@@ -8,17 +8,17 @@ The type of information stored in each directory is as below:
 
 - Benchmark:
     - LAMMPS input and potential files used for the benchmarking simulation runs
-    - All raw data files from the simulations run (untracked)
+    - All raw LAMMPS data files from the simulations run (untracked)
     - A gunzipped tar ball containing all of the simulations performed for benchmarking purposes
 - EAM
     - setfl directory contains the generated EAM alloy potentials
 - InitStruct (untracked)
     - Initial structures for MD simulations (monometallic, bimetallic) in LAMMPS data file format
 - SimAnneal (untracked)
-    - Structures generated from simulated annealing of the initial structures
+    - Raw LAMMPS data files generated from simulated annealing of the initial structures along with the input and job script files
 - jobLogs
-    - Log files from various scripts and jobs
+    - Log files from various scripts and jobs, organised based on the existing directories in GadiGData directory
 - scripts
-    - Scripts written for various purposes
+    - Scripts written for various purposes, organised based on the existing directories in GadiGData directory
 - tarFiles (untracked)
     - gunzipped tar ball of various data for backup purposes
