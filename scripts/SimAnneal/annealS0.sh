@@ -9,16 +9,15 @@ module load lammps/3Mar2020
 
 # Fixed variables
 STAGE=0
-DATA_DIR=/g/data/q27/jt5911
-# DATA_DIR=/mnt/c/Users/User/Documents/PhD/Workstation/Data  # DEBUG
-EAM_DIR=$DATA_DIR/EAM
-IN_TEMPLATE=$DATA_DIR/scripts/SimAnneal/annealS$STAGE.in
+SIM_DATA_DIR=/scratch/q27/jt5911
+GDATA_DIR=/g/data/q27/jt5911
+EAM_DIR=$GDATA_DIR/EAM
 
 # Variables to be substituted
 wallTime={{WALLTIME}}  # hr
 numTasks={{NUM_TASKS}}
 totalDumps={{TOTAL_DUMPS}}
-inpDirName=$DATA_DIR/InitStruct/{{INP_DIR_NAME}}
+inpDirName=$SIM_DATA_DIR/InitStruct/{{INP_DIR_NAME}}
 inpFileName={{INP_FILE_NAME}}
 initTemp={{INIT_TEMP}}  # K
 S0period={{S0_PERIOD}}  # fs
@@ -34,7 +33,7 @@ timeLimit=$(echo "60*60*$maxJobTime*$numTasks" | bc)  # s
 S0dumpInt=$(echo "$S0period/$totalDumps" | bc)  # fs
 
 mpirun -np $numTasks lmp_openmpi -sf opt \
-                                 -in $IN_TEMPLATE \
+                                 -in ${inpFileName}S$STAGE.in \
                                  -var inpDirName $inpDirName \
                                  -var inpFileName $inpFileName \
                                  -var element1 $element1 \
@@ -48,3 +47,5 @@ mpirun -np $numTasks lmp_openmpi -sf opt \
                                  >> ${inpFileName}S$STAGE.log
 mkdir ${inpFileName}S$STAGE
 mv ${inpFileName}S$STAGE.*.lmp ${inpFileName}S$STAGE
+tar -czvf ${inpFileName}S$STAGE.tar.gz ${inpFileName}S$STAGE
+rm -rf ${inpFileName}S$STAGE

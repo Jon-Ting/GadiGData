@@ -4,7 +4,6 @@
 # To do:
 
 declare -a TYPE_ARR=('CS/' 'L10/' 'L12/' 'RCS/' 'RAL/')
-declare -a TYPE_ARR=('CS/')
 TARGET_SIZE=80
 STAGE=0
 
@@ -25,17 +24,17 @@ S1therInt=500  # fs
 S2therInt=200  # fs
 S3therInt=500  # fs
 
-DATA_DIR=/g/data/q27/jt5911
-# DATA_DIR=/mnt/c/Users/User/Documents/PhD/Workstation/Data  # DEBUG
-EAM_DIR=$DATA_DIR/EAM
-TEMPLATE_NAME=$DATA_DIR/scripts/SimAnneal/annealS$STAGE
+SIM_DATA_DIR=/scratch/q27/jt5911
+GDATA_DIR=/g/data/q27/jt5911
+EAM_DIR=$GDATA_DIR/EAM
+TEMPLATE_NAME=$GDATA_DIR/scripts/SimAnneal/annealS$STAGE
 
 echo "Looping through directories:"
 echo "-----------------------------------------------"
 for ((i=0;i<${#TYPE_ARR[@]};i++)); do
     bnpType=${TYPE_ARR[$i]}
     inpDirName=BNP/$bnpType
-    annealDirName=$DATA_DIR/SimAnneal/$bnpType
+    annealDirName=$SIM_DATA_DIR/SimAnneal/$bnpType
     echo "  $bnpType Directory:"
     for bnpDir in $annealDirName*; do
         

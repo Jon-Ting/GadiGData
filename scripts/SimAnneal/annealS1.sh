@@ -9,10 +9,8 @@ module load lammps/3Mar2020
 
 # Fixed variables
 STAGE=1
-DATA_DIR=/g/data/q27/jt5911
-# DATA_DIR=/mnt/c/Users/User/Documents/PhD/Workstation/Data  # DEBUG
-EAM_DIR=$DATA_DIR/EAM
-IN_TEMPLATE=$DATA_DIR/scripts/SimAnneal/annealS$STAGE.in
+GDATA_DIR=/g/data/q27/jt5911
+EAM_DIR=$GDATA_DIR/EAM
 
 # Variables to be substituted
 wallTime={{WALLTIME}}  # hr
@@ -38,7 +36,7 @@ S1period=$(echo "($heatTemp-300)/$heatRate*1000" | bc)  # fs
 S1dumpInt=$(echo "$S1period/$totalDumps" | bc)  # fs
 
 mpirun -np $numTasks lmp_openmpi -sf opt \
-                                 -in $IN_TEMPLATE \
+                                 -in ${inpFileName}S$STAGE.in \
                                  -var inpFileName $inpFileName \
                                  -var S1startFrame $S1startFrame \
                                  -var element1 $element1 \
@@ -53,3 +51,5 @@ mpirun -np $numTasks lmp_openmpi -sf opt \
                           >> ${inpFileName}S$STAGE.log
 mkdir ${inpFileName}S$STAGE
 mv ${inpFileName}S$STAGE.*.lmp ${inpFileName}S$STAGE
+tar -czvf ${inpFileName}S$STAGE.tar.gz ${inpFileName}S$STAGE
+rm -rf ${inpFileName}S$STAGE
