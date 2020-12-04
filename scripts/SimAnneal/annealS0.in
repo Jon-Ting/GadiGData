@@ -2,19 +2,6 @@
 # Author: Jonathan Yik Chang Ting
 # Date: 15/10/2020
 
-# Variables to be provided: 
-#    inpDirName - name of directory containing the data file
-#    inpFileName - name of data file containing nanoparticle structure (excluding extension)
-#    element1 - first element that makes up the nanoparticle
-#    element2 - second element that makes up the nanoparticle
-#    potFile - name of potential file
-#    timeLimit - CPU time limit (s)
-#    initTemp - initial temperature of the system (K)
-#    S0period - duration of Stage 0 -- equilbrating (fs)
-#    S0therInt - interval of printing thermo data during Stage 0 (fs)
-#    S0dumpInt - interval of dumping coordinates during Stage 0 (fs)
-
-
 # --------------- INITIALIZATION ---------------
 clear           # Clear all memory
 units           metal  # Report in g/mol, A, ps, eV, K, bars
@@ -22,20 +9,25 @@ boundary        p p p  # Periodic boundaries in x-, y-, z- directions
 atom_style      atomic
 
 # --------------- ATOM DEFINITION ---------------
-read_data       ${inpDirName}${inpFileName}.lmp group ${element1}${element2} nocoeff
+read_data       {INP_DIR_NAME}{INP_FILE_NAME}.lmp group {ELEMENT1}{ELEMENT2} nocoeff
 change_box      all x scale 3 y scale 3 z scale 3
 
 # --------------- FORCE FIELDS ---------------
 pair_style      eam/alloy
-pair_coeff      * * ${potFile} ${element1} ${element2}
+pair_coeff      * * {POT_FILE} {ELEMENT1} {ELEMENT2}
 neighbor        2.0 bin  # build list by binning, add 2 A skin
 neigh_modify    delay 10 check yes  # Wait 10 steps after building, build only when atom moved > skin/2
 
 # --------------- SETTINGS ---------------
-thermo          ${S0therInt}  # Thermodynamic output frequency
+compute         peAll all pe
+thermo          {S0_THER_INT}  # Thermodynamic output frequency
 thermo_style    custom step time temp press pe ke etotal
-fix             timeLimit all halt 1000 tlimit > ${timeLimit} error soft message yes  # No more runs if time limit exceeded
+fix             timeLimit all halt 1000 tlimit > {TIME_LIMIT} error soft message yes  # No more runs if time limit exceeded
 fix             zeroMomentum all momentum 1 linear 1 1 1 angular rescale  # Reset linear & angular momenta to 0 every step
+fix             peAVG all ave/time 100 1000 100000 c_peAll start 100000 # Compute average of PE over last 1 ps from 10 samples at intervals of 0.1 ps
+variable        pe1 equal f_peAVG
+variable        pe0 equal ${pe1}
+variable        loopVar loop 5
 
 # --------------- SIMULATION RUNS --------------- 
 print           "--------------- MINIMISATION ---------------"
@@ -43,14 +35,24 @@ reset_timestep  0
 min_style       cg  # Polak-Ribiere version
 minimize        1e-15 1e-15 100000 100000  # E tol, F tol, max iter, max F/E eval
 
-print           "--------------- EQUILIBRATING AT ${initTemp} K ---------------"
+print           "--------------- EQUILIBRATING AT {INIT_TEMP} K ---------------"
 reset_timestep  0
-velocity        all create ${initTemp} 777 mom yes rot yes  # seed = 777
-fix             nhS0 all nvt temp ${initTemp} ${initTemp} $(100.0*dt)
-dump            dumpS0 all custom ${S0dumpInt} ${inpFileName}S0.*.lmp id type x y z
+velocity        all create {INIT_TEMP} 777 mom yes rot yes  # seed = 777
+fix             nhS0 all nvt temp {INIT_TEMP} {INIT_TEMP} $(100.0*dt)
+dump            dumpS0 all custom/mpiio {S0_DUMP_INT} {INP_FILE_NAME}S0.*.mpiio.lmp id type x y z
 dump_modify     dumpS0 pad 8
-run             ${S0period}
-write_restart   ${inpFileName}S0.rst
+
+label           loop
+run             100000
+variable        peVar equal abs(f_peAVG-${pe0})
+print           'Change in PE: ${peVar}'
+if              "${peVar} < 1" then "jump SELF break"
+variable        pe0 equal ${pe1}
+next            loopVar
+jump            SELF loop
+label           break
+
+write_restart   {INP_FILE_NAME}S0.mpiio.rst
 unfix           nhS0
 undump          dumpS0
 

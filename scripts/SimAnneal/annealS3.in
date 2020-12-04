@@ -2,20 +2,6 @@
 # Author: Jonathan Yik Chang Ting
 # Date: 15/10/2020
 
-# Variables to be provided: 
-#    inpFileName - name of restart file (excluding extension)
-#    S3startFrame - frame number of the initial structure for Stage 3 (fs)
-#    element1 - first element that makes up the nanoparticle
-#    element2 - second element that makes up the nanoparticle
-#    potFile - name of potential file
-#    timeLimit - CPU time limit (s)
-#    heatTemp - temperature to which the system is heated (K)
-#    coolTemp - temperature to which the system is cooled (K)
-#    S3period - duration of Stage 3 -- cooling (fs)
-#    S3therInt - interval of printing thermo data during Stage 3 (fs)
-#    S3dumpInt - interval of dumping during Stage 3 (fs)
-
-
 # --------------- INITIALIZATION ---------------
 clear           # Clear all memory
 units           metal  # Report in g/mol, A, ps, eV, K, bars
@@ -23,30 +9,31 @@ boundary        p p p  # Periodic boundaries in x-, y-, z- directions
 atom_style      atomic
 
 # --------------- ATOM DEFINITION ---------------
-read_restart    ${inpFileName}S2.rst
-read_dump       ${inpFileName}S2/${inpFileName}S2.${S3startFrame}.lmp ${S3startFrame} x y z box yes purge yes replace no add keep
+read_restart    {INP_FILE_NAME}S2.mpiio.rst
+read_dump       {INP_FILE_NAME}S2/{INP_FILE_NAME}S2.{S3_START_FRAME}.mpiio.lmp {S3_START_FRAME} x y z box yes purge yes replace no add keep
 
 # --------------- FORCE FIELDS ---------------
 pair_style      eam/alloy
-pair_coeff      * * ${potFile} ${element1} ${element2}
+pair_coeff      * * {POT_FILE} {ELEMENT1} {ELEMENT2}
 neighbor        2.0 bin  # build list by binning, add 2 A skin
 neigh_modify    delay 10 check yes  # Wait 10 steps after building, build only when atom moved > skin/2
 
 # --------------- SETTINGS ---------------
-thermo          ${S3therInt}  # Thermodynamic output frequency
+thermo          {S3_THER_INT}  # Thermodynamic output frequency
 thermo_style    custom step time temp press pe ke etotal
-fix             timeLimit all halt 1000 tlimit > ${timeLimit} error soft message yes  # Continue with next part if time limit exceeded
+fix             timeLimit all halt 1000 tlimit > {TIME_LIMIT} error soft message yes  # Continue with next part if time limit exceeded
 fix             zeroMomentum all momentum 1 linear 1 1 1 angular rescale  # Reset linear & angular momenta to 0 every step
 
 # --------------- SIMULATION RUNS --------------- 
-print           "--------------- COOLING to {coolTemp} K ---------------"
+print           "--------------- COOLING to {COOL_TEMP} K ---------------"
 reset_timestep  0
-velocity        all create ${heatTemp} 777 mom yes rot yes  # seed = 777
-fix             nhS3 all nvt temp ${heatTemp} ${coolTemp} $(100.0*dt)
-dump            dumpS3 all custom ${S3dumpInt} ${inpFileName}S3.*.lmp id type x y z 
+velocity        all create {HEAT_TEMP} 777 mom yes rot yes  # seed = 777
+fix             nhS3 all nvt temp {HEAT_TEMP} {COOL_TEMP} $(100.0*dt)
+dump            dumpS3 all custom/mpiio {S3_DUMP_INT} {INP_FILE_NAME}S3.*.mpiio.lmp id type x y z 
 dump_modify     dumpS3 pad 8
-run             ${S3period}
-write_restart   ${inpFileName}S3.rst
+restart         1000000 {INP_FILE_NAME}S3.*.mpiio.rst
+run             {S3_PERIOD}
+write_restart   {INP_FILE_NAME}S3.mpiio.rst
 unfix           nhS3
 undump          dumpS3
 
