@@ -10,7 +10,7 @@ atom_style      atomic
 
 # --------------- ATOM DEFINITION ---------------
 read_restart    {INP_FILE_NAME}S0.mpiio.rst
-read_dump       {INP_FILE_NAME}S0/{INP_FILE_NAME}S0.{S1_START_FRAME}.mpiio.lmp {S1_START_FRAME} x y z box yes purge yes replace no add keep
+# read_dump       {INP_FILE_NAME}S0/{INP_FILE_NAME}S0.{S1_START_FRAME}.mpiio.lmp {S1_START_FRAME} x y z box yes purge yes replace no add keep
 
 # --------------- FORCE FIELDS ---------------
 pair_style      eam/alloy
