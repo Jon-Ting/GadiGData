@@ -24,7 +24,7 @@ thermo          {S0_THER_INT}  # Thermodynamic output frequency
 thermo_style    custom step time temp press pe ke etotal
 fix             timeLimit all halt 1000 tlimit > {TIME_LIMIT} error soft message yes  # No more runs if time limit exceeded
 fix             zeroMomentum all momentum 1 linear 1 1 1 angular rescale  # Reset linear & angular momenta to 0 every step
-fix             peAVG all ave/time 100 1000 100000 c_peAll start 100000 # Compute average of PE over last 1 ps from 10 samples at intervals of 0.1 ps
+fix             peAVG all ave/time 100 1000 100000 c_peAll start 100000 # Compute average of PE over last 100 ps from 1000 samples at intervals of 0.1 ps
 variable        pe1 equal f_peAVG
 variable        pe0 equal ${pe1}
 variable        loopVar loop 5
