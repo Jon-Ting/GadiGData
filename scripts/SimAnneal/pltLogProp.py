@@ -53,7 +53,8 @@ def plotEqPE(logFileName, warmStep=20, avgWinSize=[10, 500], examPeriod=500):
 
 def plotProp(logFileName, propList, N=-1):
     logFile = llog.File(logFileName)
-    x = logFile.get("Time", run_num=N)
+    # x = logFile.get("Time", run_num=N)
+    x = logFile.get("Temp", run_num=N)
     for prop in propList:
         y = logFile.get(prop, run_num=N)
         plt.plot(x, y)

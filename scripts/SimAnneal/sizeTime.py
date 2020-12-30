@@ -8,11 +8,16 @@ import pickle
 import pandas as pd
 
 
+RUN_LOCK = "run.lock"
+simDirPath = "/scratch/q27/jt5911/SimAnneal"
+dfCols = ['Name', 'Elements', 'Number of MPI tasks', 'Number of atoms', 'Total number of neighbours', 'Average neighbours per atom', 'Walltime (s)', 'Min memory allocated (MB)', 'Average memory allocated (MB)', 'Max memory allocated (MB)']
+
+
 def extractProp(logFileName):
     """Extract particular quantities relevant to size-time relationship out of given LAMMPS log file"""
     with open(logFileName, 'r') as f:
         lineList = f.readlines()
-        time, minMem, avgMem, maxMem = '-', 0, 0, 0
+        minMem, avgMem, maxMem = 0, 0, 0
         for i, line in enumerate(lineList):
             if 'processor' in line: numTask = int(line.strip().split()[0]) * int(line.strip().split()[2]) * int(line.strip().split()[4])
             elif 'reading atoms' in line: numAtom = int(lineList[i+1].strip().split()[0])
@@ -35,19 +40,20 @@ def sortHuman(targetList):
     return targetList
 
 
-def collateLists(propLists, colNames):
+def collateLists(varLists, colNames):
     """Turn lists containing quantities of interest into a dataframe"""
-    for i, colName in enumerate(colNames): dataDict[colName] = propLists[i]
+    dataDict = {}
+    for i, colName in enumerate(colNames): dataDict[colName] = varLists[i]
     df = pd.DataFrame(dataDict)
-    nameList = sortHuman(nameList)
-    dfSorted = df.set_index('Name').reindex(nameList).reset_index()
-    print("Sorted data frame:\n", dfSorted)
-    return dfSorted
+    # nameList = sortHuman(varLists[0])
+    # dfSorted = df.set_index('Name').reindex(nameList).reset_index()
+    # print("Sorted data frame:\n", dfSorted)
+    # return dfSorted
+    return df
 
-
-def writeExcel(df, filePath='~/sizeTime.xlsx'):
+def writeExcel(df, filePath='{0}/sizeTime.xlsx'.format(os.getcwd())):
     """Write a given dataframe to an Excel workbook"""
-    print("# Writing to Excel sheet...")
+    print("Writing to Excel sheet...")
     # df.to_excel(filePath, sheet_name='Sheet1')
     writer = pd.ExcelWriter(filePath, engine='xlsxwriter')
     df.to_excel(writer, startrow=1, sheet_name='Sheet1', index=False)
@@ -61,31 +67,32 @@ def writeExcel(df, filePath='~/sizeTime.xlsx'):
     return workbook
 
 
-def tabLog(inpPath='~'):
+def tabLog(inpPath=os.getcwd()):
     """Tabulate quantities of interest from LAMMPS log files in an Excel workbook"""
-    nameList, eleList, numTaskList, numAtomList, totNNList, avgNNList, timeList, minMemList, avgMemList, maxMemList = [], [], [], [], [], [], [], [], [], []
-    varLists = [nameList, eleList, numTaskList, numAtomList, totNNList, avgNNList, timeList, minMemList, avgMemList, maxMemList]
-    bnpTypes = [i for i in os.listdir(inpPath) if os.path.isdir('{0}/{1}'.format(inpPath, i))]
-    for bnpType in bnpTypes:
-        bnpTypePath = "{0}/{1}".format(inpPath, bnpType)
-        for bnpDirName in os.listdir(bnpTypePath):
-            try:
-                # print("Name:", bnpDirName)
-                elements = "".join(re.findall(r'[A-Z][a-z]', bnpDirName))
-                logFileName = "{0}/{1}/{1}S0.log".format(bnpTypePath, bnpDirName)
-                variables = (bnpDirName, elements) + extractProp(logFileName)
-                for i, varList in enumerate(varLists): varList.append(variables[i])
-            except (NotADirectoryError, FileNotFoundError) as error:
-                # print(error)
-                continue
-    dfCols = ['Name', 'Elements', 'Number of MPI tasks', 'Number of atoms', 'Total number of neighbours', 'Average neighbours per atom', 'Walltime (s)', 'Min memory allocated (MB)', 'Average memory allocated (MB)', 'Max memory allocated (MB)']
-    with open('propList.pickle','wb') as f: pickle.dump(varLists, f)
-    # with open('propList.pickle', 'rb') as f: propLists = pickle.load(f)
-    dfSorted = collateLists(propLists=propLists, colNames=dfCols)
-    workbook = writeExcel(df=dfSorted, filePath='{0}/sizeTime.xlsx'.format(simDataDir))
+    if os.path.isfile("{0}/varList.pickle".format(inpPath)):
+        with open('{0}/varList.pickle'.format(inpPath), 'rb') as f: varLists = pickle.load(f)
+    else:
+        nameList, eleList, numTaskList, numAtomList, totNNList, avgNNList, timeList, minMemList, avgMemList, maxMemList = [], [], [], [], [], [], [], [], [], []
+        varLists = [nameList, eleList, numTaskList, numAtomList, totNNList, avgNNList, timeList, minMemList, avgMemList, maxMemList]
+        bnpTypes = [i for i in os.listdir(inpPath) if os.path.isdir('{0}/{1}'.format(inpPath, i))]
+        for bnpType in bnpTypes:
+            bnpTypePath = "{0}/{1}".format(inpPath, bnpType)
+            for bnpDirName in os.listdir(bnpTypePath):
+                try:
+                    if os.path.isfile("{0}/{1}/{2}".format(bnpTypePath, bnpDirName, RUN_LOCK)): continue
+                    print("Name:", bnpDirName)
+                    elements = "".join(re.findall(r'[A-Z][a-z]', bnpDirName))
+                    logFileName = "{0}/{1}/{1}S0.log".format(bnpTypePath, bnpDirName)
+                    variables = (bnpDirName, elements) + extractProp(logFileName)
+                    for i, varList in enumerate(varLists): varList.append(variables[i])
+                except (NotADirectoryError, FileNotFoundError) as error:
+                    print(error)
+                    continue
+        with open('{0}/varList.pickle'.format(inpPath), 'wb') as f: pickle.dump(varLists, f)
+    df = collateLists(varLists=varLists, colNames=dfCols)
+    workbook = writeExcel(df=df, filePath='{0}/sizeTime.xlsx'.format(inpPath))
 
 
 if __name__ == '__main__':
-    simDirPath = "/scratch/q27/jt5911/SimAnneal"
     print("Tabulating values of interest from LAMMPS log files to an Excel sheet...")
     tabLog(inpPath=simDirPath)
