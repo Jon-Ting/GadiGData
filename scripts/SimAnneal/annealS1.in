@@ -10,8 +10,7 @@ atom_style      atomic
 
 # --------------- ATOM DEFINITION ---------------
 read_restart    {INP_FILE_NAME}S0.mpiio.rst
-# read_restart    {INP_FILE_NAME}S1.*.mpiio.rst
-# read_dump       {INP_FILE_NAME}S0/{INP_FILE_NAME}S0.{S1_START_FRAME}.mpiio.lmp {S1_START_FRAME} x y z box yes purge yes replace no add keep
+reset_timestep  0
 
 # --------------- FORCE FIELDS ---------------
 pair_style      eam/alloy
@@ -24,16 +23,18 @@ thermo          {S1_THER_INT}  # Thermodynamic output frequency
 thermo_style    custom step time temp press pe ke etotal
 fix             timeLimit all halt 1000 tlimit > {TIME_LIMIT} error soft message yes  # Continue with next part if time limit exceeded
 fix             zeroMomentum all momentum 1 linear 1 1 1 angular rescale  # Reset linear & angular momenta to 0 every step
+fix             nhS1 all nvt temp {INIT_TEMP} {HEAT_TEMP} $(100.0*dt)
+compute         aRDF all rdf 200
+fix             avgRDF all ave/time 1000 100 100000 c_aRDF[*] file aRDF.rdf mode vector   # Every 100 ps (25 K) averaged by 100 samples with interval of 1 ps
+dump            dumpS1 all custom/mpiio {S1_DUMP_INT} {INP_FILE_NAME}S1.*.mpiio.lmp id type element x y z
+dump_modify     dumpS1 element {ELEMENT1} {ELEMENT2} pad 8
 
 # --------------- SIMULATION RUNS --------------- 
 print           "--------------- HEATING TO {HEAT_TEMP} K ---------------"
-reset_timestep  0
-fix             nhS1 all nvt temp {INIT_TEMP} {HEAT_TEMP} $(100.0*dt)
-dump            dumpS1 all custom/mpiio {S1_DUMP_INT} {INP_FILE_NAME}S1.*.mpiio.lmp id type x y z
-dump_modify     dumpS1 pad 8
-restart         1000000 {INP_FILE_NAME}S1.*.mpiio.rst
+restart         100000 {INP_FILE_NAME}S1.*.mpiio.rst
 run             {S1_PERIOD}
 unfix           nhS1
+unfix           avgRDF
 undump          dumpS1
 
 # --------------- DONE ---------------

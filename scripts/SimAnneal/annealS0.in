@@ -26,7 +26,7 @@ fix             timeLimit all halt 1000 tlimit > {TIME_LIMIT} error soft message
 fix             zeroMomentum all momentum 1 linear 1 1 1 angular rescale  # Reset linear & angular momenta to 0 every step
 fix             peAVG all ave/time 100 1000 100000 c_peAll start 100000 # Compute average of PE over last 100 ps from 1000 samples at intervals of 0.1 ps
 variable        pe1 equal f_peAVG
-variable        pe0 equal ${pe1}
+variable        pe0 equal c_peAll
 variable        loopVar loop 5
 
 # --------------- SIMULATION RUNS --------------- 
