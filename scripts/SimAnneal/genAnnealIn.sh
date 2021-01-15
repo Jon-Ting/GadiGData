@@ -11,28 +11,27 @@
 # Melting points (K) taken from: {Pt: 2041; Co: 1768; Pd: 1828; Au: 1337}
 # size: time/task/mem
 #   Stage 0: {20: 1/24/3; 40: 1/24/4; 80: 6/48/6; 150: 20/48/8}
-#   Stage 1: {20: 7/48/40; 40: 1/48/60; 80: 6/48/90; 150: 20/48/120}
 # To do:
 #     - Cite the source for melting points!
 
 STAGE=1
 declare -a TYPE_ARR=('L10/' 'L12/' 'CS/' 'RCS/' 'RAL/')
+# declare -a TYPE_ARR=('L10/')  # DEBUG
 declare -a SIZE_ARR=(20 40 80 150)
 declare -a ELEMENT_ARR=('Pt' 'Co' 'Pd' 'Au')
-declare -a MELT_TEMP_ARR=(2100 1800 1900 1400)
+declare -a MELT_TEMP_ARR=(2300 2000 2100 1600)
 
 totalDumps=100  # frame (Stages 0 and 2)
-annealDumpRate=10  # K/frame (Stages 1 and 3)
+# annealDumpRate=20  # K/frame (Stages 1 and 3)
 initTemp=300  # K
 
 S0period=500000  # fs
 S0therInt=100  # fs
 S0dumpInt=$(echo "$S0period/$totalDumps" | bc)  # fs
 
-S1startFrame=$(printf "%08d\n" $S0period)  # fs
-heatRate=0.25  # K/ps
+heatRate=1  # K/ps
 S1therInt=500  # fs
-S1dumpInt=$(echo "$annealDumpRate/$heatRate*1000" | bc)  # fs
+# S1dumpInt=$(echo "$annealDumpRate/$heatRate*1000" | bc)  # fs
 
 S2period=1000000  # fs
 S2therInt=200  # fs
@@ -40,9 +39,9 @@ S2dumpInt=$(echo "$S2period/$totalDumps" | bc)  # fs
 
 S3startFrame=$(printf "%08d\n" $S2period)  # fs
 coolTemp=300  # K
-coolRate=0.2  # K/ps
+coolRate=1  # K/ps
 S3therInt=500  # fs
-S3dumpInt=$(echo "$annealDumpRate/$coolRate*1000" | bc)  # fs
+# S3dumpInt=$(echo "$annealDumpRate/$coolRate*1000" | bc)  # fs
 
 SIM_DATA_DIR=/scratch/$PROJECT/$USER
 GDATA_DIR=/g/data/$PROJECT/$USER
@@ -53,19 +52,12 @@ echo "Looping through directories:"
 echo "-----------------------------------------------"
 for ((i=0;i<${#SIZE_ARR[@]};i++)); do
     size=${SIZE_ARR[$i]}
-    if [ $size -eq 20 ]; then wallTime=$(printf "%02d\n" 1); numTasks=48
-    elif [ $size -eq 40 ]; then wallTime=$(printf "%02d\n" 1); numTasks=48
-    elif [ $size -eq 80 ]; then wallTime=$(printf "%02d\n" 6); numTasks=48
-    elif [ $size -eq 150 ]; then wallTime=$(printf "%02d\n" 20); numTasks=48
-    fi
-    maxJobTime=$(echo "$wallTime - 0.2" | bc)  # hr
-    timeLimit=$(echo "60*60*$maxJobTime*$numTasks" | bc)  # s
     for ((j=0;j<${#TYPE_ARR[@]};j++)); do
         bnpType=${TYPE_ARR[$j]}
         inpDirName=$GDATA_DIR/InitStruct/BNP/$bnpType
-        annealDirName=$SIM_DATA_DIR/SimAnneal/$bnpType
+        simDirName=$SIM_DATA_DIR/SimAnneal/$bnpType
         echo "  $bnpType Directory:"
-        for bnpDir in $annealDirName*; do
+        for bnpDir in $simDirName*; do
             
             # Identify the targeted directories
             inpFileName=$(echo $bnpDir | grep -oP "(?<=$bnpType).*")
@@ -79,16 +71,15 @@ for ((i=0;i<${#SIZE_ARR[@]};i++)); do
             echo "    $inpFileName"
             
             # Skip if the input file already exists, otherwise copy template to target directory
-            LMP_IN_FILE=${annealDirName}/${inpFileName}/${inpFileName}S$STAGE.in
+            LMP_IN_FILE=${simDirName}/${inpFileName}/${inpFileName}S$STAGE.in
             # if test -f $LMP_IN_FILE; then echo "      $LMP_IN_FILE exists! Skipping..."; continue; fi
-            cp $TEMPLATE_NAME.in ${annealDirName}/${inpFileName}/${inpFileName}S$STAGE.in
+            cp $TEMPLATE_NAME.in ${simDirName}/${inpFileName}/${inpFileName}S$STAGE.in
             echo "      Scripts copied!"
 
             # Compute and substitute variables in LAMMPS input file
-            elements=($(echo $inpFileName | grep -o "[A-Z][a-z]"))
-            element1=${elements[0]}
-            element2=${elements[1]}
-            potFile=$EAM_DIR/setfl_files/$element1$element2.set
+            elements=($(echo $inpFileName | grep -o "[A-Z][a-z]")); element1=${elements[0]}; element2=${elements[1]}
+            potFile=$EAM_DIR/setfl_files/$element1$element2.set; initStruct=$inpDirName$inpFileName.lmp
+            numAtoms=$(grep atoms $initStruct | awk '{print $1}'); timeLimit=$(echo "36*$numAtoms+300000" | bc)  # s
             for ((k=0;k<${#ELEMENT_ARR[@]};k++)); do
                 if echo ${elements[@]} | grep -q ${ELEMENT_ARR[$k]}; then heatTemp=${MELT_TEMP_ARR[$k]}; break; else continue; fi
             done
@@ -105,9 +96,9 @@ for ((i=0;i<${#SIZE_ARR[@]};i++)); do
                 sed -i "s/{S0_DUMP_INT}/$S0dumpInt/g" $LMP_IN_FILE
             elif [ $STAGE -eq 1 ]; then
                 S1period=$(echo "($heatTemp-300)/$heatRate*1000" | bc)  # fs
-                timeLimit=$(echo "$S1period/$S0period*$timeLimit" | bc)  # s
+                timeLimit=$(echo "$timeLimit*6" | bc)  # s
+                S1dumpInt=$(echo "$S1period/$totalDumps" | bc)  # fs
                 sed -i "s/{TIME_LIMIT}/$timeLimit/g" $LMP_IN_FILE
-                sed -i "s/{S1_START_FRAME}/$S1startFrame/g" $LMP_IN_FILE
                 sed -i "s/{INIT_TEMP}/$initTemp/g" $LMP_IN_FILE
                 sed -i "s/{HEAT_TEMP}/$heatTemp/g" $LMP_IN_FILE
                 sed -i "s/{S1_PERIOD}/$S1period/g" $LMP_IN_FILE
@@ -126,6 +117,7 @@ for ((i=0;i<${#SIZE_ARR[@]};i++)); do
             elif [ $STAGE -eq 3 ]; then
                 S3period=$(echo "($heatTemp-300)/$coolRate*1000" | bc)  # fs
                 timeLimit=$(echo "$S3period/$S0period*$timeLimit" | bc)  # s
+                S3dumpInt=$(echo "$S3period/$totalDumps" | bc)  # fs
                 sed -i "s/{TIME_LIMIT}/$timeLimit/g" $LMP_IN_FILE
                 sed -i "s/{S3_START_FRAME}/$S3startFrame/g" $LMP_IN_FILE
                 sed -i "s/{HEAT_TEMP}/$heatTemp/g" $LMP_IN_FILE
