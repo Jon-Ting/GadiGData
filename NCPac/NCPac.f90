@@ -38,7 +38,7 @@ MODULE VARIABLES
 
     
     !Program constants    
-    integer, parameter :: con_maxnn = 500                                !maximum number of 1st nearest neighbors    
+    integer, parameter :: con_maxnn = 1200                                !maximum number of 1st nearest neighbors    
     integer, parameter :: con_maxtypes = 10                             !maximum number of particle types    
 
     !Physical constants
