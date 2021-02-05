@@ -22,3 +22,14 @@ The type of information stored in each directory is as below:
     - Scripts written for various purposes, organised based on the existing directories in GadiGData directory
 - tarFiles (untracked)
     - gunzipped tar ball of various data for backup purposes
+
+Steps to simulate nanoparticles of new morphology:
+1. Adjust the parameters in constants.py according to the morphology required
+2. Make sure InitStruct/MNP directory exists, otherwise unzip from MDSS
+3. Generate the monometallic nanoparticles (MNPs) using genMNP.py 
+4. Generate the bimetallic nanoparticles (BNPs) using genBNPCS.py (for core-shell NPs) and genBNPAL.py (for NPs of other ordering)
+5. Generate a directory for each new BNPs in simulation directories (located at /scratch) and a config file in it using genBNPdir.sh
+6. Generate the LAMMPS input file corresponding to each stage of simulation using genAnnealIn.sh
+7. Queue the jobs into the jobList file in /scratch using jobList.sh
+8. Submit the jobs to be run using subAnneal.sh
+
