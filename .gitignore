@@ -1,4 +1,8 @@
+ExpStruct/
 InitStruct/
+NCPac/testStruct/
 jobLogs/
 tarFiles/
 SimAnneal/
+!*/InitStruct/
+!*/SimAnneal/
