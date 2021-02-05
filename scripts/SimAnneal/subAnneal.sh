@@ -7,7 +7,7 @@ SIM_DATA_DIR=/scratch/$PROJECT/$USER/SimAnneal
 SCRIPT_DIR=/g/data/$PROJECT/$USER/scripts/SimAnneal
 EXAM_LOCK=examine.lock; JOB_LIST=jobList; QUEUE_LIST=queueList; SCRIPT=runAnneal.sh
 
-maxQueueNum=100; numInQueue=$(qselect -u $USER | wc -l); numToSub=$(echo "$maxQueueNum-$numInQueue" | bc)
+maxQueueNum=2; numInQueue=$(qselect -u $USER | wc -l); numToSub=$(echo "$maxQueueNum-$numInQueue" | bc)
 echo -e "maxQueueNum: $maxQueueNum\nnumInQueue: $numInQueue\nnumToSub: $numToSub"; cd $SIM_DATA_DIR
 for (( a=0; $a<$numToSub; a++ )); do
     numJobLeft=$(wc -l $SIM_DATA_DIR/$JOB_LIST | awk '{print $1}')
@@ -28,7 +28,10 @@ for (( a=0; $a<$numToSub; a++ )); do
     mem=$(echo "scale=0; (-($numAtoms-320000)*($numAtoms-320000)/40000000000+8) * $numNode" | bc)  # GB (for S0 only at the moment)
     wallTime=$(echo "(36*$numAtoms+360000) / $ncpus" | bc)  # s
     if grep -q "S1" <<< "${initName: -2}"; then
-        mem=$(echo "scale=0; (($mem*0.6)+1) / 1" | bc); wallTime=$(echo "scale=0; ($wallTime*1.5) / 1" | bc); echo "Multiplied mem & wallTime!"
+        mem=$(echo "scale=0; (($mem*0.6)+1) / 1" | bc); wallTime=$(echo "scale=0; ($wallTime*3) / 1" | bc); echo "Adjusted S1 mem & wallTime!"
+        if [ $wallTime -gt 172800 ]; then wallTime=172800; echo "Limited wallTime!"; fi
+    elif grep -q "S2" <<< "${initName: -2}"; then
+        mem=$(echo "scale=0; (($mem*0.8)+1) / 1" | bc); wallTime=$(echo "scale=0; ($wallTime*3) / 1" | bc); echo "Adjusted S2 mem & wallTime!"
         if [ $wallTime -gt 172800 ]; then wallTime=172800; echo "Limited wallTime!"; fi
     fi
     hr=$(printf "%02d\n" $(echo "scale=0; $wallTime / 60 / 60" | bc))  # hr
@@ -36,7 +39,7 @@ for (( a=0; $a<$numToSub; a++ )); do
     sec=$(printf "%02d\n" $(echo "scale=0; $wallTime - $hr*60*60 - $min*60" | bc))  # s
     sed -i "0,/^.*-l ncpus=.*$/s//#PBS -l ncpus=$ncpus,walltime=$hr:$min:$sec,mem=${mem}GB/" $SCRIPT_DIR/$SCRIPT
     sed -i "0,/^.*mpirun.*$/s//mpirun -np $ncpus lmp_openmpi -sf opt -in \$jobName.in > \$initName.log/" $SCRIPT_DIR/$SCRIPT
-    qsub -v jobName=$jobName $SCRIPT_DIR/$SCRIPT; echo $jobName >> $QUEUE_LIST; rm -f $EXAM_LOCK
+    qsub -v jobName=$jobName $SCRIPT_DIR/$SCRIPT; sleep 1; echo $jobName >> $QUEUE_LIST; rm -f $EXAM_LOCK
     echo -e "Submitted $jobName\nnumAtoms,ncpus,walltime,mem = $numAtoms,$ncpus,$hr:$min:$sec,$mem"
 done
 qstat -Ewatu $USER; echo "$(qstat -Eu $USER | wc -l) - 5" | bc | xargs printf "%s jobs in queue!\n"

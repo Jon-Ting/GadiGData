@@ -29,13 +29,13 @@ eleDict = {'Co':
 # NP diameters of interest (Angstrom)
 # diameterList = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 120, 150, 180, 200, 250, 300]  # For generating MNP
 # diameterList = [20, 30, 40, 50, 60, 70, 80, 90, 100, 120, 150, 200, 300]  # Ideally generate for all BNPs
-diameterList = [20, 40, 80, 150, 300]  # Currrent BNP generation
+diameterList = [20, 30, 40, 50, 60, 70, 80]  # Currrent BNP generation
 
 # Shapes of interest
 shapeList = ['CU', 'TH', 'RD', 'OT', 'TO', 'CO', 'DH', 'IC']
 
 # Distributions of interest
-distribList = ['RAL', 'RCS', 'L10', 'L12', 'RL10', 'RL12']
+distribList = ['RAL', 'RCS', 'L10', 'L12'] #, 'RL10', 'RL12']
 
 # Ratios of interest (A where A + B = 100)
 # ratioList = [10, 20, 25, 30, 50, 70, 75, 80, 90]

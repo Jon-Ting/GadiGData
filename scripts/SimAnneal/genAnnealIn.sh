@@ -14,10 +14,10 @@
 # To do:
 #     - Cite the source for melting points!
 
-STAGE=1
+STAGE=0
 declare -a TYPE_ARR=('L10/' 'L12/' 'CS/' 'RCS/' 'RAL/')
-# declare -a TYPE_ARR=('L10/')  # DEBUG
-declare -a SIZE_ARR=(20 40 80 150)
+declare -a TYPE_ARR=('L10')  # DEBUG
+declare -a SIZE_ARR=(20 30 40 50 60 70 80)
 declare -a ELEMENT_ARR=('Pt' 'Co' 'Pd' 'Au')
 declare -a MELT_TEMP_ARR=(2300 2000 2100 1600)
 
@@ -33,15 +33,9 @@ heatRate=1  # K/ps
 S1therInt=500  # fs
 # S1dumpInt=$(echo "$annealDumpRate/$heatRate*1000" | bc)  # fs
 
-S2period=1000000  # fs
-S2therInt=200  # fs
+S2period=20000  # fs
+S2therInt=100  # fs
 S2dumpInt=$(echo "$S2period/$totalDumps" | bc)  # fs
-
-S3startFrame=$(printf "%08d\n" $S2period)  # fs
-coolTemp=300  # K
-coolRate=1  # K/ps
-S3therInt=500  # fs
-# S3dumpInt=$(echo "$annealDumpRate/$coolRate*1000" | bc)  # fs
 
 SIM_DATA_DIR=/scratch/$PROJECT/$USER
 GDATA_DIR=/g/data/$PROJECT/$USER
@@ -96,7 +90,7 @@ for ((i=0;i<${#SIZE_ARR[@]};i++)); do
                 sed -i "s/{S0_DUMP_INT}/$S0dumpInt/g" $LMP_IN_FILE
             elif [ $STAGE -eq 1 ]; then
                 S1period=$(echo "($heatTemp-300)/$heatRate*1000" | bc)  # fs
-                timeLimit=$(echo "$timeLimit*6" | bc)  # s
+                timeLimit=$(echo "$timeLimit*3" | bc)  # s
                 S1dumpInt=$(echo "$S1period/$totalDumps" | bc)  # fs
                 sed -i "s/{TIME_LIMIT}/$timeLimit/g" $LMP_IN_FILE
                 sed -i "s/{INIT_TEMP}/$initTemp/g" $LMP_IN_FILE
@@ -106,25 +100,14 @@ for ((i=0;i<${#SIZE_ARR[@]};i++)); do
                 sed -i "s/{S1_DUMP_INT}/$S1dumpInt/g" $LMP_IN_FILE
             elif [ $STAGE -eq 2 ]; then
                 S1period=$(echo "($heatTemp-300)/$heatRate*1000" | bc)  # fs
-                S2startFrame=$(printf "%08d\n" $S1period)  # fs
-                timeLimit=$(echo "$S2period/$S0period*$timeLimit" | bc)  # s
+                timeLimit=$(echo "$timeLimit*3" | bc)  # s
+                S1dumpInt=$(echo "$S1period/$totalDumps" | bc)  # fs
                 sed -i "s/{TIME_LIMIT}/$timeLimit/g" $LMP_IN_FILE
-                sed -i "s/{S2_START_FRAME}/$S2startFrame/g" $LMP_IN_FILE
+                sed -i "s/{S1_DUMP_INT}/$S1dumpInt/g" $LMP_IN_FILE
                 sed -i "s/{HEAT_TEMP}/$heatTemp/g" $LMP_IN_FILE
                 sed -i "s/{S2_PERIOD}/$S2period/g" $LMP_IN_FILE
                 sed -i "s/{S2_THER_INT}/$S2therInt/g" $LMP_IN_FILE 
                 sed -i "s/{S2_DUMP_INT}/$S2dumpInt/g" $LMP_IN_FILE
-            elif [ $STAGE -eq 3 ]; then
-                S3period=$(echo "($heatTemp-300)/$coolRate*1000" | bc)  # fs
-                timeLimit=$(echo "$S3period/$S0period*$timeLimit" | bc)  # s
-                S3dumpInt=$(echo "$S3period/$totalDumps" | bc)  # fs
-                sed -i "s/{TIME_LIMIT}/$timeLimit/g" $LMP_IN_FILE
-                sed -i "s/{S3_START_FRAME}/$S3startFrame/g" $LMP_IN_FILE
-                sed -i "s/{HEAT_TEMP}/$heatTemp/g" $LMP_IN_FILE
-                sed -i "s/{COOL_TEMP}/$coolTemp/g" $LMP_IN_FILE
-                sed -i "s/{S3_PERIOD}/$S3period/g" $LMP_IN_FILE
-                sed -i "s/{S3_THER_INT}/$S3therInt/g" $LMP_IN_FILE 
-                sed -i "s/{S3_DUMP_INT}/$S3dumpInt/g" $LMP_IN_FILE
             else echo "Variable STAGE: $STAGE unrecognised"; exit 1; fi
             echo "      Variables substituted!"
         done

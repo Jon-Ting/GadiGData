@@ -11,23 +11,23 @@
 # - Validate potential files
 
 # Define variables
-EAM_DIR=EAM/setfl_files
-LMP_DATA_DIR=init_lmp_data_files
+EAM_DIR=/g/data/q27/jt5911/EAM/setfl_files
+LMP_DATA_DIR=/g/data/q27/jt5911/InitStruct
 MNP_DIR=MNP
 BNP_DIR=BNP
 CS_DIR=CS
 IN_TEMPLATE=genBNPCS.in
 logFile=lmpBNPCS.log
 latType=fcc
-# declare -a ELEMENT_ARR=('Co' 'Pd' 'Pt' 'Au')
-declare -a ELEMENT_ARR=('Au' 'Pt' 'Pd' 'Co')
+declare -a ELEMENT_ARR=('Co' 'Pd' 'Pt' 'Au')
+# declare -a ELEMENT_ARR=('Au' 'Pt' 'Pd' 'Co')
 # declare -a MASS_ARR=(58.933 106.42 195.08 196.97)
 declare -a MASS_ARR=(196.97 195.08 106.42 58.933)
 # declare -a RADIUS_ARR=(1.25 1.37 1.39 1.44)
 declare -a RADIUS_ARR=(1.44 1.39 1.37 1.25)
 # declare -a FCC_LC_ARR=(3.537 3.89 3.92 4.09)
 declare -a FCC_LC_ARR=(4.09 3.92 3.89 3.537)
-declare -a SIZE_ARR=(20 40 80 150 300)
+declare -a SIZE_ARR=(20 30 40 50 60 70 80)
 declare -a SHAPE_ARR=('CU' 'TH' 'RD' 'OT' 'TO' 'CO' 'DH' 'IC')
 
 echo "Generating core-shell bimetallic nanoparticles:"

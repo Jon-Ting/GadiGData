@@ -4,9 +4,6 @@
 
 # --------------- INITIALIZATION ---------------
 clear           # Clear all memory
-units           metal  # Report in g/mol, A, ps, eV, K, bars
-boundary        p p p  # Periodic boundaries in x-, y-, z- directions
-atom_style      atomic
 
 # --------------- ATOM DEFINITION ---------------
 read_restart    {INP_FILE_NAME}S0.mpiio.rst

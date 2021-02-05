@@ -1,7 +1,7 @@
 #!/bin/bash
 #PBS -P q27
 #PBS -q normal
-#PBS -l ncpus=144,walltime=48:00:00,mem=72GB
+#PBS -l ncpus=240,walltime=39:37:57,mem=33GB
 #PBS -l storage=scratch/q27+gdata/q27
 #PBS -l wd
 #PBS -v NJOBS,NJOB,jobName
@@ -31,7 +31,7 @@
 
 # Initial setup
 EXAM_LOCK=examine.lock; RUN_LOCK=run.lock
-if [ X$NJOBS == X ]; then echo "NJOBS (total number of jobs in sequence) is not set - defaulting to 100"; export NJOBS=100; fi
+if [ X$NJOBS == X ]; then echo "NJOBS (total number of jobs in sequence) is not set - defaulting to 100"; export NJOBS=1; fi
 if [ X$NJOB == X ]; then echo "NJOB (current job number in sequence) is not set - defaulting to 1"; export NJOB=1; fi
 if [ X$jobName == X ]; then echo "jobName is not set"; exit 1; fi
 trap ctrl_c SIGINT
@@ -39,36 +39,46 @@ function ctrl_c() { echo -e "\nExiting"; rm -f $EXAM_LOCK $RUN_LOCK; ls; exit 1;
 
 # Program execution
 module load lammps/3Mar2020
-SIM_DATA_DIR=/scratch/$PROJECT/$USER/SimAnneal
-QUEUE_LIST=queueList; RUN_LIST=runList
-dirName=$(echo ${jobName%/*}); unqName=$(echo $jobName | awk -F'/' '{print $NF}')
-if test -f $dirName/$RUN_LOCK; then echo "$dirName already running!"; sed -i "/$unqName/d" $SIM_DATA_DIR/$QUEUE_LIST; exit 1
+SIM_DATA_DIR=/scratch/$PROJECT/$USER/SimAnneal; QUEUE_LIST=queueList; RUN_LIST=runList
+dirName=$(echo ${jobName%/*}); unqName=$(echo $jobName | awk -F'/' '{print $NF}'); tarName=$(echo $initName | awk -F'/' '{print $NF}')
+if test -f $dirName/$RUN_LOCK; then
+    echo "$dirName already running!"; sed -i "/$unqName/d" $SIM_DATA_DIR/$QUEUE_LIST; exit 1
 elif test -f $jobName.log; then
     if [[ $(tail $jobName.log) =~ "DONE!" ]]; then echo "$jobName simulated!"; sed -i "/$unqName/d" $SIM_DATA_DIR/$QUEUE_LIST; exit 1
-    else echo "Previous $jobName job unfinished"; rm -f $jobName.log; fi; fi
+    else echo "Previous $jobName job unfinished, removing log file"; rm -f $jobName.log; fi; fi
 echo "Running $jobName"; cd $dirName; touch $RUN_LOCK
-echo $jobName >> $SIM_DATA_DIR/$RUN_LIST
-echo $unqName; sed -i "/$unqName/d" $SIM_DATA_DIR/$QUEUE_LIST 
+echo "$jobName ${PBS_JOBNAME::-2}${PBS_JOBID::-9}" >> $SIM_DATA_DIR/$RUN_LIST; sed -i "/$unqName/d" $SIM_DATA_DIR/$QUEUE_LIST 
 if grep -q "re" <<< "${jobName: -2}"; then
     initName=${jobName::-2}; nLog=$(ls $initName*.log | wc -l); mv $initName.log ${initName}r$nLog.log
-    if grep -q "S1" <<< "${initName: -2}"; then mv $initName.rdf ${initName}r$nLog.rdf; fi
+    if grep -q "S1" <<< "${initName: -2}"; then mv $initName.rdf ${initName}r$nLog.rdf;
+    elif grep -q "S2" <<< "${initName: -2}"; then tar -xf $tarName.tar.gz; fi
 else initName=$jobName; fi
-mpirun -np 144 lmp_openmpi -sf opt -in $jobName.in > $initName.log
+if grep -q "S2" <<< "${initName: -2}"; then mkdir $initName; tar -xf ${initName::-1}1.tar.gz; fi
+mpirun -np 240 lmp_openmpi -sf opt -in $jobName.in > $initName.log
 
 # Post execution
-JOB_LIST=jobList; errstat=$?
-if [ $errstat -ne 0 ]; then sleep 5; echo "Job \#$NJOB gave error status $errstat - Stopping sequence"; rm -f $RUN_LOCK; ls; exit $errstat
-# elif [ ! -f $initName.mpiio.rst ]; then echo "No checkpoint file $initName.mpiio.rst"; rm -f $RUN_LOCK; ls; exit 1
-elif [[ ! $(tail $initName.log) =~ "DONE!" ]]; then echo "String DONE not in $initName.log!"; rm -f $RUN_LOCK; ls; exit 1; fi
+JOB_LIST=jobList; errstat=$? 
+if [ $errstat -ne 0 ]; then
+    sleep 5; echo "Job \#$NJOB gave error status $errstat - Stopping sequence"
+    rm -f $RUN_LOCK; sed -i "/$unqName/d" $SIM_DATA_DIR/$RUN_LIST; ls; exit $errstat
+elif [[ ! $(tail $initName.log) =~ "DONE!" ]]; then
+    sleep 5; echo "String DONE not in $initName.log!"
+    rm -f $RUN_LOCK; sed -i "/$unqName/d" $SIM_DATA_DIR/$RUN_LIST; ls; exit 1
+fi
 echo -e "\nSimulation done, compressing .lmp files..."
-tarName=$(echo $initName | awk -F'/' '{print $NF}') 
-if grep -q "re" <<< "${jobName: -2}"; then tar -xf $tarName.tar.gz; echo "extracted"; ls; else mkdir $tarName; fi
-mv $tarName.*.lmp $tarName; tar -czvf $tarName.tar.gz $tarName; rm -rf $tarName $RUN_LOCK; ls; cd $SIM_DATA_DIR
+sed -i "/$unqName/d" $SIM_DATA_DIR/$RUN_LIST 
+if ! grep -q "S2" <<< "${initName: -2}"; then
+    if grep -q "re" <<< "${jobName: -2}"; then tar -xf $tarName.tar.gz
+    else mkdir $tarName; mv $tarName.*.lmp $tarName; fi
+fi
+tar -czvf $tarName.tar.gz $tarName; rm -rf $tarName $RUN_LOCK; ls; cd $SIM_DATA_DIR
+if grep -q "S2" <<< "${initName: -2}"; then rm -rf ${initName::-1}1; fi
 sed -i "/$unqName/d" $SIM_DATA_DIR/$RUN_LIST 
 numJobLeft=$(wc -l $SIM_DATA_DIR/$JOB_LIST | awk '{print $1}')
-if [ $numJobLeft -eq 0 ]; then echo "No more job in $JOB_LIST"; exit 0; else echo "$numJobLeft job(s) in $JOB_LIST"; fi
-if [ -f STOP_SEQUENCE ]; then echo "Terminating sequence at job number $NJOB"; exit 0
-elif [ $NJOB -ge $NJOBS ]; then echo -e "\nFinished last job in sequence of $NJOBS jobs"; exit 0; fi
+if [ $numJobLeft -eq 0 ]; then echo "No more job in $JOB_LIST"; exit 2
+elif [ -f STOP_SEQUENCE ]; then echo "Terminating sequence at job number $NJOB"; exit 3
+elif [ $NJOB -ge $NJOBS ]; then echo -e "\nFinished last job in sequence of $NJOBS jobs"; exit 4
+else echo "$numJobLeft job(s) in $JOB_LIST"; fi
 
 # Setup for next job
 i=0; maxIter=100
@@ -86,7 +96,10 @@ numNode=$(echo "scale=0; ($ncpus-1)/48 + 1" | bc)
 mem=$(echo "scale=0; (-($numAtoms-320000)*($numAtoms-320000)/40000000000+8) * $numNode" | bc)  # GB (for S0 only at the moment)
 wallTime=$(echo "(36*$numAtoms+360000) / $ncpus" | bc)  # s
 if grep -q "S1" <<< "${initName: -2}"; then
-    mem=$(echo "scale=0; (($mem*0.6)+1) / 1" | bc); wallTime=$(echo "scale=0; ($wallTime*1.5) / 1" | bc); echo "Multiplied mem & wallTime!"
+    mem=$(echo "scale=0; (($mem*3)+1) / 1" | bc); wallTime=$(echo "scale=0; ($wallTime*3) / 1" | bc); echo "Multiplied mem & wallTime!"
+    if [ $wallTime -gt 172800 ]; then wallTime=172800; echo "Limited wallTime!"; fi
+elif grep -q "S2" <<< "${initName: -2}"; then
+    mem=$(echo "scale=0; (($mem*0.8)+1) / 1" | bc); wallTime=$(echo "scale=0; ($wallTime*3) / 1" | bc); echo "Adjusted S2 mem & wallTime!"
     if [ $wallTime -gt 172800 ]; then wallTime=172800; echo "Limited wallTime!"; fi
 fi
 hr=$(printf "%02d\n" $(echo "scale=0; $wallTime / 60 / 60" | bc))  # hr

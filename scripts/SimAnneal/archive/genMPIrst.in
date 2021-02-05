@@ -1,0 +1,42 @@
+# LAMMPS input template to generate restart files using MPIIO package from usual restart files
+# Author: Jonathan Yik Chang Ting
+# Date: 3/12/2020
+# Variables to be substituted:
+# - INP_FILE_NAME
+# - POT_FILE
+# - ELEMENT1
+# - ELEMENT2
+
+clear           # Clear all memory
+units           metal  # Report in g/mol, A, ps, eV, K, bars
+boundary        p p p  # Periodic boundaries in x-, y-, z- directions
+atom_style      atomic
+
+# read_restart    ${INP_FILE_NAME}S0.rst
+read_data       ${INP_FILE_NAME}.lmp group AuCo nocoeff
+change_box      all x scale 3 y scale 3 z scale 3
+read_dump       ${INP_FILE_NAME}S0/${INP_FILE_NAME}S0.{START_FRAME}.mpiio.lmp {START_FRAME} x y z box yes purge yes replace no add keep
+
+pair_style      eam/alloy
+pair_coeff      * * ${POT_FILE} ${ELEMENT1} ${ELEMENT2}
+neighbor        2.0 bin  # build list by binning, add 2 A skin
+neigh_modify    delay 10 check yes  # Wait 10 steps after building, build only when atom moved > skin/2
+
+compute         peAll all pe
+thermo          100  # Thermodynamic output frequency
+thermo_style    custom step time temp press pe ke etotal
+fix             timeLimit all halt 1000 tlimit > 3369600.0 error soft message yes  # No more runs if time limit exceeded
+fix             zeroMomentum all momentum 1 linear 1 1 1 angular rescale  # Reset linear & angular momenta to 0 every step
+fix             peAVG all ave/time 100 1000 100000 c_peAll start 100000 # Compute average of PE over last 1 ps from 10 samples at intervals of 0.1 ps
+variable        pe1 equal f_peAVG
+variable        pe0 equal ${pe1}
+variable        loopVar loop 5
+reset_timestep  0
+velocity        all create 300 777 mom yes rot yes  # seed = 777
+
+write_restart   ${INP_FILE_NAME}S0.mpiio.rst
+
+print ""
+print "DONE!"
+print "------------------------------------------------------------------------------------------------------------------------------"
+print ""
