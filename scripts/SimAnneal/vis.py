@@ -17,6 +17,7 @@ TO DO
 
 import os
 import sys
+import glob
 import subprocess
 import scipy.stats
 import numpy as np
@@ -25,6 +26,7 @@ import seaborn as sns
 import lammps_logfile as llog
 import matplotlib.pyplot as plt
 import banpei
+from matplotlib.lines import Line2D
 from scipy.signal import find_peaks
 
 sns.set()
@@ -33,6 +35,7 @@ sns.set_palette(palette='cubehelix')
 sns.set_context("paper", rc={'font.size': 12, 'axes.titlesize': 15, 'axes.labelsize': 12, 'lines.linewidth': 1.5, 'lines.markersize': 8})
 simDirPath = "/scratch/q27/jt5911/SimAnneal"
 figDirPath = "{0}/figures/eqPE".format(simDirPath)
+expStructNames = ["AuBP1_25Pd", "AuBP1_50Pd", "AuBP1_75Pd", "H1_25Pd", "H1_50Pd", "H1_75Pd", "Pd4_25Pd", "Pd4_25Pd"]
 
 
 def zScorePeakAlg(y, lag, threshold, influence):
@@ -74,18 +77,39 @@ def zScorePeakAlg(y, lag, threshold, influence):
                 stdFilter = np.asarray(stdFilter))
 
 
-def pltRDF_NCP(spacing=0.05, numFrame=10, intFrame=10):
-    dfAll = pd.read_csv("/g/data/q27/jt5911/NCPac/od_GR.csv", header=1)
-    dfTot = dfAll[dfAll["      Type1"] == "      Total"]
-    df11 = dfAll[(dfAll["      Type1"] == "          1") & (dfAll["      Type2"] == "          1")]
-    df12 = dfAll[(dfAll["      Type1"] == "          1") & (dfAll["      Type2"] == "          2")]
-    df22 = dfAll[dfAll["      Type1"] == "          2"]
+def pltBL_NCP(inpDir, numFrame=10, intFrame=10):
     sns.set_context(rc={'font.size': 10, 'axes.titlesize': 13, 'axes.labelsize': 12, 'lines.linewidth': 1.5, 'lines.markersize': 8})
-    fig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2, 2, figsize=(8, 6))
-    axList, titleList = [ax1, ax2, ax3, ax4], ["Total RDF", "Au-Au RDF", "Au-Co RDF", "Co-Co RDF"]
-    for (i, dfRDF) in enumerate((dfTot, df11, df12, df22)):
-        df = dfRDF.copy()
-        df.drop(["      Type1", "      Type2"], axis=1, inplace=True)
+    dfAu, dfPd = pd.read_csv("{0}/Au_nanoparticle_dataset.csv".format(inpDir), header=0), pd.read_csv("{0}/Pd_nanoparticle_dataset.csv".format(inpDir), header=0)
+    headerList, titleList = ["Avg_bonds", "Std_bonds", "Max_bonds", "Min_bonds"], ["Average", "Standard Deviation", "Maximum", "Minimum"]
+    dfAuBond, dfPdBond = dfAu[headerList], dfPd[headerList]
+    figAu, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2, 2, figsize=(8, 6))
+    figPd, ((ax5, ax6), (ax7, ax8)) = plt.subplots(2, 2, figsize=(8, 6))
+    axListAu, axListPd = [ax1, ax2, ax3, ax4], [ax5, ax6, ax7, ax8]
+    dfLists, axLists = [dfAuBond, dfPdBond], [axListAu, axListPd]
+    for (i, df) in enumerate(dfLists):
+        for (j, header) in enumerate(headerList):
+            df[headerList[j]].plot.kde(ax=axLists[i][j], title=titleList[j])
+    BLfilePath = "{0}/*R5*od_BOND_length.csv".format(inpDir)
+    for BLfile in glob.glob(BLfilePath): 
+        dfAll = pd.read_csv(BLfile, header=1)
+        dfAuStats, dfPdStats = dfAll.iloc[:, 24:28], dfAll.iloc[:, 10:14]
+        dfStatLists = [dfAuStats, dfPdStats]
+        for (i, df) in enumerate(dfStatLists):
+            for (j, header) in enumerate(headerList):
+                axLists[i][j].axvline(x=df.iloc[0, j])
+    plt.xlabel("Bond Length (Angstrom)")
+    # plt.title("Bond Length Statistics Distribution")
+    plt.tight_layout()
+
+
+def pltADF_NCP(inpDir, numFrame=10, intFrame=10):
+    ADFfilePath = "{0}/od_G3.csv".format(inpDir)
+    sns.set_context(rc={'font.size': 10, 'axes.titlesize': 13, 'axes.labelsize': 12, 'lines.linewidth': 1.5, 'lines.markersize': 8})
+    for ADFfile in glob.glob(ADFfilePath): 
+        dfAll = pd.read_csv(ADFfile, header=1)
+        dfADF = dfAll[dfAll["      Type1"] == "      Total"]
+        df = dfADF.copy()
+        df.drop(["      Type1", "      Type2", "      Type3", "     Angles", "        Avg", "    Std Dev"], axis=1, inplace=True)
         df = df.convert_dtypes()
         df.set_index("      Frame", inplace=True)
         df.columns = df.columns.astype(float)
@@ -93,12 +117,46 @@ def pltRDF_NCP(spacing=0.05, numFrame=10, intFrame=10):
         for j in range(numFrame):
             df.iloc[:, j*intFrame] = df.iloc[:, j*intFrame:(j+1)*intFrame].mean(axis=1)
         df = df.iloc[:, 0:numFrame*intFrame:intFrame]
-        df.plot(kind="line", ax=axList[i], title=titleList[i])
+        df.plot(kind="line")
+    plt.tick_params(labelcolor="none", top=False, bottom=False, left=False, right=False)
+    plt.xlabel("Bond Angle (Degree)")
+    plt.ylabel("Angular Distribution Function")
+    plt.title("Heating Phase Total ADF")
+    plt.tight_layout()
+
+
+def pltRDF_NCP(inpDir, numFrame=10, intFrame=10):
+    RDFfilePath = "{0}/*R5*od_GR.csv".format(inpDir)
+    sns.set_context(rc={'font.size': 10, 'axes.titlesize': 13, 'axes.labelsize': 12, 'lines.linewidth': 1.5, 'lines.markersize': 8})
+    fig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2, 2, figsize=(8, 6))
+    axList, titleList, legendList = [ax1, ax2, ax3, ax4], ["Total RDF", "Au-Au RDF", "Au-Co RDF", "Co-Co RDF"], []
+    for RDFfile in glob.glob(RDFfilePath): 
+        legendList.append(RDFfile)
+        dfAll = pd.read_csv(RDFfile, header=1)
+        dfTot = dfAll[dfAll["      Type1"] == "      Total"]
+        df11 = dfAll[(dfAll["      Type1"] == "          1") & (dfAll["      Type2"] == "          1")]
+        df12 = dfAll[(dfAll["      Type1"] == "          1") & (dfAll["      Type2"] == "          2")]
+        df22 = dfAll[dfAll["      Type1"] == "          2"]
+        for (i, dfRDF) in enumerate((dfTot, df11, df12, df22)):
+            df = dfRDF.copy()
+            df.drop(["      Type1", "      Type2"], axis=1, inplace=True)
+            df = df.convert_dtypes()
+            df.set_index("      Frame", inplace=True)
+            df.columns = df.columns.astype(float)
+            df = df.transpose()
+            for j in range(numFrame):
+                df.iloc[:, j*intFrame] = df.iloc[:, j*intFrame:(j+1)*intFrame].mean(axis=1)
+            df = df.iloc[:, 0:numFrame*intFrame:intFrame]
+            df.plot(kind="line", ax=axList[i], title=titleList[i]) #, legend=False)
+    #plt.legend(legendList, loc='upper center', bbox_to_anchor=(0.5, -0.15), ncol=3, fancybox=True, shadow=True)
     fig.add_subplot(111, frameon=False)
     plt.tick_params(labelcolor="none", top=False, bottom=False, left=False, right=False)
     plt.xlabel("Interatomic Distance (Angstrom)")
     plt.ylabel("Radial Distribution Function")
     # plt.title("Heating Phase RDF")
+    #cmap = sns.set_palette(palette='cubehelix')
+    #customLines = [Line2D([0], [0], color=cmap(0.5), lw=2)] * 5
+    #plt.legend(customLines, legendList, loc='upper center', bbox_to_anchor=(0.5, -0.15), ncol=5, fancybox=True, shadow=True)
     plt.subplots_adjust(left=0.01, right=0.99, bottom=0.01, top=0.99, wspace=0.25, hspace=0.1)
     plt.tight_layout()
 
@@ -247,10 +305,10 @@ def checkEq(typeDirPath, dirName, pThresh, avgWinSize, warmStep, examPeriod, ski
         plt.savefig(fname="{0}/{1}.png".format(figDirPath, logFileName.split('/')[-1][:-6]))
         if pVal > pThresh:
             print("{0} equilibrated (p = {1:.5f})".format(dirName, pVal))
-            with open("{0}/{1}/config.yml".format(typeDirPath, dirName), "w") as f: f.write("S0eq: true")
+            with open("{0}/{1}/config.yml".format(typeDirPath, dirName), "w") as f: f.write("S0eq: true\n")
         else:
             print("{0} unequilibrated (p = {1:.6f})".format(dirName, pVal))
-            with open("{0}/{1}/config.yml".format(typeDirPath, dirName), "w") as f: f.write("S0eq: false")
+            with open("{0}/{1}/config.yml".format(typeDirPath, dirName), "w") as f: f.write("S0eq: false\n")
     except (NotADirectoryError, FileNotFoundError) as err:
         # print(err)
         return
@@ -264,9 +322,15 @@ if __name__ == '__main__':
             changePointIdx = pltLind(winSize=10, numFrameLag=2)
             print("NP started melting from frame {0}".format(changePointIdx - 1))
         elif sys.argv[1] == "rdf":  # RDF plots
-            pltRDF_NCP(spacing=0.05, numFrame=7, intFrame=2)
+            pltRDF_NCP(numFrame=1, intFrame=1)  # 7, 2 for heat phase
             #meltFrame = pltRDF(numBin=200, numCurve=7, interval=1, plotCoord=False, useZScore=False)
             #print("NP melted by frame {0}".format(meltFrame))
+        elif sys.argv[1] == "adf":  # ADF plots
+            pltADF_NCP(inpDir="/g/data/q27/jt5911/NCPac", numFrame=1, intFrame=1)
+        elif sys.argv[1] == "exp":  # Experimental structure validation
+            #pltRDF_NCP(inpDir="/g/data/q27/jt5911/ExpStruct", numFrame=1, intFrame=1)
+            #pltADF_NCP(inpDir="/g/data/q27/jt5911/ExpStruct", numFrame=1, intFrame=1)
+            pltBL_NCP(inpDir="/g/data/q27/jt5911/ExpStruct", numFrame=1, intFrame=1)
         plt.show()
     elif len(sys.argv) == 3:  # Check equilibration of specified BNP directory
         typeDirPath = "{0}/{1}".format(simDirPath, sys.argv[1])

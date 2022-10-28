@@ -8,7 +8,7 @@ STAGE=2
 JOB_LIST_FILE=jobList; QUEUE_LIST_FILE=queueList
 CONFIG_FILE=config.yml; RUN_LOCK=run.lock; EXAM_LOCK=examine.lock
 SIM_DATA_DIR=/scratch/$PROJECT/$USER/SimAnneal
-for inFile in $SIM_DATA_DIR/L10/*/*S$STAGE.in; do
+for inFile in $SIM_DATA_DIR/RCS/*/*S$STAGE.in; do
     jobPath=${inFile::-3}; dirPath=$(echo ${jobPath%/*}); unqName=$(echo $jobPath | awk -F'/' '{print $NF}')
     if [ $STAGE = 1 ]; then
         eqState=$(grep S0eq: $dirPath/$CONFIG_FILE)
@@ -21,11 +21,19 @@ for inFile in $SIM_DATA_DIR/L10/*/*S$STAGE.in; do
     elif grep -Fq $jobPath $SIM_DATA_DIR/$QUEUE_LIST_FILE; then echo "$jobPath queuing, skipping..."; continue  # Has been submitted
     elif test -f $dirPath/$RUN_LOCK; then echo "$dirPath running a job, skipping..."; continue  # Running
     elif test -f $jobPath.log; then  # Log file exists but not running
-        if [[ $(tail $jobPath.log) =~ "DONE!" ]]; then
+        if [[ $(tail -n 350 $jobPath.log) =~ "DONE!" ]]; then
             if [ $STAGE = 2 ]; then
-                runState=$(grep S2ok: $dirPath/$CONFIG_FILE)
-                if ! grep -q "true" <<< "$runState"; then echo "S2ok: true" >> $dirPath/$CONFIG_FILE; fi
-                echo "$jobPath done, skipping..."; continue
+                if [[ ! $(tail -n 5 $jobPath.log) =~ "ALL DONE!" ]]; then
+                    doneNum=$(ls $jobPath/*min*xyz | wc -l)
+                    echo "$jobPath unfinishued, generating job script..."; cp ${jobPath}.in ${jobPath}re.in; jobPath=${jobPath}re
+                    sed -i "0,/^.*runNum loop.*$/s//variable        remainNum equal 101-$doneNum\nvariable        loopNum loop \${remainNum}\nvariable        runNum equal \${loopNum}+$doneNum/" $jobPath.in
+                    sed -i "0,/next            runNum/s//next            loopNum/" $jobPath.in
+                    sed -i "0,/jump.*$/s//jump            SELF/" $jobPath.in
+                else
+                    runState=$(grep S2ok: $dirPath/$CONFIG_FILE)
+                    if ! grep -q "true" <<< "$runState"; then echo "S2ok: true" >> $dirPath/$CONFIG_FILE; fi
+                    echo "$jobPath done, skipping..."; continue
+                fi
             elif [ $STAGE = 1 ]; then
                 if [[ $(tail -n 40 $jobPath.log) =~ "halt timeLimit" ]]; then
                     echo "$jobPath unfinished, generating job script..."; cp ${jobPath}.in ${jobPath}re.in; jobPath=${jobPath}re
@@ -43,6 +51,7 @@ for inFile in $SIM_DATA_DIR/L10/*/*S$STAGE.in; do
                     echo "$jobPath done, skipping..."; continue
                 fi
             elif [ $STAGE = 0 ]; then
+                #echo "$jobPath done (tmp skip)"; continue
                 eqState=$(grep S0eq: $dirPath/$CONFIG_FILE)
                 if grep -q "true" <<< "$eqState"; then echo "$jobPath equilibrated, skipping..."; continue; fi  # Skip if equilibrated
                 bnpType=$(echo $jobPath | awk -F'/' '{print $6}'); dirName=$(echo $jobPath | awk -F'/' '{print $7}')

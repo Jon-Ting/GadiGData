@@ -1,0 +1,3 @@
+#!/bin/bash
+module restore  /g/data/q27/jt5911/scripts/FeatEng/.cfg_18737414.gadi-pbs/module_coll
+ python3 $* 

@@ -6,38 +6,52 @@
 
 
 NCPPath=/g/data/$PROJECT/$USER/NCPac
-JOB_LIST_FILE=jobList; QUEUE_LIST_FILE=queueList
-CONFIG_FILE=config.yml; RUN_LOCK=run.lock; EXAM_LOCK=examine.lock; SURF_FILE=surf.xyz
-SIM_DATA_DIR=/scratch/$PROJECT/$USER/SimAnneal
+DATA_DIR=/g/data/$PROJECT/$USER/SimAnneal
+declare -a TYPE_ARR=('L10' 'L12' 'CS' 'RCS' 'RAL')
+SURF_FILE=surf.xyz
+
+
 # Loop through all NP simulation directories
-for dirPath in $SIM_DATA_DIR/*/*; do
-    if grep -Fq $dirPath $SIM_DATA_DIR/$JOB_LIST_FILE; then echo "$dirPath on list, skipping..."; continue  # On the to-be-submitted-list
-    elif grep -Fq $dirPath $SIM_DATA_DIR/$QUEUE_LIST_FILE; then echo "$dirPath queuing, skipping..."; continue  # Has been submitted
-    elif test -f $dirPath/$RUN_LOCK; then echo "$dirPath running a job, skipping..."; continue  # Running
-    fi
-    # Check that S2 is done
-    runState=$(grep S2ok: $dirPath/$CONFIG_FILE); dirName=$(echo $dirPath | awk -F'/' '{print $NF}')
-    if grep -q "true" <<< "$runState" ; then echo "$dirName S2 OK!"; else echo "$dirName S2 not OK"; continue; fi
-    # Change into the directry, untar the S2 tar.gz file; change into S2 directory, copy NCPac files to the directory
-    cd $dirPath; tar -xf *S2.tar.gz; cd *S2; cp -r $NCPPath/NCPac.exe $NCPPath/NCPac.inp $dirPath/*S2/
-    # Loop through all NP in the S2 directory
-    for filePath in *; do
-        # Modify NCPac.inp to run on the file 
-        sed -i "s/^.*in_filexyz.*$/$filePath        - name of xyz input file        [in_filexyz]/" NCPac.inp
+for ((i=0;i<${#TYPE_ARR[@]};i++)); do
+    bnpType=${TYPE_ARR[$i]}
+    # Go to the directory where the raw data are stored
+    cd $DATA_DIR/${bnpType}min
+    # Loop through all NP in the directory
+    for filePath in $DATA_DIR/${bnpType}min/*; do
+        xyzName=$(echo $filePath | awk -F'/' '{print $NF}')
+        unqName=${xyzName::-4}
+        # Identify constituent elements and compute appropriate first neighbour cutoff
+        ele1=${xyzName:0:2}; ele2=${xyzName:2:2}
+        if [ $ele1 == 'Au' ]; then cut1=3.6
+        elif [ $ele1 == 'Co' ]; then cut1=3.4
+        elif [ $ele1 == 'Pd' ]; then cut1=3.5
+        elif [ $ele1 == 'Pt' ]; then cut1=3.7
+        else echo 'Element 1 unrecognised'; fi 
+        if [ $ele2 == 'Au' ]; then cut2=3.6
+        elif [ $ele2 == 'Co' ]; then cut2=3.4
+        elif [ $ele2 == 'Pd' ]; then cut2=3.5
+        elif [ $ele2 == 'Pt' ]; then cut2=3.7
+        else echo 'Element 1 unrecognised'; fi 
+        cut12=$(echo "($cut1 + $cut2) / 2" | bc)
+        echo $unqName $ele1 $ele2 $cut1 $cut2 $cut12
+        # Copy NCPac executable and input files to the directory
+        cp -r $NCPPath/NCPac.exe $NCPPath/NCPac.inp ./
+        # Modify NCPac.inp (Need further modification)
+        sed -i "s/^.*in_filexyz.*$/$xyzName        - name of xyz input file        [in_filexyz]/" NCPac.inp
+        sed -i "s/^.*in_cutoff.*$/$ele1 $cut1 $cut12                                  - NN unique cutoff matrix (line1 type1,r1r1,r1r2, line2 type2 r2r2)   [in_cutoff(i,j)]/" NCPac.inp
+        sed -i "s/^.*Second element cutoff.*$/$ele2 $cut2                                      - Second element cutoff/" NCPac.inp
         # Run NCPac.exe to get od_FEATURESET.csv and od_LINDEX.dat
         ./NCPac.exe
-        # Rename the essential output files
-        mv od_FEATURESET.csv od_FEATURESET_whole.csv; mv od_LINDEX.dat od_LINDEX_whole.dat
-        # Modify NCPac.inp to get surface-dependent g(r) and off Lindemann index calculation
-        mv ov_SURF_layer.xyz $SURF_FILE
-        sed -i "s/^.*in_filexyz.*$/$SURF_FILE        - name of xyz input file        [in_filexyz]/" NCPac.inp
-        sed -i "s/^.*in_5th_option.*$/1        - read in surface data 5th column        (0=N,1=Y)  [in_5th_option]/" NCPac.inp
-        sed -i "s/^.*in_lindem_flag.*$/0        - LINDEMANN INDEX        (0=N,1=Y)  [in_lindem_flag]" NCPac.inp
-        # Rerun NCPac.exe
-        ./NCPac.exe
-        # Collect the data into a table
+        # Rename the essential output files (could append a lot more files to rename)
+        mv od_FEATURESET.csv od_FEATURESET_$unqName.csv
+        #mv od_LINDEX.dat od_LINDEX_$unqName.dat
 
+        # Modify NCPac.inp to get surface-dependent g(r) and off Lindemann index calculation
+        #mv ov_SURF_layer.xyz $SURF_FILE
+        #sed -i "s/^.*in_filexyz.*$/$SURF_FILE        - name of xyz input file        [in_filexyz]/" NCPac.inp
+        #sed -i "s/^.*in_5th_option.*$/1        - read in surface data 5th column        (0=N,1=Y)  [in_5th_option]/" NCPac.inp
+        #sed -i "s/^.*in_lindem_flag.*$/0        - LINDEMANN INDEX        (0=N,1=Y)  [in_lindem_flag]" NCPac.inp
+        # Rerun NCPac.exe
+        #./NCPac.exe
     done
-    # Remove the executable and redundant files, recompress the S2 directory, remove S2 directory
-    rm -f NCPac.exe NCPac.inp od* ov*; cd ..; tar -czf $dirName.tar.gz $dirName; rm -rf $dirName
 done

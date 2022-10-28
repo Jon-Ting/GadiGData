@@ -1,0 +1,17 @@
+distributed.nanny - INFO -         Start Nanny at: 'tcp://10.6.76.35:34423'
+distributed.worker - INFO -       Start worker at:     tcp://10.6.76.35:38137
+distributed.worker - INFO -          Listening to:     tcp://10.6.76.35:38137
+distributed.worker - INFO -          dashboard at:           10.6.76.35:37829
+distributed.worker - INFO - Waiting to connect to:      tcp://10.6.76.35:8701
+distributed.worker - INFO - -------------------------------------------------
+distributed.worker - INFO -               Threads:                          1
+distributed.worker - INFO -                Memory:                   10.74 GB
+distributed.worker - INFO -       Local Directory: /jobfs/18737414.gadi-pbs/dask-worker-space/dask-worker-space/worker-qbgdgmjy
+distributed.worker - INFO - -------------------------------------------------
+distributed.worker - INFO -         Registered to:      tcp://10.6.76.35:8701
+distributed.worker - INFO - -------------------------------------------------
+distributed.core - INFO - Starting established connection
+distributed.dask_worker - INFO - Exiting on signal 15
+distributed.nanny - INFO - Closing Nanny at 'tcp://10.6.76.35:34423'
+distributed.nanny - INFO - Worker process 2244048 was killed by signal 15
+distributed.dask_worker - INFO - End worker

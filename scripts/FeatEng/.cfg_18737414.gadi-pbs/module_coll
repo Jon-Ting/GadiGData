@@ -1,0 +1,9 @@
+module use --append /opt/Modules/modulefiles
+module use --append /opt/Modules/v4.3.0/modulefiles
+module use --append /apps/Modules/modulefiles
+module load --notuasked intel-mkl/2019.3.199
+module load --notuasked python3/3.7.4
+module load --notuasked hdf5/1.10.5
+module load --notuasked netcdf/4.7.4
+module load pangeo
+

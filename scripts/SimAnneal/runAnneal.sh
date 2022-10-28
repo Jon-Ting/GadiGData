@@ -1,7 +1,7 @@
 #!/bin/bash
 #PBS -P q27
 #PBS -q normal
-#PBS -l ncpus=240,walltime=39:37:57,mem=33GB
+#PBS -l ncpus=48,walltime=14:38:00,mem=20GB,jobfs=10GB
 #PBS -l storage=scratch/q27+gdata/q27
 #PBS -l wd
 #PBS -v NJOBS,NJOB,jobName
@@ -31,8 +31,8 @@
 
 # Initial setup
 EXAM_LOCK=examine.lock; RUN_LOCK=run.lock
-if [ X$NJOBS == X ]; then echo "NJOBS (total number of jobs in sequence) is not set - defaulting to 100"; export NJOBS=1; fi
-if [ X$NJOB == X ]; then echo "NJOB (current job number in sequence) is not set - defaulting to 1"; export NJOB=1; fi
+if [ X$NJOBS == X ]; then export NJOBS=10000; fi
+if [ X$NJOB == X ]; then export NJOB=1; fi
 if [ X$jobName == X ]; then echo "jobName is not set"; exit 1; fi
 trap ctrl_c SIGINT
 function ctrl_c() { echo -e "\nExiting"; rm -f $EXAM_LOCK $RUN_LOCK; ls; exit 1; }
@@ -40,7 +40,7 @@ function ctrl_c() { echo -e "\nExiting"; rm -f $EXAM_LOCK $RUN_LOCK; ls; exit 1;
 # Program execution
 module load lammps/3Mar2020
 SIM_DATA_DIR=/scratch/$PROJECT/$USER/SimAnneal; QUEUE_LIST=queueList; RUN_LIST=runList
-dirName=$(echo ${jobName%/*}); unqName=$(echo $jobName | awk -F'/' '{print $NF}'); tarName=$(echo $initName | awk -F'/' '{print $NF}')
+dirName=$(echo ${jobName%/*}); unqName=$(echo $jobName | awk -F'/' '{print $NF}')
 if test -f $dirName/$RUN_LOCK; then
     echo "$dirName already running!"; sed -i "/$unqName/d" $SIM_DATA_DIR/$QUEUE_LIST; exit 1
 elif test -f $jobName.log; then
@@ -51,13 +51,15 @@ echo "$jobName ${PBS_JOBNAME::-2}${PBS_JOBID::-9}" >> $SIM_DATA_DIR/$RUN_LIST; s
 if grep -q "re" <<< "${jobName: -2}"; then
     initName=${jobName::-2}; nLog=$(ls $initName*.log | wc -l); mv $initName.log ${initName}r$nLog.log
     if grep -q "S1" <<< "${initName: -2}"; then mv $initName.rdf ${initName}r$nLog.rdf;
-    elif grep -q "S2" <<< "${initName: -2}"; then tar -xf $tarName.tar.gz; fi
+    elif grep -q "S2" <<< "${initName: -2}"; then
+        if test -f $initName.tar.gz; then tar -xf $initName.tar.gz; fi
+    fi
 else initName=$jobName; fi
 if grep -q "S2" <<< "${initName: -2}"; then mkdir $initName; tar -xf ${initName::-1}1.tar.gz; fi
-mpirun -np 240 lmp_openmpi -sf opt -in $jobName.in > $initName.log
+mpirun -np 48 lmp_openmpi -sf opt -in $jobName.in > $initName.log
 
 # Post execution
-JOB_LIST=jobList; errstat=$? 
+JOB_LIST=jobList; errstat=$?; tarName=$(echo $initName | awk -F'/' '{print $NF}')
 if [ $errstat -ne 0 ]; then
     sleep 5; echo "Job \#$NJOB gave error status $errstat - Stopping sequence"
     rm -f $RUN_LOCK; sed -i "/$unqName/d" $SIM_DATA_DIR/$RUN_LIST; ls; exit $errstat
@@ -70,8 +72,11 @@ sed -i "/$unqName/d" $SIM_DATA_DIR/$RUN_LIST
 if ! grep -q "S2" <<< "${initName: -2}"; then
     if grep -q "re" <<< "${jobName: -2}"; then tar -xf $tarName.tar.gz
     else mkdir $tarName; mv $tarName.*.lmp $tarName; fi
+    tar -czvf $tarName.tar.gz $tarName
+else
+    zip -r $tarName.zip $tarName/
 fi
-tar -czvf $tarName.tar.gz $tarName; rm -rf $tarName $RUN_LOCK; ls; cd $SIM_DATA_DIR
+rm -rf $tarName $RUN_LOCK; ls; cd $SIM_DATA_DIR
 if grep -q "S2" <<< "${initName: -2}"; then rm -rf ${initName::-1}1; fi
 sed -i "/$unqName/d" $SIM_DATA_DIR/$RUN_LIST 
 numJobLeft=$(wc -l $SIM_DATA_DIR/$JOB_LIST | awk '{print $1}')
@@ -93,13 +98,13 @@ initStruct=$(grep read_data ${initName::-1}0.in | awk '{print $2}')
 numAtoms=$(grep atoms $initStruct | awk '{print $1}')
 ncpus=$(echo "scale=0; (($numAtoms-1)/64000+1) * 48" | bc)
 numNode=$(echo "scale=0; ($ncpus-1)/48 + 1" | bc)
-mem=$(echo "scale=0; (-($numAtoms-320000)*($numAtoms-320000)/40000000000+8) * $numNode" | bc)  # GB (for S0 only at the moment)
-wallTime=$(echo "(36*$numAtoms+360000) / $ncpus" | bc)  # s
+mem=$(echo "scale=0; ($numAtoms/360000 + 1) * $ncpus/2" | bc)  # GB (for S0 only at the moment)
+wallTime=$(echo "(36*$numAtoms) / $ncpus" | bc)  # s
 if grep -q "S1" <<< "${initName: -2}"; then
     mem=$(echo "scale=0; (($mem*3)+1) / 1" | bc); wallTime=$(echo "scale=0; ($wallTime*3) / 1" | bc); echo "Multiplied mem & wallTime!"
     if [ $wallTime -gt 172800 ]; then wallTime=172800; echo "Limited wallTime!"; fi
 elif grep -q "S2" <<< "${initName: -2}"; then
-    mem=$(echo "scale=0; (($mem*0.8)+1) / 1" | bc); wallTime=$(echo "scale=0; ($wallTime*3) / 1" | bc); echo "Adjusted S2 mem & wallTime!"
+    mem=$(echo "scale=0; (($mem*0.8)+1) / 1" | bc); wallTime=$(echo "scale=0; ($wallTime*4) / 1" | bc); echo "Adjusted S2 mem & wallTime!"
     if [ $wallTime -gt 172800 ]; then wallTime=172800; echo "Limited wallTime!"; fi
 fi
 hr=$(printf "%02d\n" $(echo "scale=0; $wallTime / 60 / 60" | bc))  # hr

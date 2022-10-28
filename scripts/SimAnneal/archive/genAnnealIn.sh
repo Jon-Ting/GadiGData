@@ -14,12 +14,12 @@
 # To do:
 #     - Cite the source for melting points!
 
-STAGE=0
+STAGE=2
 declare -a TYPE_ARR=('L10/' 'L12/' 'CS/' 'RCS/' 'RAL/')
-declare -a TYPE_ARR=('L10')  # DEBUG
+declare -a TYPE_ARR=('RCS/')  # DEBUG
 declare -a SIZE_ARR=(20 30 40 50 60 70 80)
-declare -a ELEMENT_ARR=('Pt' 'Co' 'Pd' 'Au')
-declare -a MELT_TEMP_ARR=(2300 2000 2100 1600)
+declare -a ELEMENT_ARR=('Pt' 'Pd' 'Co' 'Au')
+declare -a MELT_TEMP_ARR=(2300 2100 2000 1600)
 
 totalDumps=100  # frame (Stages 0 and 2)
 # annealDumpRate=20  # K/frame (Stages 1 and 3)
@@ -65,9 +65,9 @@ for ((i=0;i<${#SIZE_ARR[@]};i++)); do
             echo "    $inpFileName"
             
             # Skip if the input file already exists, otherwise copy template to target directory
-            LMP_IN_FILE=${simDirName}/${inpFileName}/${inpFileName}S$STAGE.in
-            # if test -f $LMP_IN_FILE; then echo "      $LMP_IN_FILE exists! Skipping..."; continue; fi
-            cp $TEMPLATE_NAME.in ${simDirName}/${inpFileName}/${inpFileName}S$STAGE.in
+            LMP_IN_FILE=${simDirName}${inpFileName}/${inpFileName}S$STAGE.in
+            if test -f $LMP_IN_FILE; then echo "      $LMP_IN_FILE exists! Skipping..."; continue; fi
+            cp $TEMPLATE_NAME.in ${simDirName}${inpFileName}/${inpFileName}S$STAGE.in
             echo "      Scripts copied!"
 
             # Compute and substitute variables in LAMMPS input file

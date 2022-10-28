@@ -28,4 +28,4 @@ with open("/g/data/q27/jt5911/NCPac/testing.xyz", "w") as f:
         else:
             newLine = " ".join(line.split())
             f.write(newLine + "\n")
-print("Done!")
+print("Done! Check the element number of the last frame!")
