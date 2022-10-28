@@ -33,3 +33,49 @@ Steps to simulate nanoparticles of new morphology:
 7. Queue the jobs into the jobList file in /scratch using jobList.sh
 8. Submit the jobs to be run using subAnneal.sh
 
+
+Contents of MDSS system under jt5911/:
+- InitStruct.zip
+    - Contains initial structures of MNPs and BNPs
+- largeBNPs.zip
+    - Contains BNPs of diameter > 8 nm
+- SimAnneal/
+    - minStruct/ (Contains minimised BNP structures, target for ML applications)
+        - CSminSmall.zip
+        - L10min.zip
+        - L12min.zip
+        - RALminSmall.zip
+        - RCSminSmall.tar.gz
+    - oriStruct/ (Contains last frame of BNP structures prior to minimisation)
+        - CSoriSmall.zip
+        - L10ori.zip
+        - L12ori.zip
+        - RALoriSmall.zip
+        - RCSoriSmall.tar.gz
+    - simTraj/ (Contains simulation trajectory documents)
+        - CS60+/ (Contains files for BNPs with diameter > 6 nm)
+            - Pt80TOPd50ICCS.tar.gz ...
+        - CSAu.zip
+        - CSCo.zip
+        - CSPd.zip
+        - CSPt.zip
+        - L10All.zip
+        - L12All.zip
+        - RAL.zip
+        - RAL50+/ (Contains files for BNPs with diameter > 5 nm)
+            - PtPd80TO50RAL6.tar.gz ...
+        - RALAu.zip
+        - RALCo.zip
+        - RALPd.zip
+        - RALPt.zip
+        - RCS50+/ (Contains files for BNPS with diameter > 5 nm)
+            - PtPd80TO50RCS6.tar.gz ...
+        - RCSAu.zip
+        - RCSCo.zip
+        - RCSPd.zip
+        - RCSPt.zip
+        - largeCS.zip (Contains files for BNPs with diameter > 8 nm)
+        - largeL10.zip (Contains files for BNPs with diameter > 8 nm)
+        - largeL12.zip (Contains files for BNPs with diameter > 8 nm) 
+        - largeRAL.zip (Contains files for BNPs with diameter > 8 nm) 
+        - largeRCS.zip (Contains files for BNPs with diameter > 8 nm) 
