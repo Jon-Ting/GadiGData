@@ -49,7 +49,7 @@ MODULE VARIABLES
     !Input parameters(in order of appearance in input file)  
     character(len=100) :: in_filexyz                                    !input xyz movie filename
     integer :: in_write_screen                                          !write out to screen flag
-    integer :: in_5th_option                                            !option for reading in 5th surface column
+    integer :: in_5th_option                                            !option for reading in 4th surface column
     real(dp) :: in_cutoff(con_maxtypes,con_maxtypes)                    !cutoff distance for defining 1st nn   
     
     real(dp) :: in_xl, in_yl, in_zl                                     !cell length in x, y and z direction     
@@ -4890,7 +4890,6 @@ subroutine CAL_G3
 
     
     !Write out g3(theta)
-    
     if(headers_done==0) then
         !Title (1st line)      
         write(52,10)

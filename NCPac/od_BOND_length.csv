@@ -1,3 +1,1 @@
 BOND LENGTH STATS (Column blocks for type-type combinations (lengths in Angstrom))
-      Frame,      Type1,      Type2, Avg Length,    Std Dev, Max Length, Min Length,  N Lengths,      Type1,      Type2, Avg Length,    Std Dev, Max Length, Min Length,  N Lengths,      Type1,      Type2, Avg Length,    Std Dev, Max Length, Min Length,  N Lengths,      Type1,      Type2, Avg Length,    Std Dev, Max Length, Min Length,  N Lengths
-          1,      Total,      Total,   2.750971,   0.216984,   3.298022,   2.320050,       3331,          1,          1,   2.464374,   0.076613,   2.599605,   2.320535,        245,          1,          2,   2.676715,   0.176557,   2.999807,   2.320050,       1734,          2,          2,   2.898143,   0.177030,   3.298022,   2.521089,       1352
