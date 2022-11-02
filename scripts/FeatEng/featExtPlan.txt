@@ -1,7 +1,7 @@
 # Details the plan for feature extraction from the multimetallic nanoparticles raw data (.xyz files)
 - Generate the features from each software/package into different files, combine them later on if necessary
 - Could do them in small batches of instance
-- Better consider similarity between different configurations before starting to extract the features (archetypal analysis to find the minimum set containing the most information?)
+- Better consider similarity between different configurations before starting to extract the features (archetypal analysis to find the minimum set containing the most information? Can't use AA for this -- too little archetypes, but AA is still worth doing by itself, just not for this purpose)
 
 - Generate features using modified NCPac:
     - Test if feasible for large nanoparticles

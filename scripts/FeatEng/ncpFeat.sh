@@ -1,12 +1,19 @@
 #!/bin/bash
+#PBS -P q27
+#PBS -q normal
+#PBS -l ncpus=1,walltime=24:00:00,mem=50GB,jobfs=1GB
+#PBS -l storage=scratch/q27+gdata/q27
+#PBS -l wd
+
 # Goal: Extract features from nanoparticle structures using NCPac
 # Author: Jonathan Yik Chang Ting
 # Date: 2/2/2021
-# To do:
+# TO DO
+# - 
 
 
-NCPPath=/g/data/$PROJECT/$USER/NCPac
-DATA_DIR=/g/data/$PROJECT/$USER/SimAnneal
+NCP_PATH=/g/data/$PROJECT/$USER/NCPac
+DATA_DIR=/scratch/$PROJECT/$USER/SimAnneal/AuPt
 declare -a TYPE_ARR=('L10' 'L12' 'CS' 'RCS' 'RAL')
 SURF_FILE=surf.xyz
 
@@ -35,13 +42,13 @@ for ((i=0;i<${#TYPE_ARR[@]};i++)); do
         cut12=$(echo "($cut1 + $cut2) / 2" | bc)
         echo $unqName $ele1 $ele2 $cut1 $cut2 $cut12
         # Copy NCPac executable and input files to the directory
-        cp -r $NCPPath/NCPac.exe $NCPPath/NCPac.inp ./
+         cp -r $NCP_PATH/NCPac.exe $NCP_PATH/NCPac.inp ./
         # Modify NCPac.inp (Need further modification)
         sed -i "s/^.*in_filexyz.*$/$xyzName        - name of xyz input file        [in_filexyz]/" NCPac.inp
         sed -i "s/^.*in_cutoff.*$/$ele1 $cut1 $cut12                                  - NN unique cutoff matrix (line1 type1,r1r1,r1r2, line2 type2 r2r2)   [in_cutoff(i,j)]/" NCPac.inp
         sed -i "s/^.*Second element cutoff.*$/$ele2 $cut2                                      - Second element cutoff/" NCPac.inp
         # Run NCPac.exe to get od_FEATURESET.csv and od_LINDEX.dat
-        ./NCPac.exe
+        ./NCPac.exe >> ncp.log
         # Rename the essential output files (could append a lot more files to rename)
         mv od_FEATURESET.csv od_FEATURESET_$unqName.csv
         #mv od_LINDEX.dat od_LINDEX_$unqName.dat
