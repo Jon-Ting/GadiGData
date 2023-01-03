@@ -1,0 +1,8 @@
+ &funccard
+ atomtype='E1'
+ &end
+ &funccard
+ atomtype='E2'
+ &end
+ &funccard
+ &end

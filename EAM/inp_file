@@ -1,0 +1,9 @@
+ &funccard
+ atomtype='Pt'
+ &end
+ &funccard
+ atomtype='Pd'
+ &end
+ &funccard
+ &end
+
