@@ -16,12 +16,8 @@ The type of information stored in each directory is as below:
     - Initial structures for MD simulations (monometallic, bimetallic) in LAMMPS data file format
 - SimAnneal
     - Raw LAMMPS dataand log files (untracked) generated from simulated annealing of the initial structures along with the input and job script files
-- jobLogs (untracked)
-    - Log files from various scripts and jobs, organised based on the existing directories in GadiGData directory
 - scripts
     - Scripts written for various purposes, organised based on the existing directories in GadiGData directory
-- tarFiles (untracked)
-    - gunzipped tar ball of various data for backup purposes
 
 Steps to simulate nanoparticles of new morphology:
 1. Adjust the parameters in constants.py according to the morphology required
