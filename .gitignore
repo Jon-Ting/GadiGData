@@ -1,8 +1,8 @@
-ExpStruct/
 InitStruct/
-NCPac/testStruct/
-jobLogs/
-tarFiles/
-SimAnneal/
-!*/InitStruct/
-!*/SimAnneal/
+PostSim/*/
+scripts/InitStruct/logFiles/
+scripts/SimAnneal/logFiles/
+scripts/SimAnneal/FDest/testCases/
+scripts/FeatExtEng/NCPac/*mod
+scripts/FeatExtEng/NCPac/*xyz
+scripts/FeatExtEng/testReg/
