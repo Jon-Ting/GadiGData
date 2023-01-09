@@ -1,2 +1,0 @@
-ssh -N -L 8332:gadi-cpu-clx-2771.gadi.nci.org.au:8332 jt5911@gadi.nci.org.au  
-ssh -N -L 8799:gadi-cpu-clx-2771.gadi.nci.org.au:8799 jt5911@gadi.nci.org.au 
