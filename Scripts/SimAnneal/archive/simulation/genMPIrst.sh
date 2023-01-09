@@ -4,7 +4,7 @@
 # Date: 1/1/2021
 
 EAM_DIR=/g/data/$PROJECT/$USER/EAM
-TEMPLATE_FILE=/g/data/$PROJECT/$USER/scripts/SimAnneal/genMPIrst.in
+TEMPLATE_FILE=/g/data/$PROJECT/$USER/Scripts/SimAnneal/genMPIrst.in
 for dirName in */; do
     if [ ! -f $dirName/*S0.rst ]; then continue; fi
     cd $dirName; cp $TEMPLATE_FILE .

@@ -39,7 +39,7 @@ S2dumpInt=$(echo "$S2period/$totalDumps" | bc)  # fs
 SIM_DATA_DIR=/scratch/$PROJECT/$USER
 GDATA_DIR=/g/data/$PROJECT/$USER
 EAM_DIR=$GDATA_DIR/EAM
-TEMPLATE_NAME=$GDATA_DIR/scripts/SimAnneal/annealS$STAGE
+TEMPLATE_NAME=$GDATA_DIR/Scripts/SimAnneal/annealS$STAGE
 
 echo "Looping through directories:"
 echo "-----------------------------------------------"

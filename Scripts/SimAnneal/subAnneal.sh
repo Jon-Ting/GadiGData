@@ -4,7 +4,7 @@
 # Date: 15/12/2020
 
 SIM_DATA_DIR=/scratch/$PROJECT/$USER/SimAnneal
-SCRIPT_DIR=/g/data/$PROJECT/$USER/scripts/SimAnneal
+SCRIPT_DIR=/g/data/$PROJECT/$USER/Scripts/SimAnneal
 EXAM_LOCK=examine.lock; JOB_LIST=jobList; QUEUE_LIST=queueList; SCRIPT=runAnneal.sh
 
 maxQueueNum=50; numInQueue=$(qselect -u $USER | wc -l); numToSub=$(echo "$maxQueueNum-$numInQueue" | bc)

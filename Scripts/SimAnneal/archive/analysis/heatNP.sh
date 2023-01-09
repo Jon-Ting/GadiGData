@@ -4,7 +4,7 @@
 # Date: 6/1/2021
 
 SIM_DATA_DIR=/scratch/$PROJECT/$USER/SimAnneal
-SCRIPT_DIR=/g/data/$PROJECT/$USER/scripts/SimAnneal
+SCRIPT_DIR=/g/data/$PROJECT/$USER/Scripts/SimAnneal
 NCPAC_DIR=/home/564/$USER/NCPac
 
 # Convert LAMMPS dump files into xyz format

@@ -92,7 +92,7 @@ while [ $i -lt $maxIter ]; do
     else touch $EXAM_LOCK; jobName=$(head -n1 $JOB_LIST); tail -n+2 $JOB_LIST > $JOB_LIST.2; mv $JOB_LIST.2 $JOB_LIST || continue; break; fi
 done
 if [ $i -gt $maxIter ]; then echo "Waited for too long! Check $EXAM_LOCK"; exit 1; fi
-NJOB=$(($NJOB+1)); SCRIPT_DIR=/g/data/$PROJECT/$USER/scripts/SimAnneal
+NJOB=$(($NJOB+1)); SCRIPT_DIR=/g/data/$PROJECT/$USER/Scripts/SimAnneal
 if grep -q "re" <<< "${jobName: -2}"; then initName=${jobName::-2}; else initName=$jobName; fi
 initStruct=$(grep read_data ${initName::-1}0.in | awk '{print $2}')
 numAtoms=$(grep atoms $initStruct | awk '{print $1}')
