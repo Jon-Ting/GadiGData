@@ -1,4 +1,4 @@
-# Goal: Figure out the relationship between simulation system size and walltime tobe requested
+# Goal: Figure out the relationship between simulation system size and walltime to be requested
 # Author: Jonathan Yik Chang Ting
 # Date: 17/12/2020
 

@@ -1,0 +1,191 @@
+Comparing AuPd30CU75RAL0S2min.0.xyz with AuPd30CU75RAL0S2min.18000.xyz...
+	eucRMSD: 0.02366
+	boxCntDimDiff: 2.196462 - 2.198610 = 0.002148
+	2-sample Kolmogorov-Smirnov test statistic: 0.00573; p-value: 0.991791
+	Kruskal-Wallis H-test statistic: 0.00020; p-value: 0.988588
+	Mutual information : 0.674
+Comparing AuPd30CU75RAL0S2min.18000.xyz with AuPd30CU75RAL0S2min.36000.xyz...
+	eucRMSD: 0.00046
+	boxCntDimDiff: 2.198610 - 2.198522 = 0.000088
+	2-sample Kolmogorov-Smirnov test statistic: 0.00168; p-value: 1.000000
+	Kruskal-Wallis H-test statistic: 0.02104; p-value: 0.884683
+	Mutual information : 1.308
+Comparing AuPd30CU75RAL0S2min.36000.xyz with AuPd30CU75RAL0S2min.54000.xyz...
+	eucRMSD: 0.03206
+	boxCntDimDiff: 2.198522 - 2.196725 = 0.001797
+	2-sample Kolmogorov-Smirnov test statistic: 0.00429; p-value: 0.999935
+	Kruskal-Wallis H-test statistic: 0.10789; p-value: 0.742560
+	Mutual information : 0.633
+Comparing AuPd30CU75RAL0S2min.54000.xyz with AuPd30CU75RAL0S2min.72000.xyz...
+	eucRMSD: 0.00063
+	boxCntDimDiff: 2.196725 - 2.196536 = 0.000189
+	2-sample Kolmogorov-Smirnov test statistic: 0.00203; p-value: 1.000000
+	Kruskal-Wallis H-test statistic: 0.00007; p-value: 0.993301
+	Mutual information : 1.228
+Comparing AuPd30CU75RAL0S2min.72000.xyz with AuPd30CU75RAL0S2min.90000.xyz...
+	eucRMSD: 0.02246
+	boxCntDimDiff: 2.196536 - 2.197116 = 0.000580
+	2-sample Kolmogorov-Smirnov test statistic: 0.00847; p-value: 0.807593
+	Kruskal-Wallis H-test statistic: 0.32279; p-value: 0.569935
+	Mutual information : 0.669
+Comparing AuPd30CU75RAL0S2min.90000.xyz with AuPd30CU75RAL0S2min.108000.xyz...
+	eucRMSD: 0.08220
+	boxCntDimDiff: 2.197116 - 2.383687 = 0.186571
+	2-sample Kolmogorov-Smirnov test statistic: 0.01497; p-value: 0.154892
+	Kruskal-Wallis H-test statistic: 1.41149; p-value: 0.234809
+	Mutual information : 0.580
+Comparing AuPd30CU75RAL0S2min.108000.xyz with AuPd30CU75RAL0S2min.126000.xyz...
+	eucRMSD: 0.08236
+	boxCntDimDiff: 2.383687 - 2.197447 = 0.186240
+	2-sample Kolmogorov-Smirnov test statistic: 0.01237; p-value: 0.346263
+	Kruskal-Wallis H-test statistic: 0.72845; p-value: 0.393385
+	Mutual information : 0.590
+Comparing AuPd30CU75RAL0S2min.126000.xyz with AuPd30CU75RAL0S2min.144000.xyz...
+	eucRMSD: 0.20082
+	boxCntDimDiff: 2.197447 - 2.254975 = 0.057529
+	2-sample Kolmogorov-Smirnov test statistic: 0.03870; p-value: 0.000000
+	Kruskal-Wallis H-test statistic: 25.63069; p-value: 0.000000
+	Mutual information : 0.618
+Comparing AuPd30CU75RAL0S2min.144000.xyz with AuPd30CU75RAL0S2min.162000.xyz...
+	eucRMSD: 0.24219
+	boxCntDimDiff: 2.254975 - 2.319389 = 0.064414
+	2-sample Kolmogorov-Smirnov test statistic: 0.01957; p-value: 0.023457
+	Kruskal-Wallis H-test statistic: 1.35807; p-value: 0.243873
+	Mutual information : 0.626
+Comparing AuPd30CU75RAL0S2min.162000.xyz with AuPd30CU75RAL0S2min.180000.xyz...
+	eucRMSD: 0.59509
+	boxCntDimDiff: 2.319389 - 2.306684 = 0.012705
+	2-sample Kolmogorov-Smirnov test statistic: 0.30863; p-value: 0.000000
+	Kruskal-Wallis H-test statistic: 1462.22887; p-value: 0.000000
+	Mutual information : 0.412
+Comparing AuPd30CU75RAL0S2min.180000.xyz with AuPd30CU75RAL0S2min.198000.xyz...
+	eucRMSD: 0.59369
+	boxCntDimDiff: 2.306684 - 2.288244 = 0.018439
+	2-sample Kolmogorov-Smirnov test statistic: 0.20715; p-value: 0.000000
+	Kruskal-Wallis H-test statistic: 553.56912; p-value: 0.000000
+	Mutual information : 0.452
+Comparing AuPd30CU75RAL0S2min.198000.xyz with AuPd30CU75RAL0S2min.216000.xyz...
+	eucRMSD: 0.42932
+	boxCntDimDiff: 2.288244 - 2.269440 = 0.018805
+	2-sample Kolmogorov-Smirnov test statistic: 0.15135; p-value: 0.000000
+	Kruskal-Wallis H-test statistic: 244.20448; p-value: 0.000000
+	Mutual information : 0.481
+Comparing AuPd30CU75RAL0S2min.216000.xyz with AuPd30CU75RAL0S2min.234000.xyz...
+	eucRMSD: 0.19029
+	boxCntDimDiff: 2.269440 - 2.270374 = 0.000934
+	2-sample Kolmogorov-Smirnov test statistic: 0.02211; p-value: 0.005619
+	Kruskal-Wallis H-test statistic: 1.45416; p-value: 0.227862
+	Mutual information : 0.550
+Comparing AuPd30CU75RAL0S2min.234000.xyz with AuPd30CU75RAL0S2min.252000.xyz...
+	eucRMSD: 0.32847
+	boxCntDimDiff: 2.270374 - 2.275579 = 0.005205
+	2-sample Kolmogorov-Smirnov test statistic: 0.07060; p-value: 0.000000
+	Kruskal-Wallis H-test statistic: 73.42433; p-value: 0.000000
+	Mutual information : 0.559
+Comparing AuPd30CU75RAL0S2min.252000.xyz with AuPd30CU75RAL0S2min.270000.xyz...
+	eucRMSD: 0.41989
+	boxCntDimDiff: 2.275579 - 2.268114 = 0.007465
+	2-sample Kolmogorov-Smirnov test statistic: 0.02202; p-value: 0.005483
+	Kruskal-Wallis H-test statistic: 1.20917; p-value: 0.271496
+	Mutual information : 0.581
+Comparing AuPd30CU75RAL0S2min.270000.xyz with AuPd30CU75RAL0S2min.288000.xyz...
+	eucRMSD: 0.38693
+	boxCntDimDiff: 2.268114 - 2.271930 = 0.003816
+	2-sample Kolmogorov-Smirnov test statistic: 0.02321; p-value: 0.002836
+	Kruskal-Wallis H-test statistic: 1.78980; p-value: 0.180951
+	Mutual information : 0.587
+Comparing AuPd30CU75RAL0S2min.288000.xyz with AuPd30CU75RAL0S2min.306000.xyz...
+	eucRMSD: 0.37531
+	boxCntDimDiff: 2.271930 - 2.267248 = 0.004681
+	2-sample Kolmogorov-Smirnov test statistic: 0.02063; p-value: 0.011022
+	Kruskal-Wallis H-test statistic: 0.64650; p-value: 0.421367
+	Mutual information : 0.598
+Comparing AuPd30CU75RAL0S2min.306000.xyz with AuPd30CU75RAL0S2min.324000.xyz...
+	eucRMSD: 0.46880
+	boxCntDimDiff: 2.267248 - 2.249587 = 0.017661
+	2-sample Kolmogorov-Smirnov test statistic: 0.01983; p-value: 0.016187
+	Kruskal-Wallis H-test statistic: 0.30361; p-value: 0.581625
+	Mutual information : 0.575
+Comparing AuPd30CU75RAL0S2min.324000.xyz with AuPd30CU75RAL0S2min.342000.xyz...
+	eucRMSD: 0.57560
+	boxCntDimDiff: 2.249587 - 2.269833 = 0.020246
+	2-sample Kolmogorov-Smirnov test statistic: 0.02198; p-value: 0.005453
+	Kruskal-Wallis H-test statistic: 0.01840; p-value: 0.892106
+	Mutual information : 0.556
+Comparing AuPd30CU75RAL0S2min.342000.xyz with AuPd30CU75RAL0S2min.360000.xyz...
+	eucRMSD: 0.48849
+	boxCntDimDiff: 2.269833 - 2.277198 = 0.007365
+	2-sample Kolmogorov-Smirnov test statistic: 0.05245; p-value: 0.000000
+	Kruskal-Wallis H-test statistic: 2.45802; p-value: 0.116926
+	Mutual information : 0.559
+Comparing AuPd30CU75RAL0S2min.360000.xyz with AuPd30CU75RAL0S2min.378000.xyz...
+	eucRMSD: 0.56909
+	boxCntDimDiff: 2.277198 - 2.294167 = 0.016969
+	2-sample Kolmogorov-Smirnov test statistic: 0.09971; p-value: 0.000000
+	Kruskal-Wallis H-test statistic: 150.73754; p-value: 0.000000
+	Mutual information : 0.595
+Comparing AuPd30CU75RAL0S2min.378000.xyz with AuPd30CU75RAL0S2min.396000.xyz...
+	eucRMSD: 0.57276
+	boxCntDimDiff: 2.294167 - 2.259761 = 0.034406
+	2-sample Kolmogorov-Smirnov test statistic: 0.08702; p-value: 0.000000
+	Kruskal-Wallis H-test statistic: 140.93725; p-value: 0.000000
+	Mutual information : 0.603
+Comparing AuPd30CU75RAL0S2min.396000.xyz with AuPd30CU75RAL0S2min.414000.xyz...
+	eucRMSD: 0.79227
+	boxCntDimDiff: 2.259761 - 2.297265 = 0.037504
+	2-sample Kolmogorov-Smirnov test statistic: 0.08137; p-value: 0.000000
+	Kruskal-Wallis H-test statistic: 105.55482; p-value: 0.000000
+	Mutual information : 0.611
+Comparing AuPd30CU75RAL0S2min.414000.xyz with AuPd30CU75RAL0S2min.432000.xyz...
+	eucRMSD: 1.16924
+	boxCntDimDiff: 2.297265 - 2.289226 = 0.008039
+	2-sample Kolmogorov-Smirnov test statistic: 0.09674; p-value: 0.000000
+	Kruskal-Wallis H-test statistic: 148.91057; p-value: 0.000000
+	Mutual information : 0.611
+Comparing AuPd30CU75RAL0S2min.432000.xyz with AuPd30CU75RAL0S2min.450000.xyz...
+	eucRMSD: 0.95209
+	boxCntDimDiff: 2.289226 - 2.317064 = 0.027838
+	2-sample Kolmogorov-Smirnov test statistic: 0.10789; p-value: 0.000000
+	Kruskal-Wallis H-test statistic: 202.69750; p-value: 0.000000
+	Mutual information : 0.660
+Comparing AuPd30CU75RAL0S2min.450000.xyz with AuPd30CU75RAL0S2min.468000.xyz...
+	eucRMSD: 0.79459
+	boxCntDimDiff: 2.317064 - 2.304582 = 0.012482
+	2-sample Kolmogorov-Smirnov test statistic: 0.03350; p-value: 0.000001
+	Kruskal-Wallis H-test statistic: 10.59434; p-value: 0.001134
+	Mutual information : 0.690
+Comparing AuPd30CU75RAL0S2min.468000.xyz with AuPd30CU75RAL0S2min.486000.xyz...
+	eucRMSD: 0.91499
+	boxCntDimDiff: 2.304582 - 2.332187 = 0.027605
+	2-sample Kolmogorov-Smirnov test statistic: 0.04609; p-value: 0.000000
+	Kruskal-Wallis H-test statistic: 33.83687; p-value: 0.000000
+	Mutual information : 0.695
+Comparing AuPd30CU75RAL0S2min.486000.xyz with AuPd30CU75RAL0S2min.504000.xyz...
+	eucRMSD: 0.92839
+	boxCntDimDiff: 2.332187 - 2.347948 = 0.015762
+	2-sample Kolmogorov-Smirnov test statistic: 0.01303; p-value: 0.195450
+	Kruskal-Wallis H-test statistic: 1.05426; p-value: 0.304527
+	Mutual information : 0.664
+Comparing AuPd30CU75RAL0S2min.504000.xyz with AuPd30CU75RAL0S2min.522000.xyz...
+	eucRMSD: 0.96292
+	boxCntDimDiff: 2.347948 - 2.347177 = 0.000771
+	2-sample Kolmogorov-Smirnov test statistic: 0.03977; p-value: 0.000000
+	Kruskal-Wallis H-test statistic: 29.41657; p-value: 0.000000
+	Mutual information : 0.703
+Comparing AuPd30CU75RAL0S2min.522000.xyz with AuPd30CU75RAL0S2min.540000.xyz...
+	eucRMSD: 0.96874
+	boxCntDimDiff: 2.347177 - 2.340622 = 0.006555
+	2-sample Kolmogorov-Smirnov test statistic: 0.04541; p-value: 0.000000
+	Kruskal-Wallis H-test statistic: 35.41620; p-value: 0.000000
+	Mutual information : 0.698
+Comparing AuPd30CU75RAL0S2min.540000.xyz with AuPd30CU75RAL0S2min.558000.xyz...
+	eucRMSD: 1.00106
+	boxCntDimDiff: 2.340622 - 2.335053 = 0.005569
+	2-sample Kolmogorov-Smirnov test statistic: 0.01881; p-value: 0.018862
+	Kruskal-Wallis H-test statistic: 2.62800; p-value: 0.104994
+	Mutual information : 0.698
+Average duration:
+  RMSD 0.000 s
+  RDF 151.233 s
+  BCDim 42.795829
+set()

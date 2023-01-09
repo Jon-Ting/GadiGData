@@ -1,0 +1,139 @@
+Comparing Au60OTCo30RDCSS2min.0.xyz with Au60OTCo30RDCSS2min.17000.xyz...
+	eucRMSD: 0.06237
+	boxCntDimDiff: 2.677271 - 2.678703 = 0.001433
+	2-sample Kolmogorov-Smirnov test statistic: 0.00425; p-value: 0.985383
+	Kruskal-Wallis H-test statistic: 0.02583; p-value: 0.872328
+	Mutual information : 0.932
+Comparing Au60OTCo30RDCSS2min.17000.xyz with Au60OTCo30RDCSS2min.34000.xyz...
+	eucRMSD: 0.09074
+	boxCntDimDiff: 2.678703 - 2.677543 = 0.001161
+	2-sample Kolmogorov-Smirnov test statistic: 0.00515; p-value: 0.920850
+	Kruskal-Wallis H-test statistic: 0.08894; p-value: 0.765532
+	Mutual information : 0.924
+Comparing Au60OTCo30RDCSS2min.34000.xyz with Au60OTCo30RDCSS2min.51000.xyz...
+	eucRMSD: 0.09834
+	boxCntDimDiff: 2.677543 - 2.677807 = 0.000265
+	2-sample Kolmogorov-Smirnov test statistic: 0.00481; p-value: 0.953432
+	Kruskal-Wallis H-test statistic: 0.04158; p-value: 0.838426
+	Mutual information : 0.950
+Comparing Au60OTCo30RDCSS2min.51000.xyz with Au60OTCo30RDCSS2min.68000.xyz...
+	eucRMSD: 0.22920
+	boxCntDimDiff: 2.677807 - 2.708312 = 0.030504
+	2-sample Kolmogorov-Smirnov test statistic: 0.02035; p-value: 0.000178
+	Kruskal-Wallis H-test statistic: 6.15696; p-value: 0.013090
+	Mutual information : 0.920
+Comparing Au60OTCo30RDCSS2min.68000.xyz with Au60OTCo30RDCSS2min.85000.xyz...
+	eucRMSD: 0.10771
+	boxCntDimDiff: 2.708312 - 2.697530 = 0.010781
+	2-sample Kolmogorov-Smirnov test statistic: 0.00449; p-value: 0.978128
+	Kruskal-Wallis H-test statistic: 0.06426; p-value: 0.799878
+	Mutual information : 0.926
+Comparing Au60OTCo30RDCSS2min.85000.xyz with Au60OTCo30RDCSS2min.102000.xyz...
+	eucRMSD: 0.07732
+	boxCntDimDiff: 2.697530 - 2.699500 = 0.001970
+	2-sample Kolmogorov-Smirnov test statistic: 0.00561; p-value: 0.874184
+	Kruskal-Wallis H-test statistic: 0.05440; p-value: 0.815574
+	Mutual information : 0.924
+Comparing Au60OTCo30RDCSS2min.102000.xyz with Au60OTCo30RDCSS2min.119000.xyz...
+	eucRMSD: 0.09086
+	boxCntDimDiff: 2.699500 - 2.704091 = 0.004591
+	2-sample Kolmogorov-Smirnov test statistic: 0.00384; p-value: 0.996640
+	Kruskal-Wallis H-test statistic: 0.01130; p-value: 0.915339
+	Mutual information : 0.924
+Comparing Au60OTCo30RDCSS2min.119000.xyz with Au60OTCo30RDCSS2min.136000.xyz...
+	eucRMSD: 0.10827
+	boxCntDimDiff: 2.704091 - 2.702250 = 0.001841
+	2-sample Kolmogorov-Smirnov test statistic: 0.00523; p-value: 0.920936
+	Kruskal-Wallis H-test statistic: 0.00661; p-value: 0.935204
+	Mutual information : 0.916
+Comparing Au60OTCo30RDCSS2min.136000.xyz with Au60OTCo30RDCSS2min.153000.xyz...
+	eucRMSD: 0.14422
+	boxCntDimDiff: 2.702250 - 2.712773 = 0.010522
+	2-sample Kolmogorov-Smirnov test statistic: 0.00700; p-value: 0.646561
+	Kruskal-Wallis H-test statistic: 0.11625; p-value: 0.733134
+	Mutual information : 0.915
+Comparing Au60OTCo30RDCSS2min.153000.xyz with Au60OTCo30RDCSS2min.170000.xyz...
+	eucRMSD: 0.14598
+	boxCntDimDiff: 2.712773 - 2.699649 = 0.013124
+	2-sample Kolmogorov-Smirnov test statistic: 0.00811; p-value: 0.459208
+	Kruskal-Wallis H-test statistic: 0.01271; p-value: 0.910239
+	Mutual information : 0.905
+Comparing Au60OTCo30RDCSS2min.170000.xyz with Au60OTCo30RDCSS2min.187000.xyz...
+	eucRMSD: 0.00724
+	boxCntDimDiff: 2.699649 - 2.698270 = 0.001378
+	2-sample Kolmogorov-Smirnov test statistic: 0.00376; p-value: 0.997541
+	Kruskal-Wallis H-test statistic: 0.00442; p-value: 0.947004
+	Mutual information : 1.538
+Comparing Au60OTCo30RDCSS2min.187000.xyz with Au60OTCo30RDCSS2min.204000.xyz...
+	eucRMSD: 0.11957
+	boxCntDimDiff: 2.698270 - 2.697480 = 0.000790
+	2-sample Kolmogorov-Smirnov test statistic: 0.00712; p-value: 0.625835
+	Kruskal-Wallis H-test statistic: 0.12429; p-value: 0.724424
+	Mutual information : 0.895
+Comparing Au60OTCo30RDCSS2min.204000.xyz with Au60OTCo30RDCSS2min.221000.xyz...
+	eucRMSD: 0.14571
+	boxCntDimDiff: 2.697480 - 2.703265 = 0.005785
+	2-sample Kolmogorov-Smirnov test statistic: 0.00664; p-value: 0.710914
+	Kruskal-Wallis H-test statistic: 0.16799; p-value: 0.681904
+	Mutual information : 0.904
+Comparing Au60OTCo30RDCSS2min.221000.xyz with Au60OTCo30RDCSS2min.238000.xyz...
+	eucRMSD: 0.08213
+	boxCntDimDiff: 2.703265 - 2.697925 = 0.005340
+	2-sample Kolmogorov-Smirnov test statistic: 0.01365; p-value: 0.030635
+	Kruskal-Wallis H-test statistic: 0.60890; p-value: 0.435201
+	Mutual information : 1.002
+Comparing Au60OTCo30RDCSS2min.238000.xyz with Au60OTCo30RDCSS2min.255000.xyz...
+	eucRMSD: 0.09135
+	boxCntDimDiff: 2.697925 - 2.701218 = 0.003293
+	2-sample Kolmogorov-Smirnov test statistic: 0.00579; p-value: 0.838504
+	Kruskal-Wallis H-test statistic: 0.09061; p-value: 0.763398
+	Mutual information : 0.937
+Comparing Au60OTCo30RDCSS2min.255000.xyz with Au60OTCo30RDCSS2min.272000.xyz...
+	eucRMSD: 0.09430
+	boxCntDimDiff: 2.701218 - 2.701936 = 0.000718
+	2-sample Kolmogorov-Smirnov test statistic: 0.01659; p-value: 0.004133
+	Kruskal-Wallis H-test statistic: 1.09514; p-value: 0.295335
+	Mutual information : 0.924
+Comparing Au60OTCo30RDCSS2min.272000.xyz with Au60OTCo30RDCSS2min.289000.xyz...
+	eucRMSD: 0.08363
+	boxCntDimDiff: 2.701936 - 2.701592 = 0.000344
+	2-sample Kolmogorov-Smirnov test statistic: 0.00452; p-value: 0.977079
+	Kruskal-Wallis H-test statistic: 0.00000; p-value: 0.998518
+	Mutual information : 0.917
+Comparing Au60OTCo30RDCSS2min.289000.xyz with Au60OTCo30RDCSS2min.306000.xyz...
+	eucRMSD: 0.20917
+	boxCntDimDiff: 2.701592 - 2.691736 = 0.009855
+	2-sample Kolmogorov-Smirnov test statistic: 0.03349; p-value: 0.000000
+	Kruskal-Wallis H-test statistic: 27.80831; p-value: 0.000000
+	Mutual information : 0.920
+Comparing Au60OTCo30RDCSS2min.306000.xyz with Au60OTCo30RDCSS2min.323000.xyz...
+	eucRMSD: 0.17710
+	boxCntDimDiff: 2.691736 - 2.692803 = 0.001066
+	2-sample Kolmogorov-Smirnov test statistic: 0.01189; p-value: 0.091063
+	Kruskal-Wallis H-test statistic: 0.31516; p-value: 0.574531
+	Mutual information : 0.919
+Comparing Au60OTCo30RDCSS2min.323000.xyz with Au60OTCo30RDCSS2min.340000.xyz...
+	eucRMSD: 0.22284
+	boxCntDimDiff: 2.692803 - 2.687122 = 0.005681
+	2-sample Kolmogorov-Smirnov test statistic: 0.00886; p-value: 0.350734
+	Kruskal-Wallis H-test statistic: 0.70824; p-value: 0.400029
+	Mutual information : 0.918
+Comparing Au60OTCo30RDCSS2min.340000.xyz with Au60OTCo30RDCSS2min.357000.xyz...
+	eucRMSD: 0.19819
+	boxCntDimDiff: 2.687122 - 2.691801 = 0.004679
+	2-sample Kolmogorov-Smirnov test statistic: 0.01001; p-value: 0.215637
+	Kruskal-Wallis H-test statistic: 0.34334; p-value: 0.557905
+	Mutual information : 0.927
+Comparing Au60OTCo30RDCSS2min.357000.xyz with Au60OTCo30RDCSS2min.374000.xyz...
+	eucRMSD: 0.25635
+	boxCntDimDiff: 2.691801 - 2.691514 = 0.000287
+	2-sample Kolmogorov-Smirnov test statistic: 0.01241; p-value: 0.068298
+	Kruskal-Wallis H-test statistic: 1.05804; p-value: 0.303662
+	Mutual information : 0.914
+Comparing Au60OTCo30RDCSS2min.374000.xyz with Au60OTCo30RDCSS2min.391000.xyz...
+	eucRMSD: 0.21552
+	boxCntDimDiff: 2.691514 - 2.664016 = 0.027498
+	2-sample Kolmogorov-Smirnov test statistic: 0.02845; p-value: 0.000000
+	Kruskal-Wallis H-test statistic: 23.03819; p-value: 0.000002
+	Mutual information : 0.905
+Comparing Au60OTCo30RDCSS2min.391000.xyz with Au60OTCo30RDCSS2min.408000.xyz...

@@ -1,0 +1,191 @@
+Comparing PtAu20THL12S2min.0.xyz with PtAu20THL12S2min.20000.xyz...
+	eucRMSD: 0.19875
+	boxCntDimDiff: 1.981759 - 1.987048 = 0.005289
+	2-sample Kolmogorov-Smirnov test statistic: 0.00754; p-value: 0.987572
+	Kruskal-Wallis H-test statistic: 0.84765; p-value: 0.357218
+	Mutual information : 0.058
+Comparing PtAu20THL12S2min.20000.xyz with PtAu20THL12S2min.40000.xyz...
+	eucRMSD: 0.06203
+	boxCntDimDiff: 1.987048 - 1.984941 = 0.002107
+	2-sample Kolmogorov-Smirnov test statistic: 0.00526; p-value: 0.999969
+	Kruskal-Wallis H-test statistic: 0.29051; p-value: 0.589896
+	Mutual information : 0.052
+Comparing PtAu20THL12S2min.40000.xyz with PtAu20THL12S2min.60000.xyz...
+	eucRMSD: 0.00005
+	boxCntDimDiff: 1.984941 - 1.986461 = 0.001520
+	2-sample Kolmogorov-Smirnov test statistic: 0.00072; p-value: 1.000000
+	Kruskal-Wallis H-test statistic: 0.00686; p-value: 0.933972
+	Mutual information : 0.460
+Comparing PtAu20THL12S2min.60000.xyz with PtAu20THL12S2min.80000.xyz...
+	eucRMSD: 0.06203
+	boxCntDimDiff: 1.986461 - 1.989149 = 0.002687
+	2-sample Kolmogorov-Smirnov test statistic: 0.00507; p-value: 0.999988
+	Kruskal-Wallis H-test statistic: 0.18470; p-value: 0.667365
+	Mutual information : 0.058
+Comparing PtAu20THL12S2min.80000.xyz with PtAu20THL12S2min.100000.xyz...
+	eucRMSD: 0.35935
+	boxCntDimDiff: 1.989149 - 1.985224 = 0.003925
+	2-sample Kolmogorov-Smirnov test statistic: 0.00756; p-value: 0.987088
+	Kruskal-Wallis H-test statistic: 0.72162; p-value: 0.395612
+	Mutual information : 0.048
+Comparing PtAu20THL12S2min.100000.xyz with PtAu20THL12S2min.120000.xyz...
+	eucRMSD: 0.34130
+	boxCntDimDiff: 1.985224 - 1.989894 = 0.004670
+	2-sample Kolmogorov-Smirnov test statistic: 0.01698; p-value: 0.268813
+	Kruskal-Wallis H-test statistic: 2.74959; p-value: 0.097279
+	Mutual information : 0.052
+Comparing PtAu20THL12S2min.120000.xyz with PtAu20THL12S2min.140000.xyz...
+	eucRMSD: 0.44201
+	boxCntDimDiff: 1.989894 - 1.982625 = 0.007270
+	2-sample Kolmogorov-Smirnov test statistic: 0.00990; p-value: 0.886733
+	Kruskal-Wallis H-test statistic: 0.21792; p-value: 0.640629
+	Mutual information : 0.044
+Comparing PtAu20THL12S2min.140000.xyz with PtAu20THL12S2min.160000.xyz...
+	eucRMSD: 0.42873
+	boxCntDimDiff: 1.982625 - 1.983589 = 0.000965
+	2-sample Kolmogorov-Smirnov test statistic: 0.01285; p-value: 0.613467
+	Kruskal-Wallis H-test statistic: 6.52883; p-value: 0.010614
+	Mutual information : 0.040
+Comparing PtAu20THL12S2min.160000.xyz with PtAu20THL12S2min.180000.xyz...
+	eucRMSD: 0.37391
+	boxCntDimDiff: 1.983589 - 1.985114 = 0.001525
+	2-sample Kolmogorov-Smirnov test statistic: 0.00987; p-value: 0.885188
+	Kruskal-Wallis H-test statistic: 3.76554; p-value: 0.052319
+	Mutual information : 0.052
+Comparing PtAu20THL12S2min.180000.xyz with PtAu20THL12S2min.200000.xyz...
+	eucRMSD: 0.64559
+	boxCntDimDiff: 1.985114 - 1.987817 = 0.002703
+	2-sample Kolmogorov-Smirnov test statistic: 0.04061; p-value: 0.000018
+	Kruskal-Wallis H-test statistic: 57.61566; p-value: 0.000000
+	Mutual information : 0.063
+Comparing PtAu20THL12S2min.200000.xyz with PtAu20THL12S2min.220000.xyz...
+	eucRMSD: 0.65572
+	boxCntDimDiff: 1.987817 - 1.999921 = 0.012104
+	2-sample Kolmogorov-Smirnov test statistic: 0.01701; p-value: 0.248366
+	Kruskal-Wallis H-test statistic: 0.06163; p-value: 0.803939
+	Mutual information : 0.085
+Comparing PtAu20THL12S2min.220000.xyz with PtAu20THL12S2min.240000.xyz...
+	eucRMSD: 0.50442
+	boxCntDimDiff: 1.999921 - 1.992369 = 0.007552
+	2-sample Kolmogorov-Smirnov test statistic: 0.02053; p-value: 0.101341
+	Kruskal-Wallis H-test statistic: 13.44099; p-value: 0.000246
+	Mutual information : 0.068
+Comparing PtAu20THL12S2min.240000.xyz with PtAu20THL12S2min.260000.xyz...
+	eucRMSD: 0.45177
+	boxCntDimDiff: 1.992369 - 2.002152 = 0.009783
+	2-sample Kolmogorov-Smirnov test statistic: 0.01429; p-value: 0.463336
+	Kruskal-Wallis H-test statistic: 1.77913; p-value: 0.182257
+	Mutual information : 0.056
+Comparing PtAu20THL12S2min.260000.xyz with PtAu20THL12S2min.280000.xyz...
+	eucRMSD: 0.76093
+	boxCntDimDiff: 2.002152 - 2.003866 = 0.001714
+	2-sample Kolmogorov-Smirnov test statistic: 0.02427; p-value: 0.029265
+	Kruskal-Wallis H-test statistic: 16.81297; p-value: 0.000041
+	Mutual information : 0.067
+Comparing PtAu20THL12S2min.280000.xyz with PtAu20THL12S2min.300000.xyz...
+	eucRMSD: 0.88285
+	boxCntDimDiff: 2.003866 - 1.996000 = 0.007866
+	2-sample Kolmogorov-Smirnov test statistic: 0.02267; p-value: 0.048758
+	Kruskal-Wallis H-test statistic: 7.50197; p-value: 0.006163
+	Mutual information : 0.076
+Comparing PtAu20THL12S2min.300000.xyz with PtAu20THL12S2min.320000.xyz...
+	eucRMSD: 0.88574
+	boxCntDimDiff: 1.996000 - 1.987113 = 0.008887
+	2-sample Kolmogorov-Smirnov test statistic: 0.02512; p-value: 0.021565
+	Kruskal-Wallis H-test statistic: 15.14316; p-value: 0.000100
+	Mutual information : 0.083
+Comparing PtAu20THL12S2min.320000.xyz with PtAu20THL12S2min.340000.xyz...
+	eucRMSD: 0.64327
+	boxCntDimDiff: 1.987113 - 1.993413 = 0.006300
+	2-sample Kolmogorov-Smirnov test statistic: 0.02044; p-value: 0.098269
+	Kruskal-Wallis H-test statistic: 6.97543; p-value: 0.008264
+	Mutual information : 0.087
+Comparing PtAu20THL12S2min.340000.xyz with PtAu20THL12S2min.360000.xyz...
+	eucRMSD: 0.66956
+	boxCntDimDiff: 1.993413 - 1.971471 = 0.021942
+	2-sample Kolmogorov-Smirnov test statistic: 0.02023; p-value: 0.098479
+	Kruskal-Wallis H-test statistic: 3.02504; p-value: 0.081988
+	Mutual information : 0.085
+Comparing PtAu20THL12S2min.360000.xyz with PtAu20THL12S2min.380000.xyz...
+	eucRMSD: 0.67005
+	boxCntDimDiff: 1.971471 - 1.987497 = 0.016026
+	2-sample Kolmogorov-Smirnov test statistic: 0.02227; p-value: 0.052131
+	Kruskal-Wallis H-test statistic: 13.18560; p-value: 0.000282
+	Mutual information : 0.077
+Comparing PtAu20THL12S2min.380000.xyz with PtAu20THL12S2min.400000.xyz...
+	eucRMSD: 0.58770
+	boxCntDimDiff: 1.987497 - 2.003103 = 0.015606
+	2-sample Kolmogorov-Smirnov test statistic: 0.02654; p-value: 0.012543
+	Kruskal-Wallis H-test statistic: 0.02869; p-value: 0.865485
+	Mutual information : 0.069
+Comparing PtAu20THL12S2min.400000.xyz with PtAu20THL12S2min.420000.xyz...
+	eucRMSD: 0.68777
+	boxCntDimDiff: 2.003103 - 1.983871 = 0.019232
+	2-sample Kolmogorov-Smirnov test statistic: 0.03587; p-value: 0.000174
+	Kruskal-Wallis H-test statistic: 36.58829; p-value: 0.000000
+	Mutual information : 0.093
+Comparing PtAu20THL12S2min.420000.xyz with PtAu20THL12S2min.440000.xyz...
+	eucRMSD: 0.82176
+	boxCntDimDiff: 1.983871 - 1.990296 = 0.006425
+	2-sample Kolmogorov-Smirnov test statistic: 0.01510; p-value: 0.361375
+	Kruskal-Wallis H-test statistic: 0.03039; p-value: 0.861609
+	Mutual information : 0.118
+Comparing PtAu20THL12S2min.440000.xyz with PtAu20THL12S2min.460000.xyz...
+	eucRMSD: 0.94856
+	boxCntDimDiff: 1.990296 - 1.998601 = 0.008305
+	2-sample Kolmogorov-Smirnov test statistic: 0.02035; p-value: 0.090429
+	Kruskal-Wallis H-test statistic: 7.17533; p-value: 0.007391
+	Mutual information : 0.097
+Comparing PtAu20THL12S2min.460000.xyz with PtAu20THL12S2min.480000.xyz...
+	eucRMSD: 0.96145
+	boxCntDimDiff: 1.998601 - 1.991275 = 0.007326
+	2-sample Kolmogorov-Smirnov test statistic: 0.02814; p-value: 0.005524
+	Kruskal-Wallis H-test statistic: 3.00358; p-value: 0.083081
+	Mutual information : 0.094
+Comparing PtAu20THL12S2min.480000.xyz with PtAu20THL12S2min.500000.xyz...
+	eucRMSD: 1.00072
+	boxCntDimDiff: 1.991275 - 2.012607 = 0.021332
+	2-sample Kolmogorov-Smirnov test statistic: 0.01688; p-value: 0.238082
+	Kruskal-Wallis H-test statistic: 0.31035; p-value: 0.577466
+	Mutual information : 0.105
+Comparing PtAu20THL12S2min.500000.xyz with PtAu20THL12S2min.520000.xyz...
+	eucRMSD: 1.00242
+	boxCntDimDiff: 2.012607 - 1.973699 = 0.038908
+	2-sample Kolmogorov-Smirnov test statistic: 0.02516; p-value: 0.018118
+	Kruskal-Wallis H-test statistic: 15.56136; p-value: 0.000080
+	Mutual information : 0.085
+Comparing PtAu20THL12S2min.520000.xyz with PtAu20THL12S2min.540000.xyz...
+	eucRMSD: 1.16667
+	boxCntDimDiff: 1.973699 - 1.995141 = 0.021442
+	2-sample Kolmogorov-Smirnov test statistic: 0.01419; p-value: 0.445765
+	Kruskal-Wallis H-test statistic: 4.71410; p-value: 0.029916
+	Mutual information : 0.093
+Comparing PtAu20THL12S2min.540000.xyz with PtAu20THL12S2min.560000.xyz...
+	eucRMSD: 1.44091
+	boxCntDimDiff: 1.995141 - 1.993386 = 0.001755
+	2-sample Kolmogorov-Smirnov test statistic: 0.02586; p-value: 0.013606
+	Kruskal-Wallis H-test statistic: 0.00170; p-value: 0.967087
+	Mutual information : 0.092
+Comparing PtAu20THL12S2min.560000.xyz with PtAu20THL12S2min.580000.xyz...
+	eucRMSD: 1.66810
+	boxCntDimDiff: 1.993386 - 1.993985 = 0.000599
+	2-sample Kolmogorov-Smirnov test statistic: 0.02852; p-value: 0.004255
+	Kruskal-Wallis H-test statistic: 18.51265; p-value: 0.000017
+	Mutual information : 0.091
+Comparing PtAu20THL12S2min.580000.xyz with PtAu20THL12S2min.600000.xyz...
+	eucRMSD: 1.92112
+	boxCntDimDiff: 1.993985 - 1.991591 = 0.002394
+	2-sample Kolmogorov-Smirnov test statistic: 0.01652; p-value: 0.258791
+	Kruskal-Wallis H-test statistic: 5.37521; p-value: 0.020425
+	Mutual information : 0.120
+Comparing PtAu20THL12S2min.600000.xyz with PtAu20THL12S2min.620000.xyz...
+	eucRMSD: 2.33746
+	boxCntDimDiff: 1.991591 - 1.995814 = 0.004224
+	2-sample Kolmogorov-Smirnov test statistic: 0.03140; p-value: 0.001462
+	Kruskal-Wallis H-test statistic: 28.14170; p-value: 0.000000
+	Mutual information : 0.098
+Average duration:
+  RMSD 0.000 s
+  RDF 8.968 s
+  BCDim 28.118976
+set()

@@ -8,7 +8,7 @@
 # Goal: Automate the generation of LAMMPS input file for each nanoparticle to be simulated
 # Author: Jonathan Yik Chang Ting
 # Date: 1/12/2020
-# Melting points (K) taken from: {Pt: 2041; Co: 1768; Pd: 1828; Au: 1337}
+# Melting points (K) taken from: {Pt: 2041; Co: 1768; Pd: 1828; Au: 1337} (ref: https://www.angstromsciences.com/melting-points-of-elements-reference)
 # size: time/task/mem
 #   Stage 0: {20: 1/24/3; 40: 1/24/4; 80: 6/48/6; 150: 20/48/8}
 # To do:
@@ -16,7 +16,6 @@
 
 STAGE=2
 declare -a TYPE_ARR=('L10/' 'L12/' 'CS/' 'RCS/' 'RAL/')
-declare -a TYPE_ARR=('RCS/')  # DEBUG
 declare -a SIZE_ARR=(20 30 40 50 60 70 80)
 declare -a ELEMENT_ARR=('Pt' 'Pd' 'Co' 'Au')
 declare -a MELT_TEMP_ARR=(2300 2100 2000 1600)

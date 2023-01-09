@@ -11,7 +11,6 @@
 # Date: 16/1/2021
 
 declare -a TYPE_ARR=('L10' 'L12' 'CS' 'RCS' 'RAL')
-declare -a TYPE_ARR=('L10')
 SIM_DATA_DIR=/scratch/$PROJECT/$USER/SimAnneal
 GDATA_DIR=/g/data/$PROJECT/$USER
 

@@ -24,7 +24,7 @@ fix             nhS1 all nvt temp {INIT_TEMP} {HEAT_TEMP} $(100.0*dt)
 compute         aRDF all rdf 200
 fix             avgRDF all ave/time 1000 100 100000 c_aRDF[*] file {INP_FILE_NAME}S1.rdf mode vector   # Every 100 ps (25 K) averaged by 100 samples with interval of 1 ps
 dump            dumpS1 all custom/mpiio {S1_DUMP_INT} {INP_FILE_NAME}S1.*.mpiio.lmp id type element x y z
-dump_modify     dumpS1 element {ELEMENT1} {ELEMENT2} pad 8
+dump_modify     dumpS1 element {ELEMENT1} {ELEMENT2} pad 8  # Required for proper visualisation of structures generated
 
 # --------------- SIMULATION RUNS --------------- 
 print           "--------------- HEATING TO {HEAT_TEMP} K ---------------"

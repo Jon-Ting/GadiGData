@@ -2,13 +2,12 @@
 # Goal: Script to generate and update the list of LAMMPS simulations to be run
 # Author: Jonathan Yik Chang Ting
 # Date: 14/12/2020
-# To do:
 
-STAGE=2
+STAGE=$1
 JOB_LIST_FILE=jobList; QUEUE_LIST_FILE=queueList
 CONFIG_FILE=config.yml; RUN_LOCK=run.lock; EXAM_LOCK=examine.lock
 SIM_DATA_DIR=/scratch/$PROJECT/$USER/SimAnneal
-for inFile in $SIM_DATA_DIR/RCS/*/*S$STAGE.in; do
+for inFile in $SIM_DATA_DIR/*/*/*S$STAGE.in; do
     jobPath=${inFile::-3}; dirPath=$(echo ${jobPath%/*}); unqName=$(echo $jobPath | awk -F'/' '{print $NF}')
     if [ $STAGE = 1 ]; then
         eqState=$(grep S0eq: $dirPath/$CONFIG_FILE)

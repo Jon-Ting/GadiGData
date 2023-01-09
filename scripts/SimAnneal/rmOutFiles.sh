@@ -1,9 +1,9 @@
-# Goal: Clean working directory by removing standard error and output files generated from submitted job that completed fine
+# Goal: Clean the directory storing stimulation data by removing standard error and output files generated from submitted job that completed fine
 # Author: Jonathan Yik Chang Ting
 # Date: 10/2/2021
 
 
-SimDirPath=/scratch/q27/jt5911/SimAnneal
+SimDirPath=/scratch/$PROJECT/$USER/SimAnneal
 RUN_LOCK=run.lock; RUN_LIST=runList
 for stdErrFile in $SimDirPath/runAnneal.sh.e*; do
     sed -i "/^.*Loading lammps.*$/d" $stdErrFile

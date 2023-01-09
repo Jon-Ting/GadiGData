@@ -1,0 +1,191 @@
+Comparing AuPt40IC50RCS8S2min.0.xyz with AuPt40IC50RCS8S2min.20000.xyz...
+	eucRMSD: 0.11832
+	boxCntDimDiff: 2.377587 - 2.375877 = 0.001710
+	2-sample Kolmogorov-Smirnov test statistic: 0.00644; p-value: 0.913847
+	Kruskal-Wallis H-test statistic: 0.01740; p-value: 0.895047
+	Mutual information : 0.670
+Comparing AuPt40IC50RCS8S2min.20000.xyz with AuPt40IC50RCS8S2min.40000.xyz...
+	eucRMSD: 0.15785
+	boxCntDimDiff: 2.375877 - 2.372835 = 0.003043
+	2-sample Kolmogorov-Smirnov test statistic: 0.01004; p-value: 0.432977
+	Kruskal-Wallis H-test statistic: 0.17968; p-value: 0.671649
+	Mutual information : 0.662
+Comparing AuPt40IC50RCS8S2min.40000.xyz with AuPt40IC50RCS8S2min.60000.xyz...
+	eucRMSD: 0.14945
+	boxCntDimDiff: 2.372835 - 2.376372 = 0.003537
+	2-sample Kolmogorov-Smirnov test statistic: 0.00997; p-value: 0.442302
+	Kruskal-Wallis H-test statistic: 0.15564; p-value: 0.693203
+	Mutual information : 0.669
+Comparing AuPt40IC50RCS8S2min.60000.xyz with AuPt40IC50RCS8S2min.80000.xyz...
+	eucRMSD: 0.11781
+	boxCntDimDiff: 2.376372 - 2.376722 = 0.000351
+	2-sample Kolmogorov-Smirnov test statistic: 0.00799; p-value: 0.723900
+	Kruskal-Wallis H-test statistic: 0.19884; p-value: 0.655655
+	Mutual information : 0.663
+Comparing AuPt40IC50RCS8S2min.80000.xyz with AuPt40IC50RCS8S2min.100000.xyz...
+	eucRMSD: 0.15151
+	boxCntDimDiff: 2.376722 - 2.385853 = 0.009131
+	2-sample Kolmogorov-Smirnov test statistic: 0.01507; p-value: 0.066387
+	Kruskal-Wallis H-test statistic: 2.17865; p-value: 0.139937
+	Mutual information : 0.660
+Comparing AuPt40IC50RCS8S2min.100000.xyz with AuPt40IC50RCS8S2min.120000.xyz...
+	eucRMSD: 0.17735
+	boxCntDimDiff: 2.385853 - 2.379219 = 0.006634
+	2-sample Kolmogorov-Smirnov test statistic: 0.01215; p-value: 0.216812
+	Kruskal-Wallis H-test statistic: 1.51658; p-value: 0.218138
+	Mutual information : 0.669
+Comparing AuPt40IC50RCS8S2min.120000.xyz with AuPt40IC50RCS8S2min.140000.xyz...
+	eucRMSD: 0.23913
+	boxCntDimDiff: 2.379219 - 2.375017 = 0.004202
+	2-sample Kolmogorov-Smirnov test statistic: 0.01691; p-value: 0.027087
+	Kruskal-Wallis H-test statistic: 1.30724; p-value: 0.252895
+	Mutual information : 0.656
+Comparing AuPt40IC50RCS8S2min.140000.xyz with AuPt40IC50RCS8S2min.160000.xyz...
+	eucRMSD: 0.17550
+	boxCntDimDiff: 2.375017 - 2.374547 = 0.000470
+	2-sample Kolmogorov-Smirnov test statistic: 0.01150; p-value: 0.271003
+	Kruskal-Wallis H-test statistic: 0.12529; p-value: 0.723363
+	Mutual information : 0.649
+Comparing AuPt40IC50RCS8S2min.160000.xyz with AuPt40IC50RCS8S2min.180000.xyz...
+	eucRMSD: 0.25418
+	boxCntDimDiff: 2.374547 - 2.368298 = 0.006249
+	2-sample Kolmogorov-Smirnov test statistic: 0.01599; p-value: 0.042650
+	Kruskal-Wallis H-test statistic: 1.07442; p-value: 0.299949
+	Mutual information : 0.646
+Comparing AuPt40IC50RCS8S2min.180000.xyz with AuPt40IC50RCS8S2min.200000.xyz...
+	eucRMSD: 0.31243
+	boxCntDimDiff: 2.368298 - 2.380700 = 0.012402
+	2-sample Kolmogorov-Smirnov test statistic: 0.01318; p-value: 0.146911
+	Kruskal-Wallis H-test statistic: 1.31550; p-value: 0.251401
+	Mutual information : 0.654
+Comparing AuPt40IC50RCS8S2min.200000.xyz with AuPt40IC50RCS8S2min.220000.xyz...
+	eucRMSD: 0.43478
+	boxCntDimDiff: 2.380700 - 2.380814 = 0.000114
+	2-sample Kolmogorov-Smirnov test statistic: 0.01312; p-value: 0.150583
+	Kruskal-Wallis H-test statistic: 0.97973; p-value: 0.322265
+	Mutual information : 0.666
+Comparing AuPt40IC50RCS8S2min.220000.xyz with AuPt40IC50RCS8S2min.240000.xyz...
+	eucRMSD: 0.48338
+	boxCntDimDiff: 2.380814 - 2.381650 = 0.000836
+	2-sample Kolmogorov-Smirnov test statistic: 0.01443; p-value: 0.088420
+	Kruskal-Wallis H-test statistic: 0.19721; p-value: 0.656979
+	Mutual information : 0.648
+Comparing AuPt40IC50RCS8S2min.240000.xyz with AuPt40IC50RCS8S2min.260000.xyz...
+	eucRMSD: 0.49558
+	boxCntDimDiff: 2.381650 - 2.392753 = 0.011103
+	2-sample Kolmogorov-Smirnov test statistic: 0.01663; p-value: 0.032032
+	Kruskal-Wallis H-test statistic: 1.59679; p-value: 0.206359
+	Mutual information : 0.645
+Comparing AuPt40IC50RCS8S2min.260000.xyz with AuPt40IC50RCS8S2min.280000.xyz...
+	eucRMSD: 0.49069
+	boxCntDimDiff: 2.392753 - 2.377134 = 0.015619
+	2-sample Kolmogorov-Smirnov test statistic: 0.02484; p-value: 0.000199
+	Kruskal-Wallis H-test statistic: 8.51172; p-value: 0.003529
+	Mutual information : 0.673
+Comparing AuPt40IC50RCS8S2min.280000.xyz with AuPt40IC50RCS8S2min.300000.xyz...
+	eucRMSD: 0.52975
+	boxCntDimDiff: 2.377134 - 2.387422 = 0.010287
+	2-sample Kolmogorov-Smirnov test statistic: 0.01703; p-value: 0.027034
+	Kruskal-Wallis H-test statistic: 3.15530; p-value: 0.075681
+	Mutual information : 0.682
+Comparing AuPt40IC50RCS8S2min.300000.xyz with AuPt40IC50RCS8S2min.320000.xyz...
+	eucRMSD: 0.45483
+	boxCntDimDiff: 2.387422 - 2.380370 = 0.007051
+	2-sample Kolmogorov-Smirnov test statistic: 0.01050; p-value: 0.391108
+	Kruskal-Wallis H-test statistic: 0.45480; p-value: 0.500062
+	Mutual information : 0.670
+Comparing AuPt40IC50RCS8S2min.320000.xyz with AuPt40IC50RCS8S2min.340000.xyz...
+	eucRMSD: 0.41297
+	boxCntDimDiff: 2.380370 - 2.376091 = 0.004280
+	2-sample Kolmogorov-Smirnov test statistic: 0.01253; p-value: 0.202070
+	Kruskal-Wallis H-test statistic: 1.68969; p-value: 0.193642
+	Mutual information : 0.681
+Comparing AuPt40IC50RCS8S2min.340000.xyz with AuPt40IC50RCS8S2min.360000.xyz...
+	eucRMSD: 0.31041
+	boxCntDimDiff: 2.376091 - 2.380158 = 0.004067
+	2-sample Kolmogorov-Smirnov test statistic: 0.01230; p-value: 0.221903
+	Kruskal-Wallis H-test statistic: 0.77934; p-value: 0.377342
+	Mutual information : 0.675
+Comparing AuPt40IC50RCS8S2min.360000.xyz with AuPt40IC50RCS8S2min.380000.xyz...
+	eucRMSD: 0.31311
+	boxCntDimDiff: 2.380158 - 2.385101 = 0.004944
+	2-sample Kolmogorov-Smirnov test statistic: 0.01470; p-value: 0.086081
+	Kruskal-Wallis H-test statistic: 1.79687; p-value: 0.180091
+	Mutual information : 0.668
+Comparing AuPt40IC50RCS8S2min.380000.xyz with AuPt40IC50RCS8S2min.400000.xyz...
+	eucRMSD: 0.42204
+	boxCntDimDiff: 2.385101 - 2.383467 = 0.001634
+	2-sample Kolmogorov-Smirnov test statistic: 0.01645; p-value: 0.039204
+	Kruskal-Wallis H-test statistic: 2.53227; p-value: 0.111540
+	Mutual information : 0.668
+Comparing AuPt40IC50RCS8S2min.400000.xyz with AuPt40IC50RCS8S2min.420000.xyz...
+	eucRMSD: 0.53481
+	boxCntDimDiff: 2.383467 - 2.391917 = 0.008450
+	2-sample Kolmogorov-Smirnov test statistic: 0.01668; p-value: 0.034672
+	Kruskal-Wallis H-test statistic: 4.20773; p-value: 0.040240
+	Mutual information : 0.657
+Comparing AuPt40IC50RCS8S2min.420000.xyz with AuPt40IC50RCS8S2min.440000.xyz...
+	eucRMSD: 0.64947
+	boxCntDimDiff: 2.391917 - 2.386256 = 0.005661
+	2-sample Kolmogorov-Smirnov test statistic: 0.01783; p-value: 0.018863
+	Kruskal-Wallis H-test statistic: 3.11887; p-value: 0.077391
+	Mutual information : 0.655
+Comparing AuPt40IC50RCS8S2min.440000.xyz with AuPt40IC50RCS8S2min.460000.xyz...
+	eucRMSD: 0.76239
+	boxCntDimDiff: 2.386256 - 2.383250 = 0.003006
+	2-sample Kolmogorov-Smirnov test statistic: 0.01527; p-value: 0.065226
+	Kruskal-Wallis H-test statistic: 0.56551; p-value: 0.452050
+	Mutual information : 0.664
+Comparing AuPt40IC50RCS8S2min.460000.xyz with AuPt40IC50RCS8S2min.480000.xyz...
+	eucRMSD: 0.71836
+	boxCntDimDiff: 2.383250 - 2.402231 = 0.018981
+	2-sample Kolmogorov-Smirnov test statistic: 0.02364; p-value: 0.000599
+	Kruskal-Wallis H-test statistic: 5.60449; p-value: 0.017915
+	Mutual information : 0.677
+Comparing AuPt40IC50RCS8S2min.480000.xyz with AuPt40IC50RCS8S2min.500000.xyz...
+	eucRMSD: 0.72761
+	boxCntDimDiff: 2.402231 - 2.392326 = 0.009906
+	2-sample Kolmogorov-Smirnov test statistic: 0.03936; p-value: 0.000000
+	Kruskal-Wallis H-test statistic: 31.05227; p-value: 0.000000
+	Mutual information : 0.674
+Comparing AuPt40IC50RCS8S2min.500000.xyz with AuPt40IC50RCS8S2min.520000.xyz...
+	eucRMSD: 0.80073
+	boxCntDimDiff: 2.392326 - 2.408829 = 0.016504
+	2-sample Kolmogorov-Smirnov test statistic: 0.03143; p-value: 0.000001
+	Kruskal-Wallis H-test statistic: 23.64442; p-value: 0.000001
+	Mutual information : 0.686
+Comparing AuPt40IC50RCS8S2min.520000.xyz with AuPt40IC50RCS8S2min.540000.xyz...
+	eucRMSD: 0.91235
+	boxCntDimDiff: 2.408829 - 2.403999 = 0.004830
+	2-sample Kolmogorov-Smirnov test statistic: 0.01881; p-value: 0.011065
+	Kruskal-Wallis H-test statistic: 3.47390; p-value: 0.062344
+	Mutual information : 0.668
+Comparing AuPt40IC50RCS8S2min.540000.xyz with AuPt40IC50RCS8S2min.560000.xyz...
+	eucRMSD: 0.95016
+	boxCntDimDiff: 2.403999 - 2.415386 = 0.011387
+	2-sample Kolmogorov-Smirnov test statistic: 0.03732; p-value: 0.000000
+	Kruskal-Wallis H-test statistic: 30.06452; p-value: 0.000000
+	Mutual information : 0.668
+Comparing AuPt40IC50RCS8S2min.560000.xyz with AuPt40IC50RCS8S2min.580000.xyz...
+	eucRMSD: 1.24227
+	boxCntDimDiff: 2.415386 - 2.402693 = 0.012693
+	2-sample Kolmogorov-Smirnov test statistic: 0.03447; p-value: 0.000000
+	Kruskal-Wallis H-test statistic: 20.73017; p-value: 0.000005
+	Mutual information : 0.632
+Comparing AuPt40IC50RCS8S2min.580000.xyz with AuPt40IC50RCS8S2min.600000.xyz...
+	eucRMSD: 1.41593
+	boxCntDimDiff: 2.402693 - 2.409648 = 0.006956
+	2-sample Kolmogorov-Smirnov test statistic: 0.02025; p-value: 0.004588
+	Kruskal-Wallis H-test statistic: 2.63260; p-value: 0.104690
+	Mutual information : 0.630
+Comparing AuPt40IC50RCS8S2min.600000.xyz with AuPt40IC50RCS8S2min.620000.xyz...
+	eucRMSD: 1.48884
+	boxCntDimDiff: 2.409648 - 2.390714 = 0.018935
+	2-sample Kolmogorov-Smirnov test statistic: 0.03000; p-value: 0.000003
+	Kruskal-Wallis H-test statistic: 14.66411; p-value: 0.000128
+	Mutual information : 0.623
+Average duration:
+  RMSD 0.000 s
+  RDF 271.537 s
+  BCDim 32.646564
+set()
