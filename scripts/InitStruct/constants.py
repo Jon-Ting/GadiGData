@@ -5,7 +5,7 @@
 from math import sqrt
 
 LMP_DATA_DIR = '/g/data/q27/jt5911/InitStruct'
-MNP_DIR, BNP_DIR = 'MNP/', 'BNP/RCS/'
+MNP_DIR, BNP_DIR = 'MNP', 'BNP'
 GOLDEN_RATIO = (1+sqrt(5)) / 2
 VACUUM_THICKNESS = 10.0
 RANDOM_DISTRIB_NO = 10

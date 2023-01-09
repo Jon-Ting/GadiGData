@@ -3,7 +3,6 @@
 # Feed different parameters into the LAMMPS input template file genBNPCS.in
 # Author: Jonathan Yik Chang Ting
 # Date: 29/10/2020
-# Atomic mass taken from 
 # Metallic radii taken from Greenwood, Norman N.; Earnshaw, Alan (1997). Chemistry of the Elements (2nd ed.). Butterworth-Heinemann. ISBN 978-0-08-037941-8
 
 # To do:
@@ -20,30 +19,32 @@ IN_TEMPLATE=genBNPCS.in
 logFile=lmpBNPCS.log
 latType=fcc
 declare -a ELEMENT_ARR=('Co' 'Pd' 'Pt' 'Au')
-# declare -a ELEMENT_ARR=('Au' 'Pt' 'Pd' 'Co')
-# declare -a MASS_ARR=(58.933 106.42 195.08 196.97)
-declare -a MASS_ARR=(196.97 195.08 106.42 58.933)
-# declare -a RADIUS_ARR=(1.25 1.37 1.39 1.44)
-declare -a RADIUS_ARR=(1.44 1.39 1.37 1.25)
-# declare -a FCC_LC_ARR=(3.537 3.89 3.92 4.09)
-declare -a FCC_LC_ARR=(4.09 3.92 3.89 3.537)
+declare -a MASS_ARR=(58.933 106.42 195.08 196.97)
+declare -a RADIUS_ARR=(1.25 1.37 1.39 1.44)
+declare -a FCC_LC_ARR=(3.537 3.89 3.92 4.09)
 declare -a SIZE_ARR=(20 30 40 50 60 70 80)
 declare -a SHAPE_ARR=('CU' 'TH' 'RD' 'OT' 'TO' 'CO' 'DH' 'IC')
 
+# Create directories to store files generated
+if test ! -d "$LMP_DATA_DIR"; then mkdir "$LMP_DATA_DIR"; fi
+if test ! -d "$LMP_DATA_DIR/$BNP_DIR"; then mkdir "$LMP_DATA_DIR/$BNP_DIR"; fi
+if test ! -d "$LMP_DATA_DIR/$BNP_DIR/$CS_DIR"; then mkdir "$LMP_DATA_DIR/$BNP_DIR/$CS_DIR"; fi
 echo "Generating core-shell bimetallic nanoparticles:"
 echo "-----------------------------------------------"
 for ((i=0;i<${#ELEMENT_ARR[@]};i++)); do
     element1=${ELEMENT_ARR[$i]}
     mass1=${MASS_ARR[$i]}
     radius1=${RADIUS_ARR[$i]}
-    for ((j=$i+1;j<${#ELEMENT_ARR[@]};j++)); do
+    for ((j=0;j<${#ELEMENT_ARR[@]};j++)); do
         element2=${ELEMENT_ARR[$j]}
+        if [ $element1 == $element2 ]; then continue; fi
         mass2=${MASS_ARR[$j]}
         radius2=${RADIUS_ARR[$j]}
         delCutoff=$(echo "scale=3;$radius1+$radius2" | bc)
+        # delCutoff=$(echo "scale=3;($radius1+$radius2)/2" | bc)  # Might be more appropriate
         latConst=${FCC_LC_ARR[$j]}
         potFile="$EAM_DIR/$element1$element2.set"
-        echo "$element2@$element1 $delCutoff"
+        echo "$element2@$element1"
         # Check if EAM potential file exists
         if test -f $potFile; then echo "  Using $potFile"; else echo "  $potFile not found!"; fi
         for ((k=1;k<${#SIZE_ARR[@]};k++)); do
@@ -62,7 +63,7 @@ for ((i=0;i<${#ELEMENT_ARR[@]};i++)); do
                         outFile="$LMP_DATA_DIR/$BNP_DIR/$CS_DIR/$element1$size1$shape1$element2$size2${shape2}CS.lmp"
                         # Check if the BNP has been generated
                         if test -f $outFile; then
-                            echo "  $element1$size1$shape1$element2$size2${shape2}CS.lmp already generated, skipping...";
+                            echo "  $element1$size1$shape1$element2$size2${shape2}CS.lmp already exists, skipping...";
                             continue
                         else
                             echo "  Generating $element1$size1$shape1$element2$size2${shape2}CS.lmp..."; fi
