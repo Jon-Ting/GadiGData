@@ -310,7 +310,7 @@ def checkEq(typeDirPath, dirName, pThresh, avgWinSize, warmStep, examPeriod, ski
             print("{0} unequilibrated (p = {1:.6f})".format(dirName, pVal))
             with open("{0}/{1}/config.yml".format(typeDirPath, dirName), "w") as f: f.write("S0eq: false\n")
     except (NotADirectoryError, FileNotFoundError) as err:
-        # print(err)
+        print(err)
         return
 
 

@@ -24,7 +24,7 @@ for inFile in $SIM_DATA_DIR/*/*/*S$STAGE.in; do
             if [ $STAGE = 2 ]; then
                 if [[ ! $(tail -n 5 $jobPath.log) =~ "ALL DONE!" ]]; then
                     doneNum=$(ls $jobPath/*min*xyz | wc -l)
-                    echo "$jobPath unfinishued, generating job script..."; cp ${jobPath}.in ${jobPath}re.in; jobPath=${jobPath}re
+                    echo "$jobPath unfinished, generating job script..."; cp ${jobPath}.in ${jobPath}re.in; jobPath=${jobPath}re
                     sed -i "0,/^.*runNum loop.*$/s//variable        remainNum equal 101-$doneNum\nvariable        loopNum loop \${remainNum}\nvariable        runNum equal \${loopNum}+$doneNum/" $jobPath.in
                     sed -i "0,/next            runNum/s//next            loopNum/" $jobPath.in
                     sed -i "0,/jump.*$/s//jump            SELF/" $jobPath.in

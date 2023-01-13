@@ -7,7 +7,7 @@ SIM_DATA_DIR=/scratch/$PROJECT/$USER/SimAnneal
 SCRIPT_DIR=/g/data/$PROJECT/$USER/Scripts/SimAnneal
 EXAM_LOCK=examine.lock; JOB_LIST=jobList; QUEUE_LIST=queueList; SCRIPT=runAnneal.sh
 
-maxQueueNum=50; numInQueue=$(qselect -u $USER | wc -l); numToSub=$(echo "$maxQueueNum-$numInQueue" | bc)
+maxQueueNum=40; numInQueue=$(qselect -u $USER | wc -l); numToSub=$(echo "$maxQueueNum-$numInQueue" | bc)
 echo -e "maxQueueNum: $maxQueueNum\nnumInQueue: $numInQueue\nnumToSub: $numToSub"; cd $SIM_DATA_DIR
 for (( a=0; $a<$numToSub; a++ )); do
     numJobLeft=$(wc -l $SIM_DATA_DIR/$JOB_LIST | awk '{print $1}')
