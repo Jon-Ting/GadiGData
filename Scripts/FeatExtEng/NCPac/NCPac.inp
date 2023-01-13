@@ -1,10 +1,10 @@
-test.xyz          - name of xyz input file                                              [in_filexyz] 
+IIIIII.xyz        - name of xyz input file                                              [in_filexyz] 
 4                 - decimal places in coordinates                                       [in_xyz_prec]
 10.0              - buffer distance from box boundaries in each axis                    [in_bound_dist]
 1                 - write out to screen                                      (0=N,1=Y)  [in_write_screen]
 0                 - read in surface data 5th column                          (0=N,1=Y)  [in_5th_option] 
-Au 3.5 3.5        - NN unique cutoff matrix (line1 type1,r1r1,r1r2, line2 type2 r2r2)   [in_cutoff(i,j)]  
-Pd 3.5
+Aa F.f F.f        - NN unique cutoff matrix (line1 type1,r1r1,r1r2, line2 type2 r2r2)   [in_cutoff(i,j)]  
+Aa F.f
 30.0 30.0 30.0    - x,y,z cell length (Angstrom)                                        [in_xl,in_yl,in_zl]
 1 1 1             - First frame, last frame, frames between analysis                    [in_frames_start,in_frames_end,in_frames_jump]
 0.05              - Reduced density (0=uses particles/cell volume for each frame)       [in_density]

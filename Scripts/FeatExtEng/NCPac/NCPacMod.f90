@@ -5837,7 +5837,7 @@ subroutine CAL_SC
     !Main search loop  
     do particle=1, natoms(frame)
     
-        print*,'Particle:',particle
+        !print*,'Particle:',particle
         
         if(in_sc_cells==-1) then
             if(sc_similar(particle)>0) then

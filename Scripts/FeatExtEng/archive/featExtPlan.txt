@@ -1,0 +1,42 @@
+# Details the plan for feature extraction from the multimetallic nanoparticles raw data (.xyz files)
+- Generate the features from each software/package into different files, combine them later on if necessary
+- Could do them in small batches of instance
+- Better consider similarity between different configurations before starting to extract the features (archetypal analysis to find the minimum set containing the most information? Can't use AA for this -- too little archetypes, but AA is still worth doing by itself, just not for this purpose)
+
+- Generate features using modified NCPac:
+    - Test if feasible for large nanoparticles
+    - Otherwise might need to parallelise?
+    - Element-specific features
+
+- Generate features using modified scripts from Ben Motevalli's GitHub repository on graphene nanoflakes:
+    - Element-specific features
+
+- Generate features using Partycls Python package:
+    - Check if applicable
+
+- Generate common descriptors using DScribe Python package:
+    - Coulomb matrix (CM)
+        - Use nuclear charges for metallic elements?
+        - Matrix form?
+        - represent whole structure (could be helpful for measuring similarity of structures)
+    - Sine matrix (SM)
+        - Use nuclear charges for metallic elements?
+        - Matrix form?
+    - Ewald sum matrix (ESM)
+        - Use nuclear charges for metallic elements?
+        - Matrix form?
+    - Atom-centered Symmetry Functions (ACSF)
+        - represent local environment near an atom using fingerprint composed of multiple two- and three-body functions that can be customised to detect specific structural features
+        - could do output stratification based on chemical identity of central species
+        - Matrix form?
+    - Smooth Overlap of Atomic Positions (SOAP)
+        - encode regions of atomic geometries using local expansion of Gaussian smeared atomic density with orthonormal functions based on spherical harmonics and radial basis functions
+        - output partial power spectrum vector
+    - Many-body Tensor Representation (MBTR)
+        - encode structure using distribution of different structural motifs
+        - easily visualised, highly interpretable, correspond to specific structural properties of system
+        - represent whole structure (could be useful for measuring similarity of structures)
+    - Local Many-body Tensor Representation (LMBTR)
+        - modified for local environment
+        - use chemical species for central position, possible to encode spatial locations that aren't centered at any particular atom
+
