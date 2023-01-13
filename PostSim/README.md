@@ -1,5 +1,4 @@
 - MDout.csv might contain duplicates, vim ':sort u' to leave only unique lines and sort them
-* Last frames and minimised structures NPs in checkHere have been extracted
 NPs in toRerun.txt potentially need to undergo another round of Stage 2 simulations
 
 npCnt (for each $eleComb):
@@ -12,10 +11,3 @@ npCnt (for each $eleComb):
 - 2868 for large RAL
 - 3828 for CS
 - Total 4788
-
-- Procedure:
-    - Get .zip from MDSS (getZip.sh)
-    - Unzip them (unzip.sh)
-    - Make prerequisite directories and files (mkdir {eleComb}, touch {MDout.csv})
-    - Generate DAP files (genDAP*.sh)
-    - Check non-empty before removing source files

@@ -1,8 +1,8 @@
 InitStruct/
 PostSim/*/
-scripts/InitStruct/logFiles/
-scripts/SimAnneal/logFiles/
-scripts/SimAnneal/FDest/testCases/
-scripts/FeatExtEng/NCPac/*mod
-scripts/FeatExtEng/NCPac/*xyz
-scripts/FeatExtEng/testReg/
+Scripts/InitStruct/logFiles/
+Scripts/SimAnneal/logFiles/
+Scripts/SimAnneal/FDest/testCases/
+Scripts/FeatExtEng/NCPac/*mod
+Scripts/FeatExtEng/NCPac/*xyz
+Scripts/FeatExtEng/testReg/
