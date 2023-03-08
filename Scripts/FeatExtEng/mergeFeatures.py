@@ -5,26 +5,25 @@ import os
 import pandas as pd
 
 
-ELEMENTS = ['Au', 'Pt']
-runTask = 'concatNPfeats' # 'mergeReformatData'  # 'mergeReformatData' or 'concatNPfeats' or 'debug'
+ELEMENTS = ['Pd', 'Au']
+runTask = 'reorderIdxs'  # 'mergeReformatData' or 'concatNPfeats' 'reorderIdxs' or 'debug'
 runParallel, verbose = True, True
-sourceDirs = ['L10', 'L12', 'RAL','RCS', 'CS']
-sourceDirs = ['L10']
+sourceDirs = ['L10', 'L12', 'RAL', 'RCS', 'CS']
 
 PROJECT, USER_NAME = 'q27', 'jt5911'
 featEngPath = f"/scratch/{PROJECT}/{USER_NAME}/{''.join(ELEMENTS)}"
 MDoutFName = f"{featEngPath}/MDout.csv"
-finalDataFName = f"{featEngPath}/{''.join(ELEMENTS)}_nanoparticle_data.csv"
+allFeatCSVfName = f"{featEngPath}/{''.join(ELEMENTS)}.csv"
 
 N_AVOGADRO = 6.02214076 * 10**23  # (atoms/mol)
-A3_PER_M3 = 10 ** 30  # Angstrom^3 per m^3 (dimensionless)
-elePropDict = {'Au': {'rho': 19320, 'm': 0.196967, 'bulkE': 3.81}, 
-               'Pt': {'rho': 21450, 'm': 0.195084, 'bulkE': 5.84}, 
-               'Pd': {'rho': 12023, 'm': 0.10642, 'bulkE': 3.89}, 
-               'Co': {'rho': 8900, 'm': 0.058933, 'bulkE': 4.39}}  # density (kg/m^3), molar mass (kg/mol), cohesive energy per atom for bulk system (eV/atom)
+A3_PER_M3 = 10 ** 30  # (Angstrom^3/m^3)
+elePropDict = {'Au': {'rho': 19320, 'm': 0.196967, 'bulkE': -3.93}, 
+               'Pt': {'rho': 21450, 'm': 0.195084, 'bulkE': -5.77}, 
+               'Pd': {'rho': 12023, 'm': 0.10642, 'bulkE': -3.91}, 
+               'Co': {'rho': 8900, 'm': 0.058933, 'bulkE': -4.41}}  # density (kg/m^3), molar mass (kg/mol), cohesive energy per atom for bulk system (eV/atom) obtained from https://www.ctcms.nist.gov/potentials/system/ based on Zhou's work (https://journals.aps.org/prb/abstract/10.1103/PhysRevB.69.144113), assuming lowest energy crystal structure in bulk
 
 # All features
-ALL_HEADERS_LIST = ['T', 'P', 'Potential_E', 'Kinetic_E', 'Total_E', 
+ALL_HEADERS_LIST = ['T', 'P', 'Potential_E', 'Kinetic_E', 'Total_E', 'Formation_E', 
                     'N_atom_total', 'N_Ele1', 'N_Ele2', 'N_atom_bulk', 'N_atom_surface', 'Vol_bulk_pack', 'Vol_sphere', 
                     'R_min', 'R_max', 'R_diff', 'R_avg', 'R_std', 'R_skew', 'R_kurt',
                     'S_100', 'S_111', 'S_110', 'S_311', 
@@ -133,7 +132,7 @@ ADD_FEAT_LIST = ['Vol_bulk_pack', 'Vol_sphere',
                  'Surf_micros', 'Surf_micros_bulk_pack_conc', 'Surf_micros_bulk_pack_ratio', 'Surf_micros_sphere_conc', 'Surf_micros_sphere_ratio', 
                  'Surf_facets_Ele1', 'Surf_facets_Ele1_bulk_pack_conc', 'Surf_facets_Ele1_bulk_pack_ratio', 'Surf_facets_Ele1_sphere_conc', 'Surf_facets_Ele1_sphere_ratio', 
                  'Surf_facets_Ele2', 'Surf_facets_Ele2_bulk_pack_conc', 'Surf_facets_Ele2_bulk_pack_ratio', 'Surf_facets_Ele2_sphere_conc', 'Surf_facets_Ele2_sphere_ratio',
-                 'Surf_facets', 'Surf_facets_bulk_pack_conc', 'Surf_facets_bulk_pack_ratio', 'Surf_facets_sphere_conc', 'Surf_facets_sphere_ratio']
+                 'Surf_facets', 'Surf_facets_bulk_pack_conc', 'Surf_facets_bulk_pack_ratio', 'Surf_facets_sphere_conc', 'Surf_facets_sphere_ratio', 'Formation_E']
 
 
 def calcBulkPackVol(row):
@@ -160,7 +159,7 @@ def calcSurfSiteConc(row, siteType, eleIdx, volType):
     return row[f"Surf_{siteType}_Ele{eleIdx}"] / row[f"Vol_{volType}"]
 
 
-def calcSurfSiteRatio(row, siteType, element, eleIdx, volType):  # TODO: Confim with Amanda, 'element' not used for now
+def calcSurfSiteRatio(row, siteType, element, eleIdx, volType):  # Element not used for now
     if eleIdx < 0:
         return sum([row[f"Surf_{siteType}_Ele{i+1}_{volType}_ratio"] for i in range(len(ELEMENTS))])
     return row[f"Surf_{siteType}_Ele{eleIdx}"] / row['N_atom_total']
@@ -205,7 +204,7 @@ def dropFeats(df, allHeaders, verbose=False):
 
     df.drop(df.columns[dropHeadersList], axis=1, inplace=True)
     df = df[df.columns.drop(list(df.filter(regex='Type')))]  # - Types columns
-    df = df.apply(pd.to_numeric, errors='coerce')  # Turning data numeric, be careful with 'coerce' option as there is a risk that blatant errors are omitted # TODO Check if anything missed
+    df = df.apply(pd.to_numeric, errors='coerce')  # Turning data numeric, be careful with 'coerce' option as there is a risk that blatant errors are omitted
     df.columns = allHeaders
     # if verbose: print(f"        Number of columns dropped: {preDropColNum - len(df.columns)}")
     return df
@@ -214,7 +213,7 @@ def dropFeats(df, allHeaders, verbose=False):
 def addFeats(df, verbose=False):
     if verbose: print('    Adding new features...')
     # - Volume= Mass / Density, Volume = 4/3*pi*r^3
-    df['Vol_bulk_pack'] = df.apply(calcBulkPackVol, axis=1)  # Assuming bulk packing (m^3) TODO: Change to A^3?
+    df['Vol_bulk_pack'] = df.apply(calcBulkPackVol, axis=1)  # Assuming bulk packing (A^3)
     df['Vol_sphere'] = df.apply(lambda row: 3 / 4 * math.pi * row['R_avg']**3, axis=1)  # Geometric volume (A^3)
     # - Curvature
     endVal, curvColIdx = 0, 22
@@ -238,9 +237,7 @@ def addFeats(df, verbose=False):
             df[f"Surf_{characteristic}_{volType}_conc"] = df.apply(lambda row: calcSurfSiteConc(row, characteristic, -1, volType), axis=1)
             df[f"Surf_{characteristic}_{volType}_ratio"] = df.apply(lambda row: calcSurfSiteRatio(row, characteristic, None, -1, volType), axis=1)
     # - Energies
-    # df['Formation_E'] = df.apply(lambda row: row['Total_E'] - (row['N_Ele1']*elePropDict[ELEMENTS[0]]['bulkE'] + row['N_Ele2']*elePropDict[ELEMENTS[1]]['bulkE']), axis=1)
-    # df['Cohesive E']
-    # df['Surface E']
+    df['Formation_E'] = df.apply(lambda row: row['Total_E'] - (row['N_Ele1']*elePropDict[ELEMENTS[0]]['bulkE'] + row['N_Ele2']*elePropDict[ELEMENTS[1]]['bulkE']), axis=1)
     return df
 
 
@@ -250,7 +247,7 @@ def mergeReformatData(outputMD, verbose=True):
     """
     if verbose: print(f"    Concatenating CSV files for nanoparticle {outputMD[0]}...")
     df1 = pd.DataFrame(outputMD).T
-    df1.columns = ['confID', 'T', 'P', 'Potential_E', 'Kinetic_E', 'Total_E']
+    df1.columns = ['ID', 'T', 'P', 'Potential_E', 'Kinetic_E', 'Total_E']
     if os.path.getsize(f"{featEngPath}/{outputMD[0]}/od_FEATURESET.csv") == 0: 
         print(f"    *{outputMD[0]} is problematic! Skipping...") 
         df = pd.DataFrame(columns=ALL_HEADERS_LIST)
@@ -258,13 +255,13 @@ def mergeReformatData(outputMD, verbose=True):
         return
     df2 = pd.read_csv(f"{featEngPath}/{outputMD[0]}/od_FEATURESET.csv", sep=',', header=1, index_col=None)  # usecols, low_memory
     df = pd.concat([df1, df2], axis='columns')
-    df.set_index(keys='confID', inplace=True)
+    df.set_index(keys='ID', inplace=True)
 
     df = dropFeats(df, ALL_HEADERS_LIST.copy(), verbose=verbose)  # Drop unused columns
     df = addFeats(df, verbose=verbose)  # Add new columns
 
     if verbose: print('    Reordering columns...')
-    energyCols = ['Potential_E', 'Kinetic_E', 'Total_E']
+    energyCols = ['Potential_E', 'Kinetic_E', 'Total_E', 'Formation_E']
     allHeadersOrdered = ALL_HEADERS_LIST.copy()
     for col in energyCols: allHeadersOrdered.remove(col)
     allHeadersOrdered.extend(energyCols)
@@ -274,21 +271,21 @@ def mergeReformatData(outputMD, verbose=True):
 
 
 def runMergeReformatParallel(verbose=False):
-    if verbose: print(f"Merging information and reformating data in parallel...")
+    if verbose: print(f"Merging information and reformating data for {''.join(ELEMENTS)} nanoparticles...")
     outputMDs = []
     with open(MDoutFName, 'r') as f:
         f.readline()
         for outputMD in csv.reader(f): 
-            if not os.path.exists(f"{featEngPath}/{outputMD[0]}/{outputMD[0]}.csv"):
+            if os.path.exists(f"{featEngPath}/{outputMD[0]}") and not os.path.exists(f"{featEngPath}/{outputMD[0]}/{outputMD[0]}.csv"):
                 outputMDs.append(outputMD)
     with Pool() as p: p.map(mergeReformatData, outputMDs)
 
 
 def concatNPfeats(verbose=False):
     '''Fastest option to concatenate CSV files, almost 2 order of magnitudes faster than Pandas alternative'''
-    if verbose: print(f"Concatenating processed feature CSV files...")
-    NPconfs = sorted(os.listdir(featEngPath))
-    with open(finalDataFName, 'wb') as fout:
+    if verbose: print(f"Concatenating processed feature CSV files for {''.join(ELEMENTS)} nanoparticles...")
+    NPconfs = sorted(os.listdir(featEngPath))[:]  #TODO: make sure slicing correctly
+    with open(allFeatCSVfName, 'wb') as fout:
         for (i, NPconf) in enumerate(NPconfs):
             if not os.path.isdir(f"{featEngPath}/{NPconf}"): continue
             if os.path.getsize(f"{featEngPath}/{NPconf}/{NPconf}.csv") == 0: 
@@ -297,6 +294,22 @@ def concatNPfeats(verbose=False):
             with open(f"{featEngPath}/{NPconf}/{NPconf}.csv", 'rb') as f:
                 if i != 0: next(f)  # Skip header
                 fout.write(f.read())
+            #if os.path.exists(f"{featEngPath}/{NPconf}/DONE.txt"): 
+            #    os.remove(f"{featEngPath}/{NPconf}/DONE.txt")
+            #    os.remove(f"{featEngPath}/{NPconf}/NCPac.exe")
+            #    os.remove(f"{featEngPath}/{NPconf}/NCPac.inp")
+            #    os.remove(f"{featEngPath}/{NPconf}/od_FEATURESET.csv")
+
+
+def reorderIdxs(verbose=False):
+    if verbose: print(f"Reordering XYZ file names and CSV entries for {''.join(ELEMENTS)} nanoparticles...")
+    from shutil import copy, move
+    DAPdirPath = f"{featEngPath}_nanoparticle_data"
+    if not os.path.exists(DAPdirPath): os.mkdir(DAPdirPath)
+    move(MDoutFName, DAPdirPath)
+    move(allFeatCSVfName, DAPdirPath)
+    for (i, NPname) in enumerate(os.listdir(featEngPath)):
+        copy(f"{featEngPath}/{NPname}/{NPname}.xyz", f"{DAPdirPath}/{str(i+1).zfill(6)}.xyz")
 
 
 if __name__ == '__main__':
@@ -304,6 +317,8 @@ if __name__ == '__main__':
         runMergeReformatParallel(verbose=True)
     elif runTask == 'concatNPfeats':  # Serial 
         concatNPfeats(verbose=True)
+    elif runTask == 'reorderIdxs':  # Serial 
+        reorderIdxs(verbose=True)
     elif runTask == 'debug':
-        outputMD = ['000015', '273.15', '22.1', '21.1', '-101.1', '-81.0']
+        outputMD = ['000000', '299.03286', '44.722039', '-7486.6016', '65.16901', '-7421.4326']
         mergeReformatData(outputMD, verbose=True) 

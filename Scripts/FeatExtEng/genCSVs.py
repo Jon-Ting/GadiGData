@@ -3,16 +3,17 @@ from multiprocessing import Pool
 import os
 from os.path import isdir, exists
 import pandas as pd
-import pickle
 import re
 import shutil
 import tarfile
 from zipfile import ZipFile
+from filtRedund import runFilter
 
 
-ELE1, ELE2 = 'Au', 'Pt'
-NPsize = 'small'  # Not ready for 'large' yet
-runTask = 'runNCPac'  # 'setupNCPac' or 'runNCPac'
+ELE1, ELE2 = 'Co', 'Pt'
+runTask = 'runNCPac'  # 'setupNCPac'or 'filtRedund' or 'runNCPac'
+startNPidx = 136996  # Only used for 'filtRedund'
+NPsize = 'small'
 replace, runParallel, verbose = False, True, True
 sourceDirs = ['L10', 'L12', 'RAL','RCS', 'CS']
 
@@ -23,6 +24,7 @@ cutOffDict = {'AuAu': 3.5, 'AuPt': 3.5, 'AuPd': 3.5, 'AuCo': 3.4,
 PROJECT, USER_NAME = 'q27', 'jt5911'
 targetDir = f"/scratch/{PROJECT}/{USER_NAME}/{ELE1}{ELE2}"
 numFramePerNP = 101
+totalNPnum = 1668
 zFillNum = 6
 doneFile = 'DONE.txt'
 outMDfile = 'MDout.csv'
@@ -30,15 +32,20 @@ NCPacExeName, NCPacInpName = 'NCPac.exe', 'NCPac.inp'
 path2NCPacExe = f"/g/data/{PROJECT}/{USER_NAME}/Scripts/FeatExtEng/NCPac/{NCPacExeName}"
 path2NCPacInp = f"/g/data/{PROJECT}/{USER_NAME}/Scripts/FeatExtEng/NCPac/{NCPacInpName}"
 headerLine = f"CSIRO Nanostructure Databank - {ELE1}{ELE2} Nanoparticle Data Set"
+if NPsize == 'small': 
+    sourcePaths = [f"/g/data/{PROJECT}/{USER_NAME}/PostSim/{sourceDir}" for sourceDir in sourceDirs]
+    npCnt = 0
+else: 
+    sourcePaths = [f"/scratch/{PROJECT}/{USER_NAME}/BNP_MDsim/{sourceDir}50+" for sourceDir in sourceDirs]
+    npCnt = 1668  # Last NP should be 4788
+    
 
-def setupNCPac(NPsize='small', replace=False, verbose=False):
-    if verbose: print("Copying xyz files to individual directories and relabelling numerically...")
+def setupNCPac(npCnt=0, replace=False, verbose=False):
+    if verbose: print(f"Copying {ELE1}{ELE2} xyz files to individual directories and relabelling numerically...")
     if not isdir(targetDir): os.mkdir(targetDir)
     if not exists(f"{targetDir}/{outMDfile}"): 
         with open(f"{targetDir}/{outMDfile}", 'w') as f: f.write('confID,T,P,PE,KE,TE\n')
 
-    npCnt = 0  
-    workingList = []
     for sourcePath in sourcePaths:
         if verbose: print(f"  Source path: {sourcePath}") 
         for eleSubDir in os.listdir(sourcePath):
@@ -85,8 +92,6 @@ def setupNCPac(NPsize='small', replace=False, verbose=False):
                         linesNCPac[5] =  f"{ELE1} {cutOffDict[ELE1*2]} {cutOffDict[ELE1+ELE2]}        - NN unique cutoff matrix (line1 type1,r1r1,r1r2, line2 type2 r2r2)   [in_cutoff(i,j)]\n"
                         linesNCPac[6] =  f"{ELE2} {cutOffDict[ELE2*2]}\n"
                         f2.writelines(linesNCPac)
-            
-                    workingList.append((confDir, confID))
                     confCnt += 1
                 
                 if verbose: print('        Extracting MD output...')
@@ -109,7 +114,14 @@ def setupNCPac(NPsize='small', replace=False, verbose=False):
                 shutil.rmtree(f"{NPdirPath}/{NPdir}S2")
                 open(f"{NPdirPath}/{doneFile}", 'w').close()
                 if verbose: print(f"        {NPdir} Done!")
-    return workingList
+
+
+def runFiltRedund(startNPidx=0, verbose=False):
+    NPfiltNames = runFilter(targetDir=targetDir, startNPidx=startNPidx, verbose=verbose)
+    if not os.path.isdir(f"{targetDir}/REDUNDANT"): 
+        os.mkdir(f"{targetDir}/REDUNDANT")
+        for npName in NPfiltNames: shutil.move(f"{targetDir}/{npName}", f"{targetDir}/REDUNDANT")
+    shutil.rmtree(f"{targetDir}/REDUNDANT")
 
 
 def runNCPac(work, verbose=False):
@@ -118,7 +130,9 @@ def runNCPac(work, verbose=False):
     print(f"  Nanoparticle: {confID}...")
     os.chdir(confDir)
     os.system(f"./{NCPacExeName}")
-    # if not exists(f"{confDir}/od_FEATURESET.csv"): open(f"{confDir}/od_FEATURESET.csv", 'w').close()  # If NCPac execution somehow fails
+    if not exists(f"{confDir}/od_FEATURESET.csv"): 
+        print(f"    {confID} is a MNP!")
+        open(f"{confDir}/od_FEATURESET.csv", 'w').close()  # If NCPac execution somehow fails (MNP instead of BNP)
     # Remove unnecessary files
     for f in glob(f"*.mod"): os.remove(f)
     for f in glob(f"fort.*"): os.remove(f)
@@ -134,16 +148,15 @@ def runNCPacParallel(remainingWork, verbose=False):
 
 
 if __name__ == '__main__':
-    if NPsize == 'small': sourcePaths = [f"/g/data/{PROJECT}/{USER_NAME}/PostSim/{sourceDir}" for sourceDir in sourceDirs]
-    else: sourcePaths = [f"/scratch/{PROJECT}/{USER_NAME}/BNP_MDsim/{sourceDir}50+" for sourceDir in sourceDirs]
-    
     if runTask == 'setupNCPac': # Copy necessary files to run NCPac to destination
-        workingList = setupNCPac(NPsize, replace=replace, verbose=verbose)
-        # with open('workingList.pickle', 'wb') as f: pickle.dump(workingList, f)  # Be careful not to overwrite this once done!
+        setupNCPac(npCnt, replace=replace, verbose=verbose)
+    elif runTask == 'filtRedund': # Remove redundant frames from DAP data
+        runFiltRedund(startNPidx=startNPidx, verbose=verbose) 
     elif runTask == 'runNCPac': # Run NCPac for each BNP
-        with open('workingList.pickle', 'rb') as f: workingList = pickle.load(f)
-        if verbose: print('Running NCPac for BNPs...')
-        if not replace: workingList = [workParam for workParam in workingList if not exists(f"{workParam[0]}/{doneFile}")]
+        workingList = [(f"{targetDir}/{str(i).zfill(zFillNum)}", str(i).zfill(zFillNum)) for i in range(totalNPnum*numFramePerNP)]
+        if verbose: print(f"Running NCPac for {ELE1}{ELE2} nanoparticles...")
+        if replace: workingList = [workParam for workParam in workingList if exists(f"{workParam[0]}")]
+        else: workingList = [workParam for workParam in workingList if exists(f"{workParam[0]}") and not exists(f"{workParam[0]}/{doneFile}")]
         if runParallel:
             with Pool() as p: p.map(runNCPac, workingList)
         else:
