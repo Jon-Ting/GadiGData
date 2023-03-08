@@ -2,7 +2,7 @@ InitStruct/
 PostSim/*/
 Scripts/InitStruct/logFiles/
 Scripts/SimAnneal/logFiles/
-Scripts/SimAnneal/FDest/testCases/
-Scripts/FeatExtEng/NCPac/*mod
 Scripts/FeatExtEng/NCPac/*xyz
 Scripts/FeatExtEng/testReg/
+Scripts/FeatExtEng/__pycache__/
+Scripts/FeatExtEng/testCasesFiltRedund/largeNPs/
