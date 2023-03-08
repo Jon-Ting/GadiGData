@@ -10,8 +10,8 @@
 # Author: Jonathan Yik Chang Ting
 # Date: 6/5/2022
 
-mdss get $USER/SimAnneal/simTraj/RCSCo.zip .
-mdss get $USER/SimAnneal/simTraj/RALCo.zip .
-mdss get $USER/SimAnneal/simTraj/CSCo.zip .
+#mdss get $USER/SimAnneal/simTraj/RCSCo.zip .
+#mdss get $USER/SimAnneal/simTraj/RALCo.zip .
+mdss get $USER/SimAnneal/simTraj/CSPt.zip .
 #mdss get $USER/SimAnneal/simTraj/L10All.zip .
 #mdss get $USER/SimAnneal/simTraj/L12All.zip .
