@@ -1,7 +1,0 @@
-Comparing CoPd80CUL10S2min.0.xyz with CoPd80CUL10S2min.17000.xyz...
-	eucRMSD: 0.01378
-	boxCntDimDiff: 1.812389 - 1.809853 = 0.002536
-	2-sample Kolmogorov-Smirnov test statistic: 0.00265; p-value: 0.999748
-	Kruskal-Wallis H-test statistic: 0.01290; p-value: 0.909571
-	Mutual information : 1.061
-Comparing CoPd80CUL10S2min.17000.xyz with CoPd80CUL10S2min.34000.xyz...

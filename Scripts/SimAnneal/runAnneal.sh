@@ -1,7 +1,7 @@
 #!/bin/bash
 #PBS -P q27
 #PBS -q normal
-#PBS -l ncpus=48,walltime=03:23:58,mem=24GB,jobfs=10GB
+#PBS -l ncpus=48,walltime=01:40:04,mem=20GB,jobfs=10GB
 #PBS -l storage=scratch/q27+gdata/q27
 #PBS -l wd
 #PBS -v NJOBS,NJOB,jobName

@@ -1,0 +1,31 @@
+# Template of LAMMPS input file for stage 0 (equilibrating) of the simulated annealing of nanoparticles
+# Author: Jonathan Yik Chang Ting
+# Date: 15/10/2020
+
+# --------------- INITIALIZATION ---------------
+clear           # Clear all memory
+units           metal  # Report in g/mol, A, ps, eV, K, bars
+boundary        p p p  # Periodic boundaries in x-, y-, z- directions
+atom_style      atomic
+
+# --------------- ATOM DEFINITION ---------------
+read_restart    PtPd20CU25RAL8S1.*.mpiio.rst
+read_dump       PtPd20CU25RAL8S2.19886.redo.xyz 0 x y z box no format xyz
+
+# --------------- FORCE FIELDS ---------------
+pair_style      eam/alloy
+pair_coeff      * * /g/data/q27/jt5911/EAM/setfl_files/PtPd.set Pt Pd
+neighbor        2.0 bin  # build list by binning, add 2 A skin
+neigh_modify    delay 10 check yes  # Wait 10 steps after building, build only when atom moved > skin/2
+
+# --------------- SIMULATION RUNS --------------- 
+print           "--------------- MINIMISATION ---------------"
+min_style       cg  # Polak-Ribiere version
+minimize        1e-15 1e-15 100000 100000  # E tol, F tol, max iter, max F/E eval
+write_dump      all xyz PtPd20CU25RAL8S2min.1800000.xyz modify element Pt Pd
+
+# --------------- DONE ---------------
+print ""
+print "DONE!"
+print "------------------------------------------------------------------------------------------------------------------------------"
+print ""

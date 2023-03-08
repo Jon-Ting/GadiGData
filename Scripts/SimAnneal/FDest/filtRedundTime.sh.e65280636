@@ -1,7 +1,0 @@
-Loading python3/3.7.4
-  Loading requirement: intel-mkl/2019.3.199
-/home/564/jt5911/.local/lib/python3.7/site-packages/statsmodels/regression/linear_model.py:1687: RuntimeWarning: divide by zero encountered in double_scalars
-  return np.dot(wresid, wresid) / self.df_resid
-/home/564/jt5911/.local/lib/python3.7/site-packages/statsmodels/regression/linear_model.py:1687: RuntimeWarning: divide by zero encountered in double_scalars
-  return np.dot(wresid, wresid) / self.df_resid
-=>> PBS: job killed: walltime 72087 exceeded limit 72000

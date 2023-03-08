@@ -1,0 +1,63 @@
+# Template of LAMMPS input file for stage 0 (equilibrating) of the simulated annealing of nanoparticles
+# Author: Jonathan Yik Chang Ting
+# Date: 15/10/2020
+
+# --------------- INITIALIZATION ---------------
+clear           # Clear all memory
+units           metal  # Report in g/mol, A, ps, eV, K, bars
+boundary        p p p  # Periodic boundaries in x-, y-, z- directions
+atom_style      atomic
+
+# --------------- ATOM DEFINITION ---------------
+read_data       {INP_DIR_NAME}{INP_FILE_NAME}.lmp group {ELEMENT1}{ELEMENT2} nocoeff
+change_box      all x scale 3 y scale 3 z scale 3
+
+# --------------- FORCE FIELDS ---------------
+pair_style      eam/alloy
+pair_coeff      * * {POT_FILE} {ELEMENT1} {ELEMENT2}
+neighbor        2.0 bin  # build list by binning, add 2 A skin
+neigh_modify    delay 10 check yes  # Wait 10 steps after building, build only when atom moved > skin/2
+
+# --------------- SETTINGS ---------------
+compute         peAll all pe
+thermo          {S0_THER_INT}  # Thermodynamic output frequency
+thermo_style    custom step time temp press pe ke etotal
+fix             timeLimit all halt 1000 tlimit > {TIME_LIMIT} error soft message yes  # No more runs if time limit exceeded
+fix             zeroMomentum all momentum 1 linear 1 1 1 angular rescale  # Reset linear & angular momenta to 0 every step
+fix             peAVG all ave/time 100 1000 100000 c_peAll start 100000 # Compute average of PE over last 100 ps from 1000 samples at intervals of 0.1 ps
+variable        pe1 equal f_peAVG
+variable        pe0 equal c_peAll
+variable        loopVar loop 5
+
+# --------------- SIMULATION RUNS --------------- 
+print           "--------------- MINIMISATION ---------------"
+reset_timestep  0
+min_style       cg  # Polak-Ribiere version
+minimize        1e-15 1e-15 100000 100000  # E tol, F tol, max iter, max F/E eval
+
+print           "--------------- EQUILIBRATING AT {INIT_TEMP} K ---------------"
+reset_timestep  0
+velocity        all create {INIT_TEMP} 777 mom yes rot yes  # seed = 777
+fix             nhS0 all nvt temp {INIT_TEMP} {INIT_TEMP} $(100.0*dt)
+dump            dumpS0 all custom/mpiio {S0_DUMP_INT} {INP_FILE_NAME}S0.*.mpiio.lmp id type x y z
+dump_modify     dumpS0 pad 8
+
+label           loop
+run             100000
+variable        peVar equal abs(f_peAVG-${pe0})
+print           'Change in PE: ${peVar}'
+if              "${peVar} < 1" then "jump SELF break"
+variable        pe0 equal ${pe1}
+next            loopVar
+jump            SELF loop
+label           break
+
+write_restart   {INP_FILE_NAME}S0.mpiio.rst
+unfix           nhS0
+undump          dumpS0
+
+# --------------- DONE ---------------
+print ""
+print "DONE!"
+print "------------------------------------------------------------------------------------------------------------------------------"
+print ""

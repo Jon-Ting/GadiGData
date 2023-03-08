@@ -1,0 +1,113 @@
+LAMMPS (29 Sep 2021)
+  using 1 OpenMP thread(s) per MPI task
+# Template of LAMMPS input file for stage 0 (equilibrating) of the simulated annealing of nanoparticles
+# Author: Jonathan Yik Chang Ting
+# Date: 15/10/2020
+
+# --------------- INITIALIZATION ---------------
+clear           # Clear all memory
+  using 1 OpenMP thread(s) per MPI task
+units           metal  # Report in g/mol, A, ps, eV, K, bars
+boundary        p p p  # Periodic boundaries in x-, y-, z- directions
+atom_style      atomic
+
+# --------------- ATOM DEFINITION ---------------
+read_restart    PtPd20CU25RAL8S1.*.mpiio.rst
+Reading restart file ...
+  restart file = 3 Mar 2020, LAMMPS = 29 Sep 2021
+WARNING: Old restart file format revision. Switching to compatibility mode. (../read_restart.cpp:611)
+WARNING: Restart file used different # of processors: 48 vs. 1 (../read_restart.cpp:658)
+  restoring atom style atomic from restart
+  orthogonal box = (-29.600000 -29.600000 -29.600000) to (59.200000 59.200000 59.200000)
+  1 by 1 by 1 MPI processor grid
+  pair style eam/alloy/opt stores no restart info
+  665 atoms
+  read_restart CPU = 0.013 seconds
+read_dump       PtPd20CU25RAL8S2.19886.redo.xyz 0 x y z box no format xyz
+Scanning dump file ...
+Reading snapshot from dump file ...
+  orthogonal box = (-29.600000 -29.600000 -29.600000) to (59.200000 59.200000 59.200000)
+  665 atoms before read
+  665 atoms in snapshot
+  0 atoms purged
+  665 atoms replaced
+  0 atoms trimmed
+  0 atoms added
+  665 atoms after read
+
+# --------------- FORCE FIELDS ---------------
+pair_style      eam/alloy
+pair_coeff      * * /g/data/q27/jt5911/EAM/setfl_files/PtPd.set Pt Pd
+neighbor        2.0 bin  # build list by binning, add 2 A skin
+neigh_modify    delay 10 check yes  # Wait 10 steps after building, build only when atom moved > skin/2
+
+# --------------- SIMULATION RUNS ---------------
+print           "--------------- MINIMISATION ---------------"
+--------------- MINIMISATION ---------------
+min_style       cg  # Polak-Ribiere version
+minimize        1e-15 1e-15 100000 100000  # E tol, F tol, max iter, max F/E eval
+WARNING: Using 'neigh_modify every 1 delay 0 check yes' setting during minimization (../min.cpp:188)
+Unused restart file global fix info:
+  fix style: nvt, fix ID: nhS1
+Neighbor list info ...
+  update every 1 steps, delay 0 steps, check yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 8.1981921
+  ghost atom cutoff = 8.1981921
+  binsize = 4.0990961, bins = 22 22 22
+  1 neighbor lists, perpetual/occasional/extra = 1 0 0
+  (1) pair eam/alloy, perpetual
+      attributes: half, newton on
+      pair build: half/bin/atomonly/newton
+      stencil: half/bin/3d
+      bin: standard
+Per MPI rank memory allocation (min/avg/max) = 4.511 | 4.511 | 4.511 Mbytes
+Step Temp E_pair E_mol TotEng Press 
+       0    1206.7414   -2948.0642            0   -2844.4911   -199.59911 
+     638    1206.7414   -3228.8868            0   -3125.3137    157.98926 
+Loop time of 1.30945 on 1 procs for 638 steps with 665 atoms
+
+90.4% CPU use with 1 MPI tasks x 1 OpenMP threads
+
+Minimization stats:
+  Stopping criterion = linesearch alpha is zero
+  Energy initial, next-to-last, final = 
+     -2948.06421418477  -3228.88678382858  -3228.88678382858
+  Force two-norm initial, final = 53.880661 0.00049778923
+  Force max component initial, final = 6.1743178 6.4386656e-05
+  Final line search alpha, max atom move = 0.031250000 2.0120830e-06
+  Iterations, force evaluations = 638 1192
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 1.2818     | 1.2818     | 1.2818     |   0.0 | 97.89
+Neigh   | 0.013542   | 0.013542   | 0.013542   |   0.0 |  1.03
+Comm    | 0.00032306 | 0.00032306 | 0.00032306 |   0.0 |  0.02
+Output  | 0          | 0          | 0          |   0.0 |  0.00
+Modify  | 0          | 0          | 0          |   0.0 |  0.00
+Other   |            | 0.01374    |            |       |  1.05
+
+Nlocal:        665.000 ave         665 max         665 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:         0.00000 ave           0 max           0 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:        33613.0 ave       33613 max       33613 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 33613
+Ave neighs/atom = 50.545865
+Neighbor list builds = 18
+Dangerous builds = 0
+write_dump      all xyz PtPd20CU25RAL8S2min.1800000.xyz modify element Pt Pd
+
+# --------------- DONE ---------------
+print ""
+
+print "DONE!"
+DONE!
+print "------------------------------------------------------------------------------------------------------------------------------"
+------------------------------------------------------------------------------------------------------------------------------
+print ""
+
+Total wall time: 0:00:01
