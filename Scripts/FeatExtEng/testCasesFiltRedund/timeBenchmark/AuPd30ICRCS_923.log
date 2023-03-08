@@ -1,0 +1,1443 @@
+Filtering redundant frames from AuPd30ICRCS_923 nanoparticles simulations...
+  Comparing AuPd30IC75RCS7S2min.0.xyz with AuPd30IC75RCS7S2min.18000.xyz...
+    eucRMSD: 0.001
+    boxCntDimDiff: |2.6782 - 2.6767| = 0.0015
+    avgBondLen Mutual information : 5.47
+    RDF 2-sample Anderson-Darling test statistic: -1.3094; p-value: 0.250
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0052; p-value: 1.000
+    RDF 2-sample Cramer-von Mises test statistic: 0.0006; p-value: 1.000
+    RDF Wasserstein distance : 0.0000034
+    RDF Hellinger distance : 0.003
+    RDF Kullback-Leibler divergence : 0.00
+    RDF Jensen-Shannon divergence : 0.00001
+    RDF Mutual information : 1.19
+    RDF Bhattacharyya distance : 0.90
+    coordNum Mutual information : 1.07
+      FOUND: AuPd30IC75RCS7S2min.0.xyz redundant!!!
+  Comparing AuPd30IC75RCS7S2min.18000.xyz with AuPd30IC75RCS7S2min.36000.xyz...
+    eucRMSD: 0.002
+    boxCntDimDiff: |2.6767 - 2.6793| = 0.0026
+    avgBondLen Mutual information : 5.47
+    RDF 2-sample Anderson-Darling test statistic: -1.3086; p-value: 0.250
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0052; p-value: 1.000
+    RDF 2-sample Cramer-von Mises test statistic: 0.0007; p-value: 1.000
+    RDF Wasserstein distance : 0.0000030
+    RDF Hellinger distance : 0.003
+    RDF Kullback-Leibler divergence : 0.00
+    RDF Jensen-Shannon divergence : 0.00001
+    RDF Mutual information : 1.19
+    RDF Bhattacharyya distance : 0.90
+    coordNum Mutual information : 1.07
+      FOUND: AuPd30IC75RCS7S2min.18000.xyz redundant!!!
+  Comparing AuPd30IC75RCS7S2min.36000.xyz with AuPd30IC75RCS7S2min.54000.xyz...
+    eucRMSD: 0.002
+    boxCntDimDiff: |2.6793 - 2.6814| = 0.0020
+    avgBondLen Mutual information : 5.47
+    RDF 2-sample Anderson-Darling test statistic: -1.3087; p-value: 0.250
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0052; p-value: 1.000
+    RDF 2-sample Cramer-von Mises test statistic: 0.0007; p-value: 1.000
+    RDF Wasserstein distance : 0.0000033
+    RDF Hellinger distance : 0.003
+    RDF Kullback-Leibler divergence : 0.00
+    RDF Jensen-Shannon divergence : 0.00001
+    RDF Mutual information : 1.20
+    RDF Bhattacharyya distance : 0.90
+    coordNum Mutual information : 1.07
+      FOUND: AuPd30IC75RCS7S2min.36000.xyz redundant!!!
+  Comparing AuPd30IC75RCS7S2min.54000.xyz with AuPd30IC75RCS7S2min.72000.xyz...
+    eucRMSD: 0.001
+    boxCntDimDiff: |2.6814 - 2.6824| = 0.0010
+    avgBondLen Mutual information : 5.48
+    RDF 2-sample Anderson-Darling test statistic: -1.3097; p-value: 0.250
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0052; p-value: 1.000
+    RDF 2-sample Cramer-von Mises test statistic: 0.0006; p-value: 1.000
+    RDF Wasserstein distance : 0.0000029
+    RDF Hellinger distance : 0.002
+    RDF Kullback-Leibler divergence : 0.00
+    RDF Jensen-Shannon divergence : 0.00001
+    RDF Mutual information : 1.19
+    RDF Bhattacharyya distance : 0.90
+    coordNum Mutual information : 1.07
+      FOUND: AuPd30IC75RCS7S2min.54000.xyz redundant!!!
+  Comparing AuPd30IC75RCS7S2min.72000.xyz with AuPd30IC75RCS7S2min.90000.xyz...
+    eucRMSD: 0.001
+    boxCntDimDiff: |2.6824 - 2.6850| = 0.0026
+    avgBondLen Mutual information : 5.47
+    RDF 2-sample Anderson-Darling test statistic: -1.3097; p-value: 0.250
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0041; p-value: 1.000
+    RDF 2-sample Cramer-von Mises test statistic: 0.0006; p-value: 1.000
+    RDF Wasserstein distance : 0.0000036
+    RDF Hellinger distance : 0.003
+    RDF Kullback-Leibler divergence : 0.00
+    RDF Jensen-Shannon divergence : 0.00001
+    RDF Mutual information : 1.19
+    RDF Bhattacharyya distance : 0.90
+    coordNum Mutual information : 1.07
+      FOUND: AuPd30IC75RCS7S2min.72000.xyz redundant!!!
+  Comparing AuPd30IC75RCS7S2min.90000.xyz with AuPd30IC75RCS7S2min.108000.xyz...
+    eucRMSD: 0.002
+    boxCntDimDiff: |2.6850 - 2.6838| = 0.0012
+    avgBondLen Mutual information : 5.46
+    RDF 2-sample Anderson-Darling test statistic: -1.3098; p-value: 0.250
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0041; p-value: 1.000
+    RDF 2-sample Cramer-von Mises test statistic: 0.0006; p-value: 1.000
+    RDF Wasserstein distance : 0.0000034
+    RDF Hellinger distance : 0.002
+    RDF Kullback-Leibler divergence : 0.00
+    RDF Jensen-Shannon divergence : 0.00001
+    RDF Mutual information : 1.17
+    RDF Bhattacharyya distance : 0.90
+    coordNum Mutual information : 1.07
+      FOUND: AuPd30IC75RCS7S2min.90000.xyz redundant!!!
+  Comparing AuPd30IC75RCS7S2min.108000.xyz with AuPd30IC75RCS7S2min.126000.xyz...
+    eucRMSD: 0.002
+    boxCntDimDiff: |2.6838 - 2.6817| = 0.0021
+    avgBondLen Mutual information : 5.48
+    RDF 2-sample Anderson-Darling test statistic: -1.3093; p-value: 0.250
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0072; p-value: 1.000
+    RDF 2-sample Cramer-von Mises test statistic: 0.0006; p-value: 1.000
+    RDF Wasserstein distance : 0.0000032
+    RDF Hellinger distance : 0.002
+    RDF Kullback-Leibler divergence : 0.00
+    RDF Jensen-Shannon divergence : 0.00001
+    RDF Mutual information : 1.18
+    RDF Bhattacharyya distance : 0.90
+    coordNum Mutual information : 1.07
+      FOUND: AuPd30IC75RCS7S2min.108000.xyz redundant!!!
+  Comparing AuPd30IC75RCS7S2min.126000.xyz with AuPd30IC75RCS7S2min.144000.xyz...
+    eucRMSD: 0.000
+    boxCntDimDiff: |2.6817 - 2.6832| = 0.0015
+    avgBondLen Mutual information : 5.47
+    RDF 2-sample Anderson-Darling test statistic: -1.3089; p-value: 0.250
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0052; p-value: 1.000
+    RDF 2-sample Cramer-von Mises test statistic: 0.0007; p-value: 1.000
+    RDF Wasserstein distance : 0.0000029
+    RDF Hellinger distance : 0.003
+    RDF Kullback-Leibler divergence : 0.00
+    RDF Jensen-Shannon divergence : 0.00001
+    RDF Mutual information : 1.18
+    RDF Bhattacharyya distance : 0.90
+    coordNum Mutual information : 1.07
+      FOUND: AuPd30IC75RCS7S2min.126000.xyz redundant!!!
+  Comparing AuPd30IC75RCS7S2min.144000.xyz with AuPd30IC75RCS7S2min.162000.xyz...
+    eucRMSD: 0.001
+    boxCntDimDiff: |2.6832 - 2.6828| = 0.0004
+    avgBondLen Mutual information : 5.47
+    RDF 2-sample Anderson-Darling test statistic: -1.3095; p-value: 0.250
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0041; p-value: 1.000
+    RDF 2-sample Cramer-von Mises test statistic: 0.0006; p-value: 1.000
+    RDF Wasserstein distance : 0.0000032
+    RDF Hellinger distance : 0.003
+    RDF Kullback-Leibler divergence : 0.00
+    RDF Jensen-Shannon divergence : 0.00001
+    RDF Mutual information : 1.18
+    RDF Bhattacharyya distance : 0.90
+    coordNum Mutual information : 1.07
+      FOUND: AuPd30IC75RCS7S2min.144000.xyz redundant!!!
+  Comparing AuPd30IC75RCS7S2min.162000.xyz with AuPd30IC75RCS7S2min.180000.xyz...
+    eucRMSD: 0.000
+    boxCntDimDiff: |2.6828 - 2.6859| = 0.0031
+    avgBondLen Mutual information : 5.47
+    RDF 2-sample Anderson-Darling test statistic: -1.3096; p-value: 0.250
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0041; p-value: 1.000
+    RDF 2-sample Cramer-von Mises test statistic: 0.0005; p-value: 1.000
+    RDF Wasserstein distance : 0.0000036
+    RDF Hellinger distance : 0.003
+    RDF Kullback-Leibler divergence : 0.00
+    RDF Jensen-Shannon divergence : 0.00001
+    RDF Mutual information : 1.18
+    RDF Bhattacharyya distance : 0.90
+    coordNum Mutual information : 1.07
+      FOUND: AuPd30IC75RCS7S2min.162000.xyz redundant!!!
+  Comparing AuPd30IC75RCS7S2min.180000.xyz with AuPd30IC75RCS7S2min.198000.xyz...
+    eucRMSD: 0.001
+    boxCntDimDiff: |2.6859 - 2.6876| = 0.0017
+    avgBondLen Mutual information : 5.48
+    RDF 2-sample Anderson-Darling test statistic: -1.3093; p-value: 0.250
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0052; p-value: 1.000
+    RDF 2-sample Cramer-von Mises test statistic: 0.0006; p-value: 1.000
+    RDF Wasserstein distance : 0.0000034
+    RDF Hellinger distance : 0.003
+    RDF Kullback-Leibler divergence : 0.00
+    RDF Jensen-Shannon divergence : 0.00001
+    RDF Mutual information : 1.18
+    RDF Bhattacharyya distance : 0.90
+    coordNum Mutual information : 1.07
+      FOUND: AuPd30IC75RCS7S2min.180000.xyz redundant!!!
+  Comparing AuPd30IC75RCS7S2min.198000.xyz with AuPd30IC75RCS7S2min.216000.xyz...
+    eucRMSD: 0.001
+    boxCntDimDiff: |2.6876 - 2.6849| = 0.0027
+    avgBondLen Mutual information : 5.47
+    RDF 2-sample Anderson-Darling test statistic: -1.3089; p-value: 0.250
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0052; p-value: 1.000
+    RDF 2-sample Cramer-von Mises test statistic: 0.0007; p-value: 1.000
+    RDF Wasserstein distance : 0.0000032
+    RDF Hellinger distance : 0.003
+    RDF Kullback-Leibler divergence : 0.00
+    RDF Jensen-Shannon divergence : 0.00001
+    RDF Mutual information : 1.19
+    RDF Bhattacharyya distance : 0.90
+    coordNum Mutual information : 1.07
+      FOUND: AuPd30IC75RCS7S2min.198000.xyz redundant!!!
+  Comparing AuPd30IC75RCS7S2min.216000.xyz with AuPd30IC75RCS7S2min.234000.xyz...
+    eucRMSD: 0.001
+    boxCntDimDiff: |2.6849 - 2.6815| = 0.0033
+    avgBondLen Mutual information : 5.47
+    RDF 2-sample Anderson-Darling test statistic: -1.3097; p-value: 0.250
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0052; p-value: 1.000
+    RDF 2-sample Cramer-von Mises test statistic: 0.0005; p-value: 1.000
+    RDF Wasserstein distance : 0.0000034
+    RDF Hellinger distance : 0.002
+    RDF Kullback-Leibler divergence : 0.00
+    RDF Jensen-Shannon divergence : 0.00001
+    RDF Mutual information : 1.18
+    RDF Bhattacharyya distance : 0.90
+    coordNum Mutual information : 1.07
+      FOUND: AuPd30IC75RCS7S2min.216000.xyz redundant!!!
+  Comparing AuPd30IC75RCS7S2min.234000.xyz with AuPd30IC75RCS7S2min.252000.xyz...
+    eucRMSD: 0.001
+    boxCntDimDiff: |2.6815 - 2.6836| = 0.0021
+    avgBondLen Mutual information : 5.47
+    RDF 2-sample Anderson-Darling test statistic: -1.3091; p-value: 0.250
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0052; p-value: 1.000
+    RDF 2-sample Cramer-von Mises test statistic: 0.0007; p-value: 1.000
+    RDF Wasserstein distance : 0.0000036
+    RDF Hellinger distance : 0.003
+    RDF Kullback-Leibler divergence : 0.00
+    RDF Jensen-Shannon divergence : 0.00001
+    RDF Mutual information : 1.15
+    RDF Bhattacharyya distance : 0.90
+    coordNum Mutual information : 1.07
+      FOUND: AuPd30IC75RCS7S2min.234000.xyz redundant!!!
+  Comparing AuPd30IC75RCS7S2min.252000.xyz with AuPd30IC75RCS7S2min.270000.xyz...
+    eucRMSD: 0.002
+    boxCntDimDiff: |2.6836 - 2.6800| = 0.0037
+    avgBondLen Mutual information : 5.47
+    RDF 2-sample Anderson-Darling test statistic: -1.3083; p-value: 0.250
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0072; p-value: 1.000
+    RDF 2-sample Cramer-von Mises test statistic: 0.0008; p-value: 1.000
+    RDF Wasserstein distance : 0.0000040
+    RDF Hellinger distance : 0.003
+    RDF Kullback-Leibler divergence : 0.00
+    RDF Jensen-Shannon divergence : 0.00001
+    RDF Mutual information : 1.18
+    RDF Bhattacharyya distance : 0.90
+    coordNum Mutual information : 1.07
+      FOUND: AuPd30IC75RCS7S2min.252000.xyz redundant!!!
+  Comparing AuPd30IC75RCS7S2min.270000.xyz with AuPd30IC75RCS7S2min.288000.xyz...
+    eucRMSD: 0.001
+    boxCntDimDiff: |2.6800 - 2.6788| = 0.0011
+    avgBondLen Mutual information : 5.47
+    RDF 2-sample Anderson-Darling test statistic: -1.3086; p-value: 0.250
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0062; p-value: 1.000
+    RDF 2-sample Cramer-von Mises test statistic: 0.0007; p-value: 1.000
+    RDF Wasserstein distance : 0.0000042
+    RDF Hellinger distance : 0.003
+    RDF Kullback-Leibler divergence : 0.00
+    RDF Jensen-Shannon divergence : 0.00001
+    RDF Mutual information : 1.18
+    RDF Bhattacharyya distance : 0.90
+    coordNum Mutual information : 1.07
+      FOUND: AuPd30IC75RCS7S2min.270000.xyz redundant!!!
+  Comparing AuPd30IC75RCS7S2min.288000.xyz with AuPd30IC75RCS7S2min.306000.xyz...
+    eucRMSD: 0.001
+    boxCntDimDiff: |2.6788 - 2.6814| = 0.0026
+    avgBondLen Mutual information : 5.47
+    RDF 2-sample Anderson-Darling test statistic: -1.3086; p-value: 0.250
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0062; p-value: 1.000
+    RDF 2-sample Cramer-von Mises test statistic: 0.0008; p-value: 1.000
+    RDF Wasserstein distance : 0.0000038
+    RDF Hellinger distance : 0.003
+    RDF Kullback-Leibler divergence : 0.00
+    RDF Jensen-Shannon divergence : 0.00001
+    RDF Mutual information : 1.18
+    RDF Bhattacharyya distance : 0.90
+    coordNum Mutual information : 1.07
+      FOUND: AuPd30IC75RCS7S2min.288000.xyz redundant!!!
+  Comparing AuPd30IC75RCS7S2min.306000.xyz with AuPd30IC75RCS7S2min.324000.xyz...
+    eucRMSD: 0.001
+    boxCntDimDiff: |2.6814 - 2.6847| = 0.0032
+    avgBondLen Mutual information : 5.46
+    RDF 2-sample Anderson-Darling test statistic: -1.3078; p-value: 0.250
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0072; p-value: 1.000
+    RDF 2-sample Cramer-von Mises test statistic: 0.0009; p-value: 1.000
+    RDF Wasserstein distance : 0.0000036
+    RDF Hellinger distance : 0.003
+    RDF Kullback-Leibler divergence : 0.00
+    RDF Jensen-Shannon divergence : 0.00001
+    RDF Mutual information : 1.16
+    RDF Bhattacharyya distance : 0.90
+    coordNum Mutual information : 1.07
+      FOUND: AuPd30IC75RCS7S2min.306000.xyz redundant!!!
+  Comparing AuPd30IC75RCS7S2min.324000.xyz with AuPd30IC75RCS7S2min.342000.xyz...
+    eucRMSD: 0.001
+    boxCntDimDiff: |2.6847 - 2.6813| = 0.0034
+    avgBondLen Mutual information : 5.47
+    RDF 2-sample Anderson-Darling test statistic: -1.3087; p-value: 0.250
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0052; p-value: 1.000
+    RDF 2-sample Cramer-von Mises test statistic: 0.0007; p-value: 1.000
+    RDF Wasserstein distance : 0.0000032
+    RDF Hellinger distance : 0.002
+    RDF Kullback-Leibler divergence : 0.00
+    RDF Jensen-Shannon divergence : 0.00001
+    RDF Mutual information : 1.19
+    RDF Bhattacharyya distance : 0.90
+    coordNum Mutual information : 1.07
+      FOUND: AuPd30IC75RCS7S2min.324000.xyz redundant!!!
+  Comparing AuPd30IC75RCS7S2min.342000.xyz with AuPd30IC75RCS7S2min.360000.xyz...
+    eucRMSD: 0.001
+    boxCntDimDiff: |2.6813 - 2.6821| = 0.0008
+    avgBondLen Mutual information : 5.46
+    RDF 2-sample Anderson-Darling test statistic: -1.3095; p-value: 0.250
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0052; p-value: 1.000
+    RDF 2-sample Cramer-von Mises test statistic: 0.0006; p-value: 1.000
+    RDF Wasserstein distance : 0.0000035
+    RDF Hellinger distance : 0.003
+    RDF Kullback-Leibler divergence : 0.00
+    RDF Jensen-Shannon divergence : 0.00001
+    RDF Mutual information : 1.18
+    RDF Bhattacharyya distance : 0.90
+    coordNum Mutual information : 1.07
+      FOUND: AuPd30IC75RCS7S2min.342000.xyz redundant!!!
+  Comparing AuPd30IC75RCS7S2min.360000.xyz with AuPd30IC75RCS7S2min.378000.xyz...
+    eucRMSD: 0.002
+    boxCntDimDiff: |2.6821 - 2.6850| = 0.0029
+    avgBondLen Mutual information : 5.47
+    RDF 2-sample Anderson-Darling test statistic: -1.3092; p-value: 0.250
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0052; p-value: 1.000
+    RDF 2-sample Cramer-von Mises test statistic: 0.0006; p-value: 1.000
+    RDF Wasserstein distance : 0.0000033
+    RDF Hellinger distance : 0.003
+    RDF Kullback-Leibler divergence : 0.00
+    RDF Jensen-Shannon divergence : 0.00001
+    RDF Mutual information : 1.17
+    RDF Bhattacharyya distance : 0.90
+    coordNum Mutual information : 1.07
+      FOUND: AuPd30IC75RCS7S2min.360000.xyz redundant!!!
+  Comparing AuPd30IC75RCS7S2min.378000.xyz with AuPd30IC75RCS7S2min.396000.xyz...
+    eucRMSD: 0.000
+    boxCntDimDiff: |2.6850 - 2.6789| = 0.0061
+    avgBondLen Mutual information : 5.47
+    RDF 2-sample Anderson-Darling test statistic: -1.3094; p-value: 0.250
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0052; p-value: 1.000
+    RDF 2-sample Cramer-von Mises test statistic: 0.0006; p-value: 1.000
+    RDF Wasserstein distance : 0.0000033
+    RDF Hellinger distance : 0.002
+    RDF Kullback-Leibler divergence : 0.00
+    RDF Jensen-Shannon divergence : 0.00001
+    RDF Mutual information : 1.18
+    RDF Bhattacharyya distance : 0.90
+    coordNum Mutual information : 1.07
+      FOUND: AuPd30IC75RCS7S2min.378000.xyz redundant!!!
+  Comparing AuPd30IC75RCS7S2min.396000.xyz with AuPd30IC75RCS7S2min.414000.xyz...
+    eucRMSD: 0.002
+    boxCntDimDiff: |2.6789 - 2.6842| = 0.0053
+    avgBondLen Mutual information : 5.46
+    RDF 2-sample Anderson-Darling test statistic: -1.3092; p-value: 0.250
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0062; p-value: 1.000
+    RDF 2-sample Cramer-von Mises test statistic: 0.0007; p-value: 1.000
+    RDF Wasserstein distance : 0.0000034
+    RDF Hellinger distance : 0.003
+    RDF Kullback-Leibler divergence : 0.00
+    RDF Jensen-Shannon divergence : 0.00001
+    RDF Mutual information : 1.19
+    RDF Bhattacharyya distance : 0.90
+    coordNum Mutual information : 1.07
+      FOUND: AuPd30IC75RCS7S2min.396000.xyz redundant!!!
+  Comparing AuPd30IC75RCS7S2min.414000.xyz with AuPd30IC75RCS7S2min.432000.xyz...
+    eucRMSD: 0.167
+    boxCntDimDiff: |2.6842 - 2.6802| = 0.0040
+    avgBondLen Mutual information : 2.42
+    RDF 2-sample Anderson-Darling test statistic: 2.8699; p-value: 0.022
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0686; p-value: 0.020
+    RDF 2-sample Cramer-von Mises test statistic: 0.3531; p-value: 0.096
+    RDF Wasserstein distance : 0.0000309
+    RDF Hellinger distance : 0.056
+    RDF Kullback-Leibler divergence : 0.01
+    RDF Jensen-Shannon divergence : 0.00260
+    RDF Mutual information : 0.93
+    RDF Bhattacharyya distance : 0.90
+    coordNum Mutual information : 1.00
+  Comparing AuPd30IC75RCS7S2min.432000.xyz with AuPd30IC75RCS7S2min.450000.xyz...
+    eucRMSD: 0.263
+    boxCntDimDiff: |2.6802 - 2.6780| = 0.0022
+    avgBondLen Mutual information : 1.52
+    RDF 2-sample Anderson-Darling test statistic: -0.9519; p-value: 0.250
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0272; p-value: 0.854
+    RDF 2-sample Cramer-von Mises test statistic: 0.0437; p-value: 0.914
+    RDF Wasserstein distance : 0.0000279
+    RDF Hellinger distance : 0.053
+    RDF Kullback-Leibler divergence : 0.15
+    RDF Jensen-Shannon divergence : 0.00257
+    RDF Mutual information : 0.83
+    RDF Bhattacharyya distance : 0.90
+    coordNum Mutual information : 0.93
+  Comparing AuPd30IC75RCS7S2min.450000.xyz with AuPd30IC75RCS7S2min.468000.xyz...
+    eucRMSD: 0.284
+    boxCntDimDiff: |2.6780 - 2.6431| = 0.0349
+    avgBondLen Mutual information : 1.45
+    RDF 2-sample Anderson-Darling test statistic: -0.8454; p-value: 0.250
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0333; p-value: 0.639
+    RDF 2-sample Cramer-von Mises test statistic: 0.0579; p-value: 0.828
+    RDF Wasserstein distance : 0.0000324
+    RDF Hellinger distance : 0.056
+    RDF Kullback-Leibler divergence : 0.11
+    RDF Jensen-Shannon divergence : 0.00285
+    RDF Mutual information : 0.80
+    RDF Bhattacharyya distance : 0.91
+    coordNum Mutual information : 0.88
+  Comparing AuPd30IC75RCS7S2min.468000.xyz with AuPd30IC75RCS7S2min.486000.xyz...
+    eucRMSD: 0.336
+    boxCntDimDiff: |2.6431 - 2.6660| = 0.0229
+    avgBondLen Mutual information : 1.46
+    RDF 2-sample Anderson-Darling test statistic: -1.1580; p-value: 0.250
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0186; p-value: 0.996
+    RDF 2-sample Cramer-von Mises test statistic: 0.0203; p-value: 0.997
+    RDF Wasserstein distance : 0.0000232
+    RDF Hellinger distance : 0.052
+    RDF Kullback-Leibler divergence : 0.32
+    RDF Jensen-Shannon divergence : 0.00242
+    RDF Mutual information : 0.82
+    RDF Bhattacharyya distance : 0.91
+    coordNum Mutual information : 0.75
+  Comparing AuPd30IC75RCS7S2min.486000.xyz with AuPd30IC75RCS7S2min.504000.xyz...
+    eucRMSD: 0.324
+    boxCntDimDiff: |2.6660 - 2.6661| = 0.0001
+    avgBondLen Mutual information : 1.65
+    RDF 2-sample Anderson-Darling test statistic: -1.0760; p-value: 0.250
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0214; p-value: 0.975
+    RDF 2-sample Cramer-von Mises test statistic: 0.0279; p-value: 0.983
+    RDF Wasserstein distance : 0.0000256
+    RDF Hellinger distance : 0.049
+    RDF Kullback-Leibler divergence : 0.18
+    RDF Jensen-Shannon divergence : 0.00210
+    RDF Mutual information : 0.87
+    RDF Bhattacharyya distance : 0.91
+    coordNum Mutual information : 0.74
+  Comparing AuPd30IC75RCS7S2min.504000.xyz with AuPd30IC75RCS7S2min.522000.xyz...
+    eucRMSD: 0.390
+    boxCntDimDiff: |2.6661 - 2.6587| = 0.0073
+    avgBondLen Mutual information : 1.71
+    RDF 2-sample Anderson-Darling test statistic: -0.9979; p-value: 0.250
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0218; p-value: 0.970
+    RDF 2-sample Cramer-von Mises test statistic: 0.0330; p-value: 0.966
+    RDF Wasserstein distance : 0.0000248
+    RDF Hellinger distance : 0.048
+    RDF Kullback-Leibler divergence : 0.29
+    RDF Jensen-Shannon divergence : 0.00208
+    RDF Mutual information : 0.92
+    RDF Bhattacharyya distance : 0.91
+    coordNum Mutual information : 0.87
+  Comparing AuPd30IC75RCS7S2min.522000.xyz with AuPd30IC75RCS7S2min.540000.xyz...
+    eucRMSD: 0.335
+    boxCntDimDiff: |2.6587 - 2.6004| = 0.0584
+    avgBondLen Mutual information : 1.28
+    RDF 2-sample Anderson-Darling test statistic: -0.5090; p-value: 0.250
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0350; p-value: 0.578
+    RDF 2-sample Cramer-von Mises test statistic: 0.1051; p-value: 0.561
+    RDF Wasserstein distance : 0.0000513
+    RDF Hellinger distance : 0.061
+    RDF Kullback-Leibler divergence : 0.04
+    RDF Jensen-Shannon divergence : 0.00349
+    RDF Mutual information : 0.81
+    RDF Bhattacharyya distance : 0.91
+    coordNum Mutual information : 0.75
+  Comparing AuPd30IC75RCS7S2min.540000.xyz with AuPd30IC75RCS7S2min.558000.xyz...
+    eucRMSD: 0.595
+    boxCntDimDiff: |2.6004 - 2.5976| = 0.0028
+    avgBondLen Mutual information : 0.42
+    RDF 2-sample Anderson-Darling test statistic: 0.4844; p-value: 0.210
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0554; p-value: 0.102
+    RDF 2-sample Cramer-von Mises test statistic: 0.2975; p-value: 0.137
+    RDF Wasserstein distance : 0.0000854
+    RDF Hellinger distance : 0.095
+    RDF Kullback-Leibler divergence : 0.03
+    RDF Jensen-Shannon divergence : 0.00871
+    RDF Mutual information : 0.71
+    RDF Bhattacharyya distance : 0.91
+    coordNum Mutual information : 0.60
+  Comparing AuPd30IC75RCS7S2min.558000.xyz with AuPd30IC75RCS7S2min.576000.xyz...
+    eucRMSD: 0.612
+    boxCntDimDiff: |2.5976 - 2.5847| = 0.0129
+    avgBondLen Mutual information : 0.70
+    RDF 2-sample Anderson-Darling test statistic: -1.1707; p-value: 0.250
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0219; p-value: 0.970
+    RDF 2-sample Cramer-von Mises test statistic: 0.0186; p-value: 0.998
+    RDF Wasserstein distance : 0.0000342
+    RDF Hellinger distance : 0.057
+    RDF Kullback-Leibler divergence : 0.08
+    RDF Jensen-Shannon divergence : 0.00318
+    RDF Mutual information : 0.76
+    RDF Bhattacharyya distance : 0.91
+    coordNum Mutual information : 0.65
+  Comparing AuPd30IC75RCS7S2min.576000.xyz with AuPd30IC75RCS7S2min.594000.xyz...
+    eucRMSD: 0.524
+    boxCntDimDiff: |2.5847 - 2.5606| = 0.0241
+    avgBondLen Mutual information : 1.30
+    RDF 2-sample Anderson-Darling test statistic: -0.8684; p-value: 0.250
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0319; p-value: 0.688
+    RDF 2-sample Cramer-von Mises test statistic: 0.0634; p-value: 0.793
+    RDF Wasserstein distance : 0.0000390
+    RDF Hellinger distance : 0.053
+    RDF Kullback-Leibler divergence : 0.18
+    RDF Jensen-Shannon divergence : 0.00271
+    RDF Mutual information : 0.78
+    RDF Bhattacharyya distance : 0.92
+    coordNum Mutual information : 0.67
+  Comparing AuPd30IC75RCS7S2min.594000.xyz with AuPd30IC75RCS7S2min.612000.xyz...
+    eucRMSD: 0.877
+    boxCntDimDiff: |2.5606 - 2.5658| = 0.0052
+    avgBondLen Mutual information : 0.49
+    RDF 2-sample Anderson-Darling test statistic: 0.3962; p-value: 0.229
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0592; p-value: 0.066
+    RDF 2-sample Cramer-von Mises test statistic: 0.2855; p-value: 0.149
+    RDF Wasserstein distance : 0.0000847
+    RDF Hellinger distance : 0.093
+    RDF Kullback-Leibler divergence : 0.05
+    RDF Jensen-Shannon divergence : 0.00825
+    RDF Mutual information : 0.64
+    RDF Bhattacharyya distance : 0.91
+    coordNum Mutual information : 0.57
+  Comparing AuPd30IC75RCS7S2min.612000.xyz with AuPd30IC75RCS7S2min.630000.xyz...
+    eucRMSD: 1.075
+    boxCntDimDiff: |2.5658 - 2.5859| = 0.0201
+    avgBondLen Mutual information : 0.88
+    RDF 2-sample Anderson-Darling test statistic: -0.0145; p-value: 0.250
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0501; p-value: 0.177
+    RDF 2-sample Cramer-von Mises test statistic: 0.2225; p-value: 0.228
+    RDF Wasserstein distance : 0.0000275
+    RDF Hellinger distance : 0.055
+    RDF Kullback-Leibler divergence : 0.13
+    RDF Jensen-Shannon divergence : 0.00293
+    RDF Mutual information : 0.67
+    RDF Bhattacharyya distance : 0.92
+    coordNum Mutual information : 0.53
+  Comparing AuPd30IC75RCS7S2min.630000.xyz with AuPd30IC75RCS7S2min.648000.xyz...
+    eucRMSD: 1.318
+    boxCntDimDiff: |2.5859 - 2.5507| = 0.0352
+    avgBondLen Mutual information : 0.67
+    RDF 2-sample Anderson-Darling test statistic: 2.2470; p-value: 0.039
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0737; p-value: 0.010
+    RDF 2-sample Cramer-von Mises test statistic: 0.5984; p-value: 0.023
+    RDF Wasserstein distance : 0.0000517
+    RDF Hellinger distance : 0.062
+    RDF Kullback-Leibler divergence : 0.03
+    RDF Jensen-Shannon divergence : 0.00369
+    RDF Mutual information : 0.68
+    RDF Bhattacharyya distance : 0.92
+    coordNum Mutual information : 0.49
+  Comparing AuPd30IC75RCS7S2min.648000.xyz with AuPd30IC75RCS7S2min.666000.xyz...
+    eucRMSD: 1.477
+    boxCntDimDiff: |2.5507 - 2.5402| = 0.0105
+    avgBondLen Mutual information : 0.52
+    RDF 2-sample Anderson-Darling test statistic: 1.2146; p-value: 0.103
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0613; p-value: 0.045
+    RDF 2-sample Cramer-von Mises test statistic: 0.4195; p-value: 0.064
+    RDF Wasserstein distance : 0.0000282
+    RDF Hellinger distance : 0.053
+    RDF Kullback-Leibler divergence : 0.03
+    RDF Jensen-Shannon divergence : 0.00278
+    RDF Mutual information : 0.68
+    RDF Bhattacharyya distance : 0.93
+    coordNum Mutual information : 0.44
+  Comparing AuPd30IC75RCS7S2min.666000.xyz with AuPd30IC75RCS7S2min.684000.xyz...
+    eucRMSD: 1.730
+    boxCntDimDiff: |2.5402 - 2.5536| = 0.0134
+    avgBondLen Mutual information : 0.56
+    RDF 2-sample Anderson-Darling test statistic: -0.9925; p-value: 0.250
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0297; p-value: 0.753
+    RDF 2-sample Cramer-von Mises test statistic: 0.0513; p-value: 0.869
+    RDF Wasserstein distance : 0.0000286
+    RDF Hellinger distance : 0.054
+    RDF Kullback-Leibler divergence : 0.11
+    RDF Jensen-Shannon divergence : 0.00281
+    RDF Mutual information : 0.73
+    RDF Bhattacharyya distance : 0.93
+    coordNum Mutual information : 0.38
+  Comparing AuPd30IC75RCS7S2min.684000.xyz with AuPd30IC75RCS7S2min.702000.xyz...
+    eucRMSD: 1.950
+    boxCntDimDiff: |2.5536 - 2.5481| = 0.0056
+    avgBondLen Mutual information : 0.25
+    RDF 2-sample Anderson-Darling test statistic: 0.8498; p-value: 0.146
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0650; p-value: 0.028
+    RDF 2-sample Cramer-von Mises test statistic: 0.3677; p-value: 0.088
+    RDF Wasserstein distance : 0.0000724
+    RDF Hellinger distance : 0.084
+    RDF Kullback-Leibler divergence : 0.03
+    RDF Jensen-Shannon divergence : 0.00702
+    RDF Mutual information : 0.64
+    RDF Bhattacharyya distance : 0.92
+    coordNum Mutual information : 0.32
+  Comparing AuPd30IC75RCS7S2min.702000.xyz with AuPd30IC75RCS7S2min.720000.xyz...
+    eucRMSD: 2.232
+    boxCntDimDiff: |2.5481 - 2.5471| = 0.0009
+    avgBondLen Mutual information : 0.13
+    RDF 2-sample Anderson-Darling test statistic: -0.1716; p-value: 0.250
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0466; p-value: 0.222
+    RDF 2-sample Cramer-von Mises test statistic: 0.1675; p-value: 0.341
+    RDF Wasserstein distance : 0.0000537
+    RDF Hellinger distance : 0.073
+    RDF Kullback-Leibler divergence : 0.02
+    RDF Jensen-Shannon divergence : 0.00528
+    RDF Mutual information : 0.63
+    RDF Bhattacharyya distance : 0.92
+    coordNum Mutual information : 0.24
+  Comparing AuPd30IC75RCS7S2min.720000.xyz with AuPd30IC75RCS7S2min.738000.xyz...
+    eucRMSD: 2.544
+    boxCntDimDiff: |2.5471 - 2.5779| = 0.0308
+    avgBondLen Mutual information : 0.02
+    RDF 2-sample Anderson-Darling test statistic: 0.4041; p-value: 0.227
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0588; p-value: 0.074
+    RDF 2-sample Cramer-von Mises test statistic: 0.2673; p-value: 0.168
+    RDF Wasserstein distance : 0.0000917
+    RDF Hellinger distance : 0.119
+    RDF Kullback-Leibler divergence : 0.09
+    RDF Jensen-Shannon divergence : 0.01406
+    RDF Mutual information : 0.55
+    RDF Bhattacharyya distance : 0.92
+    coordNum Mutual information : 0.13
+  Comparing AuPd30IC75RCS7S2min.738000.xyz with AuPd30IC75RCS7S2min.756000.xyz...
+    eucRMSD: 2.769
+    boxCntDimDiff: |2.5779 - 2.5638| = 0.0141
+    avgBondLen Mutual information : 0.00
+    RDF 2-sample Anderson-Darling test statistic: -1.2095; p-value: 0.250
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0175; p-value: 0.998
+    RDF 2-sample Cramer-von Mises test statistic: 0.0148; p-value: 1.000
+    RDF Wasserstein distance : 0.0000230
+    RDF Hellinger distance : 0.049
+    RDF Kullback-Leibler divergence : 0.04
+    RDF Jensen-Shannon divergence : 0.00238
+    RDF Mutual information : 0.80
+    RDF Bhattacharyya distance : 0.92
+    coordNum Mutual information : 0.15
+  Comparing AuPd30IC75RCS7S2min.756000.xyz with AuPd30IC75RCS7S2min.774000.xyz...
+    eucRMSD: 3.065
+    boxCntDimDiff: |2.5638 - 2.5504| = 0.0134
+    avgBondLen Mutual information : 0.04
+    RDF 2-sample Anderson-Darling test statistic: 0.0762; p-value: 0.250
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0445; p-value: 0.311
+    RDF 2-sample Cramer-von Mises test statistic: 0.2368; p-value: 0.206
+    RDF Wasserstein distance : 0.0000237
+    RDF Hellinger distance : 0.044
+    RDF Kullback-Leibler divergence : 0.02
+    RDF Jensen-Shannon divergence : 0.00194
+    RDF Mutual information : 0.82
+    RDF Bhattacharyya distance : 0.93
+    coordNum Mutual information : 0.10
+  Comparing AuPd30IC75RCS7S2min.774000.xyz with AuPd30IC75RCS7S2min.792000.xyz...
+    eucRMSD: 3.458
+    boxCntDimDiff: |2.5504 - 2.5513| = 0.0009
+    avgBondLen Mutual information : 0.03
+    RDF 2-sample Anderson-Darling test statistic: 0.2862; p-value: 0.250
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0506; p-value: 0.183
+    RDF 2-sample Cramer-von Mises test statistic: 0.2768; p-value: 0.157
+    RDF Wasserstein distance : 0.0000225
+    RDF Hellinger distance : 0.050
+    RDF Kullback-Leibler divergence : 0.08
+    RDF Jensen-Shannon divergence : 0.00243
+    RDF Mutual information : 0.83
+    RDF Bhattacharyya distance : 0.93
+    coordNum Mutual information : 0.10
+  Comparing AuPd30IC75RCS7S2min.792000.xyz with AuPd30IC75RCS7S2min.810000.xyz...
+    eucRMSD: 3.770
+    boxCntDimDiff: |2.5513 - 2.5370| = 0.0143
+    avgBondLen Mutual information : 0.02
+    RDF 2-sample Anderson-Darling test statistic: 1.2118; p-value: 0.103
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0748; p-value: 0.012
+    RDF 2-sample Cramer-von Mises test statistic: 0.4298; p-value: 0.060
+    RDF Wasserstein distance : 0.0000231
+    RDF Hellinger distance : 0.050
+    RDF Kullback-Leibler divergence : 0.01
+    RDF Jensen-Shannon divergence : 0.00246
+    RDF Mutual information : 0.74
+    RDF Bhattacharyya distance : 0.92
+    coordNum Mutual information : 0.06
+  Comparing AuPd30IC75RCS7S2min.810000.xyz with AuPd30IC75RCS7S2min.828000.xyz...
+    eucRMSD: 3.999
+    boxCntDimDiff: |2.5370 - 2.5584| = 0.0215
+    avgBondLen Mutual information : 0.00
+    RDF 2-sample Anderson-Darling test statistic: -0.2786; p-value: 0.250
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0458; p-value: 0.303
+    RDF 2-sample Cramer-von Mises test statistic: 0.1725; p-value: 0.328
+    RDF Wasserstein distance : 0.0000257
+    RDF Hellinger distance : 0.049
+    RDF Kullback-Leibler divergence : 0.05
+    RDF Jensen-Shannon divergence : 0.00235
+    RDF Mutual information : 0.74
+    RDF Bhattacharyya distance : 0.92
+    coordNum Mutual information : 0.05
+  Comparing AuPd30IC75RCS7S2min.828000.xyz with AuPd30IC75RCS7S2min.846000.xyz...
+    eucRMSD: 3.936
+    boxCntDimDiff: |2.5584 - 2.5193| = 0.0392
+    avgBondLen Mutual information : 0.01
+    RDF 2-sample Anderson-Darling test statistic: 4.0819; p-value: 0.008
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0974; p-value: 0.000
+    RDF 2-sample Cramer-von Mises test statistic: 0.9166; p-value: 0.004
+    RDF Wasserstein distance : 0.0000196
+    RDF Hellinger distance : 0.047
+    RDF Kullback-Leibler divergence : 0.01
+    RDF Jensen-Shannon divergence : 0.00221
+    RDF Mutual information : 0.81
+    RDF Bhattacharyya distance : 0.92
+    coordNum Mutual information : 0.00
+  Comparing AuPd30IC75RCS7S2min.846000.xyz with AuPd30IC75RCS7S2min.864000.xyz...
+    eucRMSD: 4.224
+    boxCntDimDiff: |2.5193 - 2.5319| = 0.0126
+    avgBondLen Mutual information : 0.00
+    RDF 2-sample Anderson-Darling test statistic: 1.3352; p-value: 0.091
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0650; p-value: 0.040
+    RDF 2-sample Cramer-von Mises test statistic: 0.4339; p-value: 0.059
+    RDF Wasserstein distance : 0.0000223
+    RDF Hellinger distance : 0.048
+    RDF Kullback-Leibler divergence : 0.06
+    RDF Jensen-Shannon divergence : 0.00225
+    RDF Mutual information : 0.82
+    RDF Bhattacharyya distance : 0.92
+    coordNum Mutual information : 0.04
+  Comparing AuPd30IC75RCS7S2min.864000.xyz with AuPd30IC75RCS7S2min.882000.xyz...
+    eucRMSD: 4.251
+    boxCntDimDiff: |2.5319 - 2.5503| = 0.0184
+    avgBondLen Mutual information : 0.00
+    RDF 2-sample Anderson-Darling test statistic: -1.0534; p-value: 0.250
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0247; p-value: 0.937
+    RDF 2-sample Cramer-von Mises test statistic: 0.0363; p-value: 0.952
+    RDF Wasserstein distance : 0.0000257
+    RDF Hellinger distance : 0.049
+    RDF Kullback-Leibler divergence : 0.01
+    RDF Jensen-Shannon divergence : 0.00235
+    RDF Mutual information : 0.76
+    RDF Bhattacharyya distance : 0.92
+    coordNum Mutual information : 0.00
+  Comparing AuPd30IC75RCS7S2min.882000.xyz with AuPd30IC75RCS7S2min.900000.xyz...
+    eucRMSD: 4.439
+    boxCntDimDiff: |2.5503 - 2.5422| = 0.0081
+    avgBondLen Mutual information : 0.00
+    RDF 2-sample Anderson-Darling test statistic: 1.9053; p-value: 0.053
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0670; p-value: 0.023
+    RDF 2-sample Cramer-von Mises test statistic: 0.5292; p-value: 0.034
+    RDF Wasserstein distance : 0.0000209
+    RDF Hellinger distance : 0.052
+    RDF Kullback-Leibler divergence : 0.08
+    RDF Jensen-Shannon divergence : 0.00265
+    RDF Mutual information : 0.74
+    RDF Bhattacharyya distance : 0.92
+    coordNum Mutual information : 0.02
+  Comparing AuPd30IC75RCS7S2min.900000.xyz with AuPd30IC75RCS7S2min.918000.xyz...
+    eucRMSD: 4.347
+    boxCntDimDiff: |2.5422 - 2.5278| = 0.0144
+    avgBondLen Mutual information : 0.00
+    RDF 2-sample Anderson-Darling test statistic: 2.6830; p-value: 0.026
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0797; p-value: 0.004
+    RDF 2-sample Cramer-von Mises test statistic: 0.6718; p-value: 0.015
+    RDF Wasserstein distance : 0.0000273
+    RDF Hellinger distance : 0.053
+    RDF Kullback-Leibler divergence : 0.05
+    RDF Jensen-Shannon divergence : 0.00273
+    RDF Mutual information : 0.75
+    RDF Bhattacharyya distance : 0.92
+    coordNum Mutual information : 0.06
+  Comparing AuPd30IC75RCS7S2min.918000.xyz with AuPd30IC75RCS7S2min.936000.xyz...
+    eucRMSD: 4.453
+    boxCntDimDiff: |2.5278 - 2.5347| = 0.0070
+    avgBondLen Mutual information : 0.00
+    RDF 2-sample Anderson-Darling test statistic: 1.7296; p-value: 0.063
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0688; p-value: 0.026
+    RDF 2-sample Cramer-von Mises test statistic: 0.5024; p-value: 0.039
+    RDF Wasserstein distance : 0.0000229
+    RDF Hellinger distance : 0.050
+    RDF Kullback-Leibler divergence : 0.01
+    RDF Jensen-Shannon divergence : 0.00252
+    RDF Mutual information : 0.79
+    RDF Bhattacharyya distance : 0.92
+    coordNum Mutual information : 0.07
+  Comparing AuPd30IC75RCS7S2min.936000.xyz with AuPd30IC75RCS7S2min.954000.xyz...
+    eucRMSD: 4.522
+    boxCntDimDiff: |2.5347 - 2.5269| = 0.0078
+    avgBondLen Mutual information : 0.03
+    RDF 2-sample Anderson-Darling test statistic: 8.6704; p-value: 0.001
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.1206; p-value: 0.000
+    RDF 2-sample Cramer-von Mises test statistic: 1.7233; p-value: 0.000
+    RDF Wasserstein distance : 0.0000271
+    RDF Hellinger distance : 0.053
+    RDF Kullback-Leibler divergence : 0.01
+    RDF Jensen-Shannon divergence : 0.00276
+    RDF Mutual information : 0.73
+    RDF Bhattacharyya distance : 0.92
+    coordNum Mutual information : 0.02
+  Comparing AuPd30IC75RCS7S2min.954000.xyz with AuPd30IC75RCS7S2min.972000.xyz...
+    eucRMSD: 4.734
+    boxCntDimDiff: |2.5269 - 2.5434| = 0.0165
+    avgBondLen Mutual information : 0.03
+    RDF 2-sample Anderson-Darling test statistic: -0.5623; p-value: 0.250
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0412; p-value: 0.373
+    RDF 2-sample Cramer-von Mises test statistic: 0.1257; p-value: 0.473
+    RDF Wasserstein distance : 0.0000246
+    RDF Hellinger distance : 0.051
+    RDF Kullback-Leibler divergence : 0.06
+    RDF Jensen-Shannon divergence : 0.00252
+    RDF Mutual information : 0.73
+    RDF Bhattacharyya distance : 0.92
+    coordNum Mutual information : 0.02
+  Comparing AuPd30IC75RCS7S2min.972000.xyz with AuPd30IC75RCS7S2min.990000.xyz...
+    eucRMSD: 4.872
+    boxCntDimDiff: |2.5434 - 2.5557| = 0.0123
+    avgBondLen Mutual information : 0.03
+    RDF 2-sample Anderson-Darling test statistic: -0.6067; p-value: 0.250
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0327; p-value: 0.656
+    RDF 2-sample Cramer-von Mises test statistic: 0.0951; p-value: 0.610
+    RDF Wasserstein distance : 0.0000178
+    RDF Hellinger distance : 0.050
+    RDF Kullback-Leibler divergence : 0.06
+    RDF Jensen-Shannon divergence : 0.00239
+    RDF Mutual information : 0.75
+    RDF Bhattacharyya distance : 0.92
+    coordNum Mutual information : 0.01
+  Comparing AuPd30IC75RCS7S2min.990000.xyz with AuPd30IC75RCS7S2min.1008000.xyz...
+    eucRMSD: 4.901
+    boxCntDimDiff: |2.5557 - 2.5448| = 0.0110
+    avgBondLen Mutual information : 0.03
+    RDF 2-sample Anderson-Darling test statistic: -0.1077; p-value: 0.250
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0488; p-value: 0.173
+    RDF 2-sample Cramer-von Mises test statistic: 0.1983; p-value: 0.271
+    RDF Wasserstein distance : 0.0000209
+    RDF Hellinger distance : 0.049
+    RDF Kullback-Leibler divergence : 0.08
+    RDF Jensen-Shannon divergence : 0.00234
+    RDF Mutual information : 0.86
+    RDF Bhattacharyya distance : 0.93
+    coordNum Mutual information : 0.02
+  Comparing AuPd30IC75RCS7S2min.1008000.xyz with AuPd30IC75RCS7S2min.1026000.xyz...
+    eucRMSD: 4.814
+    boxCntDimDiff: |2.5448 - 2.5328| = 0.0120
+    avgBondLen Mutual information : 0.02
+    RDF 2-sample Anderson-Darling test statistic: -0.2454; p-value: 0.250
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0443; p-value: 0.308
+    RDF 2-sample Cramer-von Mises test statistic: 0.1777; p-value: 0.315
+    RDF Wasserstein distance : 0.0000215
+    RDF Hellinger distance : 0.046
+    RDF Kullback-Leibler divergence : 0.01
+    RDF Jensen-Shannon divergence : 0.00215
+    RDF Mutual information : 0.86
+    RDF Bhattacharyya distance : 0.93
+    coordNum Mutual information : 0.00
+  Comparing AuPd30IC75RCS7S2min.1026000.xyz with AuPd30IC75RCS7S2min.1044000.xyz...
+    eucRMSD: 4.902
+    boxCntDimDiff: |2.5328 - 2.5314| = 0.0013
+    avgBondLen Mutual information : 0.01
+    RDF 2-sample Anderson-Darling test statistic: -0.3578; p-value: 0.250
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0346; p-value: 0.613
+    RDF 2-sample Cramer-von Mises test statistic: 0.1468; p-value: 0.400
+    RDF Wasserstein distance : 0.0000199
+    RDF Hellinger distance : 0.047
+    RDF Kullback-Leibler divergence : 0.01
+    RDF Jensen-Shannon divergence : 0.00214
+    RDF Mutual information : 0.90
+    RDF Bhattacharyya distance : 0.93
+    coordNum Mutual information : 0.02
+  Comparing AuPd30IC75RCS7S2min.1044000.xyz with AuPd30IC75RCS7S2min.1062000.xyz...
+    eucRMSD: 5.096
+    boxCntDimDiff: |2.5314 - 2.5423| = 0.0109
+    avgBondLen Mutual information : 0.00
+    RDF 2-sample Anderson-Darling test statistic: 0.4213; p-value: 0.223
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0538; p-value: 0.129
+    RDF 2-sample Cramer-von Mises test statistic: 0.2892; p-value: 0.145
+    RDF Wasserstein distance : 0.0000197
+    RDF Hellinger distance : 0.045
+    RDF Kullback-Leibler divergence : 0.03
+    RDF Jensen-Shannon divergence : 0.00203
+    RDF Mutual information : 0.89
+    RDF Bhattacharyya distance : 0.92
+    coordNum Mutual information : 0.05
+  Comparing AuPd30IC75RCS7S2min.1062000.xyz with AuPd30IC75RCS7S2min.1080000.xyz...
+    eucRMSD: 5.151
+    boxCntDimDiff: |2.5423 - 2.5075| = 0.0348
+    avgBondLen Mutual information : 0.00
+    RDF 2-sample Anderson-Darling test statistic: -0.1216; p-value: 0.250
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0534; p-value: 0.138
+    RDF 2-sample Cramer-von Mises test statistic: 0.2043; p-value: 0.259
+    RDF Wasserstein distance : 0.0000250
+    RDF Hellinger distance : 0.047
+    RDF Kullback-Leibler divergence : 0.06
+    RDF Jensen-Shannon divergence : 0.00221
+    RDF Mutual information : 0.88
+    RDF Bhattacharyya distance : 0.92
+    coordNum Mutual information : 0.00
+  Comparing AuPd30IC75RCS7S2min.1080000.xyz with AuPd30IC75RCS7S2min.1098000.xyz...
+    eucRMSD: 5.525
+    boxCntDimDiff: |2.5075 - 2.5604| = 0.0530
+    avgBondLen Mutual information : 0.05
+    RDF 2-sample Anderson-Darling test statistic: 0.1261; p-value: 0.250
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0649; p-value: 0.041
+    RDF 2-sample Cramer-von Mises test statistic: 0.2469; p-value: 0.193
+    RDF Wasserstein distance : 0.0000337
+    RDF Hellinger distance : 0.049
+    RDF Kullback-Leibler divergence : 0.01
+    RDF Jensen-Shannon divergence : 0.00236
+    RDF Mutual information : 0.83
+    RDF Bhattacharyya distance : 0.92
+    coordNum Mutual information : 0.03
+  Comparing AuPd30IC75RCS7S2min.1098000.xyz with AuPd30IC75RCS7S2min.1116000.xyz...
+    eucRMSD: 5.141
+    boxCntDimDiff: |2.5604 - 2.5487| = 0.0117
+    avgBondLen Mutual information : 0.04
+    RDF 2-sample Anderson-Darling test statistic: -0.1509; p-value: 0.250
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0429; p-value: 0.368
+    RDF 2-sample Cramer-von Mises test statistic: 0.1933; p-value: 0.281
+    RDF Wasserstein distance : 0.0000217
+    RDF Hellinger distance : 0.047
+    RDF Kullback-Leibler divergence : 0.03
+    RDF Jensen-Shannon divergence : 0.00218
+    RDF Mutual information : 0.83
+    RDF Bhattacharyya distance : 0.92
+    coordNum Mutual information : 0.02
+  Comparing AuPd30IC75RCS7S2min.1116000.xyz with AuPd30IC75RCS7S2min.1134000.xyz...
+    eucRMSD: 5.196
+    boxCntDimDiff: |2.5487 - 2.5572| = 0.0085
+    avgBondLen Mutual information : 0.02
+    RDF 2-sample Anderson-Darling test statistic: 11.4582; p-value: 0.001
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.1366; p-value: 0.000
+    RDF 2-sample Cramer-von Mises test statistic: 2.2026; p-value: 0.000
+    RDF Wasserstein distance : 0.0000223
+    RDF Hellinger distance : 0.050
+    RDF Kullback-Leibler divergence : 0.01
+    RDF Jensen-Shannon divergence : 0.00249
+    RDF Mutual information : 0.69
+    RDF Bhattacharyya distance : 0.92
+    coordNum Mutual information : 0.04
+  Comparing AuPd30IC75RCS7S2min.1134000.xyz with AuPd30IC75RCS7S2min.1152000.xyz...
+    eucRMSD: 5.279
+    boxCntDimDiff: |2.5572 - 2.5709| = 0.0136
+    avgBondLen Mutual information : 0.00
+    RDF 2-sample Anderson-Darling test statistic: 18.7263; p-value: 0.001
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.1571; p-value: 0.000
+    RDF 2-sample Cramer-von Mises test statistic: 3.4358; p-value: 0.000
+    RDF Wasserstein distance : 0.0000204
+    RDF Hellinger distance : 0.053
+    RDF Kullback-Leibler divergence : 0.05
+    RDF Jensen-Shannon divergence : 0.00280
+    RDF Mutual information : 0.65
+    RDF Bhattacharyya distance : 0.92
+    coordNum Mutual information : 0.00
+  Comparing AuPd30IC75RCS7S2min.1152000.xyz with AuPd30IC75RCS7S2min.1170000.xyz...
+    eucRMSD: 5.313
+    boxCntDimDiff: |2.5709 - 2.5237| = 0.0471
+    avgBondLen Mutual information : 0.00
+    RDF 2-sample Anderson-Darling test statistic: 5.8533; p-value: 0.002
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.1086; p-value: 0.000
+    RDF 2-sample Cramer-von Mises test statistic: 1.1969; p-value: 0.001
+    RDF Wasserstein distance : 0.0000218
+    RDF Hellinger distance : 0.052
+    RDF Kullback-Leibler divergence : 0.01
+    RDF Jensen-Shannon divergence : 0.00265
+    RDF Mutual information : 0.70
+    RDF Bhattacharyya distance : 0.92
+    coordNum Mutual information : 0.03
+  Comparing AuPd30IC75RCS7S2min.1170000.xyz with AuPd30IC75RCS7S2min.1188000.xyz...
+    eucRMSD: 5.624
+    boxCntDimDiff: |2.5237 - 2.5444| = 0.0207
+    avgBondLen Mutual information : 0.02
+    RDF 2-sample Anderson-Darling test statistic: 9.5335; p-value: 0.001
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.1352; p-value: 0.000
+    RDF 2-sample Cramer-von Mises test statistic: 1.8530; p-value: 0.000
+    RDF Wasserstein distance : 0.0000249
+    RDF Hellinger distance : 0.050
+    RDF Kullback-Leibler divergence : 0.03
+    RDF Jensen-Shannon divergence : 0.00246
+    RDF Mutual information : 0.71
+    RDF Bhattacharyya distance : 0.92
+    coordNum Mutual information : 0.00
+  Comparing AuPd30IC75RCS7S2min.1188000.xyz with AuPd30IC75RCS7S2min.1206000.xyz...
+    eucRMSD: 5.549
+    boxCntDimDiff: |2.5444 - 2.5346| = 0.0099
+    avgBondLen Mutual information : 0.00
+    RDF 2-sample Anderson-Darling test statistic: 0.7446; p-value: 0.162
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0585; p-value: 0.065
+    RDF 2-sample Cramer-von Mises test statistic: 0.3459; p-value: 0.101
+    RDF Wasserstein distance : 0.0000267
+    RDF Hellinger distance : 0.048
+    RDF Kullback-Leibler divergence : 0.01
+    RDF Jensen-Shannon divergence : 0.00226
+    RDF Mutual information : 0.79
+    RDF Bhattacharyya distance : 0.92
+    coordNum Mutual information : 0.03
+  Comparing AuPd30IC75RCS7S2min.1206000.xyz with AuPd30IC75RCS7S2min.1224000.xyz...
+    eucRMSD: 5.593
+    boxCntDimDiff: |2.5346 - 2.5511| = 0.0165
+    avgBondLen Mutual information : 0.00
+    RDF 2-sample Anderson-Darling test statistic: -0.7724; p-value: 0.250
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0419; p-value: 0.332
+    RDF 2-sample Cramer-von Mises test statistic: 0.0874; p-value: 0.651
+    RDF Wasserstein distance : 0.0000251
+    RDF Hellinger distance : 0.048
+    RDF Kullback-Leibler divergence : 0.03
+    RDF Jensen-Shannon divergence : 0.00226
+    RDF Mutual information : 0.76
+    RDF Bhattacharyya distance : 0.93
+    coordNum Mutual information : 0.03
+  Comparing AuPd30IC75RCS7S2min.1224000.xyz with AuPd30IC75RCS7S2min.1242000.xyz...
+    eucRMSD: 5.752
+    boxCntDimDiff: |2.5511 - 2.5406| = 0.0105
+    avgBondLen Mutual information : 0.00
+    RDF 2-sample Anderson-Darling test statistic: -1.0924; p-value: 0.250
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0222; p-value: 0.959
+    RDF 2-sample Cramer-von Mises test statistic: 0.0328; p-value: 0.967
+    RDF Wasserstein distance : 0.0000196
+    RDF Hellinger distance : 0.048
+    RDF Kullback-Leibler divergence : 0.03
+    RDF Jensen-Shannon divergence : 0.00224
+    RDF Mutual information : 0.77
+    RDF Bhattacharyya distance : 0.92
+    coordNum Mutual information : 0.00
+  Comparing AuPd30IC75RCS7S2min.1242000.xyz with AuPd30IC75RCS7S2min.1260000.xyz...
+    eucRMSD: 6.068
+    boxCntDimDiff: |2.5406 - 2.5608| = 0.0203
+    avgBondLen Mutual information : 0.00
+    RDF 2-sample Anderson-Darling test statistic: -0.5065; p-value: 0.250
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0403; p-value: 0.426
+    RDF 2-sample Cramer-von Mises test statistic: 0.1331; p-value: 0.446
+    RDF Wasserstein distance : 0.0000257
+    RDF Hellinger distance : 0.048
+    RDF Kullback-Leibler divergence : 0.01
+    RDF Jensen-Shannon divergence : 0.00226
+    RDF Mutual information : 0.78
+    RDF Bhattacharyya distance : 0.92
+    coordNum Mutual information : 0.02
+  Comparing AuPd30IC75RCS7S2min.1260000.xyz with AuPd30IC75RCS7S2min.1278000.xyz...
+    eucRMSD: 5.806
+    boxCntDimDiff: |2.5608 - 2.5584| = 0.0025
+    avgBondLen Mutual information : 0.00
+    RDF 2-sample Anderson-Darling test statistic: -0.2980; p-value: 0.250
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0407; p-value: 0.410
+    RDF 2-sample Cramer-von Mises test statistic: 0.1605; p-value: 0.359
+    RDF Wasserstein distance : 0.0000247
+    RDF Hellinger distance : 0.048
+    RDF Kullback-Leibler divergence : 0.06
+    RDF Jensen-Shannon divergence : 0.00223
+    RDF Mutual information : 0.84
+    RDF Bhattacharyya distance : 0.92
+    coordNum Mutual information : 0.02
+  Comparing AuPd30IC75RCS7S2min.1278000.xyz with AuPd30IC75RCS7S2min.1296000.xyz...
+    eucRMSD: 5.931
+    boxCntDimDiff: |2.5584 - 2.5426| = 0.0158
+    avgBondLen Mutual information : 0.02
+    RDF 2-sample Anderson-Darling test statistic: 0.5705; p-value: 0.193
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0573; p-value: 0.091
+    RDF 2-sample Cramer-von Mises test statistic: 0.3107; p-value: 0.126
+    RDF Wasserstein distance : 0.0000220
+    RDF Hellinger distance : 0.048
+    RDF Kullback-Leibler divergence : 0.01
+    RDF Jensen-Shannon divergence : 0.00226
+    RDF Mutual information : 0.87
+    RDF Bhattacharyya distance : 0.92
+    coordNum Mutual information : 0.00
+  Comparing AuPd30IC75RCS7S2min.1296000.xyz with AuPd30IC75RCS7S2min.1314000.xyz...
+    eucRMSD: 5.831
+    boxCntDimDiff: |2.5426 - 2.5278| = 0.0148
+    avgBondLen Mutual information : 0.00
+    RDF 2-sample Anderson-Darling test statistic: 0.6085; p-value: 0.186
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0693; p-value: 0.024
+    RDF 2-sample Cramer-von Mises test statistic: 0.3322; p-value: 0.110
+    RDF Wasserstein distance : 0.0000258
+    RDF Hellinger distance : 0.045
+    RDF Kullback-Leibler divergence : 0.03
+    RDF Jensen-Shannon divergence : 0.00198
+    RDF Mutual information : 0.79
+    RDF Bhattacharyya distance : 0.92
+    coordNum Mutual information : 0.00
+  Comparing AuPd30IC75RCS7S2min.1314000.xyz with AuPd30IC75RCS7S2min.1332000.xyz...
+    eucRMSD: 5.973
+    boxCntDimDiff: |2.5278 - 2.5370| = 0.0092
+    avgBondLen Mutual information : 0.00
+    RDF 2-sample Anderson-Darling test statistic: 2.2007; p-value: 0.040
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0856; p-value: 0.002
+    RDF 2-sample Cramer-von Mises test statistic: 0.5824; p-value: 0.025
+    RDF Wasserstein distance : 0.0000277
+    RDF Hellinger distance : 0.049
+    RDF Kullback-Leibler divergence : 0.01
+    RDF Jensen-Shannon divergence : 0.00234
+    RDF Mutual information : 0.78
+    RDF Bhattacharyya distance : 0.92
+    coordNum Mutual information : 0.00
+  Comparing AuPd30IC75RCS7S2min.1332000.xyz with AuPd30IC75RCS7S2min.1350000.xyz...
+    eucRMSD: 6.211
+    boxCntDimDiff: |2.5370 - 2.5501| = 0.0131
+    avgBondLen Mutual information : 0.00
+    RDF 2-sample Anderson-Darling test statistic: -0.7158; p-value: 0.250
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0279; p-value: 0.861
+    RDF 2-sample Cramer-von Mises test statistic: 0.0517; p-value: 0.866
+    RDF Wasserstein distance : 0.0000210
+    RDF Hellinger distance : 0.051
+    RDF Kullback-Leibler divergence : 0.12
+    RDF Jensen-Shannon divergence : 0.00258
+    RDF Mutual information : 0.81
+    RDF Bhattacharyya distance : 0.92
+    coordNum Mutual information : 0.03
+  Comparing AuPd30IC75RCS7S2min.1350000.xyz with AuPd30IC75RCS7S2min.1368000.xyz...
+    eucRMSD: 6.273
+    boxCntDimDiff: |2.5501 - 2.5467| = 0.0034
+    avgBondLen Mutual information : 0.01
+    RDF 2-sample Anderson-Darling test statistic: -0.2649; p-value: 0.250
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0410; p-value: 0.441
+    RDF 2-sample Cramer-von Mises test statistic: 0.1723; p-value: 0.328
+    RDF Wasserstein distance : 0.0000198
+    RDF Hellinger distance : 0.047
+    RDF Kullback-Leibler divergence : 0.01
+    RDF Jensen-Shannon divergence : 0.00220
+    RDF Mutual information : 0.82
+    RDF Bhattacharyya distance : 0.92
+    coordNum Mutual information : 0.03
+  Comparing AuPd30IC75RCS7S2min.1368000.xyz with AuPd30IC75RCS7S2min.1386000.xyz...
+    eucRMSD: 5.976
+    boxCntDimDiff: |2.5467 - 2.5038| = 0.0428
+    avgBondLen Mutual information : 0.00
+    RDF 2-sample Anderson-Darling test statistic: -0.7039; p-value: 0.250
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0412; p-value: 0.416
+    RDF 2-sample Cramer-von Mises test statistic: 0.0969; p-value: 0.601
+    RDF Wasserstein distance : 0.0000227
+    RDF Hellinger distance : 0.045
+    RDF Kullback-Leibler divergence : 0.01
+    RDF Jensen-Shannon divergence : 0.00201
+    RDF Mutual information : 0.85
+    RDF Bhattacharyya distance : 0.92
+    coordNum Mutual information : 0.03
+  Comparing AuPd30IC75RCS7S2min.1386000.xyz with AuPd30IC75RCS7S2min.1404000.xyz...
+    eucRMSD: 6.303
+    boxCntDimDiff: |2.5038 - 2.5526| = 0.0487
+    avgBondLen Mutual information : 0.02
+    RDF 2-sample Anderson-Darling test statistic: -0.3427; p-value: 0.250
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0494; p-value: 0.193
+    RDF 2-sample Cramer-von Mises test statistic: 0.1555; p-value: 0.373
+    RDF Wasserstein distance : 0.0000206
+    RDF Hellinger distance : 0.047
+    RDF Kullback-Leibler divergence : 0.01
+    RDF Jensen-Shannon divergence : 0.00218
+    RDF Mutual information : 0.90
+    RDF Bhattacharyya distance : 0.92
+    coordNum Mutual information : 0.00
+  Comparing AuPd30IC75RCS7S2min.1404000.xyz with AuPd30IC75RCS7S2min.1422000.xyz...
+    eucRMSD: 6.477
+    boxCntDimDiff: |2.5526 - 2.5331| = 0.0195
+    avgBondLen Mutual information : 0.01
+    RDF 2-sample Anderson-Darling test statistic: 1.6809; p-value: 0.066
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0784; p-value: 0.007
+    RDF 2-sample Cramer-von Mises test statistic: 0.4863; p-value: 0.043
+    RDF Wasserstein distance : 0.0000245
+    RDF Hellinger distance : 0.049
+    RDF Kullback-Leibler divergence : 0.08
+    RDF Jensen-Shannon divergence : 0.00239
+    RDF Mutual information : 0.82
+    RDF Bhattacharyya distance : 0.92
+    coordNum Mutual information : 0.01
+  Comparing AuPd30IC75RCS7S2min.1422000.xyz with AuPd30IC75RCS7S2min.1440000.xyz...
+    eucRMSD: 6.198
+    boxCntDimDiff: |2.5331 - 2.5461| = 0.0130
+    avgBondLen Mutual information : 0.00
+    RDF 2-sample Anderson-Darling test statistic: -0.8803; p-value: 0.250
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0357; p-value: 0.598
+    RDF 2-sample Cramer-von Mises test statistic: 0.0682; p-value: 0.764
+    RDF Wasserstein distance : 0.0000231
+    RDF Hellinger distance : 0.050
+    RDF Kullback-Leibler divergence : 0.01
+    RDF Jensen-Shannon divergence : 0.00245
+    RDF Mutual information : 0.73
+    RDF Bhattacharyya distance : 0.92
+    coordNum Mutual information : 0.00
+  Comparing AuPd30IC75RCS7S2min.1440000.xyz with AuPd30IC75RCS7S2min.1458000.xyz...
+    eucRMSD: 6.486
+    boxCntDimDiff: |2.5461 - 2.5678| = 0.0216
+    avgBondLen Mutual information : 0.00
+    RDF 2-sample Anderson-Darling test statistic: -0.1417; p-value: 0.250
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0458; p-value: 0.279
+    RDF 2-sample Cramer-von Mises test statistic: 0.1920; p-value: 0.284
+    RDF Wasserstein distance : 0.0000261
+    RDF Hellinger distance : 0.051
+    RDF Kullback-Leibler divergence : 0.05
+    RDF Jensen-Shannon divergence : 0.00253
+    RDF Mutual information : 0.75
+    RDF Bhattacharyya distance : 0.92
+    coordNum Mutual information : 0.02
+  Comparing AuPd30IC75RCS7S2min.1458000.xyz with AuPd30IC75RCS7S2min.1476000.xyz...
+    eucRMSD: 6.435
+    boxCntDimDiff: |2.5678 - 2.5259| = 0.0418
+    avgBondLen Mutual information : 0.01
+    RDF 2-sample Anderson-Darling test statistic: -0.7493; p-value: 0.250
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0322; p-value: 0.713
+    RDF 2-sample Cramer-von Mises test statistic: 0.0853; p-value: 0.663
+    RDF Wasserstein distance : 0.0000224
+    RDF Hellinger distance : 0.044
+    RDF Kullback-Leibler divergence : 0.01
+    RDF Jensen-Shannon divergence : 0.00195
+    RDF Mutual information : 0.85
+    RDF Bhattacharyya distance : 0.92
+    coordNum Mutual information : 0.01
+  Comparing AuPd30IC75RCS7S2min.1476000.xyz with AuPd30IC75RCS7S2min.1494000.xyz...
+    eucRMSD: 6.545
+    boxCntDimDiff: |2.5259 - 2.5457| = 0.0198
+    avgBondLen Mutual information : 0.00
+    RDF 2-sample Anderson-Darling test statistic: 0.1672; p-value: 0.250
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0531; p-value: 0.123
+    RDF 2-sample Cramer-von Mises test statistic: 0.2482; p-value: 0.191
+    RDF Wasserstein distance : 0.0000194
+    RDF Hellinger distance : 0.050
+    RDF Kullback-Leibler divergence : 0.01
+    RDF Jensen-Shannon divergence : 0.00248
+    RDF Mutual information : 0.70
+    RDF Bhattacharyya distance : 0.92
+    coordNum Mutual information : 0.00
+  Comparing AuPd30IC75RCS7S2min.1494000.xyz with AuPd30IC75RCS7S2min.1512000.xyz...
+    eucRMSD: 6.589
+    boxCntDimDiff: |2.5457 - 2.5211| = 0.0246
+    avgBondLen Mutual information : 0.00
+    RDF 2-sample Anderson-Darling test statistic: -1.0787; p-value: 0.250
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0247; p-value: 0.913
+    RDF 2-sample Cramer-von Mises test statistic: 0.0394; p-value: 0.937
+    RDF Wasserstein distance : 0.0000201
+    RDF Hellinger distance : 0.052
+    RDF Kullback-Leibler divergence : 0.04
+    RDF Jensen-Shannon divergence : 0.00268
+    RDF Mutual information : 0.68
+    RDF Bhattacharyya distance : 0.92
+    coordNum Mutual information : 0.01
+  Comparing AuPd30IC75RCS7S2min.1512000.xyz with AuPd30IC75RCS7S2min.1530000.xyz...
+    eucRMSD: 6.784
+    boxCntDimDiff: |2.5211 - 2.5374| = 0.0163
+    avgBondLen Mutual information : 0.00
+    RDF 2-sample Anderson-Darling test statistic: 15.8552; p-value: 0.001
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.1554; p-value: 0.000
+    RDF 2-sample Cramer-von Mises test statistic: 2.8958; p-value: 0.000
+    RDF Wasserstein distance : 0.0000268
+    RDF Hellinger distance : 0.051
+    RDF Kullback-Leibler divergence : 0.03
+    RDF Jensen-Shannon divergence : 0.00254
+    RDF Mutual information : 0.74
+    RDF Bhattacharyya distance : 0.92
+    coordNum Mutual information : 0.02
+  Comparing AuPd30IC75RCS7S2min.1530000.xyz with AuPd30IC75RCS7S2min.1548000.xyz...
+    eucRMSD: 6.879
+    boxCntDimDiff: |2.5374 - 2.5418| = 0.0044
+    avgBondLen Mutual information : 0.00
+    RDF 2-sample Anderson-Darling test statistic: -1.0749; p-value: 0.250
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0229; p-value: 0.963
+    RDF 2-sample Cramer-von Mises test statistic: 0.0283; p-value: 0.982
+    RDF Wasserstein distance : 0.0000214
+    RDF Hellinger distance : 0.049
+    RDF Kullback-Leibler divergence : 0.01
+    RDF Jensen-Shannon divergence : 0.00236
+    RDF Mutual information : 0.90
+    RDF Bhattacharyya distance : 0.92
+    coordNum Mutual information : 0.01
+  Comparing AuPd30IC75RCS7S2min.1548000.xyz with AuPd30IC75RCS7S2min.1566000.xyz...
+    eucRMSD: 6.750
+    boxCntDimDiff: |2.5418 - 2.5526| = 0.0108
+    avgBondLen Mutual information : 0.01
+    RDF 2-sample Anderson-Darling test statistic: 8.1172; p-value: 0.001
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.1205; p-value: 0.000
+    RDF 2-sample Cramer-von Mises test statistic: 1.6223; p-value: 0.000
+    RDF Wasserstein distance : 0.0000223
+    RDF Hellinger distance : 0.049
+    RDF Kullback-Leibler divergence : 0.01
+    RDF Jensen-Shannon divergence : 0.00238
+    RDF Mutual information : 0.78
+    RDF Bhattacharyya distance : 0.92
+    coordNum Mutual information : 0.00
+  Comparing AuPd30IC75RCS7S2min.1566000.xyz with AuPd30IC75RCS7S2min.1584000.xyz...
+    eucRMSD: 6.984
+    boxCntDimDiff: |2.5526 - 2.5391| = 0.0135
+    avgBondLen Mutual information : 0.03
+    RDF 2-sample Anderson-Darling test statistic: -0.9237; p-value: 0.250
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0254; p-value: 0.894
+    RDF 2-sample Cramer-von Mises test statistic: 0.0498; p-value: 0.878
+    RDF Wasserstein distance : 0.0000192
+    RDF Hellinger distance : 0.048
+    RDF Kullback-Leibler divergence : 0.01
+    RDF Jensen-Shannon divergence : 0.00233
+    RDF Mutual information : 0.81
+    RDF Bhattacharyya distance : 0.92
+    coordNum Mutual information : 0.00
+  Comparing AuPd30IC75RCS7S2min.1584000.xyz with AuPd30IC75RCS7S2min.1602000.xyz...
+    eucRMSD: 6.823
+    boxCntDimDiff: |2.5391 - 2.5202| = 0.0189
+    avgBondLen Mutual information : 0.04
+    RDF 2-sample Anderson-Darling test statistic: 11.3833; p-value: 0.001
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.1309; p-value: 0.000
+    RDF 2-sample Cramer-von Mises test statistic: 2.1797; p-value: 0.000
+    RDF Wasserstein distance : 0.0000153
+    RDF Hellinger distance : 0.050
+    RDF Kullback-Leibler divergence : 0.03
+    RDF Jensen-Shannon divergence : 0.00249
+    RDF Mutual information : 0.87
+    RDF Bhattacharyya distance : 0.92
+    coordNum Mutual information : 0.00
+  Comparing AuPd30IC75RCS7S2min.1602000.xyz with AuPd30IC75RCS7S2min.1620000.xyz...
+    eucRMSD: 6.742
+    boxCntDimDiff: |2.5202 - 2.5392| = 0.0190
+    avgBondLen Mutual information : 0.00
+    RDF 2-sample Anderson-Darling test statistic: 12.6699; p-value: 0.001
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.1417; p-value: 0.000
+    RDF 2-sample Cramer-von Mises test statistic: 2.3666; p-value: 0.000
+    RDF Wasserstein distance : 0.0000166
+    RDF Hellinger distance : 0.049
+    RDF Kullback-Leibler divergence : 0.01
+    RDF Jensen-Shannon divergence : 0.00232
+    RDF Mutual information : 0.78
+    RDF Bhattacharyya distance : 0.92
+    coordNum Mutual information : 0.02
+  Comparing AuPd30IC75RCS7S2min.1620000.xyz with AuPd30IC75RCS7S2min.1638000.xyz...
+    eucRMSD: 6.783
+    boxCntDimDiff: |2.5392 - 2.5664| = 0.0273
+    avgBondLen Mutual information : 0.02
+    RDF 2-sample Anderson-Darling test statistic: -0.2289; p-value: 0.250
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0527; p-value: 0.120
+    RDF 2-sample Cramer-von Mises test statistic: 0.1865; p-value: 0.295
+    RDF Wasserstein distance : 0.0000216
+    RDF Hellinger distance : 0.049
+    RDF Kullback-Leibler divergence : 0.04
+    RDF Jensen-Shannon divergence : 0.00234
+    RDF Mutual information : 0.78
+    RDF Bhattacharyya distance : 0.92
+    coordNum Mutual information : 0.02
+  Comparing AuPd30IC75RCS7S2min.1638000.xyz with AuPd30IC75RCS7S2min.1656000.xyz...
+    eucRMSD: 7.076
+    boxCntDimDiff: |2.5664 - 2.5513| = 0.0152
+    avgBondLen Mutual information : 0.00
+    RDF 2-sample Anderson-Darling test statistic: 0.1680; p-value: 0.250
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0589; p-value: 0.076
+    RDF 2-sample Cramer-von Mises test statistic: 0.2476; p-value: 0.192
+    RDF Wasserstein distance : 0.0000212
+    RDF Hellinger distance : 0.046
+    RDF Kullback-Leibler divergence : 0.01
+    RDF Jensen-Shannon divergence : 0.00209
+    RDF Mutual information : 0.77
+    RDF Bhattacharyya distance : 0.92
+    coordNum Mutual information : 0.01
+  Comparing AuPd30IC75RCS7S2min.1656000.xyz with AuPd30IC75RCS7S2min.1674000.xyz...
+    eucRMSD: 7.142
+    boxCntDimDiff: |2.5513 - 2.5304| = 0.0208
+    avgBondLen Mutual information : 0.02
+    RDF 2-sample Anderson-Darling test statistic: 2.3063; p-value: 0.037
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0884; p-value: 0.001
+    RDF 2-sample Cramer-von Mises test statistic: 0.6328; p-value: 0.019
+    RDF Wasserstein distance : 0.0000195
+    RDF Hellinger distance : 0.051
+    RDF Kullback-Leibler divergence : 0.03
+    RDF Jensen-Shannon divergence : 0.00255
+    RDF Mutual information : 0.81
+    RDF Bhattacharyya distance : 0.93
+    coordNum Mutual information : 0.02
+  Comparing AuPd30IC75RCS7S2min.1674000.xyz with AuPd30IC75RCS7S2min.1692000.xyz...
+    eucRMSD: 7.037
+    boxCntDimDiff: |2.5304 - 2.5269| = 0.0035
+    avgBondLen Mutual information : 0.01
+    RDF 2-sample Anderson-Darling test statistic: -0.2745; p-value: 0.250
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0428; p-value: 0.349
+    RDF 2-sample Cramer-von Mises test statistic: 0.1785; p-value: 0.314
+    RDF Wasserstein distance : 0.0000176
+    RDF Hellinger distance : 0.046
+    RDF Kullback-Leibler divergence : 0.06
+    RDF Jensen-Shannon divergence : 0.00206
+    RDF Mutual information : 0.86
+    RDF Bhattacharyya distance : 0.92
+    coordNum Mutual information : 0.03
+  Comparing AuPd30IC75RCS7S2min.1692000.xyz with AuPd30IC75RCS7S2min.1710000.xyz...
+    eucRMSD: 7.106
+    boxCntDimDiff: |2.5269 - 2.5451| = 0.0182
+    avgBondLen Mutual information : 0.00
+    RDF 2-sample Anderson-Darling test statistic: 0.4517; p-value: 0.217
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0724; p-value: 0.014
+    RDF 2-sample Cramer-von Mises test statistic: 0.3054; p-value: 0.131
+    RDF Wasserstein distance : 0.0000211
+    RDF Hellinger distance : 0.046
+    RDF Kullback-Leibler divergence : 0.03
+    RDF Jensen-Shannon divergence : 0.00206
+    RDF Mutual information : 0.85
+    RDF Bhattacharyya distance : 0.92
+    coordNum Mutual information : 0.02
+  Comparing AuPd30IC75RCS7S2min.1710000.xyz with AuPd30IC75RCS7S2min.1728000.xyz...
+    eucRMSD: 6.914
+    boxCntDimDiff: |2.5451 - 2.5683| = 0.0232
+    avgBondLen Mutual information : 0.01
+    RDF 2-sample Anderson-Darling test statistic: 1.2869; p-value: 0.096
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0744; p-value: 0.011
+    RDF 2-sample Cramer-von Mises test statistic: 0.4464; p-value: 0.055
+    RDF Wasserstein distance : 0.0000245
+    RDF Hellinger distance : 0.046
+    RDF Kullback-Leibler divergence : 0.01
+    RDF Jensen-Shannon divergence : 0.00212
+    RDF Mutual information : 0.87
+    RDF Bhattacharyya distance : 0.92
+    coordNum Mutual information : 0.01
+  Comparing AuPd30IC75RCS7S2min.1728000.xyz with AuPd30IC75RCS7S2min.1746000.xyz...
+    eucRMSD: 7.248
+    boxCntDimDiff: |2.5683 - 2.5202| = 0.0482
+    avgBondLen Mutual information : 0.00
+    RDF 2-sample Anderson-Darling test statistic: -0.5205; p-value: 0.250
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0343; p-value: 0.619
+    RDF 2-sample Cramer-von Mises test statistic: 0.1228; p-value: 0.485
+    RDF Wasserstein distance : 0.0000263
+    RDF Hellinger distance : 0.049
+    RDF Kullback-Leibler divergence : 0.11
+    RDF Jensen-Shannon divergence : 0.00232
+    RDF Mutual information : 0.86
+    RDF Bhattacharyya distance : 0.92
+    coordNum Mutual information : 0.00
+  Comparing AuPd30IC75RCS7S2min.1746000.xyz with AuPd30IC75RCS7S2min.1764000.xyz...
+    eucRMSD: 7.100
+    boxCntDimDiff: |2.5202 - 2.5556| = 0.0355
+    avgBondLen Mutual information : 0.03
+    RDF 2-sample Anderson-Darling test statistic: 12.7770; p-value: 0.001
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.1493; p-value: 0.000
+    RDF 2-sample Cramer-von Mises test statistic: 2.3617; p-value: 0.000
+    RDF Wasserstein distance : 0.0000249
+    RDF Hellinger distance : 0.048
+    RDF Kullback-Leibler divergence : 0.03
+    RDF Jensen-Shannon divergence : 0.00227
+    RDF Mutual information : 0.74
+    RDF Bhattacharyya distance : 0.92
+    coordNum Mutual information : 0.00
+  Comparing AuPd30IC75RCS7S2min.1764000.xyz with AuPd30IC75RCS7S2min.1782000.xyz...
+    eucRMSD: 7.279
+    boxCntDimDiff: |2.5556 - 2.5610| = 0.0054
+    avgBondLen Mutual information : 0.02
+    RDF 2-sample Anderson-Darling test statistic: 31.1567; p-value: 0.001
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.2369; p-value: 0.000
+    RDF 2-sample Cramer-von Mises test statistic: 5.6233; p-value: 0.000
+    RDF Wasserstein distance : 0.0000264
+    RDF Hellinger distance : 0.049
+    RDF Kullback-Leibler divergence : 0.01
+    RDF Jensen-Shannon divergence : 0.00238
+    RDF Mutual information : 0.67
+    RDF Bhattacharyya distance : 0.92
+    coordNum Mutual information : 0.03
+  Comparing AuPd30IC75RCS7S2min.1782000.xyz with AuPd30IC75RCS7S2min.1800000.xyz...
+    eucRMSD: 7.429
+    boxCntDimDiff: |2.5610 - 2.5440| = 0.0170
+    avgBondLen Mutual information : 0.00
+    RDF 2-sample Anderson-Darling test statistic: 10.2286; p-value: 0.001
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.1436; p-value: 0.000
+    RDF 2-sample Cramer-von Mises test statistic: 2.0325; p-value: 0.000
+    RDF Wasserstein distance : 0.0000202
+    RDF Hellinger distance : 0.047
+    RDF Kullback-Leibler divergence : 0.08
+    RDF Jensen-Shannon divergence : 0.00216
+    RDF Mutual information : 0.82
+    RDF Bhattacharyya distance : 0.92
+    coordNum Mutual information : 0.00
+***Average duration (s):
+  RMSD 0.000082
+  RDF 1.928743
+  BCDim 3.490291
+Redundant frames found: {'AuPd30IC75RCS7S2min.288000.xyz', 'AuPd30IC75RCS7S2min.54000.xyz', 'AuPd30IC75RCS7S2min.90000.xyz', 'AuPd30IC75RCS7S2min.126000.xyz', 'AuPd30IC75RCS7S2min.360000.xyz', 'AuPd30IC75RCS7S2min.180000.xyz', 'AuPd30IC75RCS7S2min.234000.xyz', 'AuPd30IC75RCS7S2min.0.xyz', 'AuPd30IC75RCS7S2min.108000.xyz', 'AuPd30IC75RCS7S2min.144000.xyz', 'AuPd30IC75RCS7S2min.72000.xyz', 'AuPd30IC75RCS7S2min.396000.xyz', 'AuPd30IC75RCS7S2min.162000.xyz', 'AuPd30IC75RCS7S2min.216000.xyz', 'AuPd30IC75RCS7S2min.342000.xyz', 'AuPd30IC75RCS7S2min.198000.xyz', 'AuPd30IC75RCS7S2min.18000.xyz', 'AuPd30IC75RCS7S2min.324000.xyz', 'AuPd30IC75RCS7S2min.306000.xyz', 'AuPd30IC75RCS7S2min.378000.xyz', 'AuPd30IC75RCS7S2min.252000.xyz', 'AuPd30IC75RCS7S2min.270000.xyz', 'AuPd30IC75RCS7S2min.36000.xyz'}
+ALL DONE!
+
+======================================================================================
+                  Resource Usage on 2023-03-08 08:50:46:
+   Job Id:             75824024.gadi-pbs
+   Project:            q27
+   Exit Status:        0
+   Service Units:      29.87
+   NCPUs Requested:    96                     NCPUs Used: 96              
+                                           CPU Time Used: 01:10:57        
+   Memory Requested:   30.0GB                Memory Used: 1.68GB          
+   Walltime requested: 01:00:00            Walltime Used: 00:09:20        
+   JobFS requested:    1.0GB                  JobFS used: 0B              
+======================================================================================

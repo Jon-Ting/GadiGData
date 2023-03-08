@@ -1,0 +1,1423 @@
+Filtering redundant frames from AuPt40CORCS_3871 nanoparticles simulations...
+  Comparing AuPt40CO50RCS9S2min.0.xyz with AuPt40CO50RCS9S2min.20000.xyz...
+    eucRMSD: 0.000
+    boxCntDimDiff: |2.6440 - 2.6441| = 0.0001
+    avgBondLen Mutual information : 6.82
+    RDF 2-sample Anderson-Darling test statistic: -1.3111; p-value: 0.250
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0031; p-value: 1.000
+    RDF 2-sample Cramer-von Mises test statistic: 0.0004; p-value: 1.000
+    RDF Wasserstein distance : 0.0000012
+    RDF Hellinger distance : 0.001
+    RDF Kullback-Leibler divergence : 0.00
+    RDF Jensen-Shannon divergence : 0.00000
+    RDF Mutual information : 0.93
+    RDF Bhattacharyya distance : 0.94
+    coordNum Mutual information : 1.27
+      FOUND: AuPt40CO50RCS9S2min.0.xyz redundant!!!
+  Comparing AuPt40CO50RCS9S2min.20000.xyz with AuPt40CO50RCS9S2min.40000.xyz...
+    eucRMSD: 0.000
+    boxCntDimDiff: |2.6441 - 2.6444| = 0.0003
+    avgBondLen Mutual information : 6.82
+    RDF 2-sample Anderson-Darling test statistic: -1.3114; p-value: 0.250
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0031; p-value: 1.000
+    RDF 2-sample Cramer-von Mises test statistic: 0.0004; p-value: 1.000
+    RDF Wasserstein distance : 0.0000010
+    RDF Hellinger distance : 0.001
+    RDF Kullback-Leibler divergence : 0.00
+    RDF Jensen-Shannon divergence : 0.00000
+    RDF Mutual information : 0.93
+    RDF Bhattacharyya distance : 0.94
+    coordNum Mutual information : 1.27
+      FOUND: AuPt40CO50RCS9S2min.20000.xyz redundant!!!
+  Comparing AuPt40CO50RCS9S2min.40000.xyz with AuPt40CO50RCS9S2min.60000.xyz...
+    eucRMSD: 0.000
+    boxCntDimDiff: |2.6444 - 2.6440| = 0.0004
+    avgBondLen Mutual information : 6.81
+    RDF 2-sample Anderson-Darling test statistic: -1.3107; p-value: 0.250
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0042; p-value: 1.000
+    RDF 2-sample Cramer-von Mises test statistic: 0.0004; p-value: 1.000
+    RDF Wasserstein distance : 0.0000012
+    RDF Hellinger distance : 0.001
+    RDF Kullback-Leibler divergence : 0.00
+    RDF Jensen-Shannon divergence : 0.00000
+    RDF Mutual information : 0.94
+    RDF Bhattacharyya distance : 0.94
+    coordNum Mutual information : 1.27
+      FOUND: AuPt40CO50RCS9S2min.40000.xyz redundant!!!
+  Comparing AuPt40CO50RCS9S2min.60000.xyz with AuPt40CO50RCS9S2min.80000.xyz...
+    eucRMSD: 0.063
+    boxCntDimDiff: |2.6440 - 2.6923| = 0.0482
+    avgBondLen Mutual information : 5.12
+    RDF 2-sample Anderson-Darling test statistic: -0.9895; p-value: 0.250
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0231; p-value: 0.952
+    RDF 2-sample Cramer-von Mises test statistic: 0.0519; p-value: 0.865
+    RDF Wasserstein distance : 0.0000085
+    RDF Hellinger distance : 0.011
+    RDF Kullback-Leibler divergence : 0.01
+    RDF Jensen-Shannon divergence : 0.00012
+    RDF Mutual information : 0.86
+    RDF Bhattacharyya distance : 0.94
+    coordNum Mutual information : 1.17
+  Comparing AuPt40CO50RCS9S2min.80000.xyz with AuPt40CO50RCS9S2min.100000.xyz...
+    eucRMSD: 0.063
+    boxCntDimDiff: |2.6923 - 2.6943| = 0.0021
+    avgBondLen Mutual information : 5.31
+    RDF 2-sample Anderson-Darling test statistic: -1.2965; p-value: 0.250
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0073; p-value: 1.000
+    RDF 2-sample Cramer-von Mises test statistic: 0.0025; p-value: 1.000
+    RDF Wasserstein distance : 0.0000062
+    RDF Hellinger distance : 0.009
+    RDF Kullback-Leibler divergence : 0.00
+    RDF Jensen-Shannon divergence : 0.00008
+    RDF Mutual information : 0.93
+    RDF Bhattacharyya distance : 0.94
+    coordNum Mutual information : 1.18
+  Comparing AuPt40CO50RCS9S2min.100000.xyz with AuPt40CO50RCS9S2min.120000.xyz...
+    eucRMSD: 0.092
+    boxCntDimDiff: |2.6943 - 2.6894| = 0.0050
+    avgBondLen Mutual information : 5.19
+    RDF 2-sample Anderson-Darling test statistic: -1.2815; p-value: 0.250
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0093; p-value: 1.000
+    RDF 2-sample Cramer-von Mises test statistic: 0.0038; p-value: 1.000
+    RDF Wasserstein distance : 0.0000076
+    RDF Hellinger distance : 0.010
+    RDF Kullback-Leibler divergence : 0.01
+    RDF Jensen-Shannon divergence : 0.00010
+    RDF Mutual information : 0.90
+    RDF Bhattacharyya distance : 0.94
+    coordNum Mutual information : 1.18
+  Comparing AuPt40CO50RCS9S2min.120000.xyz with AuPt40CO50RCS9S2min.140000.xyz...
+    eucRMSD: 0.105
+    boxCntDimDiff: |2.6894 - 2.6872| = 0.0022
+    avgBondLen Mutual information : 6.00
+    RDF 2-sample Anderson-Darling test statistic: -1.3036; p-value: 0.250
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0062; p-value: 1.000
+    RDF 2-sample Cramer-von Mises test statistic: 0.0015; p-value: 1.000
+    RDF Wasserstein distance : 0.0000044
+    RDF Hellinger distance : 0.006
+    RDF Kullback-Leibler divergence : 0.00
+    RDF Jensen-Shannon divergence : 0.00003
+    RDF Mutual information : 0.95
+    RDF Bhattacharyya distance : 0.94
+    coordNum Mutual information : 1.20
+  Comparing AuPt40CO50RCS9S2min.140000.xyz with AuPt40CO50RCS9S2min.160000.xyz...
+    eucRMSD: 0.163
+    boxCntDimDiff: |2.6872 - 2.6880| = 0.0008
+    avgBondLen Mutual information : 3.77
+    RDF 2-sample Anderson-Darling test statistic: -1.1545; p-value: 0.250
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0180; p-value: 0.997
+    RDF 2-sample Cramer-von Mises test statistic: 0.0247; p-value: 0.991
+    RDF Wasserstein distance : 0.0000133
+    RDF Hellinger distance : 0.015
+    RDF Kullback-Leibler divergence : 0.00
+    RDF Jensen-Shannon divergence : 0.00022
+    RDF Mutual information : 0.89
+    RDF Bhattacharyya distance : 0.94
+    coordNum Mutual information : 1.08
+  Comparing AuPt40CO50RCS9S2min.160000.xyz with AuPt40CO50RCS9S2min.180000.xyz...
+    eucRMSD: 0.139
+    boxCntDimDiff: |2.6880 - 2.6818| = 0.0062
+    avgBondLen Mutual information : 4.06
+    RDF 2-sample Anderson-Darling test statistic: -1.2746; p-value: 0.250
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0126; p-value: 1.000
+    RDF 2-sample Cramer-von Mises test statistic: 0.0050; p-value: 1.000
+    RDF Wasserstein distance : 0.0000130
+    RDF Hellinger distance : 0.013
+    RDF Kullback-Leibler divergence : 0.01
+    RDF Jensen-Shannon divergence : 0.00017
+    RDF Mutual information : 0.90
+    RDF Bhattacharyya distance : 0.94
+    coordNum Mutual information : 1.09
+  Comparing AuPt40CO50RCS9S2min.180000.xyz with AuPt40CO50RCS9S2min.200000.xyz...
+    eucRMSD: 0.086
+    boxCntDimDiff: |2.6818 - 2.6794| = 0.0024
+    avgBondLen Mutual information : 4.60
+    RDF 2-sample Anderson-Darling test statistic: -1.0448; p-value: 0.250
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0248; p-value: 0.916
+    RDF 2-sample Cramer-von Mises test statistic: 0.0456; p-value: 0.903
+    RDF Wasserstein distance : 0.0000071
+    RDF Hellinger distance : 0.009
+    RDF Kullback-Leibler divergence : 0.00
+    RDF Jensen-Shannon divergence : 0.00007
+    RDF Mutual information : 0.88
+    RDF Bhattacharyya distance : 0.94
+    coordNum Mutual information : 1.13
+  Comparing AuPt40CO50RCS9S2min.200000.xyz with AuPt40CO50RCS9S2min.220000.xyz...
+    eucRMSD: 0.112
+    boxCntDimDiff: |2.6794 - 2.6586| = 0.0208
+    avgBondLen Mutual information : 4.60
+    RDF 2-sample Anderson-Darling test statistic: -1.1934; p-value: 0.250
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0156; p-value: 1.000
+    RDF 2-sample Cramer-von Mises test statistic: 0.0187; p-value: 0.998
+    RDF Wasserstein distance : 0.0000096
+    RDF Hellinger distance : 0.012
+    RDF Kullback-Leibler divergence : 0.01
+    RDF Jensen-Shannon divergence : 0.00013
+    RDF Mutual information : 0.88
+    RDF Bhattacharyya distance : 0.94
+    coordNum Mutual information : 1.13
+  Comparing AuPt40CO50RCS9S2min.220000.xyz with AuPt40CO50RCS9S2min.240000.xyz...
+    eucRMSD: 0.190
+    boxCntDimDiff: |2.6586 - 2.6902| = 0.0316
+    avgBondLen Mutual information : 3.90
+    RDF 2-sample Anderson-Darling test statistic: 0.0740; p-value: 0.250
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0464; p-value: 0.233
+    RDF 2-sample Cramer-von Mises test statistic: 0.2415; p-value: 0.200
+    RDF Wasserstein distance : 0.0000092
+    RDF Hellinger distance : 0.012
+    RDF Kullback-Leibler divergence : 0.01
+    RDF Jensen-Shannon divergence : 0.00014
+    RDF Mutual information : 0.87
+    RDF Bhattacharyya distance : 0.94
+    coordNum Mutual information : 1.05
+  Comparing AuPt40CO50RCS9S2min.240000.xyz with AuPt40CO50RCS9S2min.260000.xyz...
+    eucRMSD: 0.225
+    boxCntDimDiff: |2.6902 - 2.6842| = 0.0060
+    avgBondLen Mutual information : 3.94
+    RDF 2-sample Anderson-Darling test statistic: -1.0016; p-value: 0.250
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0211; p-value: 0.975
+    RDF 2-sample Cramer-von Mises test statistic: 0.0495; p-value: 0.880
+    RDF Wasserstein distance : 0.0000082
+    RDF Hellinger distance : 0.011
+    RDF Kullback-Leibler divergence : 0.01
+    RDF Jensen-Shannon divergence : 0.00011
+    RDF Mutual information : 0.92
+    RDF Bhattacharyya distance : 0.94
+    coordNum Mutual information : 1.06
+  Comparing AuPt40CO50RCS9S2min.260000.xyz with AuPt40CO50RCS9S2min.280000.xyz...
+    eucRMSD: 0.217
+    boxCntDimDiff: |2.6842 - 2.7144| = 0.0303
+    avgBondLen Mutual information : 4.41
+    RDF 2-sample Anderson-Darling test statistic: -1.1694; p-value: 0.250
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0150; p-value: 1.000
+    RDF 2-sample Cramer-von Mises test statistic: 0.0202; p-value: 0.997
+    RDF Wasserstein distance : 0.0000073
+    RDF Hellinger distance : 0.010
+    RDF Kullback-Leibler divergence : 0.01
+    RDF Jensen-Shannon divergence : 0.00008
+    RDF Mutual information : 0.93
+    RDF Bhattacharyya distance : 0.94
+    coordNum Mutual information : 1.07
+  Comparing AuPt40CO50RCS9S2min.280000.xyz with AuPt40CO50RCS9S2min.300000.xyz...
+    eucRMSD: 0.245
+    boxCntDimDiff: |2.7144 - 2.7180| = 0.0036
+    avgBondLen Mutual information : 3.67
+    RDF 2-sample Anderson-Darling test statistic: -0.5651; p-value: 0.250
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0349; p-value: 0.576
+    RDF 2-sample Cramer-von Mises test statistic: 0.1173; p-value: 0.507
+    RDF Wasserstein distance : 0.0000117
+    RDF Hellinger distance : 0.014
+    RDF Kullback-Leibler divergence : 0.00
+    RDF Jensen-Shannon divergence : 0.00018
+    RDF Mutual information : 0.90
+    RDF Bhattacharyya distance : 0.94
+    coordNum Mutual information : 1.07
+  Comparing AuPt40CO50RCS9S2min.300000.xyz with AuPt40CO50RCS9S2min.320000.xyz...
+    eucRMSD: 0.269
+    boxCntDimDiff: |2.7180 - 2.6634| = 0.0546
+    avgBondLen Mutual information : 3.15
+    RDF 2-sample Anderson-Darling test statistic: -0.6465; p-value: 0.250
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0362; p-value: 0.528
+    RDF 2-sample Cramer-von Mises test statistic: 0.1132; p-value: 0.524
+    RDF Wasserstein distance : 0.0000130
+    RDF Hellinger distance : 0.015
+    RDF Kullback-Leibler divergence : 0.01
+    RDF Jensen-Shannon divergence : 0.00022
+    RDF Mutual information : 0.86
+    RDF Bhattacharyya distance : 0.94
+    coordNum Mutual information : 0.96
+  Comparing AuPt40CO50RCS9S2min.320000.xyz with AuPt40CO50RCS9S2min.340000.xyz...
+    eucRMSD: 0.235
+    boxCntDimDiff: |2.6634 - 2.7231| = 0.0596
+    avgBondLen Mutual information : 2.96
+    RDF 2-sample Anderson-Darling test statistic: -1.1769; p-value: 0.250
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0156; p-value: 1.000
+    RDF 2-sample Cramer-von Mises test statistic: 0.0148; p-value: 1.000
+    RDF Wasserstein distance : 0.0000124
+    RDF Hellinger distance : 0.017
+    RDF Kullback-Leibler divergence : 0.03
+    RDF Jensen-Shannon divergence : 0.00029
+    RDF Mutual information : 0.87
+    RDF Bhattacharyya distance : 0.94
+    coordNum Mutual information : 1.00
+  Comparing AuPt40CO50RCS9S2min.340000.xyz with AuPt40CO50RCS9S2min.360000.xyz...
+    eucRMSD: 0.198
+    boxCntDimDiff: |2.7231 - 2.6634| = 0.0597
+    avgBondLen Mutual information : 3.71
+    RDF 2-sample Anderson-Darling test statistic: -1.0624; p-value: 0.250
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0229; p-value: 0.963
+    RDF 2-sample Cramer-von Mises test statistic: 0.0378; p-value: 0.945
+    RDF Wasserstein distance : 0.0000088
+    RDF Hellinger distance : 0.010
+    RDF Kullback-Leibler divergence : 0.00
+    RDF Jensen-Shannon divergence : 0.00010
+    RDF Mutual information : 0.88
+    RDF Bhattacharyya distance : 0.94
+    coordNum Mutual information : 1.10
+  Comparing AuPt40CO50RCS9S2min.360000.xyz with AuPt40CO50RCS9S2min.380000.xyz...
+    eucRMSD: 0.278
+    boxCntDimDiff: |2.6634 - 2.6512| = 0.0122
+    avgBondLen Mutual information : 3.27
+    RDF 2-sample Anderson-Darling test statistic: 2.3160; p-value: 0.036
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0695; p-value: 0.017
+    RDF 2-sample Cramer-von Mises test statistic: 0.6153; p-value: 0.021
+    RDF Wasserstein distance : 0.0000096
+    RDF Hellinger distance : 0.013
+    RDF Kullback-Leibler divergence : 0.01
+    RDF Jensen-Shannon divergence : 0.00016
+    RDF Mutual information : 0.82
+    RDF Bhattacharyya distance : 0.94
+    coordNum Mutual information : 1.02
+  Comparing AuPt40CO50RCS9S2min.380000.xyz with AuPt40CO50RCS9S2min.400000.xyz...
+    eucRMSD: 0.221
+    boxCntDimDiff: |2.6512 - 2.6699| = 0.0187
+    avgBondLen Mutual information : 3.81
+    RDF 2-sample Anderson-Darling test statistic: -0.9937; p-value: 0.250
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0230; p-value: 0.946
+    RDF 2-sample Cramer-von Mises test statistic: 0.0511; p-value: 0.870
+    RDF Wasserstein distance : 0.0000079
+    RDF Hellinger distance : 0.012
+    RDF Kullback-Leibler divergence : 0.01
+    RDF Jensen-Shannon divergence : 0.00013
+    RDF Mutual information : 0.91
+    RDF Bhattacharyya distance : 0.94
+    coordNum Mutual information : 1.08
+  Comparing AuPt40CO50RCS9S2min.400000.xyz with AuPt40CO50RCS9S2min.420000.xyz...
+    eucRMSD: 0.458
+    boxCntDimDiff: |2.6699 - 2.6312| = 0.0387
+    avgBondLen Mutual information : 1.84
+    RDF 2-sample Anderson-Darling test statistic: 2.5281; p-value: 0.030
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0656; p-value: 0.025
+    RDF 2-sample Cramer-von Mises test statistic: 0.6367; p-value: 0.018
+    RDF Wasserstein distance : 0.0000435
+    RDF Hellinger distance : 0.035
+    RDF Kullback-Leibler divergence : 0.00
+    RDF Jensen-Shannon divergence : 0.00119
+    RDF Mutual information : 0.85
+    RDF Bhattacharyya distance : 0.94
+    coordNum Mutual information : 0.76
+  Comparing AuPt40CO50RCS9S2min.420000.xyz with AuPt40CO50RCS9S2min.440000.xyz...
+    eucRMSD: 0.473
+    boxCntDimDiff: |2.6312 - 2.6251| = 0.0061
+    avgBondLen Mutual information : 2.01
+    RDF 2-sample Anderson-Darling test statistic: -0.8893; p-value: 0.250
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0324; p-value: 0.642
+    RDF 2-sample Cramer-von Mises test statistic: 0.0702; p-value: 0.751
+    RDF Wasserstein distance : 0.0000211
+    RDF Hellinger distance : 0.020
+    RDF Kullback-Leibler divergence : 0.01
+    RDF Jensen-Shannon divergence : 0.00041
+    RDF Mutual information : 0.94
+    RDF Bhattacharyya distance : 0.95
+    coordNum Mutual information : 0.61
+  Comparing AuPt40CO50RCS9S2min.440000.xyz with AuPt40CO50RCS9S2min.460000.xyz...
+    eucRMSD: 0.516
+    boxCntDimDiff: |2.6251 - 2.6189| = 0.0062
+    avgBondLen Mutual information : 1.43
+    RDF 2-sample Anderson-Darling test statistic: -1.1237; p-value: 0.250
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0268; p-value: 0.850
+    RDF 2-sample Cramer-von Mises test statistic: 0.0295; p-value: 0.978
+    RDF Wasserstein distance : 0.0000218
+    RDF Hellinger distance : 0.021
+    RDF Kullback-Leibler divergence : 0.01
+    RDF Jensen-Shannon divergence : 0.00042
+    RDF Mutual information : 0.92
+    RDF Bhattacharyya distance : 0.94
+    coordNum Mutual information : 0.61
+  Comparing AuPt40CO50RCS9S2min.460000.xyz with AuPt40CO50RCS9S2min.480000.xyz...
+    eucRMSD: 0.476
+    boxCntDimDiff: |2.6189 - 2.6111| = 0.0078
+    avgBondLen Mutual information : 1.57
+    RDF 2-sample Anderson-Darling test statistic: -1.0293; p-value: 0.250
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0280; p-value: 0.836
+    RDF 2-sample Cramer-von Mises test statistic: 0.0469; p-value: 0.896
+    RDF Wasserstein distance : 0.0000250
+    RDF Hellinger distance : 0.022
+    RDF Kullback-Leibler divergence : 0.00
+    RDF Jensen-Shannon divergence : 0.00046
+    RDF Mutual information : 0.87
+    RDF Bhattacharyya distance : 0.94
+    coordNum Mutual information : 0.61
+  Comparing AuPt40CO50RCS9S2min.480000.xyz with AuPt40CO50RCS9S2min.500000.xyz...
+    eucRMSD: 0.461
+    boxCntDimDiff: |2.6111 - 2.5968| = 0.0143
+    avgBondLen Mutual information : 1.59
+    RDF 2-sample Anderson-Darling test statistic: -0.5717; p-value: 0.250
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0357; p-value: 0.557
+    RDF 2-sample Cramer-von Mises test statistic: 0.1243; p-value: 0.479
+    RDF Wasserstein distance : 0.0000197
+    RDF Hellinger distance : 0.020
+    RDF Kullback-Leibler divergence : 0.00
+    RDF Jensen-Shannon divergence : 0.00039
+    RDF Mutual information : 0.89
+    RDF Bhattacharyya distance : 0.94
+    coordNum Mutual information : 0.58
+  Comparing AuPt40CO50RCS9S2min.500000.xyz with AuPt40CO50RCS9S2min.520000.xyz...
+    eucRMSD: 0.496
+    boxCntDimDiff: |2.5968 - 2.6491| = 0.0523
+    avgBondLen Mutual information : 1.36
+    RDF 2-sample Anderson-Darling test statistic: -1.1734; p-value: 0.250
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0197; p-value: 0.986
+    RDF 2-sample Cramer-von Mises test statistic: 0.0225; p-value: 0.994
+    RDF Wasserstein distance : 0.0000097
+    RDF Hellinger distance : 0.017
+    RDF Kullback-Leibler divergence : 0.00
+    RDF Jensen-Shannon divergence : 0.00027
+    RDF Mutual information : 0.93
+    RDF Bhattacharyya distance : 0.94
+    coordNum Mutual information : 0.59
+  Comparing AuPt40CO50RCS9S2min.520000.xyz with AuPt40CO50RCS9S2min.540000.xyz...
+    eucRMSD: 0.608
+    boxCntDimDiff: |2.6491 - 2.6006| = 0.0485
+    avgBondLen Mutual information : 1.30
+    RDF 2-sample Anderson-Darling test statistic: -1.2321; p-value: 0.250
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0129; p-value: 1.000
+    RDF 2-sample Cramer-von Mises test statistic: 0.0111; p-value: 1.000
+    RDF Wasserstein distance : 0.0000141
+    RDF Hellinger distance : 0.018
+    RDF Kullback-Leibler divergence : 0.00
+    RDF Jensen-Shannon divergence : 0.00033
+    RDF Mutual information : 0.90
+    RDF Bhattacharyya distance : 0.94
+    coordNum Mutual information : 0.52
+  Comparing AuPt40CO50RCS9S2min.540000.xyz with AuPt40CO50RCS9S2min.560000.xyz...
+    eucRMSD: 0.720
+    boxCntDimDiff: |2.6006 - 2.6015| = 0.0009
+    avgBondLen Mutual information : 1.04
+    RDF 2-sample Anderson-Darling test statistic: -0.7222; p-value: 0.250
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0380; p-value: 0.483
+    RDF 2-sample Cramer-von Mises test statistic: 0.1019; p-value: 0.576
+    RDF Wasserstein distance : 0.0000176
+    RDF Hellinger distance : 0.020
+    RDF Kullback-Leibler divergence : 0.00
+    RDF Jensen-Shannon divergence : 0.00040
+    RDF Mutual information : 0.96
+    RDF Bhattacharyya distance : 0.95
+    coordNum Mutual information : 0.46
+  Comparing AuPt40CO50RCS9S2min.560000.xyz with AuPt40CO50RCS9S2min.580000.xyz...
+    eucRMSD: 1.004
+    boxCntDimDiff: |2.6015 - 2.6397| = 0.0382
+    avgBondLen Mutual information : 0.66
+    RDF 2-sample Anderson-Darling test statistic: 3.3174; p-value: 0.015
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0659; p-value: 0.027
+    RDF 2-sample Cramer-von Mises test statistic: 0.7617; p-value: 0.009
+    RDF Wasserstein distance : 0.0000573
+    RDF Hellinger distance : 0.045
+    RDF Kullback-Leibler divergence : 0.01
+    RDF Jensen-Shannon divergence : 0.00205
+    RDF Mutual information : 0.86
+    RDF Bhattacharyya distance : 0.95
+    coordNum Mutual information : 0.38
+  Comparing AuPt40CO50RCS9S2min.580000.xyz with AuPt40CO50RCS9S2min.600000.xyz...
+    eucRMSD: 1.267
+    boxCntDimDiff: |2.6397 - 2.6534| = 0.0136
+    avgBondLen Mutual information : 0.42
+    RDF 2-sample Anderson-Darling test statistic: 0.8616; p-value: 0.145
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0578; p-value: 0.071
+    RDF 2-sample Cramer-von Mises test statistic: 0.3326; p-value: 0.110
+    RDF Wasserstein distance : 0.0000600
+    RDF Hellinger distance : 0.039
+    RDF Kullback-Leibler divergence : 0.01
+    RDF Jensen-Shannon divergence : 0.00154
+    RDF Mutual information : 0.86
+    RDF Bhattacharyya distance : 0.94
+    coordNum Mutual information : 0.35
+  Comparing AuPt40CO50RCS9S2min.600000.xyz with AuPt40CO50RCS9S2min.620000.xyz...
+    eucRMSD: 1.212
+    boxCntDimDiff: |2.6534 - 2.6308| = 0.0225
+    avgBondLen Mutual information : 0.41
+    RDF 2-sample Anderson-Darling test statistic: -0.7806; p-value: 0.250
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0303; p-value: 0.738
+    RDF 2-sample Cramer-von Mises test statistic: 0.0761; p-value: 0.716
+    RDF Wasserstein distance : 0.0000325
+    RDF Hellinger distance : 0.030
+    RDF Kullback-Leibler divergence : 0.01
+    RDF Jensen-Shannon divergence : 0.00091
+    RDF Mutual information : 0.91
+    RDF Bhattacharyya distance : 0.95
+    coordNum Mutual information : 0.33
+  Comparing AuPt40CO50RCS9S2min.620000.xyz with AuPt40CO50RCS9S2min.640000.xyz...
+    eucRMSD: 1.286
+    boxCntDimDiff: |2.6308 - 2.6193| = 0.0116
+    avgBondLen Mutual information : 0.44
+    RDF 2-sample Anderson-Darling test statistic: 0.0482; p-value: 0.250
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0433; p-value: 0.295
+    RDF 2-sample Cramer-von Mises test statistic: 0.2248; p-value: 0.224
+    RDF Wasserstein distance : 0.0000174
+    RDF Hellinger distance : 0.020
+    RDF Kullback-Leibler divergence : 0.00
+    RDF Jensen-Shannon divergence : 0.00040
+    RDF Mutual information : 0.97
+    RDF Bhattacharyya distance : 0.95
+    coordNum Mutual information : 0.34
+  Comparing AuPt40CO50RCS9S2min.640000.xyz with AuPt40CO50RCS9S2min.660000.xyz...
+    eucRMSD: 1.457
+    boxCntDimDiff: |2.6193 - 2.6544| = 0.0351
+    avgBondLen Mutual information : 0.42
+    RDF 2-sample Anderson-Darling test statistic: 1.0235; p-value: 0.124
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0623; p-value: 0.038
+    RDF 2-sample Cramer-von Mises test statistic: 0.3988; p-value: 0.073
+    RDF Wasserstein distance : 0.0000354
+    RDF Hellinger distance : 0.027
+    RDF Kullback-Leibler divergence : 0.00
+    RDF Jensen-Shannon divergence : 0.00072
+    RDF Mutual information : 1.00
+    RDF Bhattacharyya distance : 0.95
+    coordNum Mutual information : 0.38
+  Comparing AuPt40CO50RCS9S2min.660000.xyz with AuPt40CO50RCS9S2min.680000.xyz...
+    eucRMSD: 1.837
+    boxCntDimDiff: |2.6544 - 2.6591| = 0.0048
+    avgBondLen Mutual information : 0.15
+    RDF 2-sample Anderson-Darling test statistic: 43.5712; p-value: 0.001
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.2250; p-value: 0.000
+    RDF 2-sample Cramer-von Mises test statistic: 7.6508; p-value: 0.000
+    RDF Wasserstein distance : 0.0001530
+    RDF Hellinger distance : 0.102
+    RDF Kullback-Leibler divergence : 0.04
+    RDF Jensen-Shannon divergence : 0.01034
+    RDF Mutual information : 0.64
+    RDF Bhattacharyya distance : 0.93
+    coordNum Mutual information : 0.26
+  Comparing AuPt40CO50RCS9S2min.680000.xyz with AuPt40CO50RCS9S2min.700000.xyz...
+    eucRMSD: 2.055
+    boxCntDimDiff: |2.6591 - 2.6331| = 0.0260
+    avgBondLen Mutual information : 0.13
+    RDF 2-sample Anderson-Darling test statistic: -0.9387; p-value: 0.250
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0283; p-value: 0.816
+    RDF 2-sample Cramer-von Mises test statistic: 0.0542; p-value: 0.851
+    RDF Wasserstein distance : 0.0000216
+    RDF Hellinger distance : 0.023
+    RDF Kullback-Leibler divergence : 0.00
+    RDF Jensen-Shannon divergence : 0.00055
+    RDF Mutual information : 1.01
+    RDF Bhattacharyya distance : 0.95
+    coordNum Mutual information : 0.28
+  Comparing AuPt40CO50RCS9S2min.700000.xyz with AuPt40CO50RCS9S2min.720000.xyz...
+    eucRMSD: 2.118
+    boxCntDimDiff: |2.6331 - 2.6626| = 0.0295
+    avgBondLen Mutual information : 0.07
+    RDF 2-sample Anderson-Darling test statistic: 9.8032; p-value: 0.001
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.1156; p-value: 0.000
+    RDF 2-sample Cramer-von Mises test statistic: 1.8742; p-value: 0.000
+    RDF Wasserstein distance : 0.0000536
+    RDF Hellinger distance : 0.052
+    RDF Kullback-Leibler divergence : 0.01
+    RDF Jensen-Shannon divergence : 0.00270
+    RDF Mutual information : 0.79
+    RDF Bhattacharyya distance : 0.95
+    coordNum Mutual information : 0.29
+  Comparing AuPt40CO50RCS9S2min.720000.xyz with AuPt40CO50RCS9S2min.740000.xyz...
+    eucRMSD: 2.382
+    boxCntDimDiff: |2.6626 - 2.6605| = 0.0022
+    avgBondLen Mutual information : 0.04
+    RDF 2-sample Anderson-Darling test statistic: -0.9422; p-value: 0.250
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0251; p-value: 0.919
+    RDF 2-sample Cramer-von Mises test statistic: 0.0581; p-value: 0.827
+    RDF Wasserstein distance : 0.0000109
+    RDF Hellinger distance : 0.017
+    RDF Kullback-Leibler divergence : 0.00
+    RDF Jensen-Shannon divergence : 0.00028
+    RDF Mutual information : 0.97
+    RDF Bhattacharyya distance : 0.95
+    coordNum Mutual information : 0.25
+  Comparing AuPt40CO50RCS9S2min.740000.xyz with AuPt40CO50RCS9S2min.760000.xyz...
+    eucRMSD: 2.532
+    boxCntDimDiff: |2.6605 - 2.6412| = 0.0193
+    avgBondLen Mutual information : 0.02
+    RDF 2-sample Anderson-Darling test statistic: -0.3983; p-value: 0.250
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0378; p-value: 0.453
+    RDF 2-sample Cramer-von Mises test statistic: 0.1222; p-value: 0.487
+    RDF Wasserstein distance : 0.0000336
+    RDF Hellinger distance : 0.047
+    RDF Kullback-Leibler divergence : 0.01
+    RDF Jensen-Shannon divergence : 0.00222
+    RDF Mutual information : 0.75
+    RDF Bhattacharyya distance : 0.94
+    coordNum Mutual information : 0.25
+  Comparing AuPt40CO50RCS9S2min.760000.xyz with AuPt40CO50RCS9S2min.780000.xyz...
+    eucRMSD: 3.071
+    boxCntDimDiff: |2.6412 - 2.6607| = 0.0195
+    avgBondLen Mutual information : 0.03
+    RDF 2-sample Anderson-Darling test statistic: 3.4228; p-value: 0.013
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0767; p-value: 0.005
+    RDF 2-sample Cramer-von Mises test statistic: 0.7361; p-value: 0.010
+    RDF Wasserstein distance : 0.0000128
+    RDF Hellinger distance : 0.022
+    RDF Kullback-Leibler divergence : 0.00
+    RDF Jensen-Shannon divergence : 0.00050
+    RDF Mutual information : 0.84
+    RDF Bhattacharyya distance : 0.95
+    coordNum Mutual information : 0.25
+  Comparing AuPt40CO50RCS9S2min.780000.xyz with AuPt40CO50RCS9S2min.800000.xyz...
+    eucRMSD: 3.493
+    boxCntDimDiff: |2.6607 - 2.6882| = 0.0275
+    avgBondLen Mutual information : 0.02
+    RDF 2-sample Anderson-Darling test statistic: 5.6744; p-value: 0.002
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0924; p-value: 0.000
+    RDF 2-sample Cramer-von Mises test statistic: 1.1156; p-value: 0.001
+    RDF Wasserstein distance : 0.0000102
+    RDF Hellinger distance : 0.016
+    RDF Kullback-Leibler divergence : 0.00
+    RDF Jensen-Shannon divergence : 0.00025
+    RDF Mutual information : 1.03
+    RDF Bhattacharyya distance : 0.95
+    coordNum Mutual information : 0.27
+  Comparing AuPt40CO50RCS9S2min.800000.xyz with AuPt40CO50RCS9S2min.820000.xyz...
+    eucRMSD: 3.801
+    boxCntDimDiff: |2.6882 - 2.6565| = 0.0318
+    avgBondLen Mutual information : 0.04
+    RDF 2-sample Anderson-Darling test statistic: 6.2461; p-value: 0.001
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0958; p-value: 0.000
+    RDF 2-sample Cramer-von Mises test statistic: 1.2129; p-value: 0.001
+    RDF Wasserstein distance : 0.0000081
+    RDF Hellinger distance : 0.013
+    RDF Kullback-Leibler divergence : 0.00
+    RDF Jensen-Shannon divergence : 0.00018
+    RDF Mutual information : 1.03
+    RDF Bhattacharyya distance : 0.95
+    coordNum Mutual information : 0.30
+  Comparing AuPt40CO50RCS9S2min.820000.xyz with AuPt40CO50RCS9S2min.840000.xyz...
+    eucRMSD: 3.745
+    boxCntDimDiff: |2.6565 - 2.6515| = 0.0050
+    avgBondLen Mutual information : 0.05
+    RDF 2-sample Anderson-Darling test statistic: -0.4733; p-value: 0.250
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0416; p-value: 0.358
+    RDF 2-sample Cramer-von Mises test statistic: 0.1387; p-value: 0.426
+    RDF Wasserstein distance : 0.0000097
+    RDF Hellinger distance : 0.014
+    RDF Kullback-Leibler divergence : 0.00
+    RDF Jensen-Shannon divergence : 0.00019
+    RDF Mutual information : 1.18
+    RDF Bhattacharyya distance : 0.95
+    coordNum Mutual information : 0.31
+  Comparing AuPt40CO50RCS9S2min.840000.xyz with AuPt40CO50RCS9S2min.860000.xyz...
+    eucRMSD: 3.926
+    boxCntDimDiff: |2.6515 - 2.6597| = 0.0083
+    avgBondLen Mutual information : 0.02
+    RDF 2-sample Anderson-Darling test statistic: -0.1138; p-value: 0.250
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0464; p-value: 0.238
+    RDF 2-sample Cramer-von Mises test statistic: 0.1973; p-value: 0.273
+    RDF Wasserstein distance : 0.0000082
+    RDF Hellinger distance : 0.015
+    RDF Kullback-Leibler divergence : 0.01
+    RDF Jensen-Shannon divergence : 0.00023
+    RDF Mutual information : 1.15
+    RDF Bhattacharyya distance : 0.95
+    coordNum Mutual information : 0.32
+  Comparing AuPt40CO50RCS9S2min.860000.xyz with AuPt40CO50RCS9S2min.880000.xyz...
+    eucRMSD: 3.947
+    boxCntDimDiff: |2.6597 - 2.6687| = 0.0090
+    avgBondLen Mutual information : 0.02
+    RDF 2-sample Anderson-Darling test statistic: -0.9366; p-value: 0.250
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0293; p-value: 0.792
+    RDF 2-sample Cramer-von Mises test statistic: 0.0603; p-value: 0.813
+    RDF Wasserstein distance : 0.0000082
+    RDF Hellinger distance : 0.014
+    RDF Kullback-Leibler divergence : 0.00
+    RDF Jensen-Shannon divergence : 0.00020
+    RDF Mutual information : 1.13
+    RDF Bhattacharyya distance : 0.95
+    coordNum Mutual information : 0.31
+  Comparing AuPt40CO50RCS9S2min.880000.xyz with AuPt40CO50RCS9S2min.900000.xyz...
+    eucRMSD: 4.031
+    boxCntDimDiff: |2.6687 - 2.6574| = 0.0113
+    avgBondLen Mutual information : 0.04
+    RDF 2-sample Anderson-Darling test statistic: -1.2247; p-value: 0.250
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0147; p-value: 1.000
+    RDF 2-sample Cramer-von Mises test statistic: 0.0122; p-value: 1.000
+    RDF Wasserstein distance : 0.0000096
+    RDF Hellinger distance : 0.015
+    RDF Kullback-Leibler divergence : 0.01
+    RDF Jensen-Shannon divergence : 0.00022
+    RDF Mutual information : 1.15
+    RDF Bhattacharyya distance : 0.95
+    coordNum Mutual information : 0.32
+  Comparing AuPt40CO50RCS9S2min.900000.xyz with AuPt40CO50RCS9S2min.920000.xyz...
+    eucRMSD: 4.064
+    boxCntDimDiff: |2.6574 - 2.6411| = 0.0163
+    avgBondLen Mutual information : 0.02
+    RDF 2-sample Anderson-Darling test statistic: -1.2226; p-value: 0.250
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0172; p-value: 0.998
+    RDF 2-sample Cramer-von Mises test statistic: 0.0138; p-value: 1.000
+    RDF Wasserstein distance : 0.0000083
+    RDF Hellinger distance : 0.016
+    RDF Kullback-Leibler divergence : 0.01
+    RDF Jensen-Shannon divergence : 0.00025
+    RDF Mutual information : 1.11
+    RDF Bhattacharyya distance : 0.95
+    coordNum Mutual information : 0.35
+  Comparing AuPt40CO50RCS9S2min.920000.xyz with AuPt40CO50RCS9S2min.940000.xyz...
+    eucRMSD: 4.210
+    boxCntDimDiff: |2.6411 - 2.6382| = 0.0029
+    avgBondLen Mutual information : 0.01
+    RDF 2-sample Anderson-Darling test statistic: -0.7982; p-value: 0.250
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0266; p-value: 0.873
+    RDF 2-sample Cramer-von Mises test statistic: 0.0804; p-value: 0.690
+    RDF Wasserstein distance : 0.0000095
+    RDF Hellinger distance : 0.016
+    RDF Kullback-Leibler divergence : 0.00
+    RDF Jensen-Shannon divergence : 0.00025
+    RDF Mutual information : 1.04
+    RDF Bhattacharyya distance : 0.95
+    coordNum Mutual information : 0.32
+  Comparing AuPt40CO50RCS9S2min.940000.xyz with AuPt40CO50RCS9S2min.960000.xyz...
+    eucRMSD: 4.259
+    boxCntDimDiff: |2.6382 - 2.6460| = 0.0078
+    avgBondLen Mutual information : 0.03
+    RDF 2-sample Anderson-Darling test statistic: -0.9279; p-value: 0.250
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0369; p-value: 0.523
+    RDF 2-sample Cramer-von Mises test statistic: 0.0629; p-value: 0.796
+    RDF Wasserstein distance : 0.0000124
+    RDF Hellinger distance : 0.017
+    RDF Kullback-Leibler divergence : 0.00
+    RDF Jensen-Shannon divergence : 0.00028
+    RDF Mutual information : 1.02
+    RDF Bhattacharyya distance : 0.95
+    coordNum Mutual information : 0.32
+  Comparing AuPt40CO50RCS9S2min.960000.xyz with AuPt40CO50RCS9S2min.980000.xyz...
+    eucRMSD: 4.263
+    boxCntDimDiff: |2.6460 - 2.6482| = 0.0022
+    avgBondLen Mutual information : 0.01
+    RDF 2-sample Anderson-Darling test statistic: 5.1239; p-value: 0.003
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0928; p-value: 0.000
+    RDF 2-sample Cramer-von Mises test statistic: 1.0442; p-value: 0.002
+    RDF Wasserstein distance : 0.0000106
+    RDF Hellinger distance : 0.016
+    RDF Kullback-Leibler divergence : 0.00
+    RDF Jensen-Shannon divergence : 0.00026
+    RDF Mutual information : 0.94
+    RDF Bhattacharyya distance : 0.95
+    coordNum Mutual information : 0.27
+  Comparing AuPt40CO50RCS9S2min.980000.xyz with AuPt40CO50RCS9S2min.1000000.xyz...
+    eucRMSD: 4.611
+    boxCntDimDiff: |2.6482 - 2.6456| = 0.0026
+    avgBondLen Mutual information : 0.02
+    RDF 2-sample Anderson-Darling test statistic: -0.4813; p-value: 0.250
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0420; p-value: 0.342
+    RDF 2-sample Cramer-von Mises test statistic: 0.1377; p-value: 0.430
+    RDF Wasserstein distance : 0.0000106
+    RDF Hellinger distance : 0.015
+    RDF Kullback-Leibler divergence : 0.00
+    RDF Jensen-Shannon divergence : 0.00021
+    RDF Mutual information : 1.17
+    RDF Bhattacharyya distance : 0.95
+    coordNum Mutual information : 0.27
+  Comparing AuPt40CO50RCS9S2min.1000000.xyz with AuPt40CO50RCS9S2min.1020000.xyz...
+    eucRMSD: 4.511
+    boxCntDimDiff: |2.6456 - 2.6199| = 0.0257
+    avgBondLen Mutual information : 0.02
+    RDF 2-sample Anderson-Darling test statistic: 0.8558; p-value: 0.146
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0505; p-value: 0.163
+    RDF 2-sample Cramer-von Mises test statistic: 0.3414; p-value: 0.104
+    RDF Wasserstein distance : 0.0000087
+    RDF Hellinger distance : 0.015
+    RDF Kullback-Leibler divergence : 0.00
+    RDF Jensen-Shannon divergence : 0.00022
+    RDF Mutual information : 1.11
+    RDF Bhattacharyya distance : 0.95
+    coordNum Mutual information : 0.26
+  Comparing AuPt40CO50RCS9S2min.1020000.xyz with AuPt40CO50RCS9S2min.1040000.xyz...
+    eucRMSD: 4.639
+    boxCntDimDiff: |2.6199 - 2.6216| = 0.0017
+    avgBondLen Mutual information : 0.00
+    RDF 2-sample Anderson-Darling test statistic: 15.3012; p-value: 0.001
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.1285; p-value: 0.000
+    RDF 2-sample Cramer-von Mises test statistic: 2.6550; p-value: 0.000
+    RDF Wasserstein distance : 0.0000098
+    RDF Hellinger distance : 0.015
+    RDF Kullback-Leibler divergence : 0.01
+    RDF Jensen-Shannon divergence : 0.00022
+    RDF Mutual information : 0.87
+    RDF Bhattacharyya distance : 0.95
+    coordNum Mutual information : 0.24
+  Comparing AuPt40CO50RCS9S2min.1040000.xyz with AuPt40CO50RCS9S2min.1060000.xyz...
+    eucRMSD: 4.635
+    boxCntDimDiff: |2.6216 - 2.6240| = 0.0024
+    avgBondLen Mutual information : 0.00
+    RDF 2-sample Anderson-Darling test statistic: 7.6509; p-value: 0.001
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.1005; p-value: 0.000
+    RDF 2-sample Cramer-von Mises test statistic: 1.4283; p-value: 0.000
+    RDF Wasserstein distance : 0.0000105
+    RDF Hellinger distance : 0.015
+    RDF Kullback-Leibler divergence : 0.00
+    RDF Jensen-Shannon divergence : 0.00024
+    RDF Mutual information : 0.95
+    RDF Bhattacharyya distance : 0.95
+    coordNum Mutual information : 0.25
+  Comparing AuPt40CO50RCS9S2min.1060000.xyz with AuPt40CO50RCS9S2min.1080000.xyz...
+    eucRMSD: 4.811
+    boxCntDimDiff: |2.6240 - 2.6211| = 0.0028
+    avgBondLen Mutual information : 0.01
+    RDF 2-sample Anderson-Darling test statistic: 1.5396; p-value: 0.075
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0568; p-value: 0.086
+    RDF 2-sample Cramer-von Mises test statistic: 0.4559; p-value: 0.052
+    RDF Wasserstein distance : 0.0000098
+    RDF Hellinger distance : 0.015
+    RDF Kullback-Leibler divergence : 0.01
+    RDF Jensen-Shannon divergence : 0.00021
+    RDF Mutual information : 1.19
+    RDF Bhattacharyya distance : 0.95
+    coordNum Mutual information : 0.21
+  Comparing AuPt40CO50RCS9S2min.1080000.xyz with AuPt40CO50RCS9S2min.1100000.xyz...
+    eucRMSD: 4.792
+    boxCntDimDiff: |2.6211 - 2.6322| = 0.0111
+    avgBondLen Mutual information : 0.01
+    RDF 2-sample Anderson-Darling test statistic: 3.3735; p-value: 0.014
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0750; p-value: 0.008
+    RDF 2-sample Cramer-von Mises test statistic: 0.7496; p-value: 0.010
+    RDF Wasserstein distance : 0.0000093
+    RDF Hellinger distance : 0.014
+    RDF Kullback-Leibler divergence : 0.00
+    RDF Jensen-Shannon divergence : 0.00020
+    RDF Mutual information : 1.15
+    RDF Bhattacharyya distance : 0.95
+    coordNum Mutual information : 0.21
+  Comparing AuPt40CO50RCS9S2min.1100000.xyz with AuPt40CO50RCS9S2min.1120000.xyz...
+    eucRMSD: 4.930
+    boxCntDimDiff: |2.6322 - 2.6241| = 0.0081
+    avgBondLen Mutual information : 0.00
+    RDF 2-sample Anderson-Darling test statistic: 1.4523; p-value: 0.082
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0555; p-value: 0.100
+    RDF 2-sample Cramer-von Mises test statistic: 0.4379; p-value: 0.058
+    RDF Wasserstein distance : 0.0000102
+    RDF Hellinger distance : 0.014
+    RDF Kullback-Leibler divergence : 0.00
+    RDF Jensen-Shannon divergence : 0.00021
+    RDF Mutual information : 1.19
+    RDF Bhattacharyya distance : 0.95
+    coordNum Mutual information : 0.20
+  Comparing AuPt40CO50RCS9S2min.1120000.xyz with AuPt40CO50RCS9S2min.1140000.xyz...
+    eucRMSD: 4.978
+    boxCntDimDiff: |2.6241 - 2.6213| = 0.0029
+    avgBondLen Mutual information : 0.00
+    RDF 2-sample Anderson-Darling test statistic: -0.4945; p-value: 0.250
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0467; p-value: 0.275
+    RDF 2-sample Cramer-von Mises test statistic: 0.1332; p-value: 0.446
+    RDF Wasserstein distance : 0.0000094
+    RDF Hellinger distance : 0.015
+    RDF Kullback-Leibler divergence : 0.00
+    RDF Jensen-Shannon divergence : 0.00022
+    RDF Mutual information : 1.14
+    RDF Bhattacharyya distance : 0.95
+    coordNum Mutual information : 0.20
+  Comparing AuPt40CO50RCS9S2min.1140000.xyz with AuPt40CO50RCS9S2min.1160000.xyz...
+    eucRMSD: 5.115
+    boxCntDimDiff: |2.6213 - 2.6253| = 0.0040
+    avgBondLen Mutual information : 0.02
+    RDF 2-sample Anderson-Darling test statistic: -1.1521; p-value: 0.250
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0184; p-value: 0.996
+    RDF 2-sample Cramer-von Mises test statistic: 0.0233; p-value: 0.993
+    RDF Wasserstein distance : 0.0000090
+    RDF Hellinger distance : 0.016
+    RDF Kullback-Leibler divergence : 0.00
+    RDF Jensen-Shannon divergence : 0.00024
+    RDF Mutual information : 1.15
+    RDF Bhattacharyya distance : 0.95
+    coordNum Mutual information : 0.19
+  Comparing AuPt40CO50RCS9S2min.1160000.xyz with AuPt40CO50RCS9S2min.1180000.xyz...
+    eucRMSD: 5.174
+    boxCntDimDiff: |2.6253 - 2.6295| = 0.0041
+    avgBondLen Mutual information : 0.00
+    RDF 2-sample Anderson-Darling test statistic: 5.7020; p-value: 0.002
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0999; p-value: 0.000
+    RDF 2-sample Cramer-von Mises test statistic: 1.1249; p-value: 0.001
+    RDF Wasserstein distance : 0.0000081
+    RDF Hellinger distance : 0.014
+    RDF Kullback-Leibler divergence : 0.00
+    RDF Jensen-Shannon divergence : 0.00020
+    RDF Mutual information : 0.91
+    RDF Bhattacharyya distance : 0.95
+    coordNum Mutual information : 0.17
+  Comparing AuPt40CO50RCS9S2min.1180000.xyz with AuPt40CO50RCS9S2min.1200000.xyz...
+    eucRMSD: 5.276
+    boxCntDimDiff: |2.6295 - 2.6349| = 0.0055
+    avgBondLen Mutual information : 0.03
+    RDF 2-sample Anderson-Darling test statistic: -0.6716; p-value: 0.250
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0387; p-value: 0.431
+    RDF 2-sample Cramer-von Mises test statistic: 0.1029; p-value: 0.571
+    RDF Wasserstein distance : 0.0000080
+    RDF Hellinger distance : 0.015
+    RDF Kullback-Leibler divergence : 0.00
+    RDF Jensen-Shannon divergence : 0.00022
+    RDF Mutual information : 1.08
+    RDF Bhattacharyya distance : 0.95
+    coordNum Mutual information : 0.15
+  Comparing AuPt40CO50RCS9S2min.1200000.xyz with AuPt40CO50RCS9S2min.1220000.xyz...
+    eucRMSD: 5.361
+    boxCntDimDiff: |2.6349 - 2.6233| = 0.0116
+    avgBondLen Mutual information : 0.00
+    RDF 2-sample Anderson-Darling test statistic: -0.5352; p-value: 0.250
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0363; p-value: 0.517
+    RDF 2-sample Cramer-von Mises test statistic: 0.1222; p-value: 0.487
+    RDF Wasserstein distance : 0.0000084
+    RDF Hellinger distance : 0.015
+    RDF Kullback-Leibler divergence : 0.01
+    RDF Jensen-Shannon divergence : 0.00023
+    RDF Mutual information : 1.07
+    RDF Bhattacharyya distance : 0.95
+    coordNum Mutual information : 0.16
+  Comparing AuPt40CO50RCS9S2min.1220000.xyz with AuPt40CO50RCS9S2min.1240000.xyz...
+    eucRMSD: 5.613
+    boxCntDimDiff: |2.6233 - 2.6064| = 0.0169
+    avgBondLen Mutual information : 0.01
+    RDF 2-sample Anderson-Darling test statistic: 8.0900; p-value: 0.001
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.1024; p-value: 0.000
+    RDF 2-sample Cramer-von Mises test statistic: 1.4950; p-value: 0.000
+    RDF Wasserstein distance : 0.0000093
+    RDF Hellinger distance : 0.016
+    RDF Kullback-Leibler divergence : 0.00
+    RDF Jensen-Shannon divergence : 0.00024
+    RDF Mutual information : 0.92
+    RDF Bhattacharyya distance : 0.95
+    coordNum Mutual information : 0.12
+  Comparing AuPt40CO50RCS9S2min.1240000.xyz with AuPt40CO50RCS9S2min.1260000.xyz...
+    eucRMSD: 5.627
+    boxCntDimDiff: |2.6064 - 2.6370| = 0.0306
+    avgBondLen Mutual information : 0.02
+    RDF 2-sample Anderson-Darling test statistic: 11.6288; p-value: 0.001
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.1215; p-value: 0.000
+    RDF 2-sample Cramer-von Mises test statistic: 2.0557; p-value: 0.000
+    RDF Wasserstein distance : 0.0000096
+    RDF Hellinger distance : 0.016
+    RDF Kullback-Leibler divergence : 0.00
+    RDF Jensen-Shannon divergence : 0.00025
+    RDF Mutual information : 0.89
+    RDF Bhattacharyya distance : 0.95
+    coordNum Mutual information : 0.16
+  Comparing AuPt40CO50RCS9S2min.1260000.xyz with AuPt40CO50RCS9S2min.1280000.xyz...
+    eucRMSD: 5.576
+    boxCntDimDiff: |2.6370 - 2.6205| = 0.0166
+    avgBondLen Mutual information : 0.00
+    RDF 2-sample Anderson-Darling test statistic: -0.9688; p-value: 0.250
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0285; p-value: 0.819
+    RDF 2-sample Cramer-von Mises test statistic: 0.0476; p-value: 0.892
+    RDF Wasserstein distance : 0.0000096
+    RDF Hellinger distance : 0.016
+    RDF Kullback-Leibler divergence : 0.00
+    RDF Jensen-Shannon divergence : 0.00024
+    RDF Mutual information : 1.17
+    RDF Bhattacharyya distance : 0.95
+    coordNum Mutual information : 0.13
+  Comparing AuPt40CO50RCS9S2min.1280000.xyz with AuPt40CO50RCS9S2min.1300000.xyz...
+    eucRMSD: 5.825
+    boxCntDimDiff: |2.6205 - 2.6372| = 0.0168
+    avgBondLen Mutual information : 0.00
+    RDF 2-sample Anderson-Darling test statistic: -1.1268; p-value: 0.250
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0225; p-value: 0.971
+    RDF 2-sample Cramer-von Mises test statistic: 0.0282; p-value: 0.982
+    RDF Wasserstein distance : 0.0000086
+    RDF Hellinger distance : 0.016
+    RDF Kullback-Leibler divergence : 0.00
+    RDF Jensen-Shannon divergence : 0.00024
+    RDF Mutual information : 1.20
+    RDF Bhattacharyya distance : 0.95
+    coordNum Mutual information : 0.13
+  Comparing AuPt40CO50RCS9S2min.1300000.xyz with AuPt40CO50RCS9S2min.1320000.xyz...
+    eucRMSD: 5.808
+    boxCntDimDiff: |2.6372 - 2.6199| = 0.0174
+    avgBondLen Mutual information : 0.00
+    RDF 2-sample Anderson-Darling test statistic: 0.7190; p-value: 0.166
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0640; p-value: 0.036
+    RDF 2-sample Cramer-von Mises test statistic: 0.3320; p-value: 0.110
+    RDF Wasserstein distance : 0.0000105
+    RDF Hellinger distance : 0.015
+    RDF Kullback-Leibler divergence : 0.00
+    RDF Jensen-Shannon divergence : 0.00024
+    RDF Mutual information : 1.10
+    RDF Bhattacharyya distance : 0.95
+    coordNum Mutual information : 0.11
+  Comparing AuPt40CO50RCS9S2min.1320000.xyz with AuPt40CO50RCS9S2min.1340000.xyz...
+    eucRMSD: 5.929
+    boxCntDimDiff: |2.6199 - 2.6399| = 0.0200
+    avgBondLen Mutual information : 0.00
+    RDF 2-sample Anderson-Darling test statistic: 2.8276; p-value: 0.023
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0721; p-value: 0.011
+    RDF 2-sample Cramer-von Mises test statistic: 0.6637; p-value: 0.016
+    RDF Wasserstein distance : 0.0000100
+    RDF Hellinger distance : 0.015
+    RDF Kullback-Leibler divergence : 0.00
+    RDF Jensen-Shannon divergence : 0.00022
+    RDF Mutual information : 1.02
+    RDF Bhattacharyya distance : 0.95
+    coordNum Mutual information : 0.12
+  Comparing AuPt40CO50RCS9S2min.1340000.xyz with AuPt40CO50RCS9S2min.1360000.xyz...
+    eucRMSD: 5.945
+    boxCntDimDiff: |2.6399 - 2.6303| = 0.0095
+    avgBondLen Mutual information : 0.00
+    RDF 2-sample Anderson-Darling test statistic: 2.3290; p-value: 0.036
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0689; p-value: 0.017
+    RDF 2-sample Cramer-von Mises test statistic: 0.5818; p-value: 0.025
+    RDF Wasserstein distance : 0.0000097
+    RDF Hellinger distance : 0.015
+    RDF Kullback-Leibler divergence : 0.01
+    RDF Jensen-Shannon divergence : 0.00021
+    RDF Mutual information : 1.02
+    RDF Bhattacharyya distance : 0.95
+    coordNum Mutual information : 0.10
+  Comparing AuPt40CO50RCS9S2min.1360000.xyz with AuPt40CO50RCS9S2min.1380000.xyz...
+    eucRMSD: 6.072
+    boxCntDimDiff: |2.6303 - 2.6254| = 0.0049
+    avgBondLen Mutual information : 0.00
+    RDF 2-sample Anderson-Darling test statistic: 3.6195; p-value: 0.011
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0887; p-value: 0.001
+    RDF 2-sample Cramer-von Mises test statistic: 0.8097; p-value: 0.007
+    RDF Wasserstein distance : 0.0000090
+    RDF Hellinger distance : 0.014
+    RDF Kullback-Leibler divergence : 0.00
+    RDF Jensen-Shannon divergence : 0.00020
+    RDF Mutual information : 1.05
+    RDF Bhattacharyya distance : 0.95
+    coordNum Mutual information : 0.11
+  Comparing AuPt40CO50RCS9S2min.1380000.xyz with AuPt40CO50RCS9S2min.1400000.xyz...
+    eucRMSD: 6.023
+    boxCntDimDiff: |2.6254 - 2.6175| = 0.0079
+    avgBondLen Mutual information : 0.02
+    RDF 2-sample Anderson-Darling test statistic: 4.6541; p-value: 0.005
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0968; p-value: 0.000
+    RDF 2-sample Cramer-von Mises test statistic: 0.9749; p-value: 0.003
+    RDF Wasserstein distance : 0.0000103
+    RDF Hellinger distance : 0.014
+    RDF Kullback-Leibler divergence : 0.00
+    RDF Jensen-Shannon divergence : 0.00019
+    RDF Mutual information : 0.99
+    RDF Bhattacharyya distance : 0.95
+    coordNum Mutual information : 0.13
+  Comparing AuPt40CO50RCS9S2min.1400000.xyz with AuPt40CO50RCS9S2min.1420000.xyz...
+    eucRMSD: 6.145
+    boxCntDimDiff: |2.6175 - 2.6154| = 0.0021
+    avgBondLen Mutual information : 0.01
+    RDF 2-sample Anderson-Darling test statistic: 1.2888; p-value: 0.096
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0574; p-value: 0.077
+    RDF 2-sample Cramer-von Mises test statistic: 0.4212; p-value: 0.064
+    RDF Wasserstein distance : 0.0000090
+    RDF Hellinger distance : 0.014
+    RDF Kullback-Leibler divergence : 0.00
+    RDF Jensen-Shannon divergence : 0.00020
+    RDF Mutual information : 1.05
+    RDF Bhattacharyya distance : 0.95
+    coordNum Mutual information : 0.10
+  Comparing AuPt40CO50RCS9S2min.1420000.xyz with AuPt40CO50RCS9S2min.1440000.xyz...
+    eucRMSD: 6.150
+    boxCntDimDiff: |2.6154 - 2.6285| = 0.0131
+    avgBondLen Mutual information : 0.01
+    RDF 2-sample Anderson-Darling test statistic: -1.0637; p-value: 0.250
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0275; p-value: 0.850
+    RDF 2-sample Cramer-von Mises test statistic: 0.0358; p-value: 0.954
+    RDF Wasserstein distance : 0.0000085
+    RDF Hellinger distance : 0.015
+    RDF Kullback-Leibler divergence : 0.00
+    RDF Jensen-Shannon divergence : 0.00021
+    RDF Mutual information : 1.20
+    RDF Bhattacharyya distance : 0.95
+    coordNum Mutual information : 0.09
+  Comparing AuPt40CO50RCS9S2min.1440000.xyz with AuPt40CO50RCS9S2min.1460000.xyz...
+    eucRMSD: 6.287
+    boxCntDimDiff: |2.6285 - 2.6111| = 0.0174
+    avgBondLen Mutual information : 0.00
+    RDF 2-sample Anderson-Darling test statistic: 5.1472; p-value: 0.003
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0939; p-value: 0.001
+    RDF 2-sample Cramer-von Mises test statistic: 1.0366; p-value: 0.002
+    RDF Wasserstein distance : 0.0000083
+    RDF Hellinger distance : 0.014
+    RDF Kullback-Leibler divergence : 0.00
+    RDF Jensen-Shannon divergence : 0.00020
+    RDF Mutual information : 0.94
+    RDF Bhattacharyya distance : 0.95
+    coordNum Mutual information : 0.11
+  Comparing AuPt40CO50RCS9S2min.1460000.xyz with AuPt40CO50RCS9S2min.1480000.xyz...
+    eucRMSD: 6.422
+    boxCntDimDiff: |2.6111 - 2.6174| = 0.0063
+    avgBondLen Mutual information : 0.00
+    RDF 2-sample Anderson-Darling test statistic: 8.3060; p-value: 0.001
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.1133; p-value: 0.000
+    RDF 2-sample Cramer-von Mises test statistic: 1.5476; p-value: 0.000
+    RDF Wasserstein distance : 0.0000090
+    RDF Hellinger distance : 0.014
+    RDF Kullback-Leibler divergence : 0.01
+    RDF Jensen-Shannon divergence : 0.00021
+    RDF Mutual information : 0.91
+    RDF Bhattacharyya distance : 0.95
+    coordNum Mutual information : 0.10
+  Comparing AuPt40CO50RCS9S2min.1480000.xyz with AuPt40CO50RCS9S2min.1500000.xyz...
+    eucRMSD: 6.566
+    boxCntDimDiff: |2.6174 - 2.6244| = 0.0070
+    avgBondLen Mutual information : 0.00
+    RDF 2-sample Anderson-Darling test statistic: -1.1457; p-value: 0.250
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0197; p-value: 0.991
+    RDF 2-sample Cramer-von Mises test statistic: 0.0245; p-value: 0.991
+    RDF Wasserstein distance : 0.0000072
+    RDF Hellinger distance : 0.014
+    RDF Kullback-Leibler divergence : 0.00
+    RDF Jensen-Shannon divergence : 0.00019
+    RDF Mutual information : 1.22
+    RDF Bhattacharyya distance : 0.95
+    coordNum Mutual information : 0.09
+  Comparing AuPt40CO50RCS9S2min.1500000.xyz with AuPt40CO50RCS9S2min.1520000.xyz...
+    eucRMSD: 6.628
+    boxCntDimDiff: |2.6244 - 2.6189| = 0.0055
+    avgBondLen Mutual information : 0.00
+    RDF 2-sample Anderson-Darling test statistic: -0.6664; p-value: 0.250
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0378; p-value: 0.498
+    RDF 2-sample Cramer-von Mises test statistic: 0.1044; p-value: 0.564
+    RDF Wasserstein distance : 0.0000109
+    RDF Hellinger distance : 0.017
+    RDF Kullback-Leibler divergence : 0.02
+    RDF Jensen-Shannon divergence : 0.00027
+    RDF Mutual information : 1.12
+    RDF Bhattacharyya distance : 0.95
+    coordNum Mutual information : 0.09
+  Comparing AuPt40CO50RCS9S2min.1520000.xyz with AuPt40CO50RCS9S2min.1540000.xyz...
+    eucRMSD: 6.636
+    boxCntDimDiff: |2.6189 - 2.6273| = 0.0084
+    avgBondLen Mutual information : 0.00
+    RDF 2-sample Anderson-Darling test statistic: -0.2496; p-value: 0.250
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0401; p-value: 0.404
+    RDF 2-sample Cramer-von Mises test statistic: 0.1629; p-value: 0.353
+    RDF Wasserstein distance : 0.0000091
+    RDF Hellinger distance : 0.015
+    RDF Kullback-Leibler divergence : 0.00
+    RDF Jensen-Shannon divergence : 0.00022
+    RDF Mutual information : 1.11
+    RDF Bhattacharyya distance : 0.95
+    coordNum Mutual information : 0.06
+  Comparing AuPt40CO50RCS9S2min.1540000.xyz with AuPt40CO50RCS9S2min.1560000.xyz...
+    eucRMSD: 6.617
+    boxCntDimDiff: |2.6273 - 2.6124| = 0.0149
+    avgBondLen Mutual information : 0.01
+    RDF 2-sample Anderson-Darling test statistic: -0.4037; p-value: 0.250
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0327; p-value: 0.660
+    RDF 2-sample Cramer-von Mises test statistic: 0.1394; p-value: 0.424
+    RDF Wasserstein distance : 0.0000088
+    RDF Hellinger distance : 0.015
+    RDF Kullback-Leibler divergence : 0.00
+    RDF Jensen-Shannon divergence : 0.00021
+    RDF Mutual information : 1.17
+    RDF Bhattacharyya distance : 0.95
+    coordNum Mutual information : 0.07
+  Comparing AuPt40CO50RCS9S2min.1560000.xyz with AuPt40CO50RCS9S2min.1580000.xyz...
+    eucRMSD: 6.759
+    boxCntDimDiff: |2.6124 - 2.6310| = 0.0186
+    avgBondLen Mutual information : 0.00
+    RDF 2-sample Anderson-Darling test statistic: 5.3787; p-value: 0.003
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0859; p-value: 0.002
+    RDF 2-sample Cramer-von Mises test statistic: 1.0826; p-value: 0.002
+    RDF Wasserstein distance : 0.0000090
+    RDF Hellinger distance : 0.015
+    RDF Kullback-Leibler divergence : 0.00
+    RDF Jensen-Shannon divergence : 0.00022
+    RDF Mutual information : 0.99
+    RDF Bhattacharyya distance : 0.95
+    coordNum Mutual information : 0.08
+  Comparing AuPt40CO50RCS9S2min.1580000.xyz with AuPt40CO50RCS9S2min.1600000.xyz...
+    eucRMSD: 6.947
+    boxCntDimDiff: |2.6310 - 2.6269| = 0.0040
+    avgBondLen Mutual information : 0.00
+    RDF 2-sample Anderson-Darling test statistic: 3.9475; p-value: 0.008
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0778; p-value: 0.008
+    RDF 2-sample Cramer-von Mises test statistic: 0.8471; p-value: 0.006
+    RDF Wasserstein distance : 0.0000100
+    RDF Hellinger distance : 0.014
+    RDF Kullback-Leibler divergence : 0.00
+    RDF Jensen-Shannon divergence : 0.00020
+    RDF Mutual information : 0.98
+    RDF Bhattacharyya distance : 0.95
+    coordNum Mutual information : 0.09
+  Comparing AuPt40CO50RCS9S2min.1600000.xyz with AuPt40CO50RCS9S2min.1620000.xyz...
+    eucRMSD: 6.753
+    boxCntDimDiff: |2.6269 - 2.6375| = 0.0106
+    avgBondLen Mutual information : 0.00
+    RDF 2-sample Anderson-Darling test statistic: 0.2097; p-value: 0.250
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0473; p-value: 0.228
+    RDF 2-sample Cramer-von Mises test statistic: 0.2415; p-value: 0.200
+    RDF Wasserstein distance : 0.0000092
+    RDF Hellinger distance : 0.015
+    RDF Kullback-Leibler divergence : 0.00
+    RDF Jensen-Shannon divergence : 0.00021
+    RDF Mutual information : 1.17
+    RDF Bhattacharyya distance : 0.95
+    coordNum Mutual information : 0.10
+  Comparing AuPt40CO50RCS9S2min.1620000.xyz with AuPt40CO50RCS9S2min.1640000.xyz...
+    eucRMSD: 6.903
+    boxCntDimDiff: |2.6375 - 2.6186| = 0.0189
+    avgBondLen Mutual information : 0.00
+    RDF 2-sample Anderson-Darling test statistic: 0.2322; p-value: 0.250
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0457; p-value: 0.266
+    RDF 2-sample Cramer-von Mises test statistic: 0.2468; p-value: 0.193
+    RDF Wasserstein distance : 0.0000075
+    RDF Hellinger distance : 0.014
+    RDF Kullback-Leibler divergence : 0.00
+    RDF Jensen-Shannon divergence : 0.00020
+    RDF Mutual information : 1.19
+    RDF Bhattacharyya distance : 0.95
+    coordNum Mutual information : 0.08
+  Comparing AuPt40CO50RCS9S2min.1640000.xyz with AuPt40CO50RCS9S2min.1660000.xyz...
+    eucRMSD: 7.282
+    boxCntDimDiff: |2.6186 - 2.6065| = 0.0122
+    avgBondLen Mutual information : 0.02
+    RDF 2-sample Anderson-Darling test statistic: 10.2205; p-value: 0.001
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.1288; p-value: 0.000
+    RDF 2-sample Cramer-von Mises test statistic: 1.8545; p-value: 0.000
+    RDF Wasserstein distance : 0.0000095
+    RDF Hellinger distance : 0.014
+    RDF Kullback-Leibler divergence : 0.00
+    RDF Jensen-Shannon divergence : 0.00020
+    RDF Mutual information : 0.88
+    RDF Bhattacharyya distance : 0.95
+    coordNum Mutual information : 0.08
+  Comparing AuPt40CO50RCS9S2min.1660000.xyz with AuPt40CO50RCS9S2min.1680000.xyz...
+    eucRMSD: 7.176
+    boxCntDimDiff: |2.6065 - 2.6279| = 0.0215
+    avgBondLen Mutual information : 0.02
+    RDF 2-sample Anderson-Darling test statistic: 16.8303; p-value: 0.001
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.1412; p-value: 0.000
+    RDF 2-sample Cramer-von Mises test statistic: 2.9049; p-value: 0.000
+    RDF Wasserstein distance : 0.0000095
+    RDF Hellinger distance : 0.014
+    RDF Kullback-Leibler divergence : 0.00
+    RDF Jensen-Shannon divergence : 0.00020
+    RDF Mutual information : 0.87
+    RDF Bhattacharyya distance : 0.95
+    coordNum Mutual information : 0.09
+  Comparing AuPt40CO50RCS9S2min.1680000.xyz with AuPt40CO50RCS9S2min.1700000.xyz...
+    eucRMSD: 7.177
+    boxCntDimDiff: |2.6279 - 2.6278| = 0.0001
+    avgBondLen Mutual information : 0.00
+    RDF 2-sample Anderson-Darling test statistic: 3.7493; p-value: 0.010
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0735; p-value: 0.009
+    RDF 2-sample Cramer-von Mises test statistic: 0.8081; p-value: 0.007
+    RDF Wasserstein distance : 0.0000088
+    RDF Hellinger distance : 0.015
+    RDF Kullback-Leibler divergence : 0.00
+    RDF Jensen-Shannon divergence : 0.00021
+    RDF Mutual information : 1.00
+    RDF Bhattacharyya distance : 0.95
+    coordNum Mutual information : 0.08
+  Comparing AuPt40CO50RCS9S2min.1700000.xyz with AuPt40CO50RCS9S2min.1720000.xyz...
+    eucRMSD: 7.200
+    boxCntDimDiff: |2.6278 - 2.6253| = 0.0024
+    avgBondLen Mutual information : 0.00
+    RDF 2-sample Anderson-Darling test statistic: -0.4283; p-value: 0.250
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0373; p-value: 0.484
+    RDF 2-sample Cramer-von Mises test statistic: 0.1413; p-value: 0.418
+    RDF Wasserstein distance : 0.0000081
+    RDF Hellinger distance : 0.014
+    RDF Kullback-Leibler divergence : 0.00
+    RDF Jensen-Shannon divergence : 0.00020
+    RDF Mutual information : 1.05
+    RDF Bhattacharyya distance : 0.95
+    coordNum Mutual information : 0.08
+  Comparing AuPt40CO50RCS9S2min.1720000.xyz with AuPt40CO50RCS9S2min.1740000.xyz...
+    eucRMSD: 7.370
+    boxCntDimDiff: |2.6253 - 2.6119| = 0.0135
+    avgBondLen Mutual information : 0.00
+    RDF 2-sample Anderson-Darling test statistic: -1.1721; p-value: 0.250
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0184; p-value: 0.995
+    RDF 2-sample Cramer-von Mises test statistic: 0.0195; p-value: 0.998
+    RDF Wasserstein distance : 0.0000089
+    RDF Hellinger distance : 0.014
+    RDF Kullback-Leibler divergence : 0.00
+    RDF Jensen-Shannon divergence : 0.00021
+    RDF Mutual information : 1.06
+    RDF Bhattacharyya distance : 0.95
+    coordNum Mutual information : 0.09
+  Comparing AuPt40CO50RCS9S2min.1740000.xyz with AuPt40CO50RCS9S2min.1760000.xyz...
+    eucRMSD: 7.458
+    boxCntDimDiff: |2.6119 - 2.6047| = 0.0071
+    avgBondLen Mutual information : 0.00
+    RDF 2-sample Anderson-Darling test statistic: 14.6040; p-value: 0.001
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.1305; p-value: 0.000
+    RDF 2-sample Cramer-von Mises test statistic: 2.5746; p-value: 0.000
+    RDF Wasserstein distance : 0.0000109
+    RDF Hellinger distance : 0.015
+    RDF Kullback-Leibler divergence : 0.00
+    RDF Jensen-Shannon divergence : 0.00021
+    RDF Mutual information : 0.94
+    RDF Bhattacharyya distance : 0.95
+    coordNum Mutual information : 0.08
+  Comparing AuPt40CO50RCS9S2min.1760000.xyz with AuPt40CO50RCS9S2min.1780000.xyz...
+    eucRMSD: 7.317
+    boxCntDimDiff: |2.6047 - 2.6204| = 0.0156
+    avgBondLen Mutual information : 0.00
+    RDF 2-sample Anderson-Darling test statistic: 39.9116; p-value: 0.001
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.1967; p-value: 0.000
+    RDF 2-sample Cramer-von Mises test statistic: 6.7358; p-value: 0.000
+    RDF Wasserstein distance : 0.0000112
+    RDF Hellinger distance : 0.016
+    RDF Kullback-Leibler divergence : 0.00
+    RDF Jensen-Shannon divergence : 0.00024
+    RDF Mutual information : 0.80
+    RDF Bhattacharyya distance : 0.95
+    coordNum Mutual information : 0.08
+  Comparing AuPt40CO50RCS9S2min.1780000.xyz with AuPt40CO50RCS9S2min.1800000.xyz...
+    eucRMSD: 7.390
+    boxCntDimDiff: |2.6204 - 2.6226| = 0.0023
+    avgBondLen Mutual information : 0.00
+    RDF 2-sample Anderson-Darling test statistic: -1.0250; p-value: 0.250
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0338; p-value: 0.641
+    RDF 2-sample Cramer-von Mises test statistic: 0.0467; p-value: 0.897
+    RDF Wasserstein distance : 0.0000083
+    RDF Hellinger distance : 0.014
+    RDF Kullback-Leibler divergence : 0.00
+    RDF Jensen-Shannon divergence : 0.00020
+    RDF Mutual information : 1.14
+    RDF Bhattacharyya distance : 0.95
+    coordNum Mutual information : 0.06
+  Comparing AuPt40CO50RCS9S2min.1800000.xyz with AuPt40CO50RCS9S2min.1820000.xyz...
+    eucRMSD: 7.519
+    boxCntDimDiff: |2.6226 - 2.6111| = 0.0115
+    avgBondLen Mutual information : 0.00
+    RDF 2-sample Anderson-Darling test statistic: 13.3552; p-value: 0.001
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.1343; p-value: 0.000
+    RDF 2-sample Cramer-von Mises test statistic: 2.3623; p-value: 0.000
+    RDF Wasserstein distance : 0.0000107
+    RDF Hellinger distance : 0.015
+    RDF Kullback-Leibler divergence : 0.00
+    RDF Jensen-Shannon divergence : 0.00022
+    RDF Mutual information : 0.84
+    RDF Bhattacharyya distance : 0.95
+    coordNum Mutual information : 0.08
+  Comparing AuPt40CO50RCS9S2min.1820000.xyz with AuPt40CO50RCS9S2min.1840000.xyz...
+    eucRMSD: 7.542
+    boxCntDimDiff: |2.6111 - 2.6157| = 0.0046
+    avgBondLen Mutual information : 0.00
+    RDF 2-sample Anderson-Darling test statistic: 0.6105; p-value: 0.185
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0615; p-value: 0.057
+    RDF 2-sample Cramer-von Mises test statistic: 0.3018; p-value: 0.134
+    RDF Wasserstein distance : 0.0000107
+    RDF Hellinger distance : 0.015
+    RDF Kullback-Leibler divergence : 0.01
+    RDF Jensen-Shannon divergence : 0.00022
+    RDF Mutual information : 0.97
+    RDF Bhattacharyya distance : 0.95
+    coordNum Mutual information : 0.08
+  Comparing AuPt40CO50RCS9S2min.1840000.xyz with AuPt40CO50RCS9S2min.1860000.xyz...
+    eucRMSD: 7.627
+    boxCntDimDiff: |2.6157 - 2.6197| = 0.0040
+    avgBondLen Mutual information : 0.03
+    RDF 2-sample Anderson-Darling test statistic: 3.3827; p-value: 0.014
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0789; p-value: 0.007
+    RDF 2-sample Cramer-von Mises test statistic: 0.7624; p-value: 0.009
+    RDF Wasserstein distance : 0.0000091
+    RDF Hellinger distance : 0.014
+    RDF Kullback-Leibler divergence : 0.01
+    RDF Jensen-Shannon divergence : 0.00020
+    RDF Mutual information : 0.97
+    RDF Bhattacharyya distance : 0.95
+    coordNum Mutual information : 0.10
+  Comparing AuPt40CO50RCS9S2min.1860000.xyz with AuPt40CO50RCS9S2min.1880000.xyz...
+    eucRMSD: 7.735
+    boxCntDimDiff: |2.6197 - 2.6197| = 0.0000
+    avgBondLen Mutual information : 0.00
+    RDF 2-sample Anderson-Darling test statistic: 0.7997; p-value: 0.154
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0446; p-value: 0.282
+    RDF 2-sample Cramer-von Mises test statistic: 0.3319; p-value: 0.110
+    RDF Wasserstein distance : 0.0000083
+    RDF Hellinger distance : 0.015
+    RDF Kullback-Leibler divergence : 0.00
+    RDF Jensen-Shannon divergence : 0.00022
+    RDF Mutual information : 1.13
+    RDF Bhattacharyya distance : 0.95
+    coordNum Mutual information : 0.12
+  Comparing AuPt40CO50RCS9S2min.1880000.xyz with AuPt40CO50RCS9S2min.1900000.xyz...
+    eucRMSD: 7.765
+    boxCntDimDiff: |2.6197 - 2.6235| = 0.0038
+    avgBondLen Mutual information : 0.02
+    RDF 2-sample Anderson-Darling test statistic: -0.6465; p-value: 0.250
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0329; p-value: 0.650
+    RDF 2-sample Cramer-von Mises test statistic: 0.1061; p-value: 0.556
+    RDF Wasserstein distance : 0.0000092
+    RDF Hellinger distance : 0.015
+    RDF Kullback-Leibler divergence : 0.01
+    RDF Jensen-Shannon divergence : 0.00021
+    RDF Mutual information : 1.10
+    RDF Bhattacharyya distance : 0.95
+    coordNum Mutual information : 0.08
+  Comparing AuPt40CO50RCS9S2min.1900000.xyz with AuPt40CO50RCS9S2min.1920000.xyz...
+    eucRMSD: 7.613
+    boxCntDimDiff: |2.6235 - 2.6264| = 0.0029
+    avgBondLen Mutual information : 0.00
+    RDF 2-sample Anderson-Darling test statistic: 0.8314; p-value: 0.149
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0615; p-value: 0.050
+    RDF 2-sample Cramer-von Mises test statistic: 0.3517; p-value: 0.097
+    RDF Wasserstein distance : 0.0000088
+    RDF Hellinger distance : 0.015
+    RDF Kullback-Leibler divergence : 0.00
+    RDF Jensen-Shannon divergence : 0.00022
+    RDF Mutual information : 1.02
+    RDF Bhattacharyya distance : 0.95
+    coordNum Mutual information : 0.08
+  Comparing AuPt40CO50RCS9S2min.1920000.xyz with AuPt40CO50RCS9S2min.1940000.xyz...
+    eucRMSD: 7.798
+    boxCntDimDiff: |2.6264 - 2.6261| = 0.0003
+    avgBondLen Mutual information : 0.00
+    RDF 2-sample Anderson-Darling test statistic: 2.7624; p-value: 0.024
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0791; p-value: 0.004
+    RDF 2-sample Cramer-von Mises test statistic: 0.6596; p-value: 0.016
+    RDF Wasserstein distance : 0.0000088
+    RDF Hellinger distance : 0.013
+    RDF Kullback-Leibler divergence : 0.00
+    RDF Jensen-Shannon divergence : 0.00018
+    RDF Mutual information : 0.95
+    RDF Bhattacharyya distance : 0.95
+    coordNum Mutual information : 0.08
+  Comparing AuPt40CO50RCS9S2min.1940000.xyz with AuPt40CO50RCS9S2min.1960000.xyz...
+    eucRMSD: 7.984
+    boxCntDimDiff: |2.6261 - 2.6201| = 0.0060
+    avgBondLen Mutual information : 0.01
+    RDF 2-sample Anderson-Darling test statistic: -0.0059; p-value: 0.250
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0410; p-value: 0.366
+    RDF 2-sample Cramer-von Mises test statistic: 0.2020; p-value: 0.264
+    RDF Wasserstein distance : 0.0000094
+    RDF Hellinger distance : 0.014
+    RDF Kullback-Leibler divergence : 0.00
+    RDF Jensen-Shannon divergence : 0.00020
+    RDF Mutual information : 1.17
+    RDF Bhattacharyya distance : 0.95
+    coordNum Mutual information : 0.06
+  Comparing AuPt40CO50RCS9S2min.1960000.xyz with AuPt40CO50RCS9S2min.1980000.xyz...
+    eucRMSD: 8.049
+    boxCntDimDiff: |2.6201 - 2.6182| = 0.0020
+    avgBondLen Mutual information : 0.02
+    RDF 2-sample Anderson-Darling test statistic: -0.6410; p-value: 0.250
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0373; p-value: 0.528
+    RDF 2-sample Cramer-von Mises test statistic: 0.0964; p-value: 0.603
+    RDF Wasserstein distance : 0.0000097
+    RDF Hellinger distance : 0.015
+    RDF Kullback-Leibler divergence : 0.01
+    RDF Jensen-Shannon divergence : 0.00023
+    RDF Mutual information : 1.20
+    RDF Bhattacharyya distance : 0.95
+    coordNum Mutual information : 0.06
+  Comparing AuPt40CO50RCS9S2min.1980000.xyz with AuPt40CO50RCS9S2min.2000000.xyz...
+    eucRMSD: 8.044
+    boxCntDimDiff: |2.6182 - 2.6347| = 0.0165
+    avgBondLen Mutual information : 0.01
+    RDF 2-sample Anderson-Darling test statistic: -0.5999; p-value: 0.250
+    RDF 2-sample Kolmogorov-Smirnov test statistic: 0.0360; p-value: 0.583
+    RDF 2-sample Cramer-von Mises test statistic: 0.1136; p-value: 0.523
+    RDF Wasserstein distance : 0.0000096
+    RDF Hellinger distance : 0.015
+    RDF Kullback-Leibler divergence : 0.00
+    RDF Jensen-Shannon divergence : 0.00021
+    RDF Mutual information : 1.19
+    RDF Bhattacharyya distance : 0.95
+    coordNum Mutual information : 0.08
+***Average duration (s):
+  RMSD 0.000192
+  RDF 9.945355
+  BCDim 8.687940
+Redundant frames found: {'AuPt40CO50RCS9S2min.20000.xyz', 'AuPt40CO50RCS9S2min.0.xyz', 'AuPt40CO50RCS9S2min.40000.xyz'}
+ALL DONE!
+
+======================================================================================
+                  Resource Usage on 2023-03-08 09:12:36:
+   Job Id:             75824008.gadi-pbs
+   Project:            q27
+   Exit Status:        0
+   Service Units:      101.81
+   NCPUs Requested:    96                     NCPUs Used: 96              
+                                           CPU Time Used: 06:17:58        
+   Memory Requested:   30.0GB                Memory Used: 2.0GB           
+   Walltime requested: 01:00:00            Walltime Used: 00:31:49        
+   JobFS requested:    1.0GB                  JobFS used: 0B              
+======================================================================================
