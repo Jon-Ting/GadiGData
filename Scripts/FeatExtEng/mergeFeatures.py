@@ -5,7 +5,7 @@ import os
 import pandas as pd
 
 
-ELEMENTS = ['Pd', 'Au']
+ELEMENTS = ['Co', 'Pd']
 runTask = 'reorderIdxs'  # 'mergeReformatData' or 'concatNPfeats' 'reorderIdxs' or 'debug'
 runParallel, verbose = True, True
 sourceDirs = ['L10', 'L12', 'RAL', 'RCS', 'CS']
@@ -294,11 +294,11 @@ def concatNPfeats(verbose=False):
             with open(f"{featEngPath}/{NPconf}/{NPconf}.csv", 'rb') as f:
                 if i != 0: next(f)  # Skip header
                 fout.write(f.read())
-            #if os.path.exists(f"{featEngPath}/{NPconf}/DONE.txt"): 
-            #    os.remove(f"{featEngPath}/{NPconf}/DONE.txt")
-            #    os.remove(f"{featEngPath}/{NPconf}/NCPac.exe")
-            #    os.remove(f"{featEngPath}/{NPconf}/NCPac.inp")
-            #    os.remove(f"{featEngPath}/{NPconf}/od_FEATURESET.csv")
+            if os.path.exists(f"{featEngPath}/{NPconf}/DONE.txt"): 
+                os.remove(f"{featEngPath}/{NPconf}/DONE.txt")
+                os.remove(f"{featEngPath}/{NPconf}/NCPac.exe")
+                os.remove(f"{featEngPath}/{NPconf}/NCPac.inp")
+                os.remove(f"{featEngPath}/{NPconf}/od_FEATURESET.csv")
 
 
 def reorderIdxs(verbose=False):

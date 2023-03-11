@@ -1,7 +1,7 @@
 #!/bin/bash
 #PBS -P q27
 #PBS -q normal
-#PBS -l ncpus=192,walltime=30:00:00,mem=80GB,jobfs=0GB
+#PBS -l ncpus=1,walltime=02:00:00,mem=40GB,jobfs=1GB
 #PBS -l storage=gdata/q27+scratch/q27
 #PBS -l wd
 #PBS -M Jonathan.Ting@anu.edu.au
@@ -9,15 +9,15 @@
 
 module load python3/3.11.0
 
-python3 genCSVs.py  
-#python3 mergeFeatures.py 
+#python3 genCSVs.py  
+python3 mergeFeatures.py 
 
 # Resources 
 ## Small NPs
 #PBS -l ncpus=1,walltime=03:00:00,mem=50GB,jobfs=0GB  # setupNCPac
-#PBS -l ncpus=96,walltime=70:00:00,mem=10GB,jobfs=0GB  # filtRedund
-#PBS -l ncpus=96,walltime=36:00:00,mem=50GB,jobfs=0GB  # runNCPac
-#PBS -l ncpus=96,walltime=01:00:00,mem=50GB,jobfs=0GB  # mergeReformatData
+#PBS -l ncpus=192,walltime=70:00:00,mem=10GB,jobfs=0GB  # filtRedund
+#PBS -l ncpus=192,walltime=40:00:00,mem=50GB,jobfs=1GB  # runNCPac
+#PBS -l ncpus=192,walltime=01:00:00,mem=50GB,jobfs=1GB  # mergeReformatData
 #PBS -l ncpus=1,walltime=01:30:00,mem=50GB,jobfs=0GB  # concatNPfeats
 #PBS -l ncpus=1,walltime=02:00:00,mem=40GB,jobfs=0GB  # reorderIdxs
 ## Large NPs

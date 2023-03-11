@@ -10,7 +10,7 @@ from zipfile import ZipFile
 from filtRedund import runFilter
 
 
-ELE1, ELE2 = 'Co', 'Pt'
+ELE1, ELE2 = 'Co', 'Pd'
 runTask = 'runNCPac'  # 'setupNCPac'or 'filtRedund' or 'runNCPac'
 startNPidx = 136996  # Only used for 'filtRedund'
 NPsize = 'small'
