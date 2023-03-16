@@ -10,9 +10,9 @@ from zipfile import ZipFile
 from filtRedund import runFilter
 
 
-ELE1, ELE2 = 'Co', 'Pd'
+ELE1, ELE2 = 'Au', 'Co'
 runTask = 'runNCPac'  # 'setupNCPac'or 'filtRedund' or 'runNCPac'
-startNPidx = 136996  # Only used for 'filtRedund'
+startNPidx = 0  # Only used for 'filtRedund'
 NPsize = 'small'
 replace, runParallel, verbose = False, True, True
 sourceDirs = ['L10', 'L12', 'RAL','RCS', 'CS']

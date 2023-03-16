@@ -5,7 +5,7 @@ import os
 import pandas as pd
 
 
-ELEMENTS = ['Co', 'Pd']
+ELEMENTS = ['Au', 'Pd']
 runTask = 'reorderIdxs'  # 'mergeReformatData' or 'concatNPfeats' 'reorderIdxs' or 'debug'
 runParallel, verbose = True, True
 sourceDirs = ['L10', 'L12', 'RAL', 'RCS', 'CS']
@@ -91,7 +91,7 @@ ALL_HEADERS_LIST = ['T', 'P', 'Potential_E', 'Kinetic_E', 'Total_E', 'Formation_
                     'Ele1Ele1Ele1Ele2_BTneg_avg', 'Ele1Ele1Ele1Ele2_BTneg_std', 'Ele1Ele1Ele1Ele2_BTneg_max', 'Ele1Ele1Ele1Ele2_BTneg_min', 'Ele1Ele1Ele1Ele2_BTneg_num', 'Ele1Ele1Ele1Ele2_BTpos_avg', 'Ele1Ele1Ele1Ele2_BTpos_std', 'Ele1Ele1Ele1Ele2_BTpos_max', 'Ele1Ele1Ele1Ele2_BTpos_min', 'Ele1Ele1Ele1Ele2_BTpos_num', 
                     'Ele1Ele1Ele2Ele1_BTneg_avg', 'Ele1Ele1Ele2Ele1_BTneg_std', 'Ele1Ele1Ele2Ele1_BTneg_max', 'Ele1Ele1Ele2Ele1_BTneg_min', 'Ele1Ele1Ele2Ele1_BTneg_num', 'Ele1Ele1Ele2Ele1_BTpos_avg', 'Ele1Ele1Ele2Ele1_BTpos_std', 'Ele1Ele1Ele2Ele1_BTpos_max', 'Ele1Ele1Ele2Ele1_BTpos_min', 'Ele1Ele1Ele2Ele1_BTpos_num', 
                     'Ele1Ele1Ele2Ele2_BTneg_avg', 'Ele1Ele1Ele2Ele2_BTneg_std', 'Ele1Ele1Ele2Ele2_BTneg_max', 'Ele1Ele1Ele2Ele2_BTneg_min', 'Ele1Ele1Ele2Ele2_BTneg_num', 'Ele1Ele1Ele2Ele2_BTpos_avg', 'Ele1Ele1Ele2Ele2_BTpos_std', 'Ele1Ele1Ele2Ele2_BTpos_max', 'Ele1Ele1Ele2Ele2_BTpos_min', 'Ele1Ele1Ele2Ele2_BTpos_num', 
-                    'Ele1Ele2Ele1Ele1_BTneg_avg', 'Ele1Ele2Ele1Ele1_BTneg_std', 'Ele1Ele2Ele1Ele1_BTneg_max', 'Ele1Ele2Ele1Ele1_BTneg_min', 'Ele1Ele2Ele1Ele2_BTneg_num', 'Ele1Ele2Ele1Ele1_BTpos_avg', 'Ele1Ele2Ele1Ele1_BTpos_std', 'Ele1Ele2Ele1Ele1_BTpos_max', 'Ele1Ele2Ele1Ele1_BTpos_min', 'Ele1Ele2Ele1Ele1_BTpos_num', 
+                    'Ele1Ele2Ele1Ele1_BTneg_avg', 'Ele1Ele2Ele1Ele1_BTneg_std', 'Ele1Ele2Ele1Ele1_BTneg_max', 'Ele1Ele2Ele1Ele1_BTneg_min', 'Ele1Ele2Ele1Ele1_BTneg_num', 'Ele1Ele2Ele1Ele1_BTpos_avg', 'Ele1Ele2Ele1Ele1_BTpos_std', 'Ele1Ele2Ele1Ele1_BTpos_max', 'Ele1Ele2Ele1Ele1_BTpos_min', 'Ele1Ele2Ele1Ele1_BTpos_num', 
                     'Ele1Ele2Ele1Ele2_BTneg_avg', 'Ele1Ele2Ele1Ele2_BTneg_std', 'Ele1Ele2Ele1Ele2_BTneg_max', 'Ele1Ele2Ele1Ele2_BTneg_min', 'Ele1Ele2Ele1Ele2_BTneg_num', 'Ele1Ele2Ele1Ele2_BTpos_avg', 'Ele1Ele2Ele1Ele2_BTpos_std', 'Ele1Ele2Ele1Ele2_BTpos_max', 'Ele1Ele2Ele1Ele2_BTpos_min', 'Ele1Ele2Ele1Ele2_BTpos_num', 
                     'Ele1Ele2Ele2Ele1_BTneg_avg', 'Ele1Ele2Ele2Ele1_BTneg_std', 'Ele1Ele2Ele2Ele1_BTneg_max', 'Ele1Ele2Ele2Ele1_BTneg_min', 'Ele1Ele2Ele2Ele1_BTneg_num', 'Ele1Ele2Ele2Ele1_BTpos_avg', 'Ele1Ele2Ele2Ele1_BTpos_std', 'Ele1Ele2Ele2Ele1_BTpos_max', 'Ele1Ele2Ele2Ele1_BTpos_min', 'Ele1Ele2Ele2Ele1_BTpos_num', 
                     'Ele1Ele2Ele2Ele2_BTneg_avg', 'Ele1Ele2Ele2Ele2_BTneg_std', 'Ele1Ele2Ele2Ele2_BTneg_max', 'Ele1Ele2Ele2Ele2_BTneg_min', 'Ele1Ele2Ele2Ele2_BTneg_num', 'Ele1Ele2Ele2Ele2_BTpos_avg', 'Ele1Ele2Ele2Ele2_BTpos_std', 'Ele1Ele2Ele2Ele2_BTpos_max', 'Ele1Ele2Ele2Ele2_BTpos_min', 'Ele1Ele2Ele2Ele2_BTpos_num', 
@@ -302,13 +302,12 @@ def concatNPfeats(verbose=False):
 
 
 def reorderIdxs(verbose=False):
-    if verbose: print(f"Reordering XYZ file names and CSV entries for {''.join(ELEMENTS)} nanoparticles...")
+    if verbose: print(f"Reordering XYZ file names for {''.join(ELEMENTS)} nanoparticles...")
     from shutil import copy, move
     DAPdirPath = f"{featEngPath}_nanoparticle_data"
     if not os.path.exists(DAPdirPath): os.mkdir(DAPdirPath)
-    move(MDoutFName, DAPdirPath)
-    move(allFeatCSVfName, DAPdirPath)
-    for (i, NPname) in enumerate(os.listdir(featEngPath)):
+    for (i, NPname) in enumerate(sorted(os.listdir(featEngPath))):
+        if not os.path.isdir(f"{featEngPath}/{NPname}"): continue
         copy(f"{featEngPath}/{NPname}/{NPname}.xyz", f"{DAPdirPath}/{str(i+1).zfill(6)}.xyz")
 
 
@@ -320,5 +319,5 @@ if __name__ == '__main__':
     elif runTask == 'reorderIdxs':  # Serial 
         reorderIdxs(verbose=True)
     elif runTask == 'debug':
-        outputMD = ['000000', '299.03286', '44.722039', '-7486.6016', '65.16901', '-7421.4326']
+        outputMD = ['151207', '2403.5034', '122.67761', '-3574.3398', '215.60997', '-3358.7298']
         mergeReformatData(outputMD, verbose=True) 
