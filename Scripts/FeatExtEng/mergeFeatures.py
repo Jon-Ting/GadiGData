@@ -5,7 +5,7 @@ import os
 import pandas as pd
 
 
-ELEMENTS = ['Au', 'Pd']
+ELEMENTS = ['Au', 'Co']
 runTask = 'reorderIdxs'  # 'mergeReformatData' or 'concatNPfeats' 'reorderIdxs' or 'debug'
 runParallel, verbose = True, True
 sourceDirs = ['L10', 'L12', 'RAL', 'RCS', 'CS']
@@ -319,5 +319,5 @@ if __name__ == '__main__':
     elif runTask == 'reorderIdxs':  # Serial 
         reorderIdxs(verbose=True)
     elif runTask == 'debug':
-        outputMD = ['151207', '2403.5034', '122.67761', '-3574.3398', '215.60997', '-3358.7298']
+        outputMD = ['087101', '1090.4275', '184.54473', '-14764.648', '545.47191', '-14219.176']
         mergeReformatData(outputMD, verbose=True) 

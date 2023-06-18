@@ -11,10 +11,10 @@ from filtRedund import runFilter
 
 
 ELE1, ELE2 = 'Au', 'Co'
-runTask = 'runNCPac'  # 'setupNCPac'or 'filtRedund' or 'runNCPac'
+runTask = 'setupNCPac'  # 'setupNCPac'or 'filtRedund' or 'runNCPac'
 startNPidx = 0  # Only used for 'filtRedund'
 NPsize = 'small'
-replace, runParallel, verbose = False, True, True
+replace, runParallel, verbose = True, True, True
 sourceDirs = ['L10', 'L12', 'RAL','RCS', 'CS']
 
 cutOffDict = {'AuAu': 3.5, 'AuPt': 3.5, 'AuPd': 3.5, 'AuCo': 3.4,

@@ -1,3 +1,5 @@
+# Number of NPs, min atom number, max atom number for each BNP data set
+
 AuPdPt 48136 603 959
 
 AuPt 162431 93 4631
