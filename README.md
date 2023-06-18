@@ -53,8 +53,8 @@ The type of information stored in each directory is as below:
 
 ### Generation of BNP initial structures
 1. Adjust the parameters in constants.py according to the morphology required
-3. Generate the monometallic nanoparticles (MNPs) using genMNP.py 
-4. Generate the bimetallic nanoparticles (BNPs) using genBNPCS.py (for core-shell NPs) and genBNPAL.py (for NPs of other ordering)
+2. Generate the monometallic nanoparticles (MNPs) using genMNP.py 
+3. Generate the bimetallic nanoparticles (BNPs) using genBNPCS.py (for core-shell NPs) and genBNPAL.py (for NPs of other ordering)
 
 ### Simulation of BNPs
 #### Stages of simulations
@@ -63,13 +63,18 @@ The type of information stored in each directory is as below:
 - S2: Short equilibration of the saved TNP configurations at the saved temperature
 
 #### Instructions:
-5. Generate a directory for each new BNPs in simulation directories (located at /scratch) and a config file in it using genBNPdir.sh
-6. Generate the LAMMPS input file corresponding to each stage of simulation using genAnnealIn.sh
-7. Queue the jobs into the jobList file in /scratch using jobList.sh
-8. Submit the jobs to be run using subAnneal.sh
+1. Generate a directory for each new BNPs in simulation directories (located at /scratch) and a config file in it using genBNPdir.sh
+2. Generate the LAMMPS input file corresponding to each stage of simulation using genAnnealIn.sh
+3. Queue the jobs into the jobList file in /scratch using jobList.sh
+4. Submit the jobs to be run using subAnneal.sh
 
-### Feature extraction of TNPs
-#TODO: Elaborate!
+### Feature extraction of BNPs
+1. Go to ./FeatExtEng/
+2. Modify the paths and parameters in genCSVs.py as appropriate.
+3. Submit runGenDAPdata.sh to the HPC. This will generate:
+    - {MDout.csv}, which contains the output of MD simulations of all BNPs.
+    - {features.csv}, which contains the features extracted by NCPac for all BNPs.
+4. Modify the parameters in mergeFeatures.py and run it. This will merge the information from the 2 csv files and generate a new {*_nanoparticle_dataset.csv} following the format of dataset stored on CSIRO's Data Access Portal, such as https://data.csiro.au/collection/csiro%3A58177v1 (AuPt nanoparticle). 
 
 ## Contents of MDSS system under jt5911/:
 - InitStruct.zip

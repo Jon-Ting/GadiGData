@@ -4,5 +4,4 @@ Scripts/InitStruct/logFiles/
 Scripts/SimAnneal/logFiles/
 Scripts/FeatExtEng/NCPac/*xyz
 Scripts/FeatExtEng/testReg/
-Scripts/FeatExtEng/__pycache__/
-Scripts/FeatExtEng/testCasesFiltRedund/largeNPs/
+Scripts/FeatExtEng/filtRedund/filtRedundBenchmark/
