@@ -1,7 +1,14 @@
 InitStruct/
 PostSim/*/
-Scripts/InitStruct/logFiles/
+PostSim/*.zip
+Scripts/GenInitStruct/logFiles/
 Scripts/SimAnneal/logFiles/
 Scripts/FeatExtEng/NCPac/*xyz
 Scripts/FeatExtEng/testReg/
 Scripts/FeatExtEng/filtRedund/filtRedundBenchmark/
+
+Sphractal
+regenBNP
+outputsNPFD.zip
+PythonEnvs
+Scripts/FeatExtEng/archive/sphractalArchive/profileOutputs
