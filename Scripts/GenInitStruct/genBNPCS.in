@@ -1,0 +1,55 @@
+# Template of LAMMPS input file for generation of bimetallic nanoparticles (BNPs)
+# Author: Jonathan Yik Chang Ting
+# Date: 22/10/2020
+
+# Variables to be provided: 
+#    element1 - element that makes up the BNP's shell
+#    element2 - element that makes up the BNP's core
+#    mass1 - mass of element1
+#    mass2 - mass of element2
+#    fileName1 - name of data file containing element1 monometallic NP (MNP)
+#    fileName2 - name of data file containing element2 MNP
+#    xshift - distance shift of element2 in x direction 
+#    yshift - distance shift of element2 in y direction 
+#    zshift - distance shift of element2 in z direction 
+#    latType - type of lattice (fcc, hcp, bcc, diamond, etc)
+#    latConst - lattice constant of element2 (Angstrom)
+#    delCutoff - cutoff distance for deleting overlapping atoms
+#    potFile - name of potential file
+#    outFile - name of BNP LAMMPS data file
+# To do:
+
+# --------------- INITIALIZATION ---------------
+clear  # Clear all memory
+units       metal  # Report in g/mol, A, ps, eV, K, bars
+boundary    p p p  # Periodic boundaries in x-, y-, z- directions
+atom_style  atomic
+
+# --------------- ATOM DEFINITION ---------------
+read_data   ${fileName1} extra/atom/types 1 group ${element1} nocoeff  # Binary alloy systems
+read_data   ${fileName2} add append offset 1 1 1 1 1 shift ${xShift} ${yShift} ${zShift} group ${element2} nocoeff
+mass        1 ${mass1}
+mass        2 ${mass2}
+
+# --------------- FORCE FIELDS ---------------
+pair_style      eam/alloy
+pair_coeff      * * ${potFile} ${element1} ${element2}
+neighbor        2.0 bin  # build list by binning, add 2 A skin
+neigh_modify    delay 10 check yes  # Wait 10 steps after building, build only when atom moved > skin/2
+
+# --------------- DELETE OVERLAPPED ATOMS ---------------
+delete_atoms    overlap ${delCutoff} ${element1} ${element2}  # Delete from first group
+write_data      ${outFile}
+
+# --------------- SETTINGS ---------------
+variable     ecoh equal "pe/atoms"
+thermo_style custom step atoms temp press pe ke etotal enthalpy evdwl ecoul elong epair vol density lx ly lz fmax v_ecoh
+
+# --------------- RUN ---------------
+run 0
+print ""
+print "### Generated CS BNP from ${fileName1} and ${fileName2} ###"
+print "DONE!"
+print "------------------------------------------------------------------------------------------------------------------------------"
+print ""
+

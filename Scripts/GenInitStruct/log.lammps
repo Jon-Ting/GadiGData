@@ -1,0 +1,153 @@
+LAMMPS (29 Sep 2021)
+  using 1 OpenMP thread(s) per MPI task
+# Template of LAMMPS input file for generation of bimetallic nanoparticles (BNPs)
+# Author: Jonathan Yik Chang Ting
+# Date: 22/10/2020
+
+# Variables to be provided:
+#    element1 - element that makes up the BNP's shell
+#    element2 - element that makes up the BNP's core
+#    mass1 - mass of element1
+#    mass2 - mass of element2
+#    fileName1 - name of data file containing element1 monometallic NP (MNP)
+#    fileName2 - name of data file containing element2 MNP
+#    xshift - distance shift of element2 in x direction
+#    yshift - distance shift of element2 in y direction
+#    zshift - distance shift of element2 in z direction
+#    latType - type of lattice (fcc, hcp, bcc, diamond, etc)
+#    latConst - lattice constant of element2 (Angstrom)
+#    delCutoff - cutoff distance for deleting overlapping atoms
+#    potFile - name of potential file
+#    outFile - name of BNP LAMMPS data file
+# To do:
+
+# --------------- INITIALIZATION ---------------
+clear  # Clear all memory
+  using 1 OpenMP thread(s) per MPI task
+units       metal  # Report in g/mol, A, ps, eV, K, bars
+boundary    p p p  # Periodic boundaries in x-, y-, z- directions
+atom_style  atomic
+
+# --------------- ATOM DEFINITION ---------------
+read_data   ${fileName1} extra/atom/types 1 group ${element1} nocoeff  # Binary alloy systems
+read_data   /g/data/q27/jt5911/InitStruct/MNP/Au50OT.lmp extra/atom/types 1 group ${element1} nocoeff  
+read_data   /g/data/q27/jt5911/InitStruct/MNP/Au50OT.lmp extra/atom/types 1 group Au nocoeff  
+Reading data file ...
+  orthogonal box = (0.0000000 0.0000000 0.0000000) to (59.080000 59.080000 59.080000)
+  1 by 1 by 1 MPI processor grid
+  reading atoms ...
+  1469 atoms
+  read_data CPU = 0.005 seconds
+read_data   ${fileName2} add append offset 1 1 1 1 1 shift ${xShift} ${yShift} ${zShift} group ${element2} nocoeff
+read_data   /g/data/q27/jt5911/InitStruct/MNP/Co20OT.lmp add append offset 1 1 1 1 1 shift ${xShift} ${yShift} ${zShift} group ${element2} nocoeff
+read_data   /g/data/q27/jt5911/InitStruct/MNP/Co20OT.lmp add append offset 1 1 1 1 1 shift 13.928 ${yShift} ${zShift} group ${element2} nocoeff
+read_data   /g/data/q27/jt5911/InitStruct/MNP/Co20OT.lmp add append offset 1 1 1 1 1 shift 13.928 13.928 ${zShift} group ${element2} nocoeff
+read_data   /g/data/q27/jt5911/InitStruct/MNP/Co20OT.lmp add append offset 1 1 1 1 1 shift 13.928 13.928 13.928 group ${element2} nocoeff
+read_data   /g/data/q27/jt5911/InitStruct/MNP/Co20OT.lmp add append offset 1 1 1 1 1 shift 13.928 13.928 13.928 group Co nocoeff
+Reading data file ...
+  orthogonal box = (0.0000000 0.0000000 0.0000000) to (59.080000 59.080000 59.080000)
+  1 by 1 by 1 MPI processor grid
+  reading atoms ...
+  231 atoms
+  read_data CPU = 0.002 seconds
+mass        1 ${mass1}
+mass        1 196.97
+mass        2 ${mass2}
+mass        2 58.933
+
+# --------------- FORCE FIELDS ---------------
+pair_style      eam/alloy
+pair_coeff      * * ${potFile} ${element1} ${element2}
+pair_coeff      * * /g/data/q27/jt5911/EAM/setfl_files/AuCo.set ${element1} ${element2}
+pair_coeff      * * /g/data/q27/jt5911/EAM/setfl_files/AuCo.set Au ${element2}
+pair_coeff      * * /g/data/q27/jt5911/EAM/setfl_files/AuCo.set Au Co
+neighbor        2.0 bin  # build list by binning, add 2 A skin
+neigh_modify    delay 10 check yes  # Wait 10 steps after building, build only when atom moved > skin/2
+
+# --------------- DELETE OVERLAPPED ATOMS ---------------
+delete_atoms    overlap ${delCutoff} ${element1} ${element2}  # Delete from first group
+delete_atoms    overlap 2.69 ${element1} ${element2}  
+delete_atoms    overlap 2.69 Au ${element2}  
+delete_atoms    overlap 2.69 Au Co  
+System init for delete_atoms ...
+Neighbor list info ...
+  update every 1 steps, delay 10 steps, check yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 8.4511323
+  ghost atom cutoff = 8.4511323
+  binsize = 4.2255661, bins = 14 14 14
+  2 neighbor lists, perpetual/occasional/extra = 1 1 0
+  (1) command delete_atoms, occasional
+      attributes: full, newton on
+      pair build: full/bin/atomonly
+      stencil: full/bin/3d
+      bin: standard
+  (2) pair eam/alloy, perpetual
+      attributes: half, newton on
+      pair build: half/bin/atomonly/newton
+      stencil: half/bin/3d
+      bin: standard
+Deleted 231 atoms, new total = 1469
+write_data      ${outFile}
+write_data      /g/data/q27/jt5911/InitStruct/BNP/CS/Au50OTCo20OTCS.lmp
+System init for write_data ...
+Neighbor list info ...
+  update every 1 steps, delay 10 steps, check yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 8.4511323
+  ghost atom cutoff = 8.4511323
+  binsize = 4.2255661, bins = 14 14 14
+  1 neighbor lists, perpetual/occasional/extra = 1 0 0
+  (1) pair eam/alloy, perpetual
+      attributes: half, newton on
+      pair build: half/bin/atomonly/newton
+      stencil: half/bin/3d
+      bin: standard
+
+# --------------- SETTINGS ---------------
+variable     ecoh equal "pe/atoms"
+thermo_style custom step atoms temp press pe ke etotal enthalpy evdwl ecoul elong epair vol density lx ly lz fmax v_ecoh
+
+# --------------- RUN ---------------
+run 0
+WARNING: No fixes defined, atoms won't move (../verlet.cpp:55)
+Per MPI rank memory allocation (min/avg/max) = 3.344 | 3.344 | 3.344 Mbytes
+Step Atoms Temp Press PotEng KinEng TotEng Enthalpy E_vdwl E_coul E_long E_pair Volume Density Lx Ly Lz Fmax v_ecoh 
+       0     1469            0   -11248.303   -5417.9639            0   -5417.9639    -6865.729   -5417.9639            0            0   -5417.9639    206215.57    2.0732009        59.08        59.08        59.08    2.3520759   -3.6881987 
+Loop time of 8.38e-07 on 1 procs for 0 steps with 1469 atoms
+
+119.3% CPU use with 1 MPI tasks x 1 OpenMP threads
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 0          | 0          | 0          |   0.0 |  0.00
+Neigh   | 0          | 0          | 0          |   0.0 |  0.00
+Comm    | 0          | 0          | 0          |   0.0 |  0.00
+Output  | 0          | 0          | 0          |   0.0 |  0.00
+Modify  | 0          | 0          | 0          |   0.0 |  0.00
+Other   |            | 8.38e-07   |            |       |100.00
+
+Nlocal:        1469.00 ave        1469 max        1469 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:        30.0000 ave          30 max          30 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:        76207.0 ave       76207 max       76207 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 76207
+Ave neighs/atom = 51.876787
+Neighbor list builds = 0
+Dangerous builds = 0
+print ""
+
+print "### Generated CS BNP from ${fileName1} and ${fileName2} ###"
+### Generated CS BNP from /g/data/q27/jt5911/InitStruct/MNP/Au50OT.lmp and /g/data/q27/jt5911/InitStruct/MNP/Co20OT.lmp ###
+print "DONE!"
+DONE!
+print "------------------------------------------------------------------------------------------------------------------------------"
+------------------------------------------------------------------------------------------------------------------------------
+print ""
+
+
+Total wall time: 0:00:00

@@ -1,0 +1,37 @@
+Running once for JIT compilation...
+Done!
+
+singleAtom
+  Approximating the surface with 10000 points for each atom...
+    Assessing points over:
+      1 atoms using 192 cpu(s)...
+      10000 points using 1 cpu(s)...
+    10000 surface points -> 10000 voxels, # grids: 1024
+  Representing the surface by treating each atom as exact spheres...
+    Scanning over:
+      20 box lengths using 10 cpu(s)...
+      1 atoms using 19 cpu(s)...
+    (1/eps)    (# bulk)    (# surf)
+      1.00           0          56
+      3.10         389         530
+      1.30          19          98
+      4.10         973         890
+      0.50           0          19
+      9.60       15456        4976
+      1.80          56         176
+      0.70           1          26
+      5.50        2577        1610
+     16.80       88664       15224
+      2.30         147         314
+     12.70       37145        8618
+      7.20        6176        2840
+     22.20      208080       26528
+     29.30      485487       46154
+     38.70     1132389       80594
+     51.20     2643680      141152
+     67.70     6150431      246602
+     89.50    14279933      431018
+    118.30    33099139      753530
+  Point clouds  D_Box: 2.0425 [1.6997, 2.3854],  R2: 0.9856
+  Exact surface D_Box: 2.0031 [1.9955, 2.0107],  R2: 1.0000
+  Run 0: 246.0117 s
