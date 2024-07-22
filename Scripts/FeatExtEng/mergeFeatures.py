@@ -174,7 +174,7 @@ def dropFeats(df, allHeaders, verbose=False):
     for col in ADD_FEAT_LIST: allHeaders.remove(col)  # Remove the feature names that will be added later
 
     # To be adjusted when number of elements changes
-    curvStartColIdx, rdfStartColIdx, sfStartColIdx, baStartColIdx, btStartColIdxd, clStartColIdx = 22, 767, 1253, 1766, 5164, 5750
+    curvStartColIdx, rdfStartColIdx, sfStartColIdx, baStartColIdx, btStartColIdxd, clStartColIdx = 21, 767, 1253, 1766, 5164, 5750
     rdfColNum, baColNum = 486, 3384
     
     dropHeadersList = []
@@ -216,14 +216,14 @@ def addFeats(df, verbose=False):
     df['Vol_bulk_pack'] = df.apply(calcBulkPackVol, axis=1)  # Assuming bulk packing (A^3)
     df['Vol_sphere'] = df.apply(lambda row: 3 / 4 * math.pi * row['R_avg']**3, axis=1)  # Geometric volume (A^3)
     # - Curvature
-    endVal, curvColIdx = 0, 22
+    endVal, curvColIdx = 0, 21
     for i in range(1, 19):
         curvColName = f"Curve_{endVal+1}-{i*10}"
         df[curvColName] = df.iloc[:, curvColIdx:curvColIdx+10].sum(axis=1)
         endVal = i * 10
         curvColIdx += 10
     # Drop individual curvature degrees columns
-    curvStartColIdx = 22
+    curvStartColIdx = 21
     df.drop(df.columns[list(range(curvStartColIdx, curvStartColIdx+180))], axis=1, inplace=True)
     # - Surface characteristics concentration
     for characteristic in ('defects', 'micros', 'facets'):
